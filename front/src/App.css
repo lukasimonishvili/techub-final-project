@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: transparent;
+  outline: transparent;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html {
+  font-size: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "egoe UI Emoji", "Segoe UI Symbol"; }
+
+body {
+  background-color: #fff; }
+
+a {
+  text-decoration: none; }
+
+ol, ul {
+  list-style: none; }
+
+textarea {
+  resize: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto; }
+
+.fl {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; }
+  .fl_jus_bet {
+    justify-content: space-between; }
+  .fl_jus_cen {
+    justify-content: center; }
+  .fl_dir_col {
+    flex-direction: column; }
+  .fl_center {
+    align-items: center;
+    justify-content: center; }
+  .fl_ali_cen {
+    align-items: center; }
