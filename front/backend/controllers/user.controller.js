@@ -35,4 +35,28 @@ const userRegister = (req, res) => {
   });
 };
 
-module.exports = { userRegister };
+const logIn = (req, res) => {
+  User.find({ eMail: req.body.eMail }, (err, data) => {
+    if (err) {
+      res.json({ message: "Somthing went wrong" });
+    } else {
+      if (!data.length) {
+        res.json({
+          message: "The eMail you entered doesn't match any account"
+        });
+      } else {
+        let passwdVerify = bcrypt.compareSync(
+          req.body.password,
+          data[0].password
+        );
+        if (!passwdVerify) {
+          res.json({ message: "The password you entered is incorrect" });
+        } else {
+          res.json({ message: "Okay", data: data[0] });
+        }
+      }
+    }
+  });
+};
+
+module.exports = { userRegister, logIn };
