@@ -3,6 +3,7 @@ const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
+const path = require("path");
 
 const { connect } = require("./connect");
 const { userRegister, logIn } = require("./controllers/user.controller");
