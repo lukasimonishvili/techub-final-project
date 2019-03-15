@@ -14,7 +14,8 @@ const {
 } = require("./controllers/comment.controller");
 const {
   uploadProduct,
-  addProduct
+  addProduct,
+  removeProduct
 } = require("./controllers/product.controller");
 
 const app = express();
@@ -31,6 +32,7 @@ app.post("/register", userRegister);
 app.post("/login", logIn);
 
 app.post("/addProduct", uploadProduct.array("img", 5), addProduct);
+app.post("/removeProduct", removeProduct);
 
 app.get("/comment/:productId", getCommentsByProductId);
 app.post("/addComment", addComment);
