@@ -46,6 +46,7 @@ app.use(helmet());
 app.use(cors());
 
 app.post("/register", userRegister);
+app.post("/login", logIn);
 
 app.post("/addProduct", uploadProduct.array("img", 5), addProduct);
 
