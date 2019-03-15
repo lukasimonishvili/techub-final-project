@@ -13,9 +13,9 @@ class App extends Component {
     return (
       <>
         <Header />
+        <Sidebar />
         <Login />
         <Register />
-        <Sidebar />
         <CartContainer />
       </>
     );
