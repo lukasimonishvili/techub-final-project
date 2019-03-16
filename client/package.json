@@ -20,7 +20,7 @@
     "build-css": "node-sass --include-path scss src/scss/index.scss src/App.css",
     "build-watch": "nodemon -e scss -x \"npm run build-css\"",
     "serv": "cd ../ && nodemon server.js",
-    "dev": "concurrently \" npm run str\" \" npm run build-watch\" \"npm run serv\""
+    "dev": "concurrently \" npm run start\" \" npm run build-watch\" \"npm run serv\""
   },
   "eslintConfig": {
     "extends": "react-app"

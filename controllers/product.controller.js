@@ -34,6 +34,7 @@ const addProduct = (req, res) => {
     description: req.body.description,
     price: req.body.price + "$",
     amount: req.body.amount,
+    category: req.body.category,
     likes: 0,
     disLikes: 0
   };
@@ -80,4 +81,47 @@ const removeProduct = (req, res) => {
   res.json({ message: "product removed from database" });
 };
 
-module.exports = { uploadProduct, addProduct, removeProduct };
+const getAllProductList = (req, res) => {
+  Product.find({}, (err, data) => {
+    if (err) {
+      res.json({ message: "Somthing wnet wrong" });
+    } else {
+      console.log(data);
+      res.json(data);
+    }
+  });
+};
+
+const getProductsByCategory = (req, res) => {
+  Product.find({ category: req.params.category }, (err, data) => {
+    if (err) {
+      res.json({ message: "Somthing went wrong" });
+    } else {
+      res.json(data);
+    }
+  });
+};
+
+const searchProduct = (req, res) => {
+  Product.find({}, (err, data) => {
+    let searchResult = [];
+    for (let i = 0; i < data.length; i++) {
+      let regex = new RegExp(req.params.search, "i");
+      let found = regex.test(data[i].title);
+      if (found) {
+        searchResult.push(data[i]);
+        continue;
+      }
+    }
+    res.json(searchResult);
+  });
+};
+
+module.exports = {
+  uploadProduct,
+  addProduct,
+  removeProduct,
+  getAllProductList,
+  getProductsByCategory,
+  searchProduct
+};

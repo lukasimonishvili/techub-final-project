@@ -16,7 +16,10 @@ const {
 const {
   uploadProduct,
   addProduct,
-  removeProduct
+  removeProduct,
+  getAllProductList,
+  getProductsByCategory,
+  searchProduct
 } = require("./controllers/product.controller");
 
 const app = express();
@@ -29,6 +32,20 @@ app.use(morgan("dev"));
 app.use(helmet());
 app.use(cors());
 
+app.post("/register", userRegister);
+app.post("/login", logIn);
+
+app.post("/addProduct", uploadProduct.array("img", 5), addProduct);
+app.post("/removeProduct", removeProduct);
+app.get("/getAllproduct", getAllProductList);
+app.get("/getByCategory/:category", getProductsByCategory);
+app.get("/search/:search", searchProduct);
+
+app.get("/comment/:productId", getCommentsByProductId);
+app.post("/addComment", addComment);
+app.post("/editComment", editComment);
+app.post("/removeComment", deleteComment);
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
   app.use(express.static(path.join(__dirname, "client/build")));
@@ -40,17 +57,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname + "/client/public/index.html"));
   });
 }
-
-app.post("/register", userRegister);
-app.post("/login", logIn);
-
-app.post("/addProduct", uploadProduct.array("img", 5), addProduct);
-app.post("/removeProduct", removeProduct);
-
-app.get("/comment/:productId", getCommentsByProductId);
-app.post("/addComment", addComment);
-app.post("/editComment", editComment);
-app.post("/removeComment", deleteComment);
 
 (async () => {
   try {

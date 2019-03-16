@@ -7,7 +7,6 @@ const userRegister = (req, res) => {
   User.find({ eMail: req.body.eMail }, async (err, data) => {
     if (data.length > 0) {
       res.json({ message: "user with same email already registred" });
-      console.log(data);
     } else {
       if (req.body.password.length < 6) {
         res.json({ message: "Email is invalid or already taken" });
