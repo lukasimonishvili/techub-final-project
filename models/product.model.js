@@ -23,11 +23,11 @@ const ProductSchema = new mongoose.Schema(
       required: true
     },
     likes: {
-      type: Number,
+      type: Array,
       required: true
     },
     disLikes: {
-      type: Number,
+      type: Array,
       required: true
     },
     category: {

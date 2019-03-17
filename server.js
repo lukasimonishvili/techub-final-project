@@ -19,7 +19,10 @@ const {
   removeProduct,
   getAllProductList,
   getProductsByCategory,
-  searchProduct
+  searchProduct,
+  getOneProduct,
+  likeProduct,
+  disLikeProduct
 } = require("./controllers/product.controller");
 
 const app = express();
@@ -37,9 +40,12 @@ app.post("/login", logIn);
 
 app.post("/addProduct", uploadProduct.array("img", 5), addProduct);
 app.post("/removeProduct", removeProduct);
+app.post("/likeProducts", likeProduct);
+app.post("/disLikeProduct", disLikeProduct);
 app.get("/getAllproduct", getAllProductList);
 app.get("/getByCategory/:category", getProductsByCategory);
 app.get("/search/:search", searchProduct);
+app.get("/getOne/:productId", getOneProduct);
 
 app.get("/comment/:productId", getCommentsByProductId);
 app.post("/addComment", addComment);
