@@ -9,6 +9,8 @@ import { Product } from "./components/product/product";
 import { Feedback } from "./components/feedback/feedback";
 import { Comment } from "./components/comment/comment";
 import { Chat } from "./components/contactus/chat";
+import { Admin } from "./components/admin panel/components/adminsidebar/admin";
+import { Additem } from "./components/admin panel/components/add items/additem";
 
 class App extends Component {
   render() {
@@ -16,10 +18,12 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
+        {/* <Admin/> */}
+        <Additem/>
         {/* <Product /> */}
         {/* <Comment /> */}
         {/* <Feedback /> */}
-        <Chat />
+        {/* <Chat /> */}
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
