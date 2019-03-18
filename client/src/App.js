@@ -5,6 +5,7 @@ import { Login } from "./components/login/login";
 import { CartContainer } from "./components/cart/cartContainer";
 import { Register } from "./components/register/register";
 import { Sidebar } from "./components/sidebar/sidebar";
+import { Product } from "./components/product/product";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
+        <Product />
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
