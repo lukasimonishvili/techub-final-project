@@ -444,3 +444,17 @@ table {
     .admin__leftside__item:hover {
       color: #ffffff;
       background: #1C2541; }
+
+.test {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 20px; }
+
+.test2 {
+  opacity: 0.5; }
+
+.test3 {
+  display: block;
+  border: 1px solid black;
+  margin: 20px; }
