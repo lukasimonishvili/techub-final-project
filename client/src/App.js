@@ -24,7 +24,6 @@ class App extends Component {
         <Register />
         <Comment />
         <Feedback />
-        <Chat />
         <CartContainer />
         <SearchDropdownItem />
         <Footer />
