@@ -28,6 +28,7 @@ class App extends Component {
         {/* <SearchDropdownItem /> */}
         {/* <Footer /> */}
         <Admin />
+        {/* <Chat /> */}
       </>
     );
   }

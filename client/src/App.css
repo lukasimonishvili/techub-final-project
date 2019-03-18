@@ -440,14 +440,15 @@ table {
       padding: 20px;
       color: #a5afbb; }
     .admin__leftside__list {
-      padding: 10px;
-      color: #dee1e6; }
+      padding: 10px; }
     .admin__leftside__item {
+      color: #dee1e6;
       padding: 15px;
       font-size: 20px;
       border-bottom: 2px solid #6fffe9;
       cursor: pointer;
-      transition: 0.05s; }
+      transition: 0.05s;
+      display: block; }
       .admin__leftside__item:hover {
         color: #5bc0be;
         background: #1c2541; }
@@ -456,7 +457,7 @@ table {
   width: calc(100% - 250px);
   margin: 0 auto;
   margin-top: 100px;
-  display: none;
+  display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap; }

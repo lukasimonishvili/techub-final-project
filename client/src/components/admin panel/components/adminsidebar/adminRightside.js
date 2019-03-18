@@ -1,12 +1,12 @@
 import React from "react";
 import { Additem } from "../add items/additem";
-import { AdminCustomerlist } from "../user list/adminCustomerlist";
+import {Router} from "@reach/router"
+
 
 export const AdminRightside = () => {
   return (
-    <div className="admin__rightside">
-      <Additem />
-      <AdminCustomerlist />
-    </div>
+    <Router className="admin__rightside">
+      <Additem path="/additem"/>
+    </Router>
   );
 };
