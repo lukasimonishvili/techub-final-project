@@ -6,6 +6,7 @@ import { CartContainer } from "./components/cart/cartContainer";
 import { Register } from "./components/register/register";
 import { Sidebar } from "./components/sidebar/sidebar";
 import { Product } from "./components/product/product";
+import { Wrapper } from "./components/footer/wrapper";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
+        <Wrapper />
         {/* <Product /> */}
         {/* <Login /> */}
         {/* <Register /> */}
