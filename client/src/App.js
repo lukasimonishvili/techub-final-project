@@ -11,6 +11,7 @@ import { Comment } from "./components/comment/comment";
 import { Chat } from "./components/contactus/chat";
 import { Footer } from "./components/footer/footer";
 import { Additem } from "./components/admin panel/components/add items/additem";
+import { SearchDropdownItem } from "./components/searchDropdownItem/searchDropdownItem";
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
         {/* <Register /> */}
         {/* <CartContainer /> */}
         <Footer />
+        <SearchDropdownItem />
       </>
     );
   }
