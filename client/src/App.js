@@ -12,6 +12,7 @@ import { Chat } from "./components/contactus/chat";
 import { Footer } from "./components/footer/footer";
 import { Additem } from "./components/admin panel/components/add items/additem";
 import { SearchDropdownItem } from "./components/searchDropdownItem/searchDropdownItem";
+import { Admin } from "./components/admin panel/components/adminsidebar/admin";
 
 class App extends Component {
   render() {
@@ -19,17 +20,17 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        {/* <Admin/> */}
         <Additem/>
         {/* <Product /> */}
         {/* <Comment /> */}
         {/* <Feedback /> */}
-        {/* <Chat /> */}
+        <Chat />
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
         <Footer />
         <SearchDropdownItem />
+        <Admin />
       </>
     );
   }
