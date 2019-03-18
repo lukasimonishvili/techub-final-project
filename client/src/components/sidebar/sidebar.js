@@ -1,12 +1,13 @@
 import React from "react";
-import { SidebarHeader } from "./sidebarHeader";
-import { SidebarProductlist } from "./sidebarProductlist";
+
+import { SidebarContainer } from "./sidebarContainer";
+import { SidebarRightside } from "./sidebarRightside";
 
 export const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <SidebarHeader />
-      <SidebarProductlist />
+    <div className="sidebar fl" id="sidebar">
+      <SidebarContainer />
+      <SidebarRightside />
     </div>
   );
 };

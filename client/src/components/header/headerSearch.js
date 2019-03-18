@@ -5,10 +5,10 @@ import { HeaderSearchButtonDetailed } from "./headerSearchButtonDetailed";
 
 export const HeaderSearch = () => {
   return (
-    <li className="header__search">
+    <li className="header__search fl fl_jus_bet">
       <HeaderSearchInput />
       <HeaderSearchButton />
-      <HeaderSearchButtonDetailed />
+      <HeaderSearchButtonDetailed/>
     </li>
   );
 };

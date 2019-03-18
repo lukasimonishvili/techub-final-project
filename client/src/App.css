@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: transparent;
+  outline: transparent;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+html {
+  font-size: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "egoe UI Emoji", "Segoe UI Symbol"; }
+
+body {
+  background-color: #fff;
+  padding-top: 80px; }
+
+a {
+  text-decoration: none; }
+
+ol, ul {
+  list-style: none; }
+
+textarea {
+  resize: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; }
+
+.fl {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; }
+  .fl_jus_bet {
+    justify-content: space-between; }
+  .fl_jus_cen {
+    justify-content: center; }
+  .fl_dir_col {
+    flex-direction: column; }
+  .fl_center {
+    align-items: center;
+    justify-content: center; }
+  .fl_ali_cen {
+    align-items: center; }
+
+.header {
+  width: 100%;
+  height: 80px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to right, green, rgba(0, 0, 0, 0)) 0 1 100% 0;
+  position: fixed;
+  margin-top: -80px;
+  background-color: #33333A;
+  padding: 0 20px 0 20px; }
+  .header__nav {
+    height: 80px; }
+  .header__sidebar img {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px; }
+    .header__sidebar img:hover {
+      cursor: pointer;
+      background: rgba(127, 127, 127, 0.4);
+      border: 1px solid rgba(112, 112, 112, 0.6); }
+  .header__logo {
+    width: 250px;
+    height: 60px;
+    background-image: url("https://kb.sambapos.com/wp-content/themes/sambapos_kb/assets/img/logo.png");
+    background-size: cover; }
+  .header__search {
+    max-height: 50px;
+    margin-top: 15px;
+    margin-left: 50px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    position: relative;
+    transition-duration: 0.4s;
+    overflow: hidden; }
+    .header__search:hover {
+      border: 1px solid #4d4848;
+      border-radius: 3px; }
+    .header__search__input {
+      font-size: 14px;
+      padding: 5px;
+      background: transparent;
+      color: #f5f5f5; }
+    .header__search__button {
+      margin-right: 6px;
+      padding: 5px;
+      border-radius: 2px;
+      background-color: #707070;
+      color: #f3f3f3; }
+      .header__search__button:hover {
+        cursor: pointer;
+        background: rgba(127, 127, 127, 0.4); }
+      .header__search__button--detailed {
+        padding: 5px;
+        border-radius: 2px;
+        background-color: #707070;
+        color: #f3f3f3; }
+        .header__search__button--detailed:hover {
+          cursor: pointer;
+          background: rgba(127, 127, 127, 0.4); }
+  .header__signin {
+    font-size: 16px;
+    line-height: 70px;
+    padding: 10px;
+    border-radius: 2px;
+    color: #7a7274;
+    font-weight: 500;
+    color: #f3f3f3;
+    border: 1px solid transparent; }
+    .header__signin:hover {
+      background: linear-gradient(#73c8a9, #323238);
+      border: 1px solid #33333A; }
+  .header__cart {
+    transition-duration: 0.5s; }
+    .header__cart:hover {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1); }
+  .header__cart img {
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer; }
+
+@media (max-width: 885px) {
+  .header__search {
+    margin: 0;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    background-image: url("https://ellaora.com/wp-content/uploads/2019/02/search-icon-png-23.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .header__search__input {
+      display: none; }
+    .header__search__button {
+      display: none; }
+      .header__search__button--detailed {
+        display: none; } }
+
+@media (max-width: 570px) {
+  .header__logo {
+    width: 100px;
+    margin-top: 10px;
+    height: 30px;
+    background-image: none;
+    background-repeat: no-repeat; }
+  .header__search {
+    margin-top: 20px;
+    width: 50px;
+    height: 30px; }
+  .header__sidebar img {
+    margin-top: 20px;
+    width: 30px;
+    height: 30px; }
+  .header__cart img {
+    margin-top: 15px;
+    width: 30px;
+    height: 30px; } }
+
+.sidebar {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  margin-top: -80px;
+  transition: 3s; }
+  .sidebar__rightside {
+    display: none;
+    background-color: #000000;
+    opacity: 0.3;
+    width: calc(100% - 300px);
+    height: 100vh;
+    position: fixed;
+    right: 0; }
+  .sidebar__container {
+    width: 300px;
+    height: 100vh;
+    background-color: #BDD358;
+    border-right: 3px solid #515153;
+    box-shadow: 0 0 150px black; }
+  .sidebar__header {
+    height: 80px;
+    padding: 20px;
+    font-size: 25px;
+    color: #c9cac1;
+    background-color: #343A18;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to left, green, rgba(0, 0, 0, 0)) 0 1 100% 0; }
+  .sidebar__productitem {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #504545;
+    text-align: center; }
+    .sidebar__productitem:hover {
+      cursor: pointer;
+      background-color: #cbd2ae; }
+
+@media (max-width: 885px) {
+  .sidebar__container {
+    width: 200px; }
+  .sidebar__rightside {
+    width: calc(100% - 200px); } }

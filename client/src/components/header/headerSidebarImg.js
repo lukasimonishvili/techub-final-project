@@ -4,7 +4,7 @@ export const HeaderSidebarImg = () => {
   return (
     <img
       className="sidebar__menu"
-      src="https://cdn2.iconfinder.com/data/icons/mobile-banking-ver-3a/100/1-48-512.png"
+      src="https://cdn.icon-icons.com/icons2/494/PNG/128/menu_icon-icons.com_48263.png"
       alt=""
     />
   );

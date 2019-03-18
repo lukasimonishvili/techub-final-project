@@ -3,9 +3,9 @@ import React from "react";
 export const HeaderLogoImg = () => {
   return (
     <img
-      className="Header__logo"
-      src="https://squigglepark.com/wp-content/themes/squigglepark/assets/img/logo_colour.png"
-      alt=""
+      className="header__logo"
+      src="https://kb.sambapos.com/wp-content/themes/sambapos_kb/assets/img/logo.png"
+      alt="site logo"
     />
   );
 };

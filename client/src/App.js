@@ -12,9 +12,9 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        <Login />
-        <Register />
-        <CartContainer />
+        {/* <Login /> */}
+        {/* <Register /> */}
+        {/* <CartContainer /> */}
       </>
     );
   }
