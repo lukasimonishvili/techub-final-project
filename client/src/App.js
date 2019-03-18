@@ -25,12 +25,15 @@ class App extends Component {
         {/* <Product /> */}
         {/* <Comment /> */}
         {/* <Feedback /> */}
-        {/* <Chat /> */}
+        <Chat />
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
         {/* <Footer /> */}
         {/* <SearchDropdownItem /> */}
+        <Footer />
+        <SearchDropdownItem />
+        <Admin />
       </>
     );
   }

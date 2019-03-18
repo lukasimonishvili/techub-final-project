@@ -214,6 +214,7 @@ table {
   .sidebar__rightside {
     width: calc(100% - 200px); } }
 
+<<<<<<< HEAD
 .product {
   width: 100%;
   padding-top: 100px;
@@ -406,3 +407,52 @@ table {
     .register__submit:hover {
       background: rgba(127, 127, 127, 0.4);
       cursor: pointer; }
+=======
+.chat {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  margin-top: -80px;
+  transition: 3s; }
+  .chat__rightside {
+    display: none;
+    background-color: #000000;
+    opacity: 0.3;
+    width: calc(100% - 300px);
+    height: 100vh;
+    position: fixed;
+    right: 0; }
+  .chat__container {
+    width: 300px;
+    height: 100vh;
+    background-color: #BDD358;
+    border-right: 3px solid #515153;
+    box-shadow: 0 0 150px black; }
+  .chat__header {
+    height: 80px;
+    padding: 20px;
+    font-size: 25px;
+    color: #c9cac1;
+    background-color: #343A18;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to left, green, rgba(0, 0, 0, 0)) 0 1 100% 0; }
+  .chat__productitem {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #504545;
+    text-align: center; }
+    .chat__productitem:hover {
+      cursor: pointer;
+      background-color: #cbd2ae; }
+
+@media (max-width: 885px) {
+  .sidebar__container {
+    width: 200px; }
+  .sidebar__rightside {
+    width: calc(100% - 200px); } }
+>>>>>>> 81d542a255c9854efbe74626d228803bd52008c5
