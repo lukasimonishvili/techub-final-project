@@ -7,5 +7,3 @@ export const AdminLeftside = () => {
     <AdminLeftsideHeader/>
     <AdminLeftsideList/>
     </div>)
-
-}
