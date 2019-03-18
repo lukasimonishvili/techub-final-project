@@ -220,3 +220,17 @@ input[type=number]::-webkit-outer-spin-button {
     width: 200px; }
   .sidebar__rightside {
     width: calc(100% - 200px); } }
+
+.test {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 20px; }
+
+.test2 {
+  opacity: 0.5; }
+
+.test3 {
+  display: block;
+  border: 1px solid black;
+  margin: 20px; }
