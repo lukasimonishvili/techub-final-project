@@ -1,0 +1,47 @@
+.comment {
+  width: 100%;
+  padding: 30px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: column;
+  &__output {
+    margin: 0 auto;
+    width: calc(100% - 80px);
+    height: 50px;
+    font-size: 15px;
+    &--edit {
+      width: 150px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 2px;
+      background-color: #707070;
+      color: #f3f3f3;
+      &:hover {
+        cursor: pointer;
+        background: rgba(127, 127, 127, 0.4);
+      }
+    }
+  }
+  &__input {
+    width: calc(100% - 180px);
+    padding: 30px;
+    margin: 30px 0 30px 30px;
+
+    &:focus{
+        border: 1px solid grey;
+    }
+  }
+  &__send{
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #707070;
+    color: #f3f3f3;
+    &:hover {
+      cursor: pointer;
+      background: rgba(127, 127, 127, 0.4);
+    }
+  
+  }
+}
