@@ -11,7 +11,7 @@ import { Comment } from "./components/comment/comment";
 import { Chat } from "./components/contactUs/chat";
 import { Footer } from "./components/footer/footer";
 import { Additem } from "./components/admin panel/components/add items/additem";
-import { Admin } from "./components/admin panel/components/adminsidebar/admin";
+import { SearchDropdownItem } from "./components/searchDropdownItem/searchDropdownItem";
 
 class App extends Component {
   render() {
@@ -26,9 +26,8 @@ class App extends Component {
         {/* <Login /> */}
         <Register />
         {/* <CartContainer /> */}
-        {/* <Footer /> */}
-        {/* <Admin/> */}
-        {/* <Additem/> */}
+        <Footer />
+        <SearchDropdownItem />
       </>
     );
   }
