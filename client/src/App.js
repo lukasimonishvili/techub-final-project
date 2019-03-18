@@ -13,7 +13,7 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        <Product />
+        {/* <Product /> */}
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
