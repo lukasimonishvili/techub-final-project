@@ -1,0 +1,29 @@
+.admin{
+    width: 250px;
+    height: 100vh;
+    background: #373D51;
+    margin: -80px 0 0 0;
+    &__leftside{
+        &__header{
+            background: #0B132B;
+            font-size: 25px;
+            padding: 20px;
+            color: #A5AFBB;
+        }
+        &__list{
+            padding: 10px;
+
+        }
+        &__item{
+            padding: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #6FFFE9;
+            cursor: pointer;
+            transition: 0.1s;
+            &:hover{
+                color: #ffffff;
+                background: #1C2541;
+            }
+        }
+    }
+}

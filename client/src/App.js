@@ -18,8 +18,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header />
-        <Sidebar />
+        {/* <Header /> */}
+        {/* <Sidebar /> */}
         {/* <Product /> */}
         {/* <Login /> */}
         {/* <Register /> */}
@@ -29,7 +29,7 @@ class App extends Component {
         {/* <CartContainer /> */}
         {/* <SearchDropdownItem /> */}
         {/* <Footer /> */}
-        {/* <Admin/> */}
+        <Admin/>
         {/* <Additem/> */}
       </>
     );
