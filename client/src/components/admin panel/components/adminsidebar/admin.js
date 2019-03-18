@@ -6,7 +6,7 @@ export const Admin = () => {
   return (
     <div className="admin">
       <AdminLeftside />
-      <AdminRightside/>
+      <AdminRightside />
     </div>
   );
 };

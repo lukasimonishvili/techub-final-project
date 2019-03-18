@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { Additem } from "../add items/additem";
 
 export const AdminRightside = () => {
@@ -8,5 +8,3 @@ export const AdminRightside = () => {
     </div>
   );
 };
-    </div>)
-}
