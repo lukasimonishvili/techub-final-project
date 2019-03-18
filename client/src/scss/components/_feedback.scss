@@ -1,0 +1,24 @@
+.product {
+  &__feedback {
+    padding: 30px;
+    align-content: center;
+    &__input {
+      width: 500px;
+      height: 70px;
+      padding: 10px;
+      border: 1px solid lightgrey;
+    }
+    &__button {
+      width: 150px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 2px;
+      background-color: #707070;
+      color: #f3f3f3;
+      &:hover {
+        cursor: pointer;
+        background: rgba(127, 127, 127, 0.4);
+      }
+    }
+  }
+}

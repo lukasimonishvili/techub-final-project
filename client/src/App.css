@@ -424,26 +424,158 @@ table {
     border: 1px solid #474750; }
 
 .admin {
-  width: 250px;
-  height: 100vh;
-  background: #373D51;
-  margin: -80px 0 0 0; }
-  .admin__leftside__header {
-    background: #0B132B;
-    font-size: 25px;
-    padding: 20px;
-    color: #A5AFBB; }
-  .admin__leftside__list {
-    padding: 10px; }
-  .admin__leftside__item {
-    padding: 15px;
-    font-size: 20px;
-    border-bottom: 2px solid #6FFFE9;
+  display: flex; }
+  .admin__rightside {
+    margin-top: -80px;
+    width: calc(100% - 250px);
+    background: #f4f4f4; }
+  .admin__leftside {
+    width: 250px;
+    height: 100vh;
+    background: #373d51;
+    margin: -80px 0 0 0; }
+    .admin__leftside__header {
+      background: #0b132b;
+      font-size: 25px;
+      padding: 20px;
+      color: #a5afbb; }
+    .admin__leftside__list {
+      padding: 10px;
+      color: #dee1e6; }
+    .admin__leftside__item {
+      padding: 15px;
+      font-size: 20px;
+      border-bottom: 2px solid #6fffe9;
+      cursor: pointer;
+      transition: 0.05s; }
+      .admin__leftside__item:hover {
+        color: #5bc0be;
+        background: #1c2541; }
+
+.additem {
+  width: calc(100% - 250px);
+  margin: 0 auto;
+  margin-top: 100px;
+  display: none;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+  .additem__upload[type="file"] {
     cursor: pointer;
-    transition: 0.1s; }
-    .admin__leftside__item:hover {
-      color: #ffffff;
-      background: #1C2541; }
+    width: 180px;
+    height: 34px;
+    overflow: hidden; }
+    .additem__upload[type="file"]:before {
+      width: 158px;
+      height: 32px;
+      font-size: 16px;
+      line-height: 32px;
+      content: "Select your file";
+      display: inline-block;
+      background: white;
+      border: 1px solid #000;
+      padding: 0 10px;
+      text-align: center; }
+    .additem__upload[type="file"]::-webkit-file-upload-button {
+      visibility: hidden; }
+  .additem__name {
+    width: 180px;
+    height: 34px;
+    padding: 8px;
+    border: 1px solid black;
+    margin: 0 30px 20px 0; }
+  .additem__category {
+    width: 180px;
+    height: 34px;
+    padding: 8px;
+    margin: 0 30px 20px 0;
+    border: 1px solid black; }
+  .additem__description {
+    width: 700px;
+    height: 34px;
+    margin: 0 30px 20px 0;
+    padding: 8px;
+    border: 1px solid black; }
+  .additem__quantity {
+    width: 180px;
+    margin: 0 30px 20px 0;
+    height: 34px;
+    padding: 8px;
+    border: 1px solid black; }
+  .additem__cost {
+    margin: 0 30px 20px 0;
+    width: 180px;
+    height: 34px;
+    padding: 8px;
+    border: 1px solid black; }
+  .additem__send {
+    width: 180px;
+    height: 34px;
+    margin: 0 30px 20px 0;
+    padding: 8px;
+    border: 1px solid black;
+    background-color: #707070;
+    color: #f3f3f3; }
+    .additem__send:hover {
+      background: rgba(127, 127, 127, 0.4);
+      cursor: pointer; }
+
+.product__feedback {
+  padding: 30px;
+  align-content: center; }
+  .product__feedback__input {
+    width: 500px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid lightgrey; }
+  .product__feedback__button {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #707070;
+    color: #f3f3f3; }
+    .product__feedback__button:hover {
+      cursor: pointer;
+      background: rgba(127, 127, 127, 0.4); }
+
+.comment {
+  width: 100%;
+  padding: 30px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: column; }
+  .comment__output {
+    margin: 0 auto;
+    width: calc(100% - 80px);
+    height: 50px;
+    font-size: 15px; }
+    .comment__output--edit {
+      width: 150px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 2px;
+      background-color: #707070;
+      color: #f3f3f3; }
+      .comment__output--edit:hover {
+        cursor: pointer;
+        background: rgba(127, 127, 127, 0.4); }
+  .comment__input {
+    width: calc(100% - 180px);
+    padding: 30px;
+    margin: 30px 0 30px 30px; }
+    .comment__input:focus {
+      border: 1px solid grey; }
+  .comment__send {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #707070;
+    color: #f3f3f3; }
+    .comment__send:hover {
+      cursor: pointer;
+      background: rgba(127, 127, 127, 0.4); }
 
 .test {
   width: 100px;

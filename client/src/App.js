@@ -12,14 +12,14 @@ import { Chat } from "./components/contactUs/chat";
 import { Footer } from "./components/footer/footer";
 import { SearchDropdownItem } from "./components/searchDropdownItem/searchDropdownItem";
 import { Admin } from "./components/admin panel/components/adminsidebar/admin";
-import { Additem } from "./components/admin panel/components/add items/additem";
+import { AdminRightside } from "./components/admin panel/components/adminsidebar/adminRightside";
 
 class App extends Component {
   render() {
     return (
       <>
-        {/* <Header /> */}
-        {/* <Sidebar /> */}
+        <Header />
+        <Sidebar />
         {/* <Product /> */}
         {/* <Login /> */}
         {/* <Register /> */}
@@ -29,8 +29,7 @@ class App extends Component {
         {/* <CartContainer /> */}
         {/* <SearchDropdownItem /> */}
         {/* <Footer /> */}
-        <Admin/>
-        {/* <Additem/> */}
+        {/* <Admin /> */}
       </>
     );
   }
