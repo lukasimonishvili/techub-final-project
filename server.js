@@ -6,7 +6,12 @@ const cors = require("cors");
 const path = require("path");
 
 const { connect } = require("./connect");
-const { userRegister, logIn } = require("./controllers/user.controller");
+const {
+  userRegister,
+  logIn,
+  removeUser,
+  editUser
+} = require("./controllers/user.controller");
 const {
   addComment,
   editComment,
@@ -38,6 +43,8 @@ app.use(cors());
 
 app.post("/register", userRegister);
 app.post("/login", logIn);
+app.post("/removeUser", removeUser);
+app.post("/editUser/:userId", editUser);
 
 app.post("/addProduct", uploadProductImg.array("img", 5), addProduct);
 app.post(
