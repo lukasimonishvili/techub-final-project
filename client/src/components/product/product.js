@@ -6,7 +6,7 @@ export const Product = () => {
   return (
     <div className="product fl">
       <ProductImage />
-      <ProductInfo/>
+      <ProductInfo />
     </div>
   );
 };

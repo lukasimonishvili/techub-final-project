@@ -8,7 +8,7 @@ import { LoginRegister } from "./loginRegister";
 
 export const Login = () => {
     return (
-        <div className="login">
+        <div className="login fl fl_jus_bet">
             <LoginUsername/>
             <LoginPassword/>
             <LoginSignin/>

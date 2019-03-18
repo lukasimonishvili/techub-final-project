@@ -5,7 +5,6 @@ export const RegisterPasswordRepeat = () => {
     <input
       type="password"
       placeholder="repeat password"
-      required
       className="register__password"
     />
   );
