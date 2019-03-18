@@ -17,17 +17,18 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header />
-        <Sidebar />
-        <Product />
-        <Login />
-        <Register />
-        <Comment />
-        <Feedback />
-        <CartContainer />
-        <SearchDropdownItem />
-        <Footer />
+        {/* <Header /> */}
+        {/* <Sidebar /> */}
+        {/* <Product /> */}
+        {/* <Login /> */}
+        {/* <Register /> */}
+        {/* <Comment /> */}
+        {/* <Feedback /> */}
+        {/* <CartContainer /> */}
+        {/* <SearchDropdownItem /> */}
+        {/* <Footer /> */}
         <Admin />
+        {/* <Chat /> */}
       </>
     );
   }

@@ -4,12 +4,12 @@ import { AdminLeftsideItem } from "./adminLeftsideItem";
 export const AdminLeftsideList = () => {
   return (
     <ul className="admin__leftside__list">
-      <AdminLeftsideItem listItem="Add Items" />
-      <AdminLeftsideItem listItem="User List" />
-      <AdminLeftsideItem listItem="Item List" />
-      <AdminLeftsideItem listItem="Comments" />
-      <AdminLeftsideItem listItem="Contact User" />
-      <AdminLeftsideItem listItem="Log Out" />
+      <AdminLeftsideItem listItem="Add Items" link="/additem"/>
+      <AdminLeftsideItem listItem="User List" link="/"/>
+      <AdminLeftsideItem listItem="Item List" link="/"/>
+      <AdminLeftsideItem listItem="Comments" link="/"/>
+      <AdminLeftsideItem listItem="Contact User" link="/"/>
+      <AdminLeftsideItem listItem="Log Out" link="/"/>
     </ul>
   );
 };

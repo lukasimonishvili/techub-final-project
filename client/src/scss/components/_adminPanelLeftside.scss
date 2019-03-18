@@ -18,14 +18,15 @@
     }
     &__list {
       padding: 10px;
-      color: #dee1e6;
     }
     &__item {
+      color: #dee1e6;
       padding: 15px;
       font-size: 20px;
       border-bottom: 2px solid #6fffe9;
       cursor: pointer;
       transition: 0.05s;
+      display: block;
       &:hover {
         color: #5bc0be;
         background: #1c2541;
