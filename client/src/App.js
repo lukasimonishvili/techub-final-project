@@ -12,7 +12,6 @@ import { Chat } from "./components/contactUs/chat";
 import { Footer } from "./components/footer/footer";
 import { SearchDropdownItem } from "./components/searchDropdownItem/searchDropdownItem";
 import { Admin } from "./components/admin panel/components/adminsidebar/admin";
-import { AdminRightside } from "./components/admin panel/components/adminsidebar/adminRightside";
 
 class App extends Component {
   render() {
@@ -20,14 +19,16 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        {/* <Product /> */}
-        {/* <Login /> */}
-        {/* <Register /> */}
-        {/* <Comment /> */}
-        {/* <CartContainer /> */}
-        {/* <SearchDropdownItem /> */}
-        {/* <Footer /> */}
-        {/* <Admin /> */}
+        <Product />
+        <Login />
+        <Register />
+        <Comment />
+        <Feedback />
+        <Chat />
+        <CartContainer />
+        <SearchDropdownItem />
+        <Footer />
+        <Admin />
       </>
     );
   }
