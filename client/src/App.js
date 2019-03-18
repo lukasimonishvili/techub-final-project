@@ -9,7 +9,7 @@ import { Product } from "./components/product/product";
 import { Feedback } from "./components/feedback/feedback";
 import { Comment } from "./components/comment/comment";
 import { Chat } from "./components/contactus/chat";
-import { Admin } from "./components/admin panel/components/adminsidebar/admin";
+import { Footer } from "./components/footer/footer";
 import { Additem } from "./components/admin panel/components/add items/additem";
 
 class App extends Component {
@@ -27,6 +27,7 @@ class App extends Component {
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
+        <Footer />
       </>
     );
   }
