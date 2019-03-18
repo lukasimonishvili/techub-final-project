@@ -6,6 +6,8 @@ import { CartContainer } from "./components/cart/cartContainer";
 import { Register } from "./components/register/register";
 import { Sidebar } from "./components/sidebar/sidebar";
 import { Product } from "./components/product/product";
+import { Feedback } from "./components/feedback/feedback";
+import { Comment } from "./components/comment/comment";
 
 class App extends Component {
   render() {
@@ -13,7 +15,9 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        {/* <Product /> */}
+        <Product />
+        <Comment />
+        <Feedback />
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
