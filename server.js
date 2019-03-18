@@ -6,7 +6,12 @@ const cors = require("cors");
 const path = require("path");
 
 const { connect } = require("./connect");
-const { userRegister, logIn } = require("./controllers/user.controller");
+const {
+  userRegister,
+  logIn,
+  removeUser,
+  editUser
+} = require("./controllers/user.controller");
 const {
   addComment,
   editComment,
@@ -14,7 +19,7 @@ const {
   getCommentsByProductId
 } = require("./controllers/comment.controller");
 const {
-  uploadProduct,
+  uploadProductImg,
   addProduct,
   removeProduct,
   getAllProductList,
@@ -22,7 +27,8 @@ const {
   searchProduct,
   getOneProduct,
   likeProduct,
-  disLikeProduct
+  disLikeProduct,
+  editProduct
 } = require("./controllers/product.controller");
 
 const app = express();
@@ -37,8 +43,15 @@ app.use(cors());
 
 app.post("/register", userRegister);
 app.post("/login", logIn);
+app.post("/removeUser", removeUser);
+app.post("/editUser/:userId", editUser);
 
-app.post("/addProduct", uploadProduct.array("img", 5), addProduct);
+app.post("/addProduct", uploadProductImg.array("img", 5), addProduct);
+app.post(
+  "/editProduct/:productId",
+  uploadProductImg.array("img", 5),
+  editProduct
+);
 app.post("/removeProduct", removeProduct);
 app.post("/likeProducts", likeProduct);
 app.post("/disLikeProduct", disLikeProduct);

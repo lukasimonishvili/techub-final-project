@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
     cb(null, new Date().toISOString().replace(/:/g, "-") + file.originalname);
   }
 });
-const uploadProduct = multer({
+const uploadProductImg = multer({
   storage: storage,
   limits: {
     fileSize: 1024 * 1024 * 2
@@ -122,87 +122,171 @@ const getOneProduct = (req, res) => {
     if (err) {
       res.json({ message: "Somthing wnet wrong" });
     } else {
-      res.json(data);
+      res.json(data[0]);
     }
   });
 };
 
 const likeProduct = (req, res) => {
-  Product.find({ _id: req.body.productId }, (err, data) => {
+  Product.findOne({ _id: req.body.productId }, (err, data) => {
     if (err) {
       res.json({ message: "Somthing wnet wrong" });
     } else {
-      let checkDisLikes = () => {
-        let result = true;
-        for (let i = 0; i < data[0].disLikes.length; i++) {
-          if (data[0].disLikes[i] == req.body.userId) {
-            data[0].disLikes.splice(i, 1);
-            result = false;
-            break;
-          }
-        }
-        return result;
-      };
-      if (!checkDisLikes()) {
-        data[0].likes.push(req.body.userId);
-      } else {
-        for (let i = 0; i < data[0].likes.length; i++) {
-          if (data[0].likes.length == req.body.userId) {
-            data[0].likes.splice(i, 1);
-            break;
-          }
+      let disLikeChecked = false;
+      let checkedDisLikeIndex = 0;
+      for (let i = 0; i < data.disLikes.length; i++) {
+        if (req.body.userId == data.disLikes[i]) {
+          checkedDisLikeIndex = i;
+          disLikeChecked = true;
+          break;
         }
       }
-      data.save(err => {
-        if (err) {
-          res.json({ message: "not saved" });
-        } else {
-          res.json({ message: "saved!" });
+      if (disLikeChecked) {
+        data.disLikes.splice(checkedDisLikeIndex, 1);
+        data.likes.push(req.body.userId);
+        data.save(err => {
+          if (err) {
+            res.json({ message: "not saved" });
+          } else {
+            res.json({ likes: data.likes, disLikes: data.disLikes });
+          }
+        });
+      } else {
+        let likeChecked = false;
+        let checkedLikeIndex = 0;
+        for (let i = 0; i < data.likes.length; i++) {
+          if (req.body.userId == data.likes[i]) {
+            checkedLikeIndex = i;
+            likeChecked = true;
+            break;
+          }
         }
-      });
+        if (likeChecked) {
+          data.likes.splice(checkedLikeIndex, 1);
+          data.save(err => {
+            if (err) {
+              res.json({ message: "not saved" });
+            } else {
+              res.json({ likes: data.likes, disLikes: data.disLikes });
+            }
+          });
+        } else {
+          data.likes.push(req.body.userId);
+          data.save(err => {
+            if (err) {
+              res.json({ message: "not saved" });
+            } else {
+              res.json({ likes: data.likes, disLikes: data.disLikes });
+            }
+          });
+        }
+      }
     }
   });
 };
 
 const disLikeProduct = (req, res) => {
-  Product.find({ _id: req.body.productId }, (err, data) => {
+  Product.findOne({ _id: req.body.productId }, (err, data) => {
     if (err) {
       res.json({ message: "Somthing wnet wrong" });
     } else {
-      let checkLikesList = () => {
-        let result = true;
-        for (let i = 0; i < data[0].likes.length; i++) {
-          if (req.body.userId == data[0].likes[i]) {
-            result = false;
-            data[0].likes.splice(i, 1);
+      let likeChecked = false;
+      let checkedLikeIndex = 0;
+      for (let i = 0; i < data.likes.length; i++) {
+        if (req.body.userId == data.likes[i]) {
+          likeChecked = true;
+          checkedLikeIndex = i;
+          break;
+        }
+      }
+      if (likeChecked) {
+        data.likes.splice(checkedLikeIndex, 1);
+        data.disLikes.push(req.body.userId);
+        data.save(err => {
+          if (err) {
+            res.json({ message: "not saved" });
+          } else {
+            res.json({ likes: data.likes, disLikes: data.disLikes });
+          }
+        });
+      } else {
+        let disLikeChecked = false;
+        let checkedDisLikeIndex = 0;
+        for (let i = 0; i < data.disLikes.length; i++) {
+          if (req.body.userId == data.disLikes[i]) {
+            disLikeChecked = true;
+            checkedDisLikeIndex = i;
             break;
           }
         }
-        return result;
-      };
-      if (!checkLikesList()) {
-        data[0].disLikes.push(req.body.userId);
-      } else {
-        for (let i = 0; i < data[0].disLikes.length; i++) {
-          if (data[0].disLikes[i] == req.body.userId) {
-            data[0].disLikes.splice(i, 1);
-            break;
+        if (disLikeChecked) {
+          data.disLikes.splice(checkedDisLikeIndex, 1);
+          data.save(err => {
+            if (err) {
+              res.json({ message: "not saved" });
+            } else {
+              res.json({ likes: data.likes, disLikes: data.disLikes });
+            }
+          });
+        } else {
+          data.disLikes.push(req.body.userId);
+          data.save(err => {
+            if (err) {
+              res.json({ message: "not saved" });
+            } else {
+              res.json({ likes: data.likes, disLikes: data.disLikes });
+            }
+          });
+        }
+      }
+    }
+  });
+};
+
+const editProduct = (req, res) => {
+  let removeList = req.body.removeList.split(",");
+  Product.findOne({ _id: req.params.productId }, (err, data) => {
+    if (err) {
+      res.json({ message: "Somthin wnet wrong" });
+    } else {
+      data.title = req.body.title;
+      data.description = req.body.description;
+      data.price = req.body.price;
+      data.amount = req.body.amount;
+      data.category = req.body.category;
+
+      for (let i = 0; i < data.img.length; i++) {
+        console.log(data.img[i]);
+        for (let k = 0; k < removeList.length; k++) {
+          if (data.img[i] == removeList[k]) {
+            data.img.splice(i, 1);
+            try {
+              fs.unlinkSync(
+                `${__dirname}/../client/src/img/uploads/${removeList[k]}`
+              );
+            } catch (erro) {
+              console.error(erro);
+            }
           }
         }
       }
+      for (let i = 0; i < req.files.length; i++) {
+        data.img.push(req.files[i].filename);
+      }
       data.save(err => {
-        if (err) {
-          res.json({ message: "not saved" });
+        if (!err) {
+          console.log("good");
         } else {
-          res.json({ message: "saved!" });
+          console.log("bad");
         }
       });
+      res.json(data);
     }
   });
 };
 
 module.exports = {
-  uploadProduct,
+  uploadProductImg,
   addProduct,
   removeProduct,
   getAllProductList,
@@ -210,5 +294,6 @@ module.exports = {
   searchProduct,
   getOneProduct,
   likeProduct,
-  disLikeProduct
+  disLikeProduct,
+  editProduct
 };

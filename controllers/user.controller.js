@@ -58,4 +58,32 @@ const logIn = (req, res) => {
   });
 };
 
-module.exports = { userRegister, logIn };
+const removeUser = (req, res) => {
+  User.remove({ _id: req.body.userId }, err => {
+    if (err) {
+      res.json({ message: "Somthing went wrong" });
+    } else {
+      res.json({ message: "removed" });
+    }
+  });
+};
+
+const editUser = (req, res) => {
+  User.findOne({ _id: req.params.userId }, (err, data) => {
+    bcrypt.hash(req.body.password, saltRound).then(async hash => {
+      data.name = req.body.name;
+      data.lastName = req.body.lastName;
+      data.eMail = req.body.eMail;
+      data.password = hash;
+      data.save(err => {
+        if (err) {
+          res.json({ message: "Changes not accepted" });
+        } else {
+          res.json({ message: "saved", data });
+        }
+      });
+    });
+  });
+};
+
+module.exports = { userRegister, logIn, removeUser, editUser };

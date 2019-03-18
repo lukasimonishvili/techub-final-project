@@ -422,3 +422,39 @@ table {
     align-items: flex-end;
     margin-bottom: 10px;
     border: 1px solid #474750; }
+
+.admin {
+  width: 250px;
+  height: 100vh;
+  background: #373D51;
+  margin: -80px 0 0 0; }
+  .admin__leftside__header {
+    background: #0B132B;
+    font-size: 25px;
+    padding: 20px;
+    color: #A5AFBB; }
+  .admin__leftside__list {
+    padding: 10px; }
+  .admin__leftside__item {
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid #6FFFE9;
+    cursor: pointer;
+    transition: 0.1s; }
+    .admin__leftside__item:hover {
+      color: #ffffff;
+      background: #1C2541; }
+
+.test {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 20px; }
+
+.test2 {
+  opacity: 0.5; }
+
+.test3 {
+  display: block;
+  border: 1px solid black;
+  margin: 20px; }
