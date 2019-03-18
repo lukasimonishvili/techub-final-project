@@ -20,20 +20,17 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        <Admin/>
-        <Additem/>
         {/* <Product /> */}
-        {/* <Comment /> */}
-        {/* <Feedback /> */}
-        <Chat />
         {/* <Login /> */}
         {/* <Register /> */}
+        {/* <Comment /> */}
+        {/* <Feedback /> */}
+        {/* <Chat /> */}
         {/* <CartContainer /> */}
-        {/* <Footer /> */}
         {/* <SearchDropdownItem /> */}
-        <Footer />
-        <SearchDropdownItem />
-        <Admin />
+        {/* <Footer /> */}
+        {/* <Admin/> */}
+        {/* <Additem/> */}
       </>
     );
   }
