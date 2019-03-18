@@ -24,8 +24,6 @@ class App extends Component {
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <Comment /> */}
-        {/* <Feedback /> */}
-        {/* <Chat /> */}
         {/* <CartContainer /> */}
         {/* <SearchDropdownItem /> */}
         {/* <Footer /> */}
