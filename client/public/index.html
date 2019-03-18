@@ -391,6 +391,74 @@ body{
         height: 40px;
         margin-top: 40px;
       }
+      .chat {
+        margin-left: 500px;
+        position: absolute;
+        width: 300px;
+        height: 500px;
+      }
+      .chat__body {
+        border-radius: 15px;
+        width: 100%;
+        height: 400px;
+        background: rgba(40, 101, 109, 0.5);
+        padding: 15px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 10px;
+        border: 1px solid rgb(71, 71, 80);
+      }
+      .chat__input {
+        border: 1px solid rgb(10, 17, 110);
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      .chat__body__container--admin {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .chat__body__container--user {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .chat__body__message--user {
+        border-radius: 10px 10px 0 10px;
+        width: 100%;
+        padding: 10px;
+        background-color: blue;
+        color: #ffff;
+      }
+      .chat__body__message--admin {
+        width: 100%;
+        padding: 10px;
+        background-color: silver;
+        border-radius: 10px 10px 10px 0;
+        color: #221c1c;
+      }
+      .chat__close {
+        position: absolute;
+        right: -14px;
+        top: -14px;
+      }
+      .chat__close img {
+        width: 30px;
+        height: 30px;
+      }
+      .chat__input__text {
+        border-radius: 5px 0 0 5px;
+        border-right: 0;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(10, 58, 58);
+        font-size: 14px;
+      }
+      .chat__input__send {
+        border-radius: 5px;
+        border: none;
+        background: rgb(97, 136, 113);
+        padding: 5px;
+      }
     </style>
   </head>
   <body>

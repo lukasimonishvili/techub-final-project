@@ -6,7 +6,10 @@ import { CartContainer } from "./components/cart/cartContainer";
 import { Register } from "./components/register/register";
 import { Sidebar } from "./components/sidebar/sidebar";
 import { Product } from "./components/product/product";
-import { Wrapper } from "./components/footer/wrapper";
+import { Feedback } from "./components/feedback/feedback";
+import { Comment } from "./components/comment/comment";
+import { Chat } from "./components/contactus/chat";
+import { Footer } from "./components/footer/footer";
 
 class App extends Component {
   render() {
@@ -14,11 +17,14 @@ class App extends Component {
       <>
         <Header />
         <Sidebar />
-        <Wrapper />
         {/* <Product /> */}
+        {/* <Comment /> */}
+        {/* <Feedback /> */}
+        <Chat />
         {/* <Login /> */}
         {/* <Register /> */}
         {/* <CartContainer /> */}
+        <Footer />
       </>
     );
   }
