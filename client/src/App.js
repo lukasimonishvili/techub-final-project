@@ -50,7 +50,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.getCookie("admin")) {
+    if (this.getCookie("admin") == "true") {
       return <Admin />;
     } else {
       return <User />;
