@@ -1,8 +1,11 @@
 import React from "react";
-
+import logo from "../../img/logo.png";
 export const HeaderLogo = () => {
   return (
-    <img className="header__logo" alt="" src="https://squigglepark.com/wp-content/themes/squigglepark/assets/img/logo_colour.png">
-    </img>
+    <img
+      className="header__logo"
+      alt=""
+      src={logo}
+    />
   );
 };

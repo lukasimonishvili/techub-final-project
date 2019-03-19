@@ -69,10 +69,9 @@ table {
       background: rgba(127, 127, 127, 0.4);
       border: 1px solid rgba(112, 112, 112, 0.6); }
   .header__logo {
+    margin-top: 7px;
     width: 250px;
-    height: 60px;
-    background-image: url("https://kb.sambapos.com/wp-content/themes/sambapos_kb/assets/img/logo.png");
-    background-size: cover; }
+    height: 50px; }
   .header__search {
     max-height: 50px;
     margin-top: 15px;

@@ -8,7 +8,6 @@
     )0 1 100% 0;
     position: fixed;
     margin-top: -80px;
-    // background-color: rgb(95, 45, 95);
     background-color: #33333A;
 
     padding: 0 20px 0 20px;
@@ -26,10 +25,10 @@
         }
     }
     &__logo {
+        margin-top: 7px;
         width: 250px;
-        height: 60px;
-        background-image: url("https://kb.sambapos.com/wp-content/themes/sambapos_kb/assets/img/logo.png");
-        background-size: cover;
+        height: 50px;
+       
     }
     &__search{
         max-height: 50px;

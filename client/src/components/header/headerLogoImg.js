@@ -1,10 +1,10 @@
 import React from "react";
-
+import logo from "../../img/logo.png"
 export const HeaderLogoImg = () => {
   return (
     <img
       className="header__logo"
-      src="https://kb.sambapos.com/wp-content/themes/sambapos_kb/assets/img/logo.png"
+      src={logo}
       alt="site logo"
     />
   );
