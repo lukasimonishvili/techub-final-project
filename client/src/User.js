@@ -8,6 +8,7 @@ import { Register } from "./components/register/register";
 import { Product } from "./components/product/product";
 import { Chat } from "./components/contactus/chat";
 import { Footer } from "./components/footer/footer";
+import { Message } from "./components/message icon/message";
 
 export class User extends React.Component {
   render() {
@@ -22,6 +23,7 @@ export class User extends React.Component {
           <Register path="/register" />
           <Product path="product/:productId" />
         </Router>
+        <Message />
         <Footer />
       </>
     );
