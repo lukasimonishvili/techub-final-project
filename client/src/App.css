@@ -415,7 +415,8 @@ table {
   margin-left: 500px;
   position: absolute;
   width: 300px;
-  height: 500px; }
+  height: 500px;
+  display: none; }
   .chat__body {
     border-radius: 15px;
     width: 100%;

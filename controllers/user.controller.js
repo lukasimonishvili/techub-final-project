@@ -1,15 +1,16 @@
 const bcrypt = require("bcrypt");
 const { User } = require("../models/user.model");
+const { Comment } = require("../models/comment.model");
 
 const saltRound = 10;
 
 const userRegister = (req, res) => {
   User.find({ eMail: req.body.eMail }, async (err, data) => {
     if (data.length > 0) {
-      res.json({ message: "user with same email already registred" });
+      res.json({ message: "Email is invalid or already taken" });
     } else {
       if (req.body.password.length < 6) {
-        res.json({ message: "Email is invalid or already taken" });
+        res.json({ message: "Password should contain min 6 symbols" });
       } else {
         if (req.body.password !== req.body.repassword) {
           res.json({ message: "Those passwords didn`t match. Try again" });
@@ -70,19 +71,61 @@ const removeUser = (req, res) => {
 
 const editUser = (req, res) => {
   User.findOne({ _id: req.params.userId }, (err, data) => {
-    bcrypt.hash(req.body.password, saltRound).then(async hash => {
-      data.name = req.body.name;
-      data.lastName = req.body.lastName;
-      data.eMail = req.body.eMail;
-      data.password = hash;
-      data.save(err => {
-        if (err) {
-          res.json({ message: "Changes not accepted" });
+    let passwdVerify = bcrypt.compareSync(req.body.oldPassword, data.password);
+    if (!passwdVerify) {
+      res.json({ message: "Wrong password", data });
+    } else {
+      if (req.body.newPassword) {
+        if (req.body.newPassword.length < 6) {
+          res.json({ message: "Password should contain min 6 symbols", data });
         } else {
-          res.json({ message: "saved", data });
+          Comment.updateMany(
+            { userId: req.params.userId },
+            { author: `${req.body.name} ${req.body.lastName}` },
+            erro => {
+              if (erro) {
+                console.log("comments not saved");
+              } else {
+                console.log("saved");
+              }
+            }
+          );
+          bcrypt.hash(req.body.newPassword, saltRound).then(async hash => {
+            data.password = hash;
+            data.name = req.body.name;
+            data.lastName = req.body.lastName;
+            data.save(err => {
+              if (err) {
+                res.json({ message: "Changes not accepted", data });
+              } else {
+                res.json({ message: "saved", data });
+              }
+            });
+          });
         }
-      });
-    });
+      } else {
+        Comment.updateMany(
+          { userId: req.params.userId },
+          { author: `${req.body.name} ${req.body.lastName}` },
+          erro => {
+            if (erro) {
+              console.log("comments not saved");
+            } else {
+              console.log("saved");
+            }
+          }
+        );
+        data.name = req.body.name;
+        data.lastName = req.body.lastName;
+        data.save(err => {
+          if (err) {
+            res.json({ message: "Changes not accepted", data });
+          } else {
+            res.json({ message: "saved", data });
+          }
+        });
+      }
+    }
   });
 };
 
