@@ -1,12 +1,11 @@
 import React from "react";
 import { HeaderLogo } from "./headerLogo";
-// import { მუდმივა } from "./საქაღალდე";
+import {Link} from "@reach/router"
 
 export const SpanHeaderLogo = () => {
   return (
-    <span >
-        <HeaderLogo />
-      {/* <მუდმივა /> */}
-    </span>
+    <Link to="/">
+      <HeaderLogo />
+    </Link>
   );
 };

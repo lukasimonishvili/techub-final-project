@@ -8,8 +8,9 @@
     )0 1 100% 0;
     position: fixed;
     margin-top: -80px;
+    margin-bottom: 40px;
     background-color: #33333A;
-
+    z-index: 1000;
     padding: 0 20px 0 20px;
     &__nav{
         height: 80px;
