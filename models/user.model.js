@@ -33,7 +33,8 @@ const UserSchema = new mongoose.Schema(
     shoppHistory: {
       type: Array,
       required: true
-    }
+    },
+    status: String
   },
   { timestamps: true }
 );
