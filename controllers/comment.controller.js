@@ -10,7 +10,8 @@ const addComment = (req, res) => {
         userId: req.body.userId,
         productId: req.body.productId,
         body: req.body.body,
-        author: `${data[0].name} ${data[0].lastName}`
+        author: `${data[0].name} ${data[0].lastName}`,
+        userId: req.body.userId
       };
       Comment.create(newComment);
       res.json({ message: "okay", newComment });
