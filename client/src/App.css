@@ -646,6 +646,19 @@ table {
       cursor: pointer;
       background: rgba(127, 127, 127, 0.4); }
 
+.customerlist__search {
+  margin: 15px; }
+
+.customerlist__table {
+  border-collapse: collapse;
+  width: 100%; }
+  .customerlist__table__row:nth-child(even) {
+    background-color: #dddddd; }
+  .customerlist__table__data, .customerlist__table__header {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px; }
+
 .test {
   width: 100px;
   height: 100px;

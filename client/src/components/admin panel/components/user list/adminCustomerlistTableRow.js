@@ -6,7 +6,7 @@ import { AdminCustomerlistTableData } from "./adminCustomerlistTableData";
 
 export const AdminCustomerlistTableRow = () => { 
     return     (
-    <tr className="admin__customerlist__table--row" >
+    <tr className="customerlist__table__row" >
         <AdminCustomerlistTableDataA collumnDataA="ID"/>
         <AdminCustomerlistTableData collumnData="Name"/>
         <AdminCustomerlistTableData collumnData="lastname"/>

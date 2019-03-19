@@ -4,7 +4,7 @@ import { AdminCustomerlistTableHeader } from "./adminCustomerlistTableHeader";
 
 export const AdminCustomerlistTableHeadrow = () => { 
     return     (
-    <tr className="admin__customerlist__table--headrow" >
+    <tr className="customerlist__table__headrow" >
         <AdminCustomerlistTableHeader collumnName="ID" />
         <AdminCustomerlistTableHeader collumnName="Name" />
         <AdminCustomerlistTableHeader collumnName="lastname" />

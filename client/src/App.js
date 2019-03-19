@@ -13,6 +13,7 @@ import { Chat } from "./components/contactus/chat";
 import { Footer } from "./components/footer/footer";
 import { SearchDropdownItem } from "./components/searchDropdownItem/searchDropdownItem";
 import { Admin } from "./components/admin panel/components/adminsidebar/admin";
+import { AdminCustomerlist } from "./components/admin panel/components/user list/adminCustomerlist";
 
 class App extends Component {
   render() {
@@ -32,6 +33,7 @@ class App extends Component {
         {/* <Footer /> */}
         {/* <Admin /> */}
         {/* <Chat /> */}
+        <AdminCustomerlist />
       </>
     );
   }

@@ -5,7 +5,7 @@ import { AdminCustomerlistTableRow } from "./adminCustomerlistTableRow";
 
 export const AdminCustomerlistTable = () => { 
     return     (
-    <table className="admin__customerlist__table" >
+    <table className="customerlist__table" >
         <AdminCustomerlistTableHeadrow />
         <AdminCustomerlistTableRow />
     </table>)

@@ -5,7 +5,7 @@ import { AdminCustomerlistTable } from "./adminCustomerlistTable";
 
 export const AdminCustomerlist = () => { 
     return     (
-    <div className="admin__customerlist">
+    <div className="customerlist">
         <AdminCustomerlistTitle />
         <AdminCustomerlistSearch />
         <AdminCustomerlistTable />

@@ -1,0 +1,23 @@
+// responsive დასაწერია ! 
+.customerlist{
+
+    &__search{
+        margin: 15px;
+    }
+
+    &__table{
+        border-collapse: collapse;
+        width: 100%;
+        &__row:nth-child(even){
+            background-color: #dddddd;
+        }
+
+        &__data, &__header {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+    }
+}
+
+// responsive დასაწერია ! 
