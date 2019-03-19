@@ -1,9 +1,9 @@
 import React from "react";
-
+import {Link} from "@reach/router"
 export const LoginRegister = () => {
     return (
-        <button className="login__register">
+        <Link to="/register" className="login__register">
             Register
-        </button>
+        </Link>
     )
 }

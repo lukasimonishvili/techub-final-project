@@ -335,6 +335,10 @@ table {
       background: rgba(127, 127, 127, 0.4);
       cursor: pointer; }
   .login__register {
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 15px;
     padding: 5px;
     border-radius: 2px;
     background-color: #707070;
@@ -575,6 +579,70 @@ table {
     background-color: #707070;
     color: #f3f3f3; }
     .comment__send:hover {
+      cursor: pointer;
+      background: rgba(127, 127, 127, 0.4); }
+
+.cart {
+  width: calc(100% - 400px);
+  margin: 0 auto; }
+  .cart__conatiner {
+    width: 100%;
+    height: auto;
+    margin-top: 30px; }
+  .cart__header {
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    color: #383030;
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px; }
+  .cart__productitem {
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    position: relative; }
+    .cart__productitem__image {
+      width: 60px;
+      height: 60px; }
+    .cart__productitem__name {
+      font-size: 15px;
+      font-weight: 400; }
+    .cart__productitem__quantity {
+      font-size: 15px;
+      font-weight: 400; }
+      .cart__productitem__quantity input {
+        width: 50px;
+        margin-left: 5px;
+        padding: 5px;
+        border: 1px solid #383834;
+        border-radius: 3px; }
+        .cart__productitem__quantity input:hover {
+          background: #f3f3f3; }
+    .cart__productitem__cost {
+      color: #098504;
+      font-size: 23px; }
+    .cart__productitem__delete {
+      background-image: url("https://cdn.iconscout.com/icon/free/png-256/delete-737-475058.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      padding: 5px;
+      cursor: pointer; }
+      .cart__productitem__delete:hover {
+        background-color: #f76666; }
+  .cart__buyitnow {
+    position: absolute;
+    right: 150px;
+    bottom: 100px;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #707070;
+    color: #f3f3f3; }
+    .cart__buyitnow:hover {
       cursor: pointer;
       background: rgba(127, 127, 127, 0.4); }
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Router } from "@reach/router";
 import { Header } from "./components/header/header";
 import { Sidebar } from "./components/sidebar/sidebar";
 import { Login } from "./components/login/login";
@@ -17,17 +18,19 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <Header /> */}
-        {/* <Sidebar /> */}
+        <Header />
+        <Sidebar />
         {/* <Product /> */}
-        {/* <Login /> */}
-        {/* <Register /> */}
         {/* <Comment /> */}
         {/* <Feedback /> */}
-        {/* <CartContainer /> */}
+        <Router>
+          <CartContainer path="/mycart" />
+          <Login path="/login" />
+          <Register path="/register" />
+        </Router>
         {/* <SearchDropdownItem /> */}
         {/* <Footer /> */}
-        <Admin />
+        {/* <Admin /> */}
         {/* <Chat /> */}
       </>
     );

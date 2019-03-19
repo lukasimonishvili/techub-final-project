@@ -1,0 +1,77 @@
+.cart {
+  width: calc(100% - 400px);
+  margin: 0 auto;
+  &__conatiner {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+  &__header {
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    color: #383030;
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+  }
+  &__productitem {
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    position: relative;
+    &__image {
+      width: 60px;
+      height: 60px;
+    }
+    &__name {
+      font-size: 15px;
+      font-weight: 400;
+    }
+    &__quantity {
+      font-size: 15px;
+      font-weight: 400;
+      & input {
+        width: 50px;
+        margin-left: 5px;
+        padding: 5px;
+        border: 1px solid rgb(56, 56, 52);
+        border-radius: 3px;
+        &:hover {
+          background: #f3f3f3;
+        }
+      }
+    }
+    &__cost {
+      color: rgb(9, 133, 4);
+      font-size: 23px;
+    }
+    &__delete {
+      background-image: url("https://cdn.iconscout.com/icon/free/png-256/delete-737-475058.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(247, 102, 102);
+      }
+    }
+  }
+  &__buyitnow {
+    position: absolute;
+    right: 150px;
+    bottom: 100px;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #707070;
+    color: #f3f3f3;
+    &:hover {
+      cursor: pointer;
+      background: rgba(127, 127, 127, 0.4);
+    }
+  }
+}

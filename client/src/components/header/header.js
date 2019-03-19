@@ -1,10 +1,10 @@
-import React from "react"
+import React from "react";
 import { Wrapper } from "./wrapper";
 
 export const Header = () => {
-    return (
+  return (
     <header className="header">
-    <Wrapper/>
+      <Wrapper />
     </header>
-    )
-}
+  );
+};

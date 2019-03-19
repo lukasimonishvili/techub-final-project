@@ -1,10 +1,10 @@
 import React from "react";
 import { HeaderCartImg } from "./headerCartImg";
-
+import { Link } from "@reach/router";
 export const HeaderCart = () => {
   return (
-    <h3 className="header__cart">
+    <Link to="/mycart" className="header__cart">
       <HeaderCartImg />
-    </h3>
+    </Link>
   );
 };
