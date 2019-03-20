@@ -6,6 +6,7 @@ const cors = require("cors");
 const path = require("path");
 
 const { connect } = require("./connect");
+const { addFeedback } = require("./controllers/admin.controller");
 const {
   userRegister,
   logIn,
@@ -40,6 +41,8 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(cors());
+
+app.post("/addFeedback", addFeedback);
 
 app.post("/register", userRegister);
 app.post("/login", logIn);
