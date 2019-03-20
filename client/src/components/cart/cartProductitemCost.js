@@ -1,6 +1,5 @@
 import React from "react";
 
-// import {მუდმივა} from "./ფაილი"
 
 export const CartProductitemCost = () => {
     return (

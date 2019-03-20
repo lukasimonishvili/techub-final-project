@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Admin } from "./components/admin panel/components/adminsidebar/admin";
 import { User } from "./User";
+import {LoggedInUser} from "./loggedInUser"
 
 class App extends Component {
   state = {
@@ -47,13 +48,16 @@ class App extends Component {
 
   componentDidMount() {
     this.checkCookie("admin", false, 3650);
+    this.checkCookie("user", false, 3650);
   }
 
   render() {
     if (this.getCookie("admin") == "true") {
       return <Admin />;
-    } else {
-      return <User />;
+    } else if(this.getCookie("user") == "true"){
+      return <LoggedInUser />
+    }else{
+      return <User/>
     }
   }
 }
