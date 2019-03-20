@@ -18,8 +18,8 @@ export class User extends React.Component {
           <CartContainer path="/mycart" />
           <Login path="/login" />
           <Register path="/register" />
-          <Product path="product/:productId" />
         </Router>
+        <Product path="product/:productId" />
         <Footer />
       </>
     );

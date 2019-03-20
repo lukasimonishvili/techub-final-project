@@ -6,7 +6,7 @@ import { ProductInfoRating } from "./productInfoRating";
 
 export const ProductInfo = () => {
   return (
-    <div className="prduct__info fl_dir_col">
+    <div className="product__info fl_dir_col">
       <ProductInfoHeader />
       <ProductInfoDescription />
       <ProductInfoCostQuantity />

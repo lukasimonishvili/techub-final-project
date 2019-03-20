@@ -8,12 +8,12 @@ import { ProductInfoManagequantity } from "./productInfoManagequantity";
 
 export const ProductInfoRating = () => {
   return (
-    <span className="product__info__rating">
+    <span className="product__info__rating fl">
       <ProductInfoRatingLike />
       <ProductInfoRatingLikeCount />
       <ProductInfoRatingDislike />
       <ProductInfoRatingDislikeCount />
-      <ProductInfoAddtocart />
+      {/* <ProductInfoAddtocart /> */}
       <ProductInfoManagequantity />
     </span>
   );

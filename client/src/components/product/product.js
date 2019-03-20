@@ -1,18 +1,14 @@
 import React from "react";
-import { ProductImage } from "./productImage";
-import { ProductInfo } from "./productInfo";
 import { Comment } from "../comment/comment";
 import { Feedback } from "../feedback/feedback";
+import { ProductInfoImageContainer } from "./productInfo&productImageContainer";
 
 export const Product = () => {
   return (
     <div className="product">
-      <ProductImage />
-      <ProductInfo />
-      <>
-        <Comment />
-        <Feedback />
-      </>
+      <ProductInfoImageContainer/>
+      <Comment />
+      <Feedback />
     </div>
   );
 };
