@@ -5,6 +5,10 @@ export const ChatBodyContainerUser = () => {
   return (
     <div className="chat__body__container--user">
       <ChatBodyMessageUser />
+      <ChatBodyMessageUser />
+      <ChatBodyMessageUser />
+      <ChatBodyMessageUser />
+
     </div>
   );
 };

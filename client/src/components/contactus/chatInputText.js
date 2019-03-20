@@ -2,7 +2,7 @@ import React from "react";
 
 export const ChatInputText = () => {
   return (
-    <textarea
+    <input
       className="chat__input__text"
       name="chat"
       cols="40"

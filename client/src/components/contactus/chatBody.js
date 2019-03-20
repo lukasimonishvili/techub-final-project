@@ -7,6 +7,7 @@ export const ChatBody = () => {
     <div className="chat__body fl fl_dir_col">
       <ChatBodyContainerUser />
       <ChatBodyContainerAdmin />
+      
     </div>
   );
 };

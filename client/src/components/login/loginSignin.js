@@ -30,7 +30,10 @@ export const LoginSignin = () => {
               setCookie("admin", true, 3650);
               window.location.replace("/");
             } else {
-              alert("user login not aviable for this moment");
+              removeCookie("user");
+              setCookie("user", true, 3650);
+              alert(`hello ${res.data.data.name}`);
+              window.location.replace("/");
             }
           });
         }
