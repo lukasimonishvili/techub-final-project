@@ -1,11 +1,15 @@
-// responsive დასაწერია !
-
 .chat {
   margin-left: 500px;
   position: absolute;
   width: 300px;
   height: 500px;
+  z-index: 1000;
+  cursor: move;
   display: none;
+  // transition: 0.4s;
+  // bottom: 180px;
+  // right: 150px;
+  
   &__body {
     border-radius: 15px;
     width: 100%;
@@ -16,43 +20,78 @@
     align-items: flex-end;
     margin-bottom: 10px;
     border: 1px solid rgb(71, 71, 80);
+
+    &__container {
+      &--admin {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      &--user {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    &__message {
+      &--user {
+        border-radius: 10px 10px 0 10px;
+        width: 100%;
+        padding: 10px;
+        background-color: blue;
+        color: #ffff;
+      }
+      &--admin {
+        width: 100%;
+        padding: 10px;
+        background-color: silver;
+        border-radius: 10px 10px 10px 0;
+        color: #221c1c;
+      }
+    }
+  }
+  &__input {
+    border: 1px solid rgb(10, 17, 110);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    &__text {
+      border-radius: 5px 0 0 5px;
+      border-right: 0;
+      border: none;
+      background-color: rgba(255, 255, 255, 0);
+      color: rgb(10, 58, 58);
+      font-size: 14px;
+    }
+    &__send {
+      border-radius: 5px;
+      border: 1px solid transparent;
+      background: rgb(97, 136, 113);
+      padding: 5px;
+      &:hover {
+        cursor: pointer;
+        border: 1px solid green;
+      }
+      &:active {
+        background: rgb(58, 131, 88);
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    cursor: pointer;
+    & img {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
-// display: flex;
-// width: 100%;
-// height: 100vh;
-// position: fixed;
-// z-index: 100;
-// margin-top: -80px;
-// transition: 3s;
-// &__rightside{
-//     display: none;
-//     background-color: #000000;
-//     opacity: 0.3;
-//     width: calc(100% - 300px);
-//     height: 100vh;
-//     position: fixed;
+.messageIcon{
+  width: 100px;
+  transform: rotateY(180deg);
+  position: fixed;
+  bottom: 180px;
+  right: 50px;
+  cursor: pointer;
 
-//     right: 0;
-// }
-// &__productitem{
-//     padding: 15px;
-//     font-size: 15px;
-//     font-weight: 700;
-//     color: rgb(80, 69, 69);
-//     text-align: center;
-// &:hover{
-//     cursor: pointer;
-//     background-color: #cbd2ae;
-// }
-// }
-
-// @media (max-width: 885px) {
-//     .sidebar{
-//         &__container{
-//             width: 200px;
-//         }
-//         &__rightside{
-//             width: calc(100% - 200px);
-//         }
-//     }
+}
