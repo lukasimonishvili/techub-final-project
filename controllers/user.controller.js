@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const { User } = require("../models/user.model");
 const { Comment } = require("../models/comment.model");
+const { Feedback } = require("../models/feedback.model");
 
 const saltRound = 10;
 
@@ -90,6 +91,15 @@ const editUser = (req, res) => {
               }
             }
           );
+          Feedback.updateMany(
+            { userId: req.params.userId },
+            { author: `${req.body.name} ${req.body.lastName}` },
+            errr => {
+              if (errr) {
+                console.log("feedbacks dont changed");
+              }
+            }
+          );
           bcrypt.hash(req.body.newPassword, saltRound).then(async hash => {
             data.password = hash;
             data.name = req.body.name;
@@ -112,6 +122,15 @@ const editUser = (req, res) => {
               console.log("comments not saved");
             } else {
               console.log("saved");
+            }
+          }
+        );
+        Feedback.updateMany(
+          { userId: req.params.userId },
+          { author: `${req.body.name} ${req.body.lastName}` },
+          errr => {
+            if (errr) {
+              console.log("feedbacks dont changed");
             }
           }
         );
