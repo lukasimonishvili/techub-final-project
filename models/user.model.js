@@ -34,7 +34,11 @@ const UserSchema = new mongoose.Schema(
       type: Array,
       required: true
     },
-    status: String
+    status: String,
+    notification: {
+      type: Number,
+      required: true
+    }
   },
   { timestamps: true }
 );

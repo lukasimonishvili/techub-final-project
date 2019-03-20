@@ -5,10 +5,10 @@ import { ChatInput } from "./chatInput";
 
 export const Chat = () => {
   return (
-      <div className="chat fl fl_dir_col" id="chat">
-        <ChatClose />
-        <ChatBody />
-        <ChatInput />
-      </div>
+    <div className="chat fl fl_dir_col" id="chat">
+      <ChatClose />
+      <ChatBody />
+      <ChatInput />
+    </div>
   );
 };
