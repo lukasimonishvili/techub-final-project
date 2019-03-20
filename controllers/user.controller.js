@@ -25,7 +25,8 @@ const userRegister = (req, res) => {
               birthDay: req.body.birthDay,
               balance: 0,
               cart: [],
-              shoppHistory: []
+              shoppHistory: [],
+              notification: 0
             };
             await User.create(newUser);
             res.json({ message: "registration successfully" });
@@ -148,4 +149,21 @@ const editUser = (req, res) => {
   });
 };
 
-module.exports = { userRegister, logIn, removeUser, editUser };
+const fillBalance = (req, res) => {
+  User.findOne({ _id: req.body.userId }, (err, data) => {
+    if (err) {
+      res.json({ message: "balance not filled", balance: data.balance });
+    } else {
+      data.balance = data.balance + req.body.balance;
+      data.save(errr => {
+        if (errr) {
+          res.json({ message: "balance not filled", balance: data.balance });
+        } else {
+          res.json({ message: "Balace filled", balance: data.balance });
+        }
+      });
+    }
+  });
+};
+
+module.exports = { userRegister, logIn, removeUser, editUser, fillBalance };

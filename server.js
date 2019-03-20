@@ -6,12 +6,20 @@ const cors = require("cors");
 const path = require("path");
 
 const { connect } = require("./connect");
-const { addFeedback } = require("./controllers/admin.controller");
+const {
+  addFeedback,
+  messageUserToAdmin,
+  messageAdminToUser,
+  clearUserNotification,
+  clearAdminNotification,
+  getMessages
+} = require("./controllers/admin.controller");
 const {
   userRegister,
   logIn,
   removeUser,
-  editUser
+  editUser,
+  fillBalance
 } = require("./controllers/user.controller");
 const {
   addComment,
@@ -43,11 +51,17 @@ app.use(helmet());
 app.use(cors());
 
 app.post("/addFeedback", addFeedback);
+app.post("/messageUserToAdmin", messageUserToAdmin);
+app.post("/messageAdminToUser", messageAdminToUser);
+app.post("/clearUserNotification", clearUserNotification);
+app.post("/clearAdminNotification", clearAdminNotification);
+app.post("/getMessages", getMessages);
 
 app.post("/register", userRegister);
 app.post("/login", logIn);
 app.post("/removeUser", removeUser);
 app.post("/editUser/:userId", editUser);
+app.post("/fillBalance", fillBalance);
 
 app.post("/addProduct", uploadProductImg.array("img", 5), addProduct);
 app.post(
