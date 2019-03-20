@@ -1,0 +1,65 @@
+.profilepopup {
+  &__container {
+    width: 170px;
+    height: 150px;
+    position: absolute;
+    left: -30px;
+    top: 30px;
+    z-index: 100;
+    display: none;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 170px;
+    height: 150px;
+    background: #33333a;
+    border-radius: 0 0 5px 5px;
+
+    &__balance {
+      margin: 0 auto;
+      width: 150px;
+      font-size: 20px;
+      list-style-type: none;
+      text-align: center;
+      color: green;
+      font-weight: 600;
+      margin-top: 40px;
+    }
+    &__account {
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      margin: 0 auto;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      width: 150px;
+      padding: 4px;
+      border-radius: 2px;
+      background-color: #707070;
+      color: #f3f3f3;
+      &:hover {
+        background: rgba(127, 127, 127, 0.4);
+
+        cursor: pointer;
+      }
+    }
+    &__logout {
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      width: 150px;
+      padding: 4px;
+      border-radius: 2px;
+      background-color: #707070;
+      color: #f3f3f3;
+      &:hover {
+        background: rgba(127, 127, 127, 0.4);
+        cursor: pointer;
+      }
+    }
+  }
+}
