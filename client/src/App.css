@@ -463,12 +463,12 @@ table {
 
 .chat {
   margin-left: 500px;
-  position: absolute;
+  position: fixed;
   width: 300px;
   height: 500px;
   z-index: 1000;
   display: none;
-  bottom: 50px;
+  bottom: 10px;
   right: 50px; }
   .chat__body {
     border-radius: 15px;
@@ -542,7 +542,7 @@ table {
   width: 100px;
   transform: rotateY(180deg);
   position: fixed;
-  bottom: 180px;
+  bottom: 100px;
   right: 50px;
   cursor: pointer; }
 
@@ -706,6 +706,7 @@ table {
 
 .cart {
   width: calc(100% - 400px);
+  min-height: 100vh;
   margin: 0 auto; }
   .cart__conatiner {
     width: 100%;
@@ -876,10 +877,18 @@ table {
 
 .productOnPage {
   display: block;
-  margin: 0;
+  margin: 0 auto;
   width: 260px;
   height: 350px;
-  border: 1px solid black; }
+  border: 1px solid #85ad8f;
+  margin: 20px; }
+  .productOnPage__container {
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap; }
   .productOnPage__linkToProduct {
     text-decoration: none;
     text-align: center;
