@@ -1,12 +1,11 @@
 .chat {
   margin-left: 500px;
-  position: absolute;
+  position: fixed;
   width: 300px;
   height: 500px;
   z-index: 1000;
   display: none;
-  // transition: 0.4s;
-  bottom: 50px;
+  bottom: 10px;
   right: 50px;
 
   &__body {
@@ -110,7 +109,7 @@
   width: 100px;
   transform: rotateY(180deg);
   position: fixed;
-  bottom: 180px;
+  bottom: 100px;
   right: 50px;
   cursor: pointer;
 }

@@ -3,10 +3,11 @@
   margin: 0 auto;
   width: 260px;
   height: 350px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(133, 173, 143);
   margin: 20px;
-  }
+
   &__container {
+    padding-top: 30px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -53,4 +54,3 @@
     height: 5%;
   }
 }
-
