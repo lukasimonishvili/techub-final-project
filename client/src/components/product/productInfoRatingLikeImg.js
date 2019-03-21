@@ -2,6 +2,6 @@ import React from "react";
 
 export const ProductInfoRatingLikeImg = () => {
   return (
-    <img src="https://clipartimage.net/wp-content/uploads/2017/07/clipart-mask-happy-face.png" />
+    <img src="https://cms2cms.com/wp-content/uploads/2019/02/Green-Tick-PNG-Pic.png" />
   );
 };
