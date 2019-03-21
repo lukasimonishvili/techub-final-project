@@ -3,13 +3,30 @@ import { CartHeader } from "./cartHeader";
 import { Cart } from "./cart";
 import { CartBuyitnow } from "./cartBuyitnow";
 
-export const CartContainer = props => {
+export class CartContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.hadleContainerState = this.hadleContainerState.bind(this);
+  }
+
+  state = {
+    fake: true
+  };
+
+  hadleContainerState(value) {
+    this.setState({ fake: value });
+  }
   // console.log(props.cart);
-  return (
-    <div className="cart__container">
-      <CartHeader />
-      <Cart />
-      <CartBuyitnow />
-    </div>
-  );
-};
+  render() {
+    return (
+      <div className="cart__container">
+        <CartHeader />
+        <Cart />
+        <CartBuyitnow
+          fake={this.state.fake}
+          stater={this.hadleContainerState}
+        />
+      </div>
+    );
+  }
+}

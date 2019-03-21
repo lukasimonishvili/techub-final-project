@@ -2,7 +2,7 @@ import React from "react";
 
 export const ProfilePopupLogout = () => {
   return (
-    <button
+    <p
       className="profilepopup__list__logout"
       onClick={() => {
         let removeCookie = cname => {
@@ -24,6 +24,6 @@ export const ProfilePopupLogout = () => {
       }}
     >
       Log Out
-    </button>
+    </p>
   );
 };

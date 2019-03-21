@@ -853,7 +853,6 @@ table {
     margin-top: 15px;
     margin-bottom: 5px;
     width: 150px;
-    padding: 4px;
     border-radius: 2px;
     background-color: #707070;
     color: #f3f3f3; }
@@ -867,7 +866,6 @@ table {
     margin: 0 auto;
     margin-bottom: 10px;
     width: 150px;
-    padding: 4px;
     border-radius: 2px;
     background-color: #707070;
     color: #f3f3f3; }
