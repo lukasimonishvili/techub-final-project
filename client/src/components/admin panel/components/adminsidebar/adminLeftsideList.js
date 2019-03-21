@@ -6,7 +6,7 @@ export const AdminLeftsideList = () => {
     <ul className="admin__leftside__list">
       <AdminLeftsideItem listItem="Add Items" link="/additem" />
       <AdminLeftsideItem listItem="User List" link="/userlist" />
-      <AdminLeftsideItem listItem="Item List" link="/" />
+      <AdminLeftsideItem listItem="Product List" link="/productlist" />
       <AdminLeftsideItem listItem="Comments" link="/" />
       <AdminLeftsideItem listItem="Contact User" link="/contactuser" />
       <AdminLeftsideItem listItem="Log Out" link="/" />
