@@ -8,6 +8,7 @@ import { Message } from "./components/message icon/message";
 import { Chat } from "./components/contactus/chat";
 import { Router } from "@reach/router";
 import Axios from "axios";
+import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
 
 export class LoggedInUser extends React.Component {
   state = {
@@ -46,6 +47,7 @@ export class LoggedInUser extends React.Component {
           <CartContainer path="/mycart" />
           <Product path="product/:productId" />
         </Router>
+        <ProductOnPageContainer/>
         <Message />
         <Footer />
       </>

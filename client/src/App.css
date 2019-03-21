@@ -923,6 +923,104 @@ table {
     padding-right: 120px;
     height: 5%; }
 
+.contactuser {
+  width: 100%;
+  height: 100vh;
+  justify-content: space-between; }
+  .contactuser__leftside {
+    width: 100%;
+    height: 100vh;
+    background: #f6f6f6;
+    border: 1px solid #0b132b; }
+    .contactuser__leftside__body {
+      width: 100%;
+      height: calc(100% - 100px);
+      background: #d3d3d3;
+      overflow-y: auto;
+      justify-content: flex-end;
+      position: relative; }
+      .contactuser__leftside__body--admin {
+        background: darkgrey;
+        padding: 5px;
+        font-size: 15px;
+        border-bottom: 2px solid black; }
+      .contactuser__leftside__body--user {
+        padding: 5px;
+        font-size: 15px;
+        border-bottom: 2px solid black; }
+      .contactuser__leftside__body--username {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        color: grey;
+        border: 1px solid black;
+        padding: 30px;
+        font-size: 20px;
+        border-radius: 3px; }
+    .contactuser__leftside__input {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px; }
+      .contactuser__leftside__input--text {
+        width: calc(100% - 40px);
+        height: 60px;
+        padding: 10px; }
+        .contactuser__leftside__input--text:focus {
+          background: rgba(80, 82, 121, 0.397);
+          color: #f6f6f6; }
+      .contactuser__leftside__input--send {
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid transparent; }
+        .contactuser__leftside__input--send:hover {
+          background-color: #a7a6a6;
+          border: 1px solid black; }
+        .contactuser__leftside__input--send:active {
+          background-color: grey;
+          border: 1px solid black; }
+  .contactuser__rightside {
+    width: 100%;
+    height: 100vh;
+    background: #d3d3d3;
+    border: 1px solid grey;
+    overflow-y: auto; }
+    .contactuser__rightside__list {
+      padding: 30px;
+      margin: 0 auto; }
+      .contactuser__rightside__list--item {
+        padding: 10px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        border: 2px solid #214e47;
+        cursor: pointer; }
+        .contactuser__rightside__list--item:active {
+          background: #0b132b;
+          color: #ffffff; }
+    .contactuser__rightside__search {
+      width: 100%;
+      padding: 30px;
+      margin: 0 auto; }
+      .contactuser__rightside__search--input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #214e47; }
+      .contactuser__rightside__search--button {
+        padding: 10px;
+        border: 1px solid #214e47;
+        border-left: 0;
+        cursor: pointer; }
+        .contactuser__rightside__search--button:hover {
+          background-color: #a7a6a6;
+          border: 1px solid black;
+          border-left: none; }
+        .contactuser__rightside__search--button:active {
+          background-color: grey;
+          border: 1px solid black;
+          border-left: none; }
+
 .test {
   width: 100px;
   height: 100px;

@@ -12,7 +12,7 @@ import { ProductOnPageContainer } from "./components/product item/productOnPageC
 export class User extends React.Component {
   render() {
     return (
-      <>
+      <>      
         <Header />
         <Sidebar />
         <Router>
