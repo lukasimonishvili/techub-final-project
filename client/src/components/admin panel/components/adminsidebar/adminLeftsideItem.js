@@ -19,8 +19,8 @@ export const AdminLeftsideItem = props => {
               document.cookie =
                 cname + "=" + cvalue + ";" + expires + ";path=/";
             };
-            removeCookie("admin");
-            setCookie("admin", false, 3650);
+            removeCookie("c914847298b1b13064c3a4d");
+            setCookie("c914847298b1b13064c3a4d", null, 3650);
             window.location.replace("/");
           }
         }}

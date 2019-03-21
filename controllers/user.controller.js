@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const { User } = require("../models/user.model");
 const { Comment } = require("../models/comment.model");
 const { Feedback } = require("../models/feedback.model");
+const { Product } = require("../models/product.model");
 
 const saltRound = 10;
 
@@ -44,7 +45,10 @@ const logIn = (req, res) => {
     } else {
       if (!data.length) {
         res.json({
-          message: "The eMail you entered doesn't match any account"
+          message: "The eMail you entered doesn't match any account",
+          data: {
+            status: false
+          }
         });
       } else {
         let passwdVerify = bcrypt.compareSync(
@@ -52,7 +56,12 @@ const logIn = (req, res) => {
           data[0].password
         );
         if (!passwdVerify) {
-          res.json({ message: "The password you entered is incorrect" });
+          res.json({
+            message: "The password you entered is incorrect",
+            data: {
+              status: false
+            }
+          });
         } else {
           res.json({ message: "Okay", data: data[0] });
         }
@@ -166,4 +175,76 @@ const fillBalance = (req, res) => {
   });
 };
 
-module.exports = { userRegister, logIn, removeUser, editUser, fillBalance };
+const addToCart = (req, res) => {
+  User.findOne({ _id: req.body.userId }, (err, data) => {
+    Product.findOne({ _id: req.body.productId }, (er, product) => {
+      let alreadyInCart = false;
+      for (let i = 0; i < data.cart.length; i++) {
+        if (data.cart[i]._id == req.body.productId) {
+          alreadyInCart = true;
+        }
+      }
+      if (alreadyInCart) {
+        res.json({
+          message: "this produc is already in your cart",
+          data: data.cart
+        });
+      } else {
+        data.cart.unshift(product);
+        data.save(errr => {
+          if (errr) {
+            res.json({ message: "failed add to cart", data: data.cart });
+          } else {
+            res.json({ message: "product added to cart", data: data.cart });
+          }
+        });
+      }
+    });
+  });
+};
+
+const removeFromCart = (req, res) => {
+  User.findOne({ _id: req.body.userId }, (err, data) => {
+    for (let i = 0; i < data.cart.length; i++) {
+      if (data.cart[i]._id == req.body.productId) {
+        data.cart.splice(i, 1);
+        break;
+      }
+    }
+    data.save(er => {
+      if (er) {
+        res.json({
+          message: "Somthing wnet wrong. Try again!",
+          data: data.cart
+        });
+      } else {
+        res.json({
+          message: "Product removed from your cart",
+          data: data.cart
+        });
+      }
+    });
+  });
+};
+
+const getOneUser = (req, res) => {
+  User.findOne({ _id: req.params.userId }, (err, data) => {
+    res.json(data);
+  });
+};
+
+const buyProduct = (req, res) => {
+  console.log({ ...req.body });
+  res.json("ok");
+};
+
+module.exports = {
+  userRegister,
+  logIn,
+  removeUser,
+  editUser,
+  fillBalance,
+  addToCart,
+  removeFromCart,
+  getOneUser
+};

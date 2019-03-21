@@ -26,14 +26,24 @@ export const LoginSignin = () => {
             password: password.value
           }).then(res => {
             if (res.data.data.status) {
-              removeCookie("admin");
-              setCookie("admin", true, 3650);
+              removeCookie("c914847298b1b13064c3a4d");
+              setCookie(
+                "c914847298b1b13064c3a4d",
+                "c914847298b1b13064c3a4d",
+                3650
+              );
               window.location.replace("/");
             } else {
-              removeCookie("user");
-              setCookie("user", true, 3650);
-              alert(`hello ${res.data.data.name}`);
-              window.location.replace("/");
+              console.log(res.data.data._id);
+              console.log(String(res.data.data._id));
+              if (res.data.message == "Okay") {
+                removeCookie("c3a4d");
+                let tostring = String(res.data.data._id);
+                setCookie("c3a4d", tostring, 3650);
+                window.location.replace("/");
+              } else {
+                alert(res.data.message);
+              }
             }
           });
         }

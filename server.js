@@ -19,7 +19,10 @@ const {
   logIn,
   removeUser,
   editUser,
-  fillBalance
+  fillBalance,
+  addToCart,
+  removeFromCart,
+  getOneUser
 } = require("./controllers/user.controller");
 const {
   addComment,
@@ -62,6 +65,9 @@ app.post("/login", logIn);
 app.post("/removeUser", removeUser);
 app.post("/editUser/:userId", editUser);
 app.post("/fillBalance", fillBalance);
+app.post("/addToCart", addToCart);
+app.post("/removeFromCart", removeFromCart);
+app.post("/getOneUser/:userId", getOneUser);
 
 app.post("/addProduct", uploadProductImg.array("img", 5), addProduct);
 app.post(

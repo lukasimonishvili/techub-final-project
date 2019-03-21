@@ -7,6 +7,7 @@ export const LoginUsername = () => {
       type="text"
       placeholder="E-mail"
       id="eMail"
+      defaultValue="misho@misho.com"
     />
   );
 };

@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const { Product } = require("../models/product.model");
 const { Comment } = require("../models/comment.model");
+const { User } = require("../models/user.model");
 
 const fileFilter = (req, file, cb) => {
   if (file.mimetype == "image/jpeg" || file.mimetype == "image/png") {
@@ -51,7 +52,6 @@ const removeProduct = (req, res) => {
     if (err) {
       console.error(err);
     } else {
-      console.log(data);
       for (let i = 0; i < data.img.length; i++) {
         try {
           fs.unlinkSync(
@@ -78,6 +78,24 @@ const removeProduct = (req, res) => {
       console.log("comments deleted");
     }
   });
+  User.find({}, (err, data) => {
+    for (let i = 0; i < data.length; i++) {
+      User.findOne({ _id: data[i]._id }, (er, user) => {
+        for (let k = 0; k < user.cart.length; k++) {
+          if (user.cart[k]._id == req.body.productId) {
+            user.cart.splice(k, 1);
+            break;
+          }
+        }
+        user.save(errr => {
+          if (!errr) {
+            console.log("cart cleared");
+          }
+        });
+      });
+    }
+  });
+  console.log(req.body.productId);
   res.json({ message: "product removed from database" });
 };
 
@@ -118,11 +136,11 @@ const searchProduct = (req, res) => {
 };
 
 const getOneProduct = (req, res) => {
-  Product.find({ _id: req.params.productId }, (err, data) => {
+  Product.findOne({ _id: req.params.productId }, (err, data) => {
     if (err) {
       res.json({ message: "Somthing wnet wrong" });
     } else {
-      res.json(data[0]);
+      res.json(data);
     }
   });
 };
