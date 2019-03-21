@@ -17,8 +17,8 @@ export const ProfilePopupLogout = () => {
           var expires = "expires=" + d.toUTCString();
           document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         };
-        removeCookie("user");
-        setCookie("user", false, 3650);
+        removeCookie("c3a4d");
+        setCookie("c3a4d", null, 3650);
         alert(`aba kargad`);
         window.location.replace("/");
       }}
