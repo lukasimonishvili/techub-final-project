@@ -22,7 +22,8 @@ const {
   fillBalance,
   addToCart,
   removeFromCart,
-  getOneUser
+  getOneUser,
+  buyProduct
 } = require("./controllers/user.controller");
 const {
   addComment,
@@ -68,6 +69,7 @@ app.post("/fillBalance", fillBalance);
 app.post("/addToCart", addToCart);
 app.post("/removeFromCart", removeFromCart);
 app.post("/getOneUser/:userId", getOneUser);
+app.post("/buyProduct", buyProduct);
 
 app.post("/addProduct", uploadProductImg.array("img", 5), addProduct);
 app.post(

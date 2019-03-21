@@ -163,7 +163,7 @@ const fillBalance = (req, res) => {
     if (err) {
       res.json({ message: "balance not filled", balance: data.balance });
     } else {
-      data.balance = data.balance + req.body.balance;
+      data.balance = data.balance + Number(req.body.balance);
       data.save(errr => {
         if (errr) {
           res.json({ message: "balance not filled", balance: data.balance });
@@ -234,8 +234,29 @@ const getOneUser = (req, res) => {
 };
 
 const buyProduct = (req, res) => {
-  console.log({ ...req.body });
-  res.json("ok");
+  User.findOne({ _id: req.body.userId }, (err, data) => {
+    data.balance -= Number(req.body.spendMoney);
+    for (let i = 0; i < req.body.products.length; i++) {
+      Product.findOne(
+        { _id: req.body.products[i].productId },
+        (er, product) => {
+          product.amount -= Number(req.body.products[i].amount);
+          data.shoppHistory.push(product);
+          product.save(errr => {
+            if (!errr) {
+              console.log(`${product.title} amount now = ${product.amount}`);
+            }
+          });
+        }
+      );
+    }
+    data.cart = [];
+    data.save(errr => {
+      if (!errr) {
+        res.json({ message: "Thank you for buying", cart: data.cart });
+      }
+    });
+  });
 };
 
 module.exports = {
@@ -246,5 +267,6 @@ module.exports = {
   fillBalance,
   addToCart,
   removeFromCart,
-  getOneUser
+  getOneUser,
+  buyProduct
 };

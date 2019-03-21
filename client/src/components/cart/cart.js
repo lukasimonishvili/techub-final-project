@@ -52,6 +52,7 @@ export class Cart extends React.Component {
               price={item.price}
               productId={item._id}
               stateHandler={this.stateHandler}
+              cart={this.state.cart}
             />
           );
         })}
