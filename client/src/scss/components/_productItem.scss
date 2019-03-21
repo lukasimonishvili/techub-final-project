@@ -1,92 +1,56 @@
-
-.productOnPage{
+.productOnPage {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 350px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 20px;
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__linkToProduct {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+  }
+  &_img {
+    width: 100%;
+    height: auto;
+  }
+  &_name {
     display: block;
-    margin: 0;
-    width: 260px;
-    height: 350px;
-    border: 1px solid black;
-    &__linkToProduct{
-        text-decoration: none;
-        text-align: center;
-        color: black;
-    }
-    &_img{
-        width: 100%;
-        height: auto;
-    }
-    &_name{
-        display: block;
-        width: 95%;
-        height: 5%;
-        margin: 2px;
-        padding: 2px;    
-    }
-    &_descr{
-        display: block;
-        text-align: left;
-        margin: 2px;
-        padding: 5px 5px;
-        width: 95%;
-        height: 15%;
-        margin-top: -10px;  
-        font-size: 11px;
-        overflow:hidden;
-    }
-    &_price{
-        display: block;
-        float: left;
-        padding-left:90px;
-        height: 5%;
-    }
-    &_curenc{
-        display: block;
-        float: right;
-        padding-right: 120px;
-        height: 5%;
-    }
+    width: 95%;
+    height: 5%;
+    margin: 2px;
+    padding: 2px;
+  }
+  &_descr {
+    display: block;
+    text-align: left;
+    margin: 2px;
+    padding: 5px 5px;
+    width: 95%;
+    height: 15%;
+    margin-top: -10px;
+    font-size: 11px;
+    overflow: hidden;
+  }
+  &_price {
+    display: block;
+    float: left;
+    padding-left: 90px;
+    height: 5%;
+  }
+  &_curenc {
+    display: block;
+    float: right;
+    padding-right: 120px;
+    height: 5%;
+  }
 }
 
-// .productOnPage {
-//     margin: 0;
-//     width: 260px;
-//     height: 315px;
-//     border: 1px solid black;
-//     }
-//     .productOnPage__linkToProduct {
-//         text-decoration: none;
-//         text-align: center;
-//         color: black;
-//     }
-//     .productOnPage_img {
-//         width: 95%;
-//         height: 65%;
-//     }
-//     .productOnPage_name {
-//         display: block;
-//         width: 95%;
-//         height: 5%;
-//         margin: 2px;
-//         padding: 2px;
-//     }
-//     .productOnPage_descr {
-//         display: block;
-//         text-align: left;
-//         margin: 2px;
-//         padding: 5px 5px;
-//         width: 95%;
-//         height: 15%;
-//         font-size: 11px;
-//         overflow:hidden; 
-//     }
-//     .productOnPage_price {
-//         display: block;
-//         float: left;
-//         padding-left:90px;
-//         height: 5%;
-//     }
-//     .productOnPage_curenc {
-//         display: block;
-//         float: right;
-//         padding-right: 120px;
-//         height: 5%;
-//     }

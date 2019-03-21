@@ -7,7 +7,7 @@ import { CartContainer } from "./components/cart/cartContainer";
 import { Register } from "./components/register/register";
 import { Product } from "./components/product/product";
 import { Footer } from "./components/footer/footer";
-import { ProductOnPage } from "./components/product item/productOnPage";
+import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
 
 export class User extends React.Component {
   render() {
@@ -15,13 +15,13 @@ export class User extends React.Component {
       <>
         <Header />
         <Sidebar />
-        <ProductOnPage />
         <Router>
           <CartContainer path="/mycart" />
           <Login path="/login" />
           <Register path="/register" />
         </Router>
-        <Product path="product/:productId" />
+        <ProductOnPageContainer/>
+        {/* <Product path="product/:productId" /> */}
         <Footer />
       </>
     );
