@@ -7,6 +7,7 @@ export const LoginPassword = () => {
       type="password"
       placeholder="password"
       id="password"
+      defaultValue="mishomisho"
     />
   );
 };

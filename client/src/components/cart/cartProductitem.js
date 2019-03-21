@@ -6,14 +6,17 @@ import { CartProductitemQuantity } from "./cartProductitemQuantity";
 import { CartProductitemCost } from "./cartProductitemCost";
 import { CartProductitemDelete } from "./cartProductitemDelete";
 
-export const CartProductitem = () => {
+export const CartProductitem = props => {
   return (
     <li className="cart__productitem fl fl_jus_bet fl_ali_cen">
-      <CartProductitemImage />
-      <CartProductitemName />
-      <CartProductitemQuantity />
-      <CartProductitemCost />
-      <CartProductitemDelete />
+      <CartProductitemImage photo={props.photo} />
+      <CartProductitemName productName={props.productName} />
+      <CartProductitemQuantity amount={props.amount} />
+      <CartProductitemCost price={props.price} />
+      <CartProductitemDelete
+        stateHandler={props.stateHandler}
+        productId={props.productId}
+      />
     </li>
   );
 };

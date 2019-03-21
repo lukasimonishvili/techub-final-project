@@ -2,13 +2,6 @@ import React from "react";
 
 // import {მუდმივა} from "./ფაილი"
 
-export const CartProductitemName = () => {
-    return (
-        <span className="cart__productitem__name">
-            {/* ტექსტი
-                ან/და
-            <მუდმივა/> */}
-            test product
-        </span>
-    )
-}
+export const CartProductitemName = props => {
+  return <span className="cart__productitem__name">{props.productName}</span>;
+};
