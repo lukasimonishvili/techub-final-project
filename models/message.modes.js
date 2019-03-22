@@ -9,6 +9,10 @@ const MessageSchema = new mongoose.Schema({
   body: {
     type: Array,
     required: true
+  },
+  notification: {
+    type: Number,
+    required: true
   }
 });
 

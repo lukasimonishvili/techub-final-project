@@ -1,4 +1,28 @@
-.account{
+.account {
+  width: 100%;
+  height: calc(100vh - 250px);
+  &__container {
     width: 100%;
-    height: calc(100vh - 250px);
+    height: 100%;
+    padding: 30px;
+    &__nav {
+        margin: 0 auto;
+        width: 800px;
+        padding: 15px;
+        justify-content: space-between;
+        background: blue;
+        color: white;
+        font-size: 20px;
+    }
+    &__body{
+        width: calc(100% - 300px);
+        height: 500px; 
+        background: red;
+        margin-top: 40px;
+        margin: 0 auto;
+        padding: 20px; 
+
+
+    }
+  }
 }

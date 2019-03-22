@@ -476,8 +476,9 @@ table {
     height: 400px;
     background: rgba(40, 101, 109, 0.5);
     padding: 15px;
-    justify-content: flex-end;
     align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
     margin-bottom: 10px;
     border: 1px solid #474750;
     overflow-y: scroll; }
@@ -488,24 +489,28 @@ table {
       background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent)); }
     .chat__body__container--admin {
       width: 100%;
+      height: auto;
       margin-bottom: 10px; }
     .chat__body__container--user {
       width: 100%;
+      height: auto;
       margin-bottom: 10px; }
     .chat__body__message--user {
       border-radius: 10px 10px 0 10px;
-      width: 100%;
       padding: 10px;
+      text-align: left;
       background-color: blue;
       color: #ffff;
-      margin-bottom: 10px; }
+      word-wrap: break-word; }
     .chat__body__message--admin {
       width: 100%;
       padding: 10px;
+      text-align: left;
       background-color: silver;
       border-radius: 10px 10px 10px 0;
       color: #221c1c;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      word-wrap: break-word; }
   .chat__input {
     border: 1px solid #0a116e;
     border-radius: 10px;
@@ -546,6 +551,7 @@ table {
   right: 50px;
   cursor: pointer; }
   .messageIcon__notification {
+    display: none;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -555,7 +561,7 @@ table {
     font-size: 14px;
     color: #ffff;
     background-color: darkred;
-    opacity: .9;
+    opacity: 0.9;
     padding: 5px;
     border-radius: 50%;
     font-weight: 500; }
@@ -1058,6 +1064,110 @@ table {
 .account {
   width: 100%;
   height: calc(100vh - 250px); }
+  .account__container {
+    width: 100%;
+    height: 100%;
+    padding: 30px; }
+    .account__container__nav {
+      margin: 0 auto;
+      width: 800px;
+      padding: 15px;
+      justify-content: space-between;
+      background: blue;
+      color: white;
+      font-size: 20px; }
+    .account__container__body {
+      width: calc(100% - 300px);
+      height: 500px;
+      background: red;
+      margin-top: 40px;
+      margin: 0 auto;
+      padding: 20px; }
+
+.ProductCat {
+  width: 100%;
+  height: 100%; }
+  .ProductCat__title {
+    margin: 5px; }
+  .ProductCat__Newcatbutton {
+    margin: 5px;
+    cursor: pointer;
+    padding: 1px 6px;
+    align-items: flex-start;
+    text-align: center;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    font: 400 13.3333px Arial; }
+    .ProductCat__Newcatbutton:active {
+      background-color: gray;
+      border: 1px solid black; }
+    .ProductCat__Newcatbutton:hover {
+      background-color: #a7a6a6;
+      border: 1px solid black; }
+  .ProductCat__All {
+    margin: 5px;
+    border: 2px solid aquamarine;
+    width: 30%;
+    padding: 2px 6px;
+    background-color: aquamarine; }
+    .ProductCat__All__Link {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      font: 400 13.3333px Arial; }
+  .ProductCat__List {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row; }
+  .ProductCat__Cat {
+    margin: 8px 5px;
+    width: 140px;
+    height: 140px;
+    padding: 2px 6px;
+    background-color: pink; }
+    .ProductCat__Cat__Link {
+      text-decoration: none;
+      color: black;
+      padding-top: 30px;
+      display: block;
+      cursor: pointer;
+      font: 400 13.3333px Arial; }
+    .ProductCat__Cat__actionbutton {
+      margin: 5px;
+      display: inline;
+      margin-top: 30px;
+      border: 1px solid #214e47;
+      cursor: pointer;
+      padding: 1px 6px;
+      align-items: flex-start;
+      text-align: center;
+      color: buttontext;
+      background-color: buttonface;
+      box-sizing: border-box;
+      text-rendering: auto;
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-transform: none;
+      text-indent: 0px;
+      text-shadow: none;
+      font: 400 13.3333px Arial; }
+      .ProductCat__Cat__actionbutton:active {
+        background-color: gray;
+        border: 1px solid black; }
+      .ProductCat__Cat__actionbutton:hover {
+        background-color: #a7a6a6;
+        border: 1px solid black; }
 
 .test {
   width: 100px;

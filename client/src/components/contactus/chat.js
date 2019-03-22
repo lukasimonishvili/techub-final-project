@@ -7,11 +7,13 @@ import Axios from "axios";
 export class Chat extends React.Component {
   constructor(props) {
     super(props);
-    this.stateHandler = this.stateHandler.bind(this);
+    this.chatSateHandler = this.chatSateHandler.bind(this);
+    this.notificationStateHandler = this.notificationStateHandler.bind(this);
   }
 
   state = {
-    chat: []
+    chat: [],
+    notification: 0
   };
 
   getCookie = cname => {
@@ -29,21 +31,67 @@ export class Chat extends React.Component {
     return "";
   };
 
-  stateHandler(value) {
+  chatSateHandler(value) {
     this.setState({
       chat: value
     });
+  }
+
+  notificationStateHandler(value) {
+    this.setState({ notification: value });
+  }
+
+  intervalHandler(value) {
+    let interval = setInterval(() => {
+      Axios.post(`/getMessages`, { userId: this.getCookie("c3a4d") }).then(
+        res => {
+          if (res.data.notification) {
+            console.log(res.data.notification);
+          }
+        }
+      );
+    }, 5 * 1000);
+    if (!value) {
+      clearInterval(interval);
+    } else {
+    }
   }
 
   componentDidMount() {
     Axios.post(`/getMessages`, { userId: this.getCookie("c3a4d") }).then(
       res => {
         if (res.data) {
-          this.setState({ chat: res.data.body });
+          this.setState({
+            chat: res.data.body,
+            notification: res.data.notification
+          });
         }
-        console.log(this.state.chat);
+        let notification = document.getElementById("notification");
+        if (this.state.notification) {
+          notification.innerHTML = this.state.notification;
+          notification.style.display = "block";
+        }
       }
     );
+
+    setInterval(() => {
+      Axios.post(`/getMessages`, { userId: this.getCookie("c3a4d") }).then(
+        res => {
+          if (res.data.notification > 0) {
+            this.setState({
+              chat: res.data.body,
+              notification: res.data.notification
+            });
+            let notification = document.getElementById("notification");
+            let messageIcon = document.getElementById("messageIcon");
+            if (messageIcon.style.display == "block") {
+              notification.style.display = "block";
+            }
+            notification.innerHTML = this.state.notification;
+          }
+        }
+      );
+    }, 1 * 1000);
   }
 
   render() {
@@ -51,7 +99,7 @@ export class Chat extends React.Component {
       <div className="chat fl fl_dir_col" id="chat">
         <ChatClose />
         <ChatBody chat={this.state.chat} />
-        <ChatInput stater={this.stateHandler} />
+        <ChatInput stater={this.chatSateHandler} />
       </div>
     );
   }
