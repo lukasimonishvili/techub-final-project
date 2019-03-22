@@ -4,7 +4,7 @@ const { User } = require("../models/user.model");
 const addComment = (req, res) => {
   User.find({ _id: req.body.userId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       let newComment = {
         userId: req.body.userId,
@@ -22,7 +22,7 @@ const addComment = (req, res) => {
 const editComment = (req, res) => {
   Comment.findOne({ _id: req.body.commentId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       data.body = req.body.body;
       data.save(err => {
@@ -40,7 +40,7 @@ const editComment = (req, res) => {
 const deleteComment = (req, res) => {
   Comment.remove({ _id: req.body.commentId }, err => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       res.json({ message: "removed" });
     }
@@ -50,7 +50,7 @@ const deleteComment = (req, res) => {
 const getCommentsByProductId = (req, res) => {
   Comment.find({ productId: req.params.productId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       res.json(data);
     }

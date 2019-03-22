@@ -73,7 +73,7 @@ const removeProduct = (req, res) => {
   console.log("removing comments for that products...");
   Comment.deleteMany({ productId: req.body.productId }, err => {
     if (err) {
-      console.log("Somthing went wrong");
+      console.log("Something went wrong");
     } else {
       console.log("comments deleted");
     }
@@ -102,7 +102,7 @@ const removeProduct = (req, res) => {
 const getAllProductList = (req, res) => {
   Product.find({}, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing wnet wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       console.log(data);
       res.json(data);
@@ -113,7 +113,7 @@ const getAllProductList = (req, res) => {
 const getProductsByCategory = (req, res) => {
   Product.find({ category: req.params.category }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       res.json(data);
     }
@@ -138,7 +138,7 @@ const searchProduct = (req, res) => {
 const getOneProduct = (req, res) => {
   Product.findOne({ _id: req.params.productId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing wnet wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       res.json(data);
     }
@@ -148,7 +148,7 @@ const getOneProduct = (req, res) => {
 const likeProduct = (req, res) => {
   Product.findOne({ _id: req.body.productId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing wnet wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       let disLikeChecked = false;
       let checkedDisLikeIndex = 0;
@@ -206,7 +206,7 @@ const likeProduct = (req, res) => {
 const disLikeProduct = (req, res) => {
   Product.findOne({ _id: req.body.productId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing wnet wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       let likeChecked = false;
       let checkedLikeIndex = 0;
@@ -265,7 +265,7 @@ const editProduct = (req, res) => {
   let removeList = req.body.removeList.split(",");
   Product.findOne({ _id: req.params.productId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthin wnet wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       data.title = req.body.title;
       data.description = req.body.description;

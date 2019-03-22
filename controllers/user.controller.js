@@ -41,7 +41,7 @@ const userRegister = (req, res) => {
 const logIn = (req, res) => {
   User.find({ eMail: req.body.eMail }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       if (!data.length) {
         res.json({
@@ -73,7 +73,7 @@ const logIn = (req, res) => {
 const removeUser = (req, res) => {
   User.remove({ _id: req.body.userId }, err => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       res.json({ message: "removed" });
     }
@@ -106,7 +106,7 @@ const editUser = (req, res) => {
             { author: `${req.body.name} ${req.body.lastName}` },
             errr => {
               if (errr) {
-                console.log("feedbacks dont changed");
+                console.log("feedback isn't changed");
               }
             }
           );
@@ -140,7 +140,7 @@ const editUser = (req, res) => {
           { author: `${req.body.name} ${req.body.lastName}` },
           errr => {
             if (errr) {
-              console.log("feedbacks dont changed");
+              console.log("feedback isn't changed");
             }
           }
         );
@@ -168,7 +168,7 @@ const fillBalance = (req, res) => {
         if (errr) {
           res.json({ message: "balance not filled", balance: data.balance });
         } else {
-          res.json({ message: "Balace filled", balance: data.balance });
+          res.json({ message: "Balance filled", balance: data.balance });
         }
       });
     }
@@ -186,14 +186,14 @@ const addToCart = (req, res) => {
       }
       if (alreadyInCart) {
         res.json({
-          message: "this produc is already in your cart",
+          message: "this product is already in your cart",
           data: data.cart
         });
       } else {
         data.cart.unshift(product);
         data.save(errr => {
           if (errr) {
-            res.json({ message: "failed add to cart", data: data.cart });
+            res.json({ message: "failed to add to cart", data: data.cart });
           } else {
             res.json({ message: "product added to cart", data: data.cart });
           }
@@ -214,7 +214,7 @@ const removeFromCart = (req, res) => {
     data.save(er => {
       if (er) {
         res.json({
-          message: "Somthing wnet wrong. Try again!",
+          message: "Something went wrong. Try again!",
           data: data.cart
         });
       } else {

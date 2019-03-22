@@ -6,7 +6,7 @@ const { Notification } = require("../models/admin.notification.model");
 const addFeedback = (req, res) => {
   User.findOne({ _id: req.body.userId }, (err, data) => {
     if (err) {
-      res.json({ message: "Somthing went wrong" });
+      res.json({ message: "Something went wrong" });
     } else {
       let newFeedback = {
         userId: req.body.userId,
@@ -14,7 +14,7 @@ const addFeedback = (req, res) => {
         body: req.body.body
       };
       Feedback.create(newFeedback);
-      res.json({ message: "Thank you for feedback" });
+      res.json({ message: "Thank you for your feedback" });
     }
   });
 };
@@ -42,7 +42,7 @@ const messageUserToAdmin = (req, res) => {
       data.notification = notSumm;
       data.save(errr => {
         if (errr) {
-          res.json({ message: "Meesage dont sent" });
+          res.json({ message: "Meesage isn't sent" });
         } else {
           res.json({ data: data.body, message: "Sent" });
         }

@@ -5,7 +5,7 @@ const FeedbackSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  authot: {
+  author: {
     type: String,
     required: true
   },
