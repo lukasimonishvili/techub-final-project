@@ -91,17 +91,21 @@ const messageAdminToUser = (req, res) => {
 
 const clearUserNotification = (req, res) => {
   Message.findOne({ userId: req.body.userId }, (err, data) => {
-    data.notification = 0;
-    data.save(er => {
-      if (er) {
-        res.json({
-          message: "notification not cleared",
-          data: data.notification
-        });
-      } else {
-        res.json({ message: "notification cleared", data: data });
-      }
-    });
+    if (!data) {
+      res.json("Nothing to change");
+    } else {
+      data.notification = 0;
+      data.save(er => {
+        if (er) {
+          res.json({
+            message: "notification not cleared",
+            data: data.notification
+          });
+        } else {
+          res.json({ message: "notification cleared", data: data });
+        }
+      });
+    }
   });
 };
 
@@ -123,7 +127,15 @@ const clearAdminNotification = (req, res) => {
 
 const getMessages = (req, res) => {
   Message.findOne({ userId: req.body.userId }, (err, data) => {
-    res.json(data);
+    if (data !== null) {
+      res.json(data);
+    } else {
+      let emptyData = {
+        notification: 0,
+        body: []
+      };
+      res.json(emptyData);
+    }
   });
 };
 
