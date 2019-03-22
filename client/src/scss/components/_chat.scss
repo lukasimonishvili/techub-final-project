@@ -14,8 +14,9 @@
     height: 400px;
     background: rgba(40, 101, 109, 0.5);
     padding: 15px;
-    justify-content: flex-end;
     align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
     margin-bottom: 10px;
     border: 1px solid rgb(71, 71, 80);
     overflow-y: scroll;
@@ -25,6 +26,7 @@
     }
     &::-webkit-scrollbar-thumb {
       background-color: #0ae;
+
       background-image: -webkit-gradient(
         linear,
         0 0,
@@ -37,29 +39,36 @@
     &__container {
       &--admin {
         width: 100%;
+        height: auto;
         margin-bottom: 10px;
       }
       &--user {
         width: 100%;
+        height: auto;
         margin-bottom: 10px;
       }
     }
     &__message {
       &--user {
         border-radius: 10px 10px 0 10px;
-        width: 100%;
+        // width: 100%;
         padding: 10px;
+        text-align: left;
         background-color: blue;
         color: #ffff;
-        margin-bottom: 10px;
+        word-wrap: break-word;
+        // margin-bottom: 10px;
       }
       &--admin {
         width: 100%;
         padding: 10px;
+        text-align: left;
         background-color: silver;
         border-radius: 10px 10px 10px 0;
         color: #221c1c;
         margin-bottom: 10px;
+        word-wrap: break-word;
+
       }
     }
   }
