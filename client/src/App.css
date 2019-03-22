@@ -646,16 +646,19 @@ table {
 
 .product__feedback {
   padding: 30px;
-  align-content: center; }
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 35px; }
   .product__feedback__input {
-    width: 500px;
-    height: 70px;
+    width: 300px;
+    height: 40px;
     padding: 10px;
     border: 1px solid lightgrey; }
   .product__feedback__button {
     width: 150px;
-    height: 30px;
+    height: 40px;
     padding: 5px;
+    margin-left: 1px;
     border-radius: 2px;
     background-color: #707070;
     color: #f3f3f3; }
@@ -667,25 +670,26 @@ table {
   width: 100%;
   padding: 30px;
   flex-wrap: wrap;
-  align-items: flex-end;
-  flex-direction: column; }
+  align-items: center; }
   .comment__output {
     margin: 0 auto;
     width: calc(100% - 80px);
     height: 50px;
     font-size: 15px; }
     .comment__output--edit {
+      margin-left: 30px;
       width: 150px;
       height: 30px;
       padding: 5px;
       border-radius: 2px;
       background-color: #707070;
-      color: #f3f3f3; }
+      color: #f3f3f3;
+      margin-bottom: 20px; }
       .comment__output--edit:hover {
         cursor: pointer;
         background: rgba(127, 127, 127, 0.4); }
   .comment__input {
-    width: calc(100% - 180px);
+    width: calc(100% - 250px);
     padding: 30px;
     margin: 30px 0 30px 30px;
     border: 1px solid transparent;
@@ -697,6 +701,7 @@ table {
     width: 150px;
     height: 30px;
     padding: 5px;
+    margin-left: 30px;
     border-radius: 2px;
     background-color: #707070;
     color: #f3f3f3; }
@@ -928,12 +933,12 @@ table {
   .contactuser__leftside {
     width: 100%;
     height: 100vh;
-    background: #f6f6f6;
+    background: #f4f4f4;
     border: 1px solid #0b132b; }
     .contactuser__leftside__body {
       width: 100%;
       height: calc(100% - 100px);
-      background: #d3d3d3;
+      background: #f4f4f4;
       overflow-y: auto;
       justify-content: flex-end;
       position: relative; }
@@ -982,7 +987,7 @@ table {
   .contactuser__rightside {
     width: 100%;
     height: 100vh;
-    background: #d3d3d3;
+    background: #f4f4f4;
     border: 1px solid grey;
     overflow-y: auto; }
     .contactuser__rightside__list {

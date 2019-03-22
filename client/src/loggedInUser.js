@@ -2,14 +2,13 @@ import React from "react";
 import { LoggedInHeader } from "./components/header/loggedInHeader";
 import { Sidebar } from "./components/sidebar/sidebar";
 import { CartContainer } from "./components/cart/cartContainer";
-import { Product } from "./components/product/product";
 import { Footer } from "./components/footer/footer";
 import { Message } from "./components/message icon/message";
 import { Chat } from "./components/contactus/chat";
 import { Router } from "@reach/router";
 import Axios from "axios";
 import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
-
+import { Product } from "./components/product/product";
 export class LoggedInUser extends React.Component {
   state = {
     logedInUser: {},
@@ -47,7 +46,8 @@ export class LoggedInUser extends React.Component {
           <CartContainer path="/mycart" />
           <Product path="product/:productId" />
         </Router>
-        <ProductOnPageContainer/>
+        <ProductOnPageContainer />
+        {/* <Product /> */}
         <Message />
         <Footer />
       </>

@@ -1,14 +1,15 @@
 import React from "react";
 import { CommentOutput } from "./commentOutput";
 import { CommentInput } from "./commentInput";
-import { CommentSend } from "./commentSend";
+import { CommentInputButtons } from "./commentInputButtons";
+
 
 export const Comment = () => {
   return (
     <div className="comment fl">
       <CommentOutput />
       <CommentInput />
-      <CommentSend />
+      <CommentInputButtons/>
     </div>
   );
 };
