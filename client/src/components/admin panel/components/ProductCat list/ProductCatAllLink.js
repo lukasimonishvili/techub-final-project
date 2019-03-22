@@ -1,8 +1,9 @@
 import React from "react";
 export const ProductCatAllLink = () => {
   return (
-    <a className="ProductCat__All__Link">
+    // აქ ლინკი უნდა ყოფილიყო, a tag-ი მქონდა და შევცვალე.
+    <span className="ProductCat__All__Link">
         All products >>
-    </a>
+    </span>
   );
 };
