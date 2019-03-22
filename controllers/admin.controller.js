@@ -37,7 +37,7 @@ const messageUserToAdmin = (req, res) => {
         side: "user",
         text: req.body.body
       };
-      data.body.unshift(newMessage);
+      data.body.push(newMessage);
       Notification.findOne({ from: req.body.userId }, (er, not) => {
         not.notification = not.notification++;
         not.save(errr => {
@@ -86,7 +86,7 @@ const messageAdminToUser = (req, res) => {
         side: "admin",
         text: req.body.body
       };
-      data.body.unshift(newMessage);
+      data.body.push(newMessage);
       User.findOne({ _id: req.body.userId }, (er, user) => {
         let notNumber = user.notification + 1;
         user.notification = notNumber;
@@ -143,14 +143,8 @@ const clearAdminNotification = (req, res) => {
 
 const getMessages = (req, res) => {
   Message.findOne({ userId: req.body.userId }, (err, data) => {
-    User.findOne({ _id: data.userId }, (error, user) => {
-      let sendData = {
-        user: `${user.name} ${user.lastName}`,
-        messages: data.body,
-        userId: data.userId
-      };
-      res.json(sendData);
-    });
+    console.log(data);
+    res.json(data);
   });
 };
 

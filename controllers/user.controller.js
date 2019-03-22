@@ -237,11 +237,15 @@ const buyProduct = (req, res) => {
   User.findOne({ _id: req.body.userId }, (err, data) => {
     data.balance -= Number(req.body.spendMoney);
     for (let i = 0; i < req.body.products.length; i++) {
+      data.shoppHistory.push({
+        productId: req.body.products[i].productId,
+        title: req.body.products[i].title,
+        quantity: req.body.products[i].amount
+      });
       Product.findOne(
         { _id: req.body.products[i].productId },
         (er, product) => {
           product.amount -= Number(req.body.products[i].amount);
-          data.shoppHistory.push(product);
           product.save(errr => {
             if (!errr) {
               console.log(`${product.title} amount now = ${product.amount}`);
