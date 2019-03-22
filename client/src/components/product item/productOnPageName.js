@@ -3,7 +3,7 @@ import React from "react";
 export const ProductOnPageName = () => {
   return (
     <h3 className="productOnPage_name">
-        Product Name
+       iPhone X 64GB
     </h3>
   );
 };

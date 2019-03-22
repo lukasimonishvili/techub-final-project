@@ -1,9 +1,7 @@
 .productOnPage {
-  display: block;
   margin: 0 auto;
   width: 260px;
   height: 350px;
-  border: 1px solid rgb(133, 173, 143);
   margin: 20px;
 
   &__container {
@@ -25,32 +23,59 @@
   }
   &_name {
     display: block;
-    width: 95%;
-    height: 5%;
     margin: 2px;
     padding: 2px;
-  }
-  &_descr {
-    display: block;
-    text-align: left;
-    margin: 2px;
-    padding: 5px 5px;
-    width: 95%;
-    height: 15%;
-    margin-top: -10px;
-    font-size: 11px;
-    overflow: hidden;
-  }
-  &_price {
-    display: block;
-    float: left;
-    padding-left: 90px;
-    height: 5%;
+    color: darkolivegreen;
+    font-size: 16px;
+    &_buttons{
+      justify-content: space-around;
+      & button {
+        cursor: pointer;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        color: rgb(37, 35, 35);
+        &:hover{
+          border: 1px solid rgb(133, 173, 143);
+          background: #f8f8f8;
+        }
+        &:active{
+          background: #727272;
+          color: #f4f4f4;
+
+        }
+      }
+      &-addtocart-link{
+        cursor: pointer;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        color: rgb(37, 35, 35);
+        font-size: 14px;
+        &:hover{
+          border: 1px solid rgb(133, 173, 143);
+          background: #f8f8f8;
+        }
+        &:active{
+          background: #727272;
+          color: #f4f4f4;
+
+        }
+      }
+    }
   }
   &_curenc {
     display: block;
-    float: right;
-    padding-right: 120px;
-    height: 5%;
+    width: 100%;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 20px;
+    font-size: 14px;
+    color: green;
   }
+  
 }
