@@ -29,8 +29,9 @@ export class CartBuyitnow extends React.Component {
             let amountMessage = false;
             for (let i = 0; i < res.data.cart.length; i++) {
               let amountInp = parent.childNodes[i].childNodes[2].childNodes[1];
+              let productTitle = parent.childNodes[i].childNodes[1].innerHTML;
               if (
-                amountInp.value == "MAX : 10" ||
+                amountInp.value[0] == "M" ||
                 amountInp.value == "" ||
                 amountInp.value == 0
               ) {
@@ -39,7 +40,8 @@ export class CartBuyitnow extends React.Component {
               } else {
                 let obj = {
                   amount: amountInp.value,
-                  productId: res.data.cart[i]._id
+                  productId: res.data.cart[i]._id,
+                  title: productTitle
                 };
                 sendData.push(obj);
                 let productPrice = Number(
@@ -69,7 +71,7 @@ export class CartBuyitnow extends React.Component {
               };
               Axios.post("/buyProduct", buyData).then(buy => {
                 alert(buy.data.message);
-                this.props.stater(!this.props.fake);
+                this.props.stater(buy.data.cart);
               });
             }
           });

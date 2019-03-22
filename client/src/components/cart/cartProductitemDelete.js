@@ -1,6 +1,5 @@
 import React from "react";
 import Axios from "axios";
-import { PromiseProvider } from "mongoose";
 
 export const CartProductitemDelete = props => {
   return (
@@ -26,7 +25,7 @@ export const CartProductitemDelete = props => {
           productId: props.productId
         }).then(res => {
           alert(res.data.message);
-          props.stateHandler(res.data.data);
+          props.stater(res.data.data);
         });
       }}
     />

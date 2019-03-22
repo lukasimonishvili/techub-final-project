@@ -14,7 +14,7 @@ export const CartProductitem = props => {
       <CartProductitemQuantity amount={props.amount} />
       <CartProductitemCost price={props.price} />
       <CartProductitemDelete
-        stateHandler={props.stateHandler}
+        stater={props.stater}
         productId={props.productId}
       />
     </li>
