@@ -879,11 +879,9 @@ table {
       cursor: pointer; }
 
 .productOnPage {
-  display: block;
   margin: 0 auto;
   width: 260px;
   height: 350px;
-  border: 1px solid #85ad8f;
   margin: 20px; }
   .productOnPage__container {
     padding-top: 30px;
@@ -901,30 +899,49 @@ table {
     height: auto; }
   .productOnPage_name {
     display: block;
-    width: 95%;
-    height: 5%;
     margin: 2px;
-    padding: 2px; }
-  .productOnPage_descr {
-    display: block;
-    text-align: left;
-    margin: 2px;
-    padding: 5px 5px;
-    width: 95%;
-    height: 15%;
-    margin-top: -10px;
-    font-size: 11px;
-    overflow: hidden; }
-  .productOnPage_price {
-    display: block;
-    float: left;
-    padding-left: 90px;
-    height: 5%; }
+    padding: 2px;
+    color: darkolivegreen;
+    font-size: 16px; }
+    .productOnPage_name_buttons {
+      justify-content: space-around; }
+      .productOnPage_name_buttons button {
+        cursor: pointer;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        color: #252323; }
+        .productOnPage_name_buttons button:hover {
+          border: 1px solid #85ad8f;
+          background: #f8f8f8; }
+        .productOnPage_name_buttons button:active {
+          background: #727272;
+          color: #f4f4f4; }
+      .productOnPage_name_buttons-addtocart-link {
+        cursor: pointer;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        color: #252323;
+        font-size: 14px; }
+        .productOnPage_name_buttons-addtocart-link:hover {
+          border: 1px solid #85ad8f;
+          background: #f8f8f8; }
+        .productOnPage_name_buttons-addtocart-link:active {
+          background: #727272;
+          color: #f4f4f4; }
   .productOnPage_curenc {
     display: block;
-    float: right;
-    padding-right: 120px;
-    height: 5%; }
+    width: 100%;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 20px;
+    font-size: 14px;
+    color: green; }
 
 .contactuser {
   width: 100%;
