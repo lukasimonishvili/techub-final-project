@@ -5,9 +5,8 @@ export const ChatInputText = () => {
     <input
       className="chat__input__text"
       name="chat"
-      cols="40"
-      rows="2"
       placeholder="Type your message here"
+      id="messageInp"
     />
   );
 };

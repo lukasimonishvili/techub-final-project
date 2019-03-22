@@ -1,5 +1,5 @@
 import React from "react";
 
-export const ChatBodyMessageUser = () => {
-  return <div className="chat__body__message--user">hello</div>;
+export const ChatBodyMessageUser = props => {
+  return <div className="chat__body__message--user">{props.txt}</div>;
 };

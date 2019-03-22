@@ -272,7 +272,6 @@ const editProduct = (req, res) => {
       data.price = req.body.price;
       data.amount = req.body.amount;
       data.category = req.body.category;
-
       for (let i = 0; i < data.img.length; i++) {
         console.log(data.img[i]);
         for (let k = 0; k < removeList.length; k++) {
