@@ -19,10 +19,9 @@
     margin-bottom: 10px;
     border: 1px solid rgb(71, 71, 80);
     overflow-y: scroll;
-    
+
     &::-webkit-scrollbar {
       width: 10px;
-
     }
     &::-webkit-scrollbar-thumb {
       background-color: #0ae;
@@ -62,7 +61,6 @@
         border-radius: 10px 10px 10px 0;
         color: #221c1c;
         margin-bottom: 10px;
-
       }
     }
   }
@@ -112,4 +110,19 @@
   bottom: 100px;
   right: 50px;
   cursor: pointer;
+  &__notification {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: fixed;
+    bottom: 155px;
+    right: 60px;
+    font-size: 14px;
+    color: #ffff;
+    background-color: darkred;
+    opacity: .9;
+    padding: 5px;
+    border-radius: 50%;
+    font-weight: 500;
+  }
 }
