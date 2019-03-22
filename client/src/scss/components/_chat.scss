@@ -119,6 +119,7 @@
   right: 50px;
   cursor: pointer;
   &__notification {
+    display: none;
     width: 30px;
     height: 30px;
     text-align: center;
@@ -128,7 +129,7 @@
     font-size: 14px;
     color: #ffff;
     background-color: darkred;
-    opacity: .9;
+    opacity: 0.9;
     padding: 5px;
     border-radius: 50%;
     font-weight: 500;
