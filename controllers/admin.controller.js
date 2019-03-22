@@ -38,16 +38,8 @@ const messageUserToAdmin = (req, res) => {
         text: req.body.body
       };
       data.body.push(newMessage);
-      Notification.findOne({ from: req.body.userId }, (er, not) => {
-        not.notification = not.notification++;
-        not.save(errr => {
-          if (errr) {
-            console.log("message sent withou notification");
-          } else {
-            console.log("message sent with notification");
-          }
-        });
-      });
+      let notSumm = data.notification + 1;
+      data.notification = notSumm;
       data.save(errr => {
         if (errr) {
           res.json({ message: "Meesage dont sent" });
@@ -64,30 +56,18 @@ const messageAdminToUser = (req, res) => {
     if (!data) {
       let newMessageBox = {
         userId: req.body.userId,
-        body: [{ side: "admin", text: req.body.body }]
+        body: [{ side: "admin", text: req.body.body }],
+        notification: 1
       };
       Message.create(newMessageBox);
-      User.findOne({ _id: req.body.userId }, (er, user) => {
-        let notNumber = user.notification + 1;
-        user.notification = notNumber;
-        user.save(errr => {
-          if (errr) {
-            res.json({
-              message: "Message sent withou notification",
-              data: newMessageBox.body
-            });
-          } else {
-            res.json({ message: "Message sent", data: newMessageBox.body });
-          }
-        });
-      });
+      res.json({ message: "message sent", data: newMessageBox.body });
     } else {
       let newMessage = {
         side: "admin",
         text: req.body.body
       };
       data.body.push(newMessage);
-      User.findOne({ _id: req.body.userId }, (er, user) => {
+      Message.findOne({ userId: req.body.userId }, (er, user) => {
         let notNumber = user.notification + 1;
         user.notification = notNumber;
         user.save(errr => {
@@ -110,7 +90,7 @@ const messageAdminToUser = (req, res) => {
 };
 
 const clearUserNotification = (req, res) => {
-  User.findOne({ _id: req.body.userId }, (err, data) => {
+  Message.findOne({ userId: req.body.userId }, (err, data) => {
     data.notification = 0;
     data.save(er => {
       if (er) {
@@ -119,7 +99,7 @@ const clearUserNotification = (req, res) => {
           data: data.notification
         });
       } else {
-        res.json({ message: "notification cleared", data: data.notification });
+        res.json({ message: "notification cleared", data: data });
       }
     });
   });
@@ -143,7 +123,6 @@ const clearAdminNotification = (req, res) => {
 
 const getMessages = (req, res) => {
   Message.findOne({ userId: req.body.userId }, (err, data) => {
-    console.log(data);
     res.json(data);
   });
 };
