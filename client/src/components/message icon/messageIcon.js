@@ -2,15 +2,8 @@ import React from "react";
 import message from "../../img/messageUs.png";
 
 export class MessageIcon extends React.Component {
-  componentDidMount(){
-  }
+  componentDidMount() {}
   render() {
-    return (
-      <img
-        src={message}
-        className="messageIcon"
-        
-      />
-    );
+    return <img src={message} className="messageIcon" />;
   }
 }
