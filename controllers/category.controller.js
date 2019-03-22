@@ -10,7 +10,7 @@ const addCategory = (req, res) => {
         title: req.body.title
       };
       Category.create(newCategory);
-      res.json({ message: "created a new category", newCategory });
+      res.json({ message: "created a new category", data });
     }
   });
 };
@@ -28,7 +28,7 @@ const editCategory = (req, res) => {
           console.log("bad");
         }
       });
-      res.json({ message: "okay", newCategory: data });
+      res.json({ message: "okay", data });
     }
   });
 };
@@ -38,7 +38,7 @@ const deleteCategory = (req, res) => {
     if (err) {
       res.json({ message: "Something went wrong" });
     } else {
-      res.json({ message: "removed" });
+      res.json({ message: "removed", data });
     }
   });
 };

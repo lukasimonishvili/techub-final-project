@@ -44,6 +44,13 @@ const {
   editProduct
 } = require("./controllers/product.controller");
 
+const {
+  addCategory,
+  editCategory,
+  deleteCategory,
+  getCategoryList
+} = require("./controllers/category.controller");
+
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -89,6 +96,11 @@ app.get("/comment/:productId", getCommentsByProductId);
 app.post("/addComment", addComment);
 app.post("/editComment", editComment);
 app.post("/removeComment", deleteComment);
+
+app.post("/addCategory", addCategory);
+app.post("/editCategory", editCategory);
+app.post("/deleteCategory", deleteCategory);
+app.post("/categoryList", getCategoryList);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
