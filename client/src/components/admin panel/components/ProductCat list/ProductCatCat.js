@@ -1,9 +1,14 @@
 import React from "react"
 
+import { ProductCatActionbuttonEdit } from "./ProductCatActionbuttonEdit";
+import { ProductCatActionbuttonDellete } from "./ProductCatActionbuttonDellete";
 
-export const AdminCustomerlistTableDataA = (props) => { 
+
+export const ProductCatCat = (props) => { 
     return     (
-    <td className="customerlist__table__data" ><a>{props.collumnDataA}</a>
-    </td>)
-
+    <div className="ProductCat__Cat" >
+        <span className="ProductCat__Cat__Link">{props.prodCat}</span>
+        <ProductCatActionbuttonEdit />
+        <ProductCatActionbuttonDellete />
+    </div>)
 }
