@@ -1,9 +1,5 @@
 import React from "react";
 
-export const ProductOnPageCurenc = () => {
-  return (
-    <strong className="productOnPage_curenc">
-        200$
-    </strong>
-  );
+export const ProductOnPageCurenc = props => {
+  return <strong className="productOnPage_curenc">{props.price}</strong>;
 };

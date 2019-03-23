@@ -1,28 +1,180 @@
 .account {
   width: 100%;
   height: calc(100vh - 250px);
+  z-index: 11111111111;
   &__container {
     width: 100%;
     height: 100%;
     padding: 30px;
     &__nav {
-        margin: 0 auto;
-        width: 800px;
+      margin: 0 auto;
+      width: calc(100% - 300px);
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      &--deposit {
+        text-align: center;
+        height: 100%;
+        width: 33.3%;
         padding: 15px;
-        justify-content: space-between;
-        background: blue;
-        color: white;
-        font-size: 20px;
+        border-radius: 4px 0 0 0;
+        background: rgb(51, 51, 58);
+       color: #ffffff;
+      }
+      &--History {
+        text-align: center;
+        height: 100%;
+        width: 33.3%;
+        padding: 15px;
+        background: #33333a4b;
+        color: #ffffff;
+      }
+      &--personal {
+        width: 33.3%;
+        text-align: center;
+        background: #33333a4b;
+
+        height: 100%;
+        padding: 15px;
+        border-radius: 0 4px 0 0;
+        color: #ffffff;
+        font-weight: 500;
+      }
+      & li{
+        cursor: pointer;
+        width: 100%;
+        &:hover {
+          background-color: #33333a9f;
+        }
+      }
     }
-    &__body{
-        width: calc(100% - 300px);
-        height: 500px; 
-        background: red;
-        margin-top: 40px;
-        margin: 0 auto;
-        padding: 20px; 
+    &__body {
+      width: calc(100% - 300px);
+      height: calc(100% - 100px);
+      background: rgb(51, 51, 58);
+      margin-top: 40px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 0 0 4px 4px;
+      /* width */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #252529; 
+      border-radius:2px; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #656571;
+      border-radius:2px; 
+    }
 
-
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+      &--hislist{
+        width:100%;
+      }
+      &--deposit {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        & input {
+          width: 200px;
+          height: 30px;
+          padding: 4px;
+          margin-bottom: 50px;
+          background: transparent;
+          border-bottom: 2px solid #ffffff;
+          color: #ffffff;
+        }
+        & button {
+          cursor: pointer;
+          width: 150px;
+          height: 30px;
+          margin-bottom: 50px;
+          padding: 4px;
+          background: #26991e;
+          // border: 1px solid rgb(188, 204, 158);
+          border-radius: 3px;
+          line-height: 0;
+          font-size: 14px;
+          color: #ffffff;
+          
+          &:active {
+            background: #02722d;
+          }
+        }
+      }
+      &--history {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        & li {
+          padding:12px;
+          font-size: 15px;
+          color: #ffffff;
+          // border: 1px solid rgb(188, 204, 158);
+          width: 100%;
+          &:nth-child(2n+1){
+            background:#3e3e46;
+          }
+        }
+        & button {
+          cursor: pointer;
+          height: 30px;
+          margin-bottom: 30px;
+          padding: 15px;
+          background: #991e1e;
+          border-radius: 3px;
+          line-height: 0;
+          font-size: 14px;
+          color: #ffffff;
+          
+          &:active {
+            background: #720202;
+          }
+        }
+      }
+      &--personal {
+        display: none;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        & input {
+          margin: 0 auto;
+          background: transparent;
+          padding: 30px 30px 20px 5px;
+          color: #ffffff;
+          border-bottom: 2px solid #ffffff;
+          width: 300px;
+          height: 30px;
+        }
+        & button {
+          margin: 0 auto;
+          cursor: pointer;
+          width: 200px;
+          height: 30px;
+          margin-bottom: 50px;
+          padding: 4px;
+          background: #26991e;
+          border-radius: 3px;
+          line-height: 0;
+          font-size: 14px;
+          color: #ffffff;
+          
+          &:active {
+            background: #02722d;
+          }
+        }
+      }
     }
   }
 }

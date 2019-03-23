@@ -30,6 +30,13 @@ export const ChatInputSend = props => {
             props.stater(res.data.data);
           });
         }
+        let x = setTimeout(function() {
+          clearTimeout(x);
+          let body = document.getElementById("chatBody");
+          body.scrollTo(0, body.offsetHeight * 200);
+          console.log('clicked');
+        }, 500);
+      
       }}
     >
       Send

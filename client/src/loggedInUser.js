@@ -46,10 +46,9 @@ export class LoggedInUser extends React.Component {
         <Router>
           <CartContainer path="/mycart" />
           <Product path="product/:productId" />
-          <Account path="/account"/>
+          <Account path="/account" />
         </Router>
-        {/* <ProductOnPageContainer /> */}
-        {/* <Product /> */}
+        <ProductOnPageContainer />
         <Message />
         <Footer />
       </>

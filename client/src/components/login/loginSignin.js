@@ -36,7 +36,7 @@ export const LoginSignin = () => {
             } else {
               console.log(res.data.data._id);
               console.log(String(res.data.data._id));
-              if (res.data.message == "Okay") {
+              if (res.data.message === "Okay") {
                 removeCookie("c3a4d");
                 let tostring = String(res.data.data._id);
                 setCookie("c3a4d", tostring, 3650);
