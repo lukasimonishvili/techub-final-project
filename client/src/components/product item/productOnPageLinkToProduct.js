@@ -4,13 +4,13 @@ import { ProductOnPageName } from "./productOnPageName";
 import { ProductOnPageCurenc } from "./productOnPageCurenc";
 import { ProductOnPageBuyingoptions } from "./productOnPageBuyingoptions";
 
-export const ProductOnPageLinkToProduct = () => {
+export const ProductOnPageLinkToProduct = props => {
   return (
     <div className="productOnPage__linkToProduct">
-        <ProductOnPageImg />
-        <ProductOnPageName />
-        <ProductOnPageCurenc />
-        <ProductOnPageBuyingoptions/>
+      <ProductOnPageImg image={props.image} />
+      <ProductOnPageName productName={props.productName} />
+      <ProductOnPageCurenc price={props.price} />
+      <ProductOnPageBuyingoptions />
     </div>
   );
 };

@@ -32,6 +32,9 @@ export class ContactUser extends React.Component {
                 let elementHandler = element.innerHTML.split(" ")[3];
                 if (elementHandler === res.data[i].from) {
                   parent.insertBefore(element, parent.childNodes[0]);
+                  Axios.post("/clearAdminNotification", {
+                    userId: res.data[i].from
+                  });
                   if (res.data[i].from !== this.state.userId) {
                     element.style.color = "red";
                   }

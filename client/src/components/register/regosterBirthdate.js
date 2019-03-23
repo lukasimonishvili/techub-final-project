@@ -2,6 +2,11 @@ import React from "react";
 
 export const RegisterBirthdate = () => {
   return (
-    <input type="date" placeholder="birthday" className="register__birthdate" />
+    <input
+      type="date"
+      id="date"
+      placeholder="birthday"
+      className="register__birthdate"
+    />
   );
 };
