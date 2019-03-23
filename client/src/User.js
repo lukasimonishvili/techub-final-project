@@ -12,16 +12,16 @@ import { ProductOnPageContainer } from "./components/product item/productOnPageC
 export class User extends React.Component {
   render() {
     return (
-      <>      
+      <>
         <Header />
         <Sidebar />
         <Router>
           <CartContainer path="/mycart" />
           <Login path="/login" />
           <Register path="/register" />
-        {/* <Product path="product/:productId" /> */}
+          <Product path="product/:productId" />
         </Router>
-        <ProductOnPageContainer/>
+        <ProductOnPageContainer />
         <Footer />
       </>
     );

@@ -3,7 +3,6 @@ import { ProductInfoRatingLike } from "./productInfoRatingLike";
 import { ProductInfoRatingLikeCount } from "./productInfoRatingLikeCount";
 import { ProductInfoRatingDislike } from "./productInfoRatingDislike";
 import { ProductInfoRatingDislikeCount } from "./productInfoRatingDislikeCount";
-import { ProductInfoAddtocart } from "./productInfoAddtocart";
 import { ProductInfoManagequantity } from "./productInfoManagequantity";
 
 export const ProductInfoRating = () => {
@@ -13,7 +12,6 @@ export const ProductInfoRating = () => {
       <ProductInfoRatingLikeCount />
       <ProductInfoRatingDislike />
       <ProductInfoRatingDislikeCount />
-      {/* <ProductInfoAddtocart /> */}
       <ProductInfoManagequantity />
     </span>
   );

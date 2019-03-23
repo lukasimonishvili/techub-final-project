@@ -5,7 +5,7 @@ export const AdminLeftsideItem = props => {
     <>
       <Link
         onClick={() => {
-          if (props.listItem == "Log Out") {
+          if (props.listItem === "Log Out") {
             let removeCookie = cname => {
               var d = new Date();
               d.setTime(d.getTime() + 0 * 60 * 1000);

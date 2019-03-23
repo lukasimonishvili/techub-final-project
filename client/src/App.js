@@ -53,10 +53,10 @@ class App extends Component {
 
   render() {
     if (
-      this.getCookie("c914847298b1b13064c3a4d") == "c914847298b1b13064c3a4d"
+      this.getCookie("c914847298b1b13064c3a4d") === "c914847298b1b13064c3a4d"
     ) {
       return <Admin />;
-    } else if (this.getCookie("c3a4d").length == 24) {
+    } else if (this.getCookie("c3a4d").length === 24) {
       return <LoggedInUser cookie={this.getCookie("c3a4d")} />;
     } else {
       return <User />;

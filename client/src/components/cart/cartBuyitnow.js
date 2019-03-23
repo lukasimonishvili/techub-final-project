@@ -31,9 +31,9 @@ export class CartBuyitnow extends React.Component {
               let amountInp = parent.childNodes[i].childNodes[2].childNodes[1];
               let productTitle = parent.childNodes[i].childNodes[1].innerHTML;
               if (
-                amountInp.value[0] == "M" ||
-                amountInp.value == "" ||
-                amountInp.value == 0
+                amountInp.value[0] === "M" ||
+                amountInp.value === "" ||
+                amountInp.value === "0"
               ) {
                 allFilled = false;
                 break;

@@ -12,7 +12,8 @@ const {
   messageAdminToUser,
   clearUserNotification,
   clearAdminNotification,
-  getMessages
+  getMessages,
+  checkNotificationsForAdmin
 } = require("./controllers/admin.controller");
 const {
   userRegister,
@@ -23,7 +24,8 @@ const {
   addToCart,
   removeFromCart,
   getOneUser,
-  buyProduct
+  buyProduct,
+  getUserList
 } = require("./controllers/user.controller");
 const {
   addComment,
@@ -67,9 +69,11 @@ app.post("/messageAdminToUser", messageAdminToUser);
 app.post("/clearUserNotification", clearUserNotification);
 app.post("/clearAdminNotification", clearAdminNotification);
 app.post("/getMessages", getMessages);
+app.post("/checkNotificationsForAdmin", checkNotificationsForAdmin);
 
 app.post("/register", userRegister);
 app.post("/login", logIn);
+app.post("/userList", getUserList);
 app.post("/removeUser", removeUser);
 app.post("/editUser/:userId", editUser);
 app.post("/fillBalance", fillBalance);

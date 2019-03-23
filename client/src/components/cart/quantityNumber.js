@@ -7,7 +7,7 @@ export const QuantityNumber = props => {
       defaultValue={`MAX : ${props.amount}`}
       placeholder="quantity"
       onClick={e => {
-        if (e.target.value == `MAX : ${props.amount}`) {
+        if (e.target.value === `MAX : ${props.amount}`) {
           e.target.value = "";
           e.target.type = "number";
         }
