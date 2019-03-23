@@ -2,11 +2,9 @@ import React from "react";
 
 export const AdditemCategory = () => {
   return (
-    <input
-      className="additem__category"
-      type="text"
-      name="product category"
-      placeholder="product category"
-    />
+    <select className="additem__category" name="product category"  >
+      <option value="product category">product category</option>
+      <option value="product category 1">product category 1</option>
+    </select>
   );
 };

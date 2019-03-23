@@ -2,6 +2,7 @@ import React from "react";
 
 import { ProductCatActionbuttonEdit } from "./ProductCatActionbuttonEdit";
 import { ProductCatActionbuttonDellete } from "./ProductCatActionbuttonDellete";
+import { ProductList } from "./ProductList";
 
 export const ProductCatCat = props => {
   return (
@@ -11,6 +12,7 @@ export const ProductCatCat = props => {
         <ProductCatActionbuttonEdit />
         <ProductCatActionbuttonDellete />
       </div>
+      <ProductList />
     </div>
   );
 };

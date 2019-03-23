@@ -4,7 +4,7 @@ import { ProductCatCat } from "./ProductCatCat";
 
 export const ProductCatList = () => {
   return (
-    <div className="ProductCat__List">
+    <div className="ProductCat__List" >
       <ProductCatCat prodCat="Cell Phones..."/>
       <ProductCatCat prodCat="Tablets..."/>
       <ProductCatCat prodCat="Laptops..."/>

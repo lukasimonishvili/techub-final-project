@@ -3,7 +3,6 @@ import { ProductCatTitle } from "./ProductCatTitle";
 import { ProductCatNewcatbutton } from "./ProductCatNewcatbutton";
 import { ProductCatAll } from "./ProductCatAll";
 import { ProductCatList } from "./ProductCatList";
-// import { შვილისმუდმივა } from "./საქაღალდე";
 
 export const ProductCat = () => {
   return (
@@ -12,7 +11,6 @@ export const ProductCat = () => {
       <ProductCatNewcatbutton />
       <ProductCatAll />
       <ProductCatList />
-        {/* <შვილის მუდმივა /> */}
     </div>
   );
 };

@@ -20,6 +20,12 @@ export const ContactUserMessagesInputSend = props => {
             props.chatStater(res.data.data);
           });
         }
+        let x = setTimeout(function() {
+          clearTimeout(x);
+          let body = document.getElementById("adminMessage");
+          body.scrollTo(0, body.offsetHeight * 200);
+          console.log("clicked");
+        }, 500);
       }}
     >
       Send

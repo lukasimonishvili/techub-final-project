@@ -1,5 +1,4 @@
 import React from "react";
-// import { შვილისმუდმივა } from "./საქაღალდე";
 
 export const ProductCatTitle = () => {
   return (
