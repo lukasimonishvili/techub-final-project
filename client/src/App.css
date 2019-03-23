@@ -74,6 +74,9 @@ table {
     margin-top: 7px;
     width: 250px;
     height: 50px; }
+    .header__logo img {
+      width: 100%;
+      height: 100%; }
   .header__search {
     max-height: 50px;
     margin-top: 15px;
@@ -82,7 +85,8 @@ table {
     border: 1px solid rgba(0, 0, 0, 0);
     position: relative;
     transition-duration: 0.4s;
-    overflow: hidden; }
+    overflow: hidden;
+    border-bottom: 1px solid #4d4848; }
     .header__search:hover {
       border: 1px solid #4d4848;
       border-radius: 3px; }
@@ -471,22 +475,25 @@ table {
   bottom: 10px;
   right: 50px; }
   .chat__body {
-    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
     width: 100%;
     height: 400px;
+    border-radius: 15px;
     background: rgba(40, 101, 109, 0.5);
-    padding: 15px;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 10px;
     border: 1px solid #474750;
-    overflow-y: scroll; }
-    .chat__body::-webkit-scrollbar {
-      width: 10px; }
-    .chat__body::-webkit-scrollbar-thumb {
-      background-color: #0ae;
-      background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent)); }
+    margin-bottom: 10px; }
+    .chat__body__wrapper {
+      width: 100%;
+      padding: 15px;
+      overflow-y: scroll; }
+      .chat__body__wrapper::-webkit-scrollbar {
+        width: 10px; }
+      .chat__body__wrapper::-webkit-scrollbar-thumb {
+        background-color: #0ae;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent)); }
     .chat__body__container--admin {
       width: 100%;
       height: auto;
@@ -501,7 +508,10 @@ table {
       text-align: left;
       background-color: blue;
       color: #ffff;
-      word-wrap: break-word; }
+      margin-bottom: 10px;
+      word-wrap: break-word;
+      word-break: break-all;
+      font-size: 12px; }
     .chat__body__message--admin {
       width: 100%;
       padding: 10px;
@@ -510,7 +520,9 @@ table {
       border-radius: 10px 10px 10px 0;
       color: #221c1c;
       margin-bottom: 10px;
-      word-wrap: break-word; }
+      word-wrap: break-word;
+      word-break: break-all;
+      font-size: 12px; }
   .chat__input {
     border: 1px solid #0a116e;
     border-radius: 10px;
@@ -1063,26 +1075,149 @@ table {
 
 .account {
   width: 100%;
-  height: calc(100vh - 250px); }
+  height: calc(100vh - 250px);
+  z-index: 11111111111; }
   .account__container {
     width: 100%;
     height: 100%;
     padding: 30px; }
     .account__container__nav {
       margin: 0 auto;
-      width: 800px;
-      padding: 15px;
-      justify-content: space-between;
-      background: blue;
-      color: white;
+      width: calc(100% - 300px);
+      color: black;
       font-size: 20px; }
+      .account__container__nav--deposit {
+        text-align: center;
+        height: 100%;
+        width: 33.3%;
+        padding: 15px;
+        border-radius: 4px 0 0 0;
+        background: #33333a;
+        color: #ffffff; }
+      .account__container__nav--History {
+        text-align: center;
+        height: 100%;
+        width: 33.3%;
+        padding: 15px;
+        background: #33333a4b;
+        color: #ffffff; }
+      .account__container__nav--personal {
+        width: 33.3%;
+        text-align: center;
+        background: #33333a4b;
+        height: 100%;
+        padding: 15px;
+        border-radius: 0 4px 0 0;
+        color: #ffffff;
+        font-weight: 500; }
+      .account__container__nav li {
+        cursor: pointer;
+        width: 100%; }
+        .account__container__nav li:hover {
+          background-color: #33333a9f; }
     .account__container__body {
       width: calc(100% - 300px);
-      height: 500px;
-      background: red;
+      height: calc(100% - 100px);
+      background: #33333a;
       margin-top: 40px;
       margin: 0 auto;
-      padding: 20px; }
+      padding: 20px;
+      border-radius: 0 0 4px 4px;
+      /* width */
+      /* Handle */
+      /* Handle on hover */ }
+      .account__container__body ::-webkit-scrollbar {
+        width: 4px; }
+      .account__container__body ::-webkit-scrollbar-track {
+        background: #252529;
+        border-radius: 2px; }
+      .account__container__body ::-webkit-scrollbar-thumb {
+        background: #656571;
+        border-radius: 2px; }
+      .account__container__body ::-webkit-scrollbar-thumb:hover {
+        background: #555; }
+      .account__container__body--hislist {
+        width: 100%; }
+      .account__container__body--deposit {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%; }
+        .account__container__body--deposit input {
+          width: 200px;
+          height: 30px;
+          padding: 4px;
+          margin-bottom: 50px;
+          background: transparent;
+          border-bottom: 2px solid #ffffff;
+          color: #ffffff; }
+        .account__container__body--deposit button {
+          cursor: pointer;
+          width: 150px;
+          height: 30px;
+          margin-bottom: 50px;
+          padding: 4px;
+          background: #26991e;
+          border-radius: 3px;
+          line-height: 0;
+          font-size: 14px;
+          color: #ffffff; }
+          .account__container__body--deposit button:active {
+            background: #02722d; }
+      .account__container__body--history {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll; }
+        .account__container__body--history li {
+          padding: 12px;
+          font-size: 15px;
+          color: #ffffff;
+          width: 100%; }
+          .account__container__body--history li:nth-child(2n+1) {
+            background: #3e3e46; }
+        .account__container__body--history button {
+          cursor: pointer;
+          height: 30px;
+          margin-bottom: 30px;
+          padding: 15px;
+          background: #991e1e;
+          border-radius: 3px;
+          line-height: 0;
+          font-size: 14px;
+          color: #ffffff; }
+          .account__container__body--history button:active {
+            background: #720202; }
+      .account__container__body--personal {
+        display: none;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%; }
+        .account__container__body--personal input {
+          margin: 0 auto;
+          background: transparent;
+          padding: 30px 30px 20px 5px;
+          color: #ffffff;
+          border-bottom: 2px solid #ffffff;
+          width: 300px;
+          height: 30px; }
+        .account__container__body--personal button {
+          margin: 0 auto;
+          cursor: pointer;
+          width: 200px;
+          height: 30px;
+          margin-bottom: 50px;
+          padding: 4px;
+          background: #26991e;
+          border-radius: 3px;
+          line-height: 0;
+          font-size: 14px;
+          color: #ffffff; }
+          .account__container__body--personal button:active {
+            background: #02722d; }
 
 .ProductCat {
   width: 100%;

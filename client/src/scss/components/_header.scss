@@ -7,7 +7,7 @@
   position: fixed;
   margin-top: -80px;
   margin-bottom: 40px;
-  background-color: #33333a;
+  background-color: rgb(51, 51, 58);
   z-index: 1000;
   padding: 0 20px 0 20px;
   &__nav {
@@ -27,9 +27,14 @@
     margin-top: 7px;
     width: 250px;
     height: 50px;
+    & img {
+      width: 100%;
+      height: 100%;
+      
+    }
   }
   &__search {
-    max-height: 50px;
+    max-height: 50px; 
     margin-top: 15px;
     margin-left: 50px;
     padding: 10px;
@@ -37,7 +42,7 @@
     position: relative;
     transition-duration: 0.4s;
     overflow: hidden;
-
+    border-bottom: 1px solid rgb(77, 72, 72);
     &:hover {
       border: 1px solid rgb(77, 72, 72);
       border-radius: 3px;
