@@ -607,6 +607,8 @@ table {
       .admin__leftside__item:hover {
         color: #5bc0be;
         background: #1c2541; }
+      .admin__leftside__item:visited {
+        background: #111727 !important; }
 
 .additem {
   width: calc(100% - 250px);
@@ -1220,89 +1222,64 @@ table {
             background: #02722d; }
 
 .ProductCat {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
   .ProductCat__title {
-    margin: 5px; }
+    margin: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3b3838; }
   .ProductCat__Newcatbutton {
-    margin: 5px;
-    cursor: pointer;
-    padding: 1px 6px;
-    align-items: flex-start;
-    text-align: center;
-    color: buttontext;
-    background-color: buttonface;
-    box-sizing: border-box;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-image: initial;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    font: 400 13.3333px Arial; }
-    .ProductCat__Newcatbutton:active {
-      background-color: gray;
-      border: 1px solid black; }
+    padding: 10px 15px;
+    margin: 0 10px 10px 10px;
+    background: #26991e;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #f3f3f3;
+    font-weight: 500;
+    cursor: pointer; }
     .ProductCat__Newcatbutton:hover {
-      background-color: #a7a6a6;
-      border: 1px solid black; }
+      background: #205e1b;
+      border: 1px solid #26991e; }
+    .ProductCat__Newcatbutton:active {
+      background: #153d12;
+      color: aliceblue;
+      border: 1px solid #205e1b; }
   .ProductCat__All {
     margin: 5px;
-    border: 2px solid aquamarine;
     width: 30%;
-    padding: 2px 6px;
-    background-color: aquamarine; }
+    padding: 2px 6px; }
     .ProductCat__All__Link {
+      cursor: context-menu;
       text-decoration: none;
       color: black;
-      cursor: pointer;
       font: 400 13.3333px Arial; }
   .ProductCat__List {
     background-color: aliceblue;
     display: flex;
-    flex-direction: row; }
+    flex-direction: column; }
   .ProductCat__Cat {
-    margin: 8px 5px;
-    width: 140px;
-    height: 140px;
-    padding: 2px 6px;
-    background-color: pink; }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #1c3229; }
     .ProductCat__Cat__Link {
+      padding-left: 10px;
+      font-size: 17px;
+      color: #fafafa;
       text-decoration: none;
-      color: black;
-      padding-top: 30px;
       display: block;
       cursor: pointer;
       font: 400 13.3333px Arial; }
     .ProductCat__Cat__actionbutton {
-      margin: 5px;
-      display: inline;
-      margin-top: 30px;
-      border: 1px solid #214e47;
-      cursor: pointer;
-      padding: 1px 6px;
-      align-items: flex-start;
-      text-align: center;
-      color: buttontext;
-      background-color: buttonface;
-      box-sizing: border-box;
-      text-rendering: auto;
-      letter-spacing: normal;
-      word-spacing: normal;
-      text-transform: none;
-      text-indent: 0px;
-      text-shadow: none;
-      font: 400 13.3333px Arial; }
-      .ProductCat__Cat__actionbutton:active {
-        background-color: gray;
-        border: 1px solid black; }
-      .ProductCat__Cat__actionbutton:hover {
-        background-color: #a7a6a6;
-        border: 1px solid black; }
+      margin-right: 20px;
+      padding: 10px; }
+      .ProductCat__Cat__actionbutton:first-child {
+        background-color: blue;
+        margin-right: 0; }
+      .ProductCat__Cat__actionbutton:last-child {
+        background: red; }
 
 .test {
   width: 100px;

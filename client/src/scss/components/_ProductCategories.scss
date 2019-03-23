@@ -1,101 +1,73 @@
 .ProductCat {
+  width: 100%;
+  &__title {
+    margin: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(59, 56, 56);
+  }
+  &__Newcatbutton {
+    padding: 10px 15px;
+    margin: 0 10px 10px 10px;
+    background: #26991e;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #f3f3f3;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      background: #205e1b;
+      border: 1px solid #26991e;
+    }
+    &:active {
+      background: #153d12;
+      color: aliceblue;
+      border: 1px solid #205e1b;
+    }
+  }
+  &__All {
+    margin: 5px;
+    width: 30%;
+    padding: 2px 6px;
+    &__Link {
+      cursor: context-menu;
+      text-decoration: none;
+      color: black;
+      font: 400 13.3333px Arial;
+    }
+  }
+  &__List {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+  }
+  &__Cat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 100%;
-    &__title {
-        margin: 5px;
+    height: 50px;
+    background-color: rgb(28, 50, 41);
+
+    &__Link {
+      padding-left: 10px;
+      font-size: 17px;
+      color: #fafafa;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      font: 400 13.3333px Arial;
     }
-    &__Newcatbutton {
-        margin: 5px;
-        cursor: pointer;
-        padding: 1px 6px;
-        align-items: flex-start;
-        text-align: center;
-        // cursor: default;
-        color: buttontext;
-        background-color: buttonface;
-        box-sizing: border-box;
-        border-width: 2px;
-        border-style: outset;
-        border-color: buttonface;
-        border-image: initial;
-        text-rendering: auto;
-        letter-spacing: normal;
-        word-spacing: normal;
-        text-transform: none;
-        text-indent: 0px;
-        text-shadow: none;
-        font: 400 13.3333px Arial;
-        &:active {
-            background-color: gray;
-            border: 1px solid black;
-        }
-        &:hover {
-            background-color: #a7a6a6;
-            border: 1px solid black;
-        }   
+    &__actionbutton {
+      margin-right: 20px;
+      padding: 10px;
+      &:first-child {
+        background-color: blue;
+        margin-right: 0;
+      }
+      &:last-child{
+        background: red;
+      }
     }
-    &__All {
-        margin: 5px;
-        border: 2px solid aquamarine;
-        width: 30%;
-        padding: 2px 6px;
-        background-color: aquamarine;
-        &__Link {
-            text-decoration: none;
-            color: black;
-            cursor: pointer;
-            font: 400 13.3333px Arial;
-        }
-    }
-    &__List {
-        background-color: aliceblue;
-        display: flex;
-        flex-direction: row;
-    }
-    &__Cat {
-        margin: 8px 5px;
-        // border: 2px solid pink;
-        width: 140px;
-        height: 140px;
-        padding: 2px 6px;
-        background-color: pink;
-        &__Link {
-            text-decoration: none;
-            color: black;
-            padding-top: 30px;
-            display: block;
-            cursor: pointer;
-            font: 400 13.3333px Arial;
-        }
-        &__actionbutton {
-            margin: 5px;
-            // padding: 2px;
-            display: inline;
-            margin-top: 30px;
-            border: 1px solid #214e47;
-            cursor: pointer;
-            padding: 1px 6px;
-            align-items: flex-start;
-            text-align: center;
-            // cursor: default;
-            color: buttontext;
-            background-color: buttonface;
-            box-sizing: border-box;
-            text-rendering: auto;
-            letter-spacing: normal;
-            word-spacing: normal;
-            text-transform: none;
-            text-indent: 0px;
-            text-shadow: none;
-            font: 400 13.3333px Arial;
-            &:active {
-                background-color: gray;
-                border: 1px solid black;
-            }
-            &:hover {
-                background-color: #a7a6a6;
-                border: 1px solid black;
-            }
-        }
-    }
+  }
 }
