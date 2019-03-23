@@ -4,6 +4,7 @@ import {Router} from "@reach/router"
 import { AdminCustomerlist } from "../user list/adminCustomerlist";
 import { ContactUser } from "../contact user/contactUser";
 import { ProductCat } from "../ProductCat list/ProductCat";
+import { Feedbacklist } from "../Feedbacklist/feedbacklist";
 
 
 export const AdminRightside = () => {
@@ -13,6 +14,7 @@ export const AdminRightside = () => {
       <AdminCustomerlist path="/userlist"/>
       <ContactUser path="/contactuser"/>
       <ProductCat path="/productlist"/>
+      <Feedbacklist path="/feedback"/>
     </Router>
   );
 };

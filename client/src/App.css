@@ -1169,6 +1169,40 @@ table {
         background-color: #a7a6a6;
         border: 1px solid black; }
 
+.Feedbacklist {
+  box-sizing: border-box; }
+  .Feedbacklist__title {
+    margin: 5px;
+    font-size: 30px;
+    font-weight: bold; }
+  .Feedbacklist .Feedbacklist__table {
+    display: table;
+    width: 100%; }
+    .Feedbacklist .Feedbacklist__table .Feedbacklist__headerrow {
+      display: table-row;
+      background-color: gray;
+      font-weight: bold;
+      font-size: 20px; }
+    .Feedbacklist .Feedbacklist__table .Feedbacklist__headercell {
+      display: table-cell;
+      padding: 10px;
+      text-align: justify;
+      border-bottom: 1px solid black;
+      min-width: fit-content; }
+    .Feedbacklist .Feedbacklist__table .Feedbacklist__row {
+      display: table-row; }
+    .Feedbacklist .Feedbacklist__table .Feedbacklist__Cell {
+      display: table-cell;
+      border-bottom: 1px solid black;
+      font-size: 10px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      min-width: fit-content;
+      max-width: 200px; }
+      .Feedbacklist .Feedbacklist__table .Feedbacklist__Cell__button {
+        padding: 5px; }
+
 .test {
   width: 100px;
   height: 100px;
