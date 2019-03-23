@@ -2,11 +2,11 @@ import React from "react";
 import { ContactUserUsersList } from "./contactUserUsersList";
 import { ContactUserUsersSearch } from "./contactUserUsersSearch";
 
-export const ContactUserUsers = () => {
+export const ContactUserUsers = props => {
   return (
     <div className="contactuser__rightside">
-    <ContactUserUsersSearch/>
-      <ContactUserUsersList />
+      <ContactUserUsersSearch />
+      <ContactUserUsersList stater={props.stater} users={props.users} />
     </div>
   );
 };

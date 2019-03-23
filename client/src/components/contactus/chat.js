@@ -84,7 +84,7 @@ export class Chat extends React.Component {
             });
             let notification = document.getElementById("notification");
             let messageIcon = document.getElementById("messageIcon");
-            if (messageIcon.style.display == "block") {
+            if (messageIcon.style.display === "block") {
               notification.style.display = "block";
             }
             notification.innerHTML = this.state.notification;

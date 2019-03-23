@@ -10,7 +10,7 @@ export const HeaderSearchInput = () => {
       onKeyUp={e => {
         if (e.target.value !== "") {
           axios.get(`/search/${e.target.value}`).then(res => {
-            if (res.data[0] == "<" || !res.data.length) {
+            if (res.data[0] === "<" || !res.data.length) {
               alert("No result!");
             } else {
               alert(res.data[0].title);

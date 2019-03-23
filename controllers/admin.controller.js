@@ -24,7 +24,8 @@ const messageUserToAdmin = (req, res) => {
     if (!data) {
       let newMessageBox = {
         userId: req.body.userId,
-        body: [{ side: "user", text: req.body.body }]
+        body: [{ side: "user", text: req.body.body }],
+        notification: 0
       };
       Message.create(newMessageBox);
       Notification.create({
@@ -38,8 +39,14 @@ const messageUserToAdmin = (req, res) => {
         text: req.body.body
       };
       data.body.push(newMessage);
-      let notSumm = data.notification + 1;
-      data.notification = notSumm;
+      Notification.findOne({ from: req.body.userId }, (e, notf) => {
+        notf.notification++;
+        notf.save(error => {
+          if (error) {
+            console.log("notification not set");
+          }
+        });
+      });
       data.save(errr => {
         if (errr) {
           res.json({ message: "Meesage isn't sent" });
@@ -139,11 +146,22 @@ const getMessages = (req, res) => {
   });
 };
 
+const checkNotificationsForAdmin = (req, res) => {
+  Notification.find({}, (err, data) => {
+    if (data.length) {
+      res.json(data);
+    } else {
+      res.json([]);
+    }
+  });
+};
+
 module.exports = {
   addFeedback,
   messageUserToAdmin,
   messageAdminToUser,
   clearUserNotification,
   clearAdminNotification,
-  getMessages
+  getMessages,
+  checkNotificationsForAdmin
 };

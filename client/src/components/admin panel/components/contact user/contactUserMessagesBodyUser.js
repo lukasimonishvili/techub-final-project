@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 
-export const ContactUserMessagesBodyUser = () => {
-    return <div className="contactuser__leftside__body--user">hi from user</div>
-}
+export const ContactUserMessagesBodyUser = props => {
+  return <div className="contactuser__leftside__body--user">{props.txt}</div>;
+};
