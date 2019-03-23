@@ -6,6 +6,10 @@ export const RegisterPassword = () => {
       type="password"
       placeholder="password"
       className="register__password"
+      id="password"
+      onClick={e => {
+        e.target.style.borderColor = "transparent";
+      }}
     />
   );
 };

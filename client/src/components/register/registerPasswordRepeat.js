@@ -6,6 +6,10 @@ export const RegisterPasswordRepeat = () => {
       type="password"
       placeholder="repeat password"
       className="register__password"
+      id="rePassword"
+      onClick={e => {
+        e.target.style.borderColor = "transparent";
+      }}
     />
   );
 };
