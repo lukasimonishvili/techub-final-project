@@ -4,7 +4,7 @@ import { FeedbacklistHeadercell } from "./FeedbacklistHeadercell";
 
 export const FeedbacklistHeaderrow = () => {
   return (
-    <div className="Feedbacklist__headerrow">
+    <div className="Feedbacklist__table__headerrow">
         {/* <შვილის მუდმივა /> */}
         <FeedbacklistHeadercell Th="Feedback"/>
         <FeedbacklistHeadercell Th="Product"/>
