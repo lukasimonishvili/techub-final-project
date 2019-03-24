@@ -489,7 +489,7 @@ table {
   height: 500px;
   z-index: 1000;
   display: none;
-  bottom: 10px;
+  bottom: 50px;
   right: 50px; }
   .chat__body {
     display: flex;
@@ -604,6 +604,14 @@ table {
     height: 400px; }
     .chat__input__text {
       margin-right: 10px; } }
+
+@media (max-height: 475px) {
+  .chat {
+    width: 250px;
+    height: 300px;
+    bottom: 30px; }
+    .chat__input {
+      height: 65px; } }
 
 .admin {
   display: flex; }

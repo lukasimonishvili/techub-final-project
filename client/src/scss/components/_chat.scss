@@ -5,7 +5,7 @@
   height: 500px;
   z-index: 1000;
   display: none;
-  bottom: 10px;
+  bottom: 50px;
   right: 50px;
 
   &__body {
@@ -156,6 +156,17 @@
       &__text{
         margin-right: 10px;
       }
+    }
+  }
+}
+
+@media (max-height: 475px){
+  .chat{
+    width: 250px;
+    height: 300px;
+    bottom: 30px;
+    &__input{
+      height: 65px;
     }
   }
 }
