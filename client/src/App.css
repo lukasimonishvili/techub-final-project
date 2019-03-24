@@ -63,9 +63,9 @@ table {
   .header__nav {
     height: 80px; }
   .header__sidebar img {
-    margin-top: 20px;
-    width: 40px;
-    height: 40px; }
+    margin-top: 10px;
+    width: 50px;
+    height: 50px; }
     .header__sidebar img:hover {
       cursor: pointer;
       background: rgba(127, 127, 127, 0.4);
@@ -155,12 +155,10 @@ table {
     border: 1px solid #33333a; }
 
 @media (max-width: 885px) {
-  __logo {
-    width: 150px;
-    height: 50px; }
-    __logo img {
-      width: 100%;
-      height: 100%; } }
+  .header__search {
+    margin-left: 0; }
+  .header__logo {
+    display: none; } }
 
 @media (max-width: 570px) {
   .header__logo {
@@ -170,15 +168,18 @@ table {
     background-image: none;
     background-repeat: no-repeat; }
   .header__search {
-    margin-top: 20px;
-    width: 50px;
-    height: 30px; }
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    border-bottom: none; }
+    .header__search__input {
+      border: none;
+      display: none; }
+    .header__search__button {
+      width: 100%;
+      padding: 0; }
   .header__sidebar img {
     margin-top: 20px;
-    width: 30px;
-    height: 30px; }
-  .header__cart img {
-    margin-top: 15px;
     width: 30px;
     height: 30px; } }
 
@@ -201,7 +202,7 @@ table {
   .sidebar__container {
     width: 300px;
     height: 100vh;
-    background-color: #BDD358;
+    background-color: #ececea;
     border-right: 3px solid #515153;
     box-shadow: 0 0 150px black; }
   .sidebar__header {
@@ -209,7 +210,7 @@ table {
     padding: 20px;
     font-size: 25px;
     color: #c9cac1;
-    background-color: #343A18;
+    background-color: #33333a;
     text-align: center;
     border-width: 3px;
     border-style: solid;
@@ -218,11 +219,13 @@ table {
     padding: 15px;
     font-size: 15px;
     font-weight: 700;
-    color: #504545;
+    color: #242121;
     text-align: center; }
     .sidebar__productitem:hover {
       cursor: pointer;
       background-color: #cbd2ae; }
+    .sidebar__productitem:active {
+      background-color: darkslategray; }
 
 @media (max-width: 885px) {
   .sidebar__container {
@@ -348,7 +351,7 @@ table {
         margin-top: 40px; }
 
 .login {
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 30px 0;
   box-sizing: border-box; }
@@ -392,6 +395,24 @@ table {
     .login__register:hover {
       background: rgba(127, 127, 127, 0.4);
       cursor: pointer; }
+
+@media (max-width: 670px) {
+  .login {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center; }
+    .login__username {
+      margin-bottom: 10px;
+      width: 250px; }
+    .login__password {
+      margin-bottom: 10px;
+      width: 250px; }
+    .login__signin {
+      width: 250px;
+      margin-bottom: 10px; }
+    .login__register {
+      width: 250px;
+      margin-bottom: 10px; } }
 
 .register {
   display: flex;
@@ -508,7 +529,7 @@ table {
       width: 100%;
       padding: 10px;
       text-align: left;
-      background-color: silver;
+      background-color: white;
       border-radius: 10px 10px 10px 0;
       color: #221c1c;
       margin-bottom: 10px;
@@ -519,7 +540,7 @@ table {
     border: 1px solid #0a116e;
     border-radius: 10px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.8); }
     .chat__input__text {
       border-radius: 5px 0 0 5px;
       border-right: 0;
@@ -569,6 +590,16 @@ table {
     padding: 5px;
     border-radius: 50%;
     font-weight: 500; }
+
+@media (max-width: 885px) {
+  .messageIcon {
+    width: 70px;
+    right: 10px; }
+  .chat {
+    width: 250px;
+    height: 400px; }
+    .chat__input__text {
+      margin-right: 10px; } }
 
 .admin {
   display: flex; }
@@ -846,12 +877,20 @@ table {
       border-bottom: 2px solid #817c7c;
       color: #121224; }
     .footer__aboutus__info {
-      font-size: 15px;
+      font-size: 12px;
       color: #29a0a0;
       margin-bottom: 10px; }
     .footer__aboutus__name {
       font-size: 13px;
-      color: cadetblue; }
+      color: #a3a3a3; }
+
+@media (max-width: 885px) {
+  .footer {
+    height: 200px; }
+    .footer__aboutus {
+      margin: 0 auto; }
+      .footer__aboutus__name {
+        font-size: 15px; } }
 
 .profilepopup__container {
   width: 170px;
@@ -909,8 +948,6 @@ table {
 
 .productOnPage {
   margin: 0 auto;
-  width: 280px;
-  height: 350px;
   margin: 20px;
   object-fit: contain; }
   .productOnPage__container {
@@ -923,15 +960,15 @@ table {
     flex-wrap: wrap;
     padding-bottom: 100px; }
   .productOnPage__linkToProduct {
+    width: 280px;
     text-decoration: none;
     text-align: center;
     color: black;
-    width: 100%;
-    margin-right: 50px;
+    margin-right: 20px;
     margin-bottom: 50px; }
   .productOnPage_img {
-    width: 280px;
-    height: 400px;
+    width: 100%;
+    height: 300px;
     object-fit: contain; }
   .productOnPage_name {
     display: block;
@@ -978,6 +1015,10 @@ table {
     padding-right: 20px;
     font-size: 14px;
     color: green; }
+
+@media (max-width: 685px) {
+  .productOnPage {
+    margin: 0 auto; } }
 
 .contactuser {
   width: 100%;
@@ -1186,7 +1227,7 @@ table {
           font-size: 15px;
           color: #ffffff;
           width: 100%; }
-          .account__container__body--history li:nth-child(2n+1) {
+          .account__container__body--history li:nth-child(2n + 1) {
             background: #3e3e46; }
         .account__container__body--history button {
           cursor: pointer;
@@ -1218,7 +1259,6 @@ table {
           cursor: pointer;
           width: 200px;
           height: 30px;
-          margin-bottom: 50px;
           padding: 4px;
           background: #26991e;
           border-radius: 3px;
@@ -1227,6 +1267,19 @@ table {
           color: #ffffff; }
           .account__container__body--personal button:active {
             background: #02722d; }
+
+@media (max-width: 920px) {
+  .account__container__nav {
+    width: 100%; }
+  .account__container__body {
+    width: 100%; } }
+
+@media (max-width: 620px) {
+  .account__container {
+    padding: 0;
+    height: calc(100vh - 200px); }
+    .account__container__nav li {
+      font-size: 10px; } }
 
 .ProductCat {
   width: 100%; }

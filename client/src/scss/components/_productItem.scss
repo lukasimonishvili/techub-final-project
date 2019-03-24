@@ -1,7 +1,5 @@
 .productOnPage {
   margin: 0 auto;
-  width: 280px;
-  height: 350px;
   margin: 20px;
   object-fit: contain;
   &__container {
@@ -15,16 +13,16 @@
     padding-bottom: 100px;
   }
   &__linkToProduct {
+    width: 280px;
     text-decoration: none;
     text-align: center;
     color: black;
-    width: 100%;
-    margin-right: 50px;
+    margin-right: 20px;
     margin-bottom: 50px;
   }
   &_img {
-    width: 280px;
-    height: 400px;
+    width: 100%;
+    height: 300px;
     object-fit: contain;
     
   }
@@ -81,5 +79,11 @@
     padding-right: 20px;
     font-size: 14px;
     color: green;
+  }
+}
+
+@media (max-width:685px) {
+  .productOnPage{
+    margin: 0 auto;
   }
 }

@@ -13,13 +13,12 @@
         width: calc(100% - 300px);
         height: 100vh;
         position: fixed;
-       
         right: 0;
     }
     &__container{
         width: 300px;
         height: 100vh;
-        background-color:#BDD358;
+        background-color:#ececea;
         border-right:3px solid rgb(81, 81, 83);
         box-shadow: 0 0 150px black;
 
@@ -29,7 +28,7 @@
         padding: 20px;
         font-size: 25px;
         color: rgb(201, 202, 193);
-        background-color: #343A18;
+        background-color: #33333a;
         text-align: center;
         border-width: 3px;
         border-style: solid;
@@ -41,11 +40,14 @@
         padding: 15px;
         font-size: 15px;
         font-weight: 700;
-        color: rgb(80, 69, 69);
+        color: rgb(36, 33, 33);
         text-align: center;
         &:hover{
             cursor: pointer;
             background-color: #cbd2ae;
+        }
+        &:active{
+            background-color: darkslategray;
         }
     }
 }
