@@ -3,10 +3,10 @@ import { ProfilePopupBalance } from "./profilePopupItem";
 import { ProfilePopupLogout } from "./profilePopupLogout";
 import { ProfilePopupAccount } from "./profilePopupAccount";
 
-export const ProfilePopupList = () => {
+export const ProfilePopupList = props => {
   return (
     <nav className="profilepopup__list">
-      <ProfilePopupBalance name="balance" />
+      <ProfilePopupBalance balance={props.balance} />
       <ProfilePopupAccount />
       <ProfilePopupLogout />
     </nav>

@@ -6,6 +6,7 @@ export const AccountContainerBodyPersonalChangepass = () => {
       type="password"
       className="account__container__body--personpass"
       placeholder="Enter new password"
+      id="newPassword"
     />
   );
 };

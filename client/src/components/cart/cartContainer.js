@@ -46,7 +46,11 @@ export class CartContainer extends React.Component {
       <div className="cart__container">
         <CartHeader />
         <Cart stater={this.stateHandler} cart={this.state.cart} />
-        <CartBuyitnow stater={this.stateHandler} />
+        <CartBuyitnow
+          baanceStater={this.props.baanceStater}
+          historyStater={this.props.historyStater}
+          stater={this.stateHandler}
+        />
       </div>
     );
   }

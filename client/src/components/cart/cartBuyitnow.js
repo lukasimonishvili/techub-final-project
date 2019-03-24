@@ -72,6 +72,8 @@ export class CartBuyitnow extends React.Component {
               Axios.post("/buyProduct", buyData).then(buy => {
                 alert(buy.data.message);
                 this.props.stater(buy.data.cart);
+                this.props.baanceStater(buy.data.balance);
+                this.props.historyStater(buy.data.history);
               });
             }
           });
