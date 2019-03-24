@@ -45,10 +45,11 @@ export class LoggedInUser extends React.Component {
         <Chat />
         <Router>
           <CartContainer path="/mycart" />
-          <Product path="product/:productId" />
           <Account path="/account" />
+          <Product path="product/:productId" />
         </Router>
         <ProductOnPageContainer />
+        {/* <Product/> */}
         <Message />
         <Footer />
       </>
