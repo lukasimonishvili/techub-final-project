@@ -1,43 +1,67 @@
 .Feedbacklist {
     box-sizing: border-box;
     &__title {
-        margin: 5px;
-        font-size: 30px;
-        font-weight: bold;
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
     }
-    .Feedbacklist__table {
-        display: table;
+    &__table {
+        list-style-type: none;
         width: 100%;
-        &__headerrow{
-            display: table-row;
-            background-color: gray;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        &__headercell{
-            display: table-cell;
-            padding: 10px;
-            text-align: justify;
-            border-bottom: 1px solid black;
-            min-width: fit-content;
-        }
+        display: flex;
+        flex-direction: column;
         &__row {
-            display: table-row;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid black;
+        }    
+        &__row:first-of-type {
+            background:gray;
+            font-weight: 800;
         }
-        &__Cell {
-            display: table-cell;
-            font-size: 10px;
+        &__Feedback {
+            font-size: 15px;
             padding: 10px;
             text-align: justify;
             word-wrap: break-word;
-            min-width: fit-content;
-            max-width: 200px;
-            border-bottom: 1px solid black;
-            &--button {
+            width: 340PX;
+        }
+        &__Product {
+            font-size: 15px;
+            padding: 10px;
+            text-align: justify;
+            word-wrap: break-word;
+            width: 210px;
+            cursor: pointer;
+        }
+        &__Author {
+            font-size: 15px;
+            padding: 10px;
+            text-align: justify;
+            word-wrap: break-word;
+            width: 170px;
+            cursor: pointer;
+        }
+        &__ID {
+            font-size: 15px;
+            padding: 10px;
+            text-align: justify;
+            word-wrap: break-word;
+            width: 215px;
+            cursor: pointer;
+        }
+        &__action {
+            font-size: 15px;
+            padding: 10px;
+            text-align: justify;
+            word-wrap: break-word;
+            width: 80px;
+            &__button {
+                margin: 5px;
                 padding: 1px 6px;
                 align-items: flex-start;
                 text-align: center;
-                cursor: default;
+                cursor: pointer;
                 color: buttontext;
                 background-color: buttonface;
                 box-sizing: border-box;
@@ -51,10 +75,7 @@
                 text-transform: none;
                 text-indent: 0px;
                 text-shadow: none;
-                display: block;
-                margin: 10px;
-                font: 400 13.3333px Arial;
-                border-bottom: 1px solid black;
+                display: inline-block;
             }
         }
     }
