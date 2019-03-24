@@ -834,6 +834,10 @@ table {
       cursor: pointer;
       background: rgba(127, 127, 127, 0.4); }
 
+@media (max-width: 885px) {
+  .cart {
+    width: 100%; } }
+
 .customerlist {
   padding: 30px; }
   .customerlist__title {
@@ -1304,6 +1308,8 @@ table {
       background: #153d12;
       color: aliceblue;
       border: 1px solid #205e1b; }
+    .ProductCat__Newcatbutton::placeholder {
+      color: #ffffff; }
   .ProductCat__All {
     margin: 5px;
     width: 30%;
@@ -1328,15 +1334,18 @@ table {
       background-color: rgba(7, 19, 14, 0.589); }
     .ProductCat__Cat__Link {
       width: calc(100% - 150px);
+      background: transparent;
       padding: 15px 0 15px 10px;
       font-size: 17px;
-      color: #fafafa;
+      color: #2c2b2b;
       text-decoration: none;
       display: block;
       cursor: pointer;
       font: 400 13.3333px Arial; }
       .ProductCat__Cat__Link:active {
         color: black; }
+      .ProductCat__Cat__Link::placeholder {
+        color: #ffffff; }
     .ProductCat__Cat__actionbutton {
       margin-right: 20px;
       padding: 10px;

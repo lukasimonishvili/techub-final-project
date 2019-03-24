@@ -7,7 +7,12 @@ import { ProductList } from "./ProductList";
 export const ProductCatCat = props => {
   return (
     <div className="ProductCat__Cat">
-      <span className="ProductCat__Cat__Link">{props.prodCat}</span>
+      <input
+        className="ProductCat__Cat__Link"
+        id="inputInProductCat"
+        type="text"
+        placeholder={props.prodCat}
+      />
       <div>
         <ProductCatActionbuttonEdit />
         <ProductCatActionbuttonDellete />

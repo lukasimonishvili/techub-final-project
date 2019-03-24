@@ -24,6 +24,9 @@
       color: aliceblue;
       border: 1px solid #205e1b;
     }
+    &::placeholder{
+      color: #ffffff;
+    }
   }
   &__All {
     margin: 5px;
@@ -55,15 +58,19 @@
 
     &__Link {
       width: calc(100% - 150px);
+      background: transparent;
       padding: 15px 0 15px 10px;
       font-size: 17px;
-      color: #fafafa;
+      color: #2c2b2b;
       text-decoration: none;
       display: block;
       cursor: pointer;
       font: 400 13.3333px Arial;
       &:active{
         color: black;
+      }
+      &::placeholder{
+        color: #ffffff;
       }
     }
     &__actionbutton {
