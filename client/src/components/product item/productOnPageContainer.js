@@ -20,16 +20,14 @@ export class ProductOnPageContainer extends React.Component {
   render() {
     return (
       <div className="productOnPage__container">
-        {this.state.products.map(item => {
+        {this.state.products.map((item, index) => {
           return (
-            <>
-              <ProductOnPage
-                price={item.price}
-                productName={item.title}
-                image={item.img[0]}
-                key={item._id}
-              />
-            </>
+            <ProductOnPage
+              price={item.price}
+              productName={item.title}
+              image={item.img[0]}
+              key={index}
+            />
           );
         })}
       </div>
