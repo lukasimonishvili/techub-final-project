@@ -1,10 +1,32 @@
 import React from "react";
+import Axios from "axios";
 
-export const AdditemCategory = () => {
-  return (
-    <select className="additem__category" name="product category"  >
-      <option value="product category">product category</option>
-      <option value="product category 1">product category 1</option>
-    </select>
-  );
-};
+export class AdditemCategory extends React.Component {
+  state = {
+    categorys: []
+  };
+
+  componentDidMount() {
+    Axios.post("/categoryList").then(res => {
+      this.setState({ categorys: res.data });
+    });
+  }
+
+  render() {
+    return (
+      <select
+        id="category"
+        className="additem__category"
+        name="product category"
+      >
+        {this.state.categorys.map(cat => {
+          return (
+            <option key={cat.title} value={cat.title}>
+              {cat.title}
+            </option>
+          );
+        })}
+      </select>
+    );
+  }
+}

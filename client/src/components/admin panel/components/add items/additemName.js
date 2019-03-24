@@ -7,6 +7,7 @@ export const AdditemName = () => {
       type="text"
       name="product name"
       placeholder="product name"
+      id="title"
     />
   );
 };

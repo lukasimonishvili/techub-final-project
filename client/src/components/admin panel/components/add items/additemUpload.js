@@ -9,6 +9,7 @@ export const AdditemUpload = () => {
       accept="image/png, image/jpeg"
       name="upliad images"
       placeholder="upliad images"
+      id="img"
     />
   );
 };
