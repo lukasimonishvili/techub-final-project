@@ -350,6 +350,10 @@ table {
         height: 40px;
         margin-top: 40px; }
 
+@media (max-width: 900px) {
+  .product__column1 {
+    flex-direction: column; } }
+
 .login {
   max-width: 600px;
   margin: 0 auto;
@@ -836,7 +840,20 @@ table {
 
 @media (max-width: 885px) {
   .cart {
-    width: 100%; } }
+    width: 100%; }
+    .cart__header {
+      text-align: left; }
+    .cart__buyitnow {
+      right: 50px;
+      top: 100px; } }
+
+@media (max-width: 500px) {
+  .cart__productitem {
+    flex-wrap: wrap; }
+    .cart__productitem__name {
+      display: none; }
+    .cart__productitem__delete {
+      margin: 0; } }
 
 .customerlist {
   padding: 30px; }
@@ -982,6 +999,21 @@ table {
     font-size: 16px; }
     .productOnPage_name_buttons {
       justify-content: space-around; }
+      .productOnPage_name_buttons-details {
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        color: #252323; }
+        .productOnPage_name_buttons-details:hover {
+          border: 1px solid #85ad8f;
+          background: #f8f8f8; }
+        .productOnPage_name_buttons-details:active {
+          background: #727272;
+          color: #f4f4f4; }
       .productOnPage_name_buttons button {
         cursor: pointer;
         margin-top: 5px;

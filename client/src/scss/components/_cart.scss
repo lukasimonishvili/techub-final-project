@@ -78,8 +78,31 @@
   }
 }
 
-@media (max-width: 885px){
-  .cart{
+@media (max-width: 885px) {
+  .cart {
     width: 100%;
+    &__header{
+      text-align: left;
+    }
+    &__buyitnow {
+      right: 50px;
+      top: 100px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cart {
+    &__productitem {
+      flex-wrap: wrap;
+      &__name {
+        display: none;
+      }
+      &__delete {
+        margin: 0;
+      }
+    }
+    &__buyitnow {
+    }
   }
 }

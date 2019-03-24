@@ -143,3 +143,11 @@
     }
   }
 }
+@media (max-width: 900px){
+  .product{
+    &__column1{
+      flex-direction: column;
+
+    }
+  }
+}

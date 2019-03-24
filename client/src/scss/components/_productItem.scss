@@ -24,7 +24,6 @@
     width: 100%;
     height: 300px;
     object-fit: contain;
-    
   }
   &_name {
     display: block;
@@ -34,6 +33,24 @@
     font-size: 16px;
     &_buttons {
       justify-content: space-around;
+      &-details {
+        cursor: pointer;
+        font-size: 13px;
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        background-color: #f3f3f3;
+        color: rgb(37, 35, 35);
+        &:hover {
+          border: 1px solid rgb(133, 173, 143);
+          background: #f8f8f8;
+        }
+        &:active {
+          background: #727272;
+          color: #f4f4f4;
+        }
+      }
       & button {
         cursor: pointer;
         margin-top: 5px;
@@ -82,8 +99,8 @@
   }
 }
 
-@media (max-width:685px) {
-  .productOnPage{
+@media (max-width: 685px) {
+  .productOnPage {
     margin: 0 auto;
   }
 }
