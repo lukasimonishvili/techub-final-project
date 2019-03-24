@@ -67,6 +67,7 @@ const messageAdminToUser = (req, res) => {
         notification: 1
       };
       Message.create(newMessageBox);
+      Notification.create({ from: req.body.userId, notification: 0 });
       res.json({ message: "message sent", data: newMessageBox.body });
     } else {
       let newMessage = {

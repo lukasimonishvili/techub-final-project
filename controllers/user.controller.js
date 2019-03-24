@@ -165,14 +165,18 @@ const fillBalance = (req, res) => {
     if (err) {
       res.json({ message: "balance not filled", balance: data.balance });
     } else {
-      data.balance = data.balance + Number(req.body.balance);
-      data.save(errr => {
-        if (errr) {
-          res.json({ message: "balance not filled", balance: data.balance });
-        } else {
-          res.json({ message: "Balance filled", balance: data.balance });
-        }
-      });
+      if (Number(req.body.balance) < 0 || Number(req.body.balance) == 0) {
+        res.json({ message: "Invalid balance number", balance: data.balance });
+      } else {
+        data.balance = data.balance + Number(req.body.balance);
+        data.save(errr => {
+          if (errr) {
+            res.json({ message: "balance not filled", balance: data.balance });
+          } else {
+            res.json({ message: "Balance filled", balance: data.balance });
+          }
+        });
+      }
     }
   });
 };
@@ -259,7 +263,12 @@ const buyProduct = (req, res) => {
     data.cart = [];
     data.save(errr => {
       if (!errr) {
-        res.json({ message: "Thank you for buying", cart: data.cart });
+        res.json({
+          message: "Thank you for buying",
+          cart: data.cart,
+          balance: data.balance,
+          history: data.shoppHistory
+        });
       }
     });
   });
@@ -268,6 +277,22 @@ const buyProduct = (req, res) => {
 const getUserList = (req, res) => {
   User.find({}, (err, data) => {
     res.json(data);
+  });
+};
+
+const clearShoppingHistory = (req, res) => {
+  User.findOne({ _id: req.body.userId }, (err, data) => {
+    if (data) {
+      data.shoppHistory = [];
+      data.save(er => {
+        if (er) {
+          console.log("Somthing went wrong");
+        }
+      });
+      res.json({ message: true, data: data.shoppHistory });
+    } else {
+      res.json({ message: false });
+    }
   });
 };
 
@@ -281,5 +306,6 @@ module.exports = {
   removeFromCart,
   getOneUser,
   buyProduct,
-  getUserList
+  getUserList,
+  clearShoppingHistory
 };

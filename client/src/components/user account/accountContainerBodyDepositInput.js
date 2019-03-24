@@ -6,6 +6,7 @@ export const AccountContainerBodyDepositInput = () => {
       type="number"
       className="account__container__body--depositinput"
       placeholder="Enter deposit amount"
+      id="fillBalance"
     />
   );
 };

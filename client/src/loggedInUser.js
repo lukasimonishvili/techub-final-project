@@ -10,11 +10,32 @@ import Axios from "axios";
 import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
 import { Product } from "./components/product/product";
 import { Account } from "./components/user account/account";
+
 export class LoggedInUser extends React.Component {
+  constructor(props) {
+    super(props);
+    this.balanceStateHandler = this.balanceStateHandler.bind(this);
+    this.historyStateHandler = this.historyStateHandler.bind(this);
+    this.userStateHandler = this.userStateHandler.bind(this);
+  }
+
   state = {
-    logedInUser: {},
-    cart: []
+    user: {},
+    balance: 0,
+    history: []
   };
+
+  balanceStateHandler(value) {
+    this.setState({ balance: value });
+  }
+
+  historyStateHandler(value) {
+    this.setState({ history: value });
+  }
+
+  userStateHandler(value) {
+    this.setState({ user: value });
+  }
 
   getCookie = cname => {
     var name = cname + "=";
@@ -33,19 +54,34 @@ export class LoggedInUser extends React.Component {
 
   componentDidMount() {
     Axios.post(`/getOneUser/${this.getCookie("c3a4d")}`).then(res => {
-      this.setState({ logedInUser: res.data });
+      this.setState({
+        user: res.data,
+        balance: res.data.balance,
+        history: res.data.shoppHistory
+      });
     });
   }
 
   render() {
     return (
       <>
-        <LoggedInHeader />
+        <LoggedInHeader balance={this.state.balance} />
         <Sidebar />
         <Chat />
         <Router>
-          <CartContainer path="/mycart" />
-          <Account path="/account" />
+          <CartContainer
+            baanceStater={this.balanceStateHandler}
+            historyStater={this.historyStateHandler}
+            path="/mycart"
+          />
+          <Account
+            path="/account"
+            history={this.state.history}
+            baanceStater={this.balanceStateHandler}
+            historyStater={this.historyStateHandler}
+            userStater={this.userStateHandler}
+            user={this.state.user}
+          />
           <Product path="product/:productId" />
         </Router>
         <ProductOnPageContainer />
