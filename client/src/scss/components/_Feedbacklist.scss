@@ -8,34 +8,53 @@
     .Feedbacklist__table {
         display: table;
         width: 100%;
-        .Feedbacklist__headerrow {
+        &__headerrow{
             display: table-row;
             background-color: gray;
             font-weight: bold;
             font-size: 20px;
         }
-        .Feedbacklist__headercell {
+        &__headercell{
             display: table-cell;
             padding: 10px;
             text-align: justify;
             border-bottom: 1px solid black;
             min-width: fit-content;
         }
-        .Feedbacklist__row {
+        &__row {
             display: table-row;
         }
-        .Feedbacklist__Cell {
+        &__Cell {
             display: table-cell;
-            border-bottom: 1px solid black;
             font-size: 10px;
             padding: 10px;
             text-align: justify;
             word-wrap: break-word;
             min-width: fit-content;
             max-width: 200px;
-            &__button {
-                // გასასწორებელია
-                padding: 5px;
+            border-bottom: 1px solid black;
+            &--button {
+                padding: 1px 6px;
+                align-items: flex-start;
+                text-align: center;
+                cursor: default;
+                color: buttontext;
+                background-color: buttonface;
+                box-sizing: border-box;
+                border-width: 2px;
+                border-style: outset;
+                border-color: buttonface;
+                border-image: initial;
+                text-rendering: auto;
+                letter-spacing: normal;
+                word-spacing: normal;
+                text-transform: none;
+                text-indent: 0px;
+                text-shadow: none;
+                display: block;
+                margin: 10px;
+                font: 400 13.3333px Arial;
+                border-bottom: 1px solid black;
             }
         }
     }

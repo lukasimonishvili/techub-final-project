@@ -4,12 +4,12 @@ import { FeedbacklistCell } from "./FeedbacklistCell";
 
 export const FeedbacklistRow = () => {
   return (
-    <div className="Feedbacklist__row">
+    <div className="Feedbacklist__table__row">
         <FeedbacklistCell Td="This is good product......Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit architecto, beatae sint ut adipisci reprehenderit cumque praesentium excepturi, ab pariatur laudantium sit, doloremque ea magnam molestias eligendi! Magni, fugiat praesentium?"/>
         <FeedbacklistCell Td="Iphone X"/>
         <FeedbacklistCell Td="Jane Doe Paterson"/>
         <FeedbacklistCell Td="000002000002000002000002"/>
-        <button type='button' className='Feedbacklist__Cell__button'>Delete</button>
+        <button type='button' className='Feedbacklist__table__Cell--button'>Delete</button>
     </div>
   );
 };
