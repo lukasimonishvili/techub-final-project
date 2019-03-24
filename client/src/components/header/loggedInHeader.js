@@ -1,10 +1,10 @@
 import React from "react";
 import { LoggedInWrapper } from "./loggedInWrapper";
 
-export const LoggedInHeader = () => {
+export const LoggedInHeader = props => {
   return (
     <header className="header">
-      <LoggedInWrapper />
+      <LoggedInWrapper balance={props.balance} />
     </header>
   );
 };

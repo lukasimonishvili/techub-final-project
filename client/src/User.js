@@ -8,6 +8,7 @@ import { Register } from "./components/register/register";
 import { Product } from "./components/product/product";
 import { Footer } from "./components/footer/footer";
 import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
+import Axios from "axios";
 
 export class User extends React.Component {
   render() {

@@ -6,6 +6,7 @@ export const AccountContainerBodyPersonalEntercurrentpass = () => {
       type="password"
       className="account__container__body--currentpass"
       placeholder="Enter current password to take changes"
+      id="oldPassword"
     />
   );
 };

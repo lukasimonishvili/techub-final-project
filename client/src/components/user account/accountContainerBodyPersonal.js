@@ -6,15 +6,20 @@ import { AccountContainerBodyPersonalChangepassrepeat } from "./accountContainer
 import { AccountContainerBodyPersonalEntercurrentpass } from "./accountContainerBodyPersonalEntercurrentpass";
 import { AccountContainerBodyPersonalSavechanges } from "./accountContainerBodyPersonalSavechanges";
 
-export const AccountContainerBodyPersonal = () => {
+export const AccountContainerBodyPersonal = props => {
   return (
-    <div className="account__container__body--personal fl_dir_col" id="personal">
-      <AccountContainerBodyPersonalChangename />
-      <AccountContainerBodyPersonalChangelastname />
+    <div
+      className="account__container__body--personal fl_dir_col"
+      id="personal"
+    >
+      <AccountContainerBodyPersonalChangename userName={props.user.name} />
+      <AccountContainerBodyPersonalChangelastname
+        lastName={props.user.lastName}
+      />
       <AccountContainerBodyPersonalChangepass />
       <AccountContainerBodyPersonalChangepassrepeat />
-      <AccountContainerBodyPersonalEntercurrentpass/>
-      <AccountContainerBodyPersonalSavechanges/>
+      <AccountContainerBodyPersonalEntercurrentpass />
+      <AccountContainerBodyPersonalSavechanges userStater={props.userStater} />
     </div>
   );
 };
