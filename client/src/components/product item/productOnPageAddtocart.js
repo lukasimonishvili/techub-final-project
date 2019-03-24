@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
+import Axios from "axios";
 
 export class ProductOnPageAddtocart extends React.Component {
   getCookie = cname => {
@@ -19,7 +20,17 @@ export class ProductOnPageAddtocart extends React.Component {
   render() {
     if (this.getCookie("c3a4d").length === 24) {
       return (
-        <button className="productOnPage_name_buttons-addtocart">
+        <button
+          className="productOnPage_name_buttons-addtocart"
+          onClick={() => {
+            Axios.post(`/addToCart`, {
+              userId: this.getCookie("c3a4d"),
+              productId: this.props.productId
+            }).then(res => {
+              alert(res.data.message);
+            });
+          }}
+        >
           Add to cart
         </button>
       );

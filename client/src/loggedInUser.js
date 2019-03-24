@@ -83,9 +83,8 @@ export class LoggedInUser extends React.Component {
             user={this.state.user}
           />
           <Product path="product/:productId" />
+          <ProductOnPageContainer path="/" />
         </Router>
-        <ProductOnPageContainer />
-        {/* <Product/> */}
         <Message />
         <Footer />
       </>

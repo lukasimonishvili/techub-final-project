@@ -1,10 +1,14 @@
 import React from "react";
 import { ProductInfoRatingDilikeImg } from "./productInfoRatingDislikeImg";
 
-export const ProductInfoRatingDislike = () => {
+export const ProductInfoRatingDislike = props => {
   return (
     <button className="product__info__rating--dislike">
-      <ProductInfoRatingDilikeImg />
+      <ProductInfoRatingDilikeImg
+        likeStater={props.likeStater}
+        productId={props.productId}
+        disLikeStater={props.disLikeStater}
+      />
     </button>
   );
 };

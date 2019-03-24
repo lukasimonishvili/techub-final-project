@@ -1,5 +1,5 @@
 import React from "react";
 
-export const ProductInfoRatingDislikeCount = () => {
-  return <span className="product__info__rating--count">4</span>;
+export const ProductInfoRatingDislikeCount = props => {
+  return <span className="product__info__rating--count">{props.disLikes}</span>;
 };

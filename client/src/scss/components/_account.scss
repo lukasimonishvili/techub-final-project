@@ -18,7 +18,7 @@
         padding: 15px;
         border-radius: 4px 0 0 0;
         background: rgb(51, 51, 58);
-       color: #ffffff;
+        color: #ffffff;
       }
       &--History {
         text-align: center;
@@ -39,7 +39,7 @@
         color: #ffffff;
         font-weight: 500;
       }
-      & li{
+      & li {
         cursor: pointer;
         width: 100%;
         &:hover {
@@ -56,26 +56,26 @@
       padding: 20px;
       border-radius: 0 0 4px 4px;
       /* width */
-    ::-webkit-scrollbar {
-      width: 4px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #252529; 
-      border-radius:2px; 
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: #656571;
-      border-radius:2px; 
-    }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #252529;
+        border-radius: 2px;
+      }
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555; 
-    }
-      &--hislist{
-        width:100%;
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #656571;
+        border-radius: 2px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      &--hislist {
+        width: 100%;
       }
       &--deposit {
         display: flex;
@@ -104,7 +104,7 @@
           line-height: 0;
           font-size: 14px;
           color: #ffffff;
-          
+
           &:active {
             background: #02722d;
           }
@@ -118,13 +118,13 @@
         height: 100%;
         overflow-y: scroll;
         & li {
-          padding:12px;
+          padding: 12px;
           font-size: 15px;
           color: #ffffff;
           // border: 1px solid rgb(188, 204, 158);
           width: 100%;
-          &:nth-child(2n+1){
-            background:#3e3e46;
+          &:nth-child(2n + 1) {
+            background: #3e3e46;
           }
         }
         & button {
@@ -137,7 +137,7 @@
           line-height: 0;
           font-size: 14px;
           color: #ffffff;
-          
+
           &:active {
             background: #720202;
           }
@@ -162,17 +162,42 @@
           cursor: pointer;
           width: 200px;
           height: 30px;
-          margin-bottom: 50px;
           padding: 4px;
           background: #26991e;
           border-radius: 3px;
           line-height: 0;
           font-size: 14px;
           color: #ffffff;
-          
+
           &:active {
             background: #02722d;
           }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 920px) {
+  .account {
+    &__container {
+      &__nav {
+        width: 100%;
+      }
+      &__body {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .account {
+    &__container {
+      padding: 0;
+      height: calc(100vh - 200px);
+      &__nav {
+        & li {
+          font-size: 10px;
         }
       }
     }
