@@ -1408,38 +1408,59 @@ table {
   box-sizing: border-box; }
   .Feedbacklist__title {
     margin: 5px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold; }
-  .Feedbacklist .Feedbacklist__table {
-    display: table;
-    width: 100%; }
-    .Feedbacklist .Feedbacklist__table__headerrow {
-      display: table-row;
-      background-color: gray;
-      font-weight: bold;
-      font-size: 20px; }
-    .Feedbacklist .Feedbacklist__table__headercell {
-      display: table-cell;
-      padding: 10px;
-      text-align: justify;
-      border-bottom: 1px solid black;
-      min-width: fit-content; }
-    .Feedbacklist .Feedbacklist__table__row {
-      display: table-row; }
-    .Feedbacklist .Feedbacklist__table__Cell {
-      display: table-cell;
-      font-size: 10px;
+  .Feedbacklist__table {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .Feedbacklist__table__row {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid black; }
+    .Feedbacklist__table__row:first-of-type {
+      background: gray;
+      font-weight: 800; }
+    .Feedbacklist__table__Feedback {
+      font-size: 15px;
       padding: 10px;
       text-align: justify;
       word-wrap: break-word;
-      min-width: fit-content;
-      max-width: 200px;
-      border-bottom: 1px solid black; }
-      .Feedbacklist .Feedbacklist__table__Cell--button {
+      width: 340PX; }
+    .Feedbacklist__table__Product {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 210px;
+      cursor: pointer; }
+    .Feedbacklist__table__Author {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 170px;
+      cursor: pointer; }
+    .Feedbacklist__table__ID {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 215px;
+      cursor: pointer; }
+    .Feedbacklist__table__action {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 80px; }
+      .Feedbacklist__table__action__button {
+        margin: 5px;
         padding: 1px 6px;
         align-items: flex-start;
         text-align: center;
-        cursor: default;
+        cursor: pointer;
         color: buttontext;
         background-color: buttonface;
         box-sizing: border-box;
@@ -1453,10 +1474,7 @@ table {
         text-transform: none;
         text-indent: 0px;
         text-shadow: none;
-        display: block;
-        margin: 10px;
-        font: 400 13.3333px Arial;
-        border-bottom: 1px solid black; }
+        display: inline-block; }
 
 .test {
   width: 100px;

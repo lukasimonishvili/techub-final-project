@@ -1,13 +1,15 @@
 import React from "react";
-import { FeedbacklistHeaderrow } from "./FeedbacklistHeaderrow";
-import { FeedbacklistRow } from "./FeedbacklistRow";
+import { FeedbacklistTableHeaderRow } from "./FeedbacklistTableHeaderRow";
+import { FeedbacklistTableRow } from "./FeedbacklistTableRow";
+
 
 export const FeedbacklistTable = () => {
   return (
-    <div className="Feedbacklist__table">
-        <FeedbacklistHeaderrow />
-        <FeedbacklistRow />
-        <FeedbacklistRow />
-    </div>
+    <ul className="Feedbacklist__table">
+      <FeedbacklistTableHeaderRow />
+      <FeedbacklistTableRow />
+      <FeedbacklistTableRow />
+      <FeedbacklistTableRow />
+    </ul>
   );
 };
