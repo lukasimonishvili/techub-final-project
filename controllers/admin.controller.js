@@ -118,17 +118,24 @@ const clearUserNotification = (req, res) => {
 
 const clearAdminNotification = (req, res) => {
   Notification.findOne({ from: req.body.userId }, (err, data) => {
-    data.notification = 0;
-    data.save(er => {
-      if (er) {
-        res.json({
-          message: "notification not cleared",
-          data: data.notification
-        });
-      } else {
-        res.json({ message: "notification cleared", data: data.notification });
-      }
-    });
+    if (data) {
+      data.notification = 0;
+      data.save(er => {
+        if (er) {
+          res.json({
+            message: "notification not cleared",
+            data: data.notification
+          });
+        } else {
+          res.json({
+            message: "notification cleared",
+            data: data.notification
+          });
+        }
+      });
+    } else {
+      res.json({ data: 0 });
+    }
   });
 };
 

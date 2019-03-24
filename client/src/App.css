@@ -765,7 +765,8 @@ table {
     position: relative; }
     .cart__productitem__image {
       width: 60px;
-      height: 60px; }
+      height: 60px;
+      object-fit: contain; }
     .cart__productitem__name {
       font-size: 15px;
       font-weight: 400; }
