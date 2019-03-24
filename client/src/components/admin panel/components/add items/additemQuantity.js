@@ -6,6 +6,7 @@ export const AdditemQuantity = () => {
       className="additem__quantity"
       type="number"
       placeholder="product quantity"
+      id="amount"
     />
   );
 };

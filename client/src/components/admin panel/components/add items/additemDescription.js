@@ -5,7 +5,7 @@ export const AdditemDescription = () => {
     <textarea
       className="additem__description"
       name="product description"
-      id=""
+      id="description"
       cols="30"
       rows="3"
       placeholder="product description"
