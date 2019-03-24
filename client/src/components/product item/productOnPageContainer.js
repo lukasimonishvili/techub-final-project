@@ -24,6 +24,7 @@ export class ProductOnPageContainer extends React.Component {
           return (
             <ProductOnPage
               price={item.price}
+              productId={item._id}
               productName={item.title}
               image={item.img[0]}
               key={index}

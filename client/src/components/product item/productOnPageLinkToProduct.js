@@ -10,7 +10,7 @@ export const ProductOnPageLinkToProduct = props => {
       <ProductOnPageImg image={props.image} />
       <ProductOnPageName productName={props.productName} />
       <ProductOnPageCurenc price={props.price} />
-      <ProductOnPageBuyingoptions />
+      <ProductOnPageBuyingoptions productId={props.productId} />
     </div>
   );
 };

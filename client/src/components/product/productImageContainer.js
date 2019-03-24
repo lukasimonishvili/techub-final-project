@@ -1,10 +1,14 @@
 import React from "react";
 import { ProductImageWrapper } from "./productImageWrapper";
 
-export const ProductImageContainer = () => {
+export const ProductImageContainer = props => {
   return (
     <div className="product__image--container">
-      <ProductImageWrapper />
+      <ProductImageWrapper
+        imgStateHander={props.imgStateHander}
+        mainImg={props.mainImg}
+        images={props.images}
+      />
     </div>
   );
 };

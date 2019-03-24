@@ -1,5 +1,9 @@
 import React from "react";
 
-export const ProductInfoAvailable = () => {
-  return <span className="product__info__available">available now 12345</span>;
+export const ProductInfoAvailable = props => {
+  return (
+    <span className="product__info__available">
+      available now {props.amount}
+    </span>
+  );
 };

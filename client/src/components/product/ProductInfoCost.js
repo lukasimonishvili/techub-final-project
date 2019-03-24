@@ -1,5 +1,5 @@
 import React from "react";
 
-export const ProductInfoCost = () => {
-  return <span className="product__info__cost">$$$$</span>;
+export const ProductInfoCost = props => {
+  return <span className="product__info__cost">{props.price}</span>;
 };

@@ -1404,30 +1404,50 @@ table {
   .Feedbacklist .Feedbacklist__table {
     display: table;
     width: 100%; }
-    .Feedbacklist .Feedbacklist__table .Feedbacklist__headerrow {
+    .Feedbacklist .Feedbacklist__table__headerrow {
       display: table-row;
       background-color: gray;
       font-weight: bold;
       font-size: 20px; }
-    .Feedbacklist .Feedbacklist__table .Feedbacklist__headercell {
+    .Feedbacklist .Feedbacklist__table__headercell {
       display: table-cell;
       padding: 10px;
       text-align: justify;
       border-bottom: 1px solid black;
       min-width: fit-content; }
-    .Feedbacklist .Feedbacklist__table .Feedbacklist__row {
+    .Feedbacklist .Feedbacklist__table__row {
       display: table-row; }
-    .Feedbacklist .Feedbacklist__table .Feedbacklist__Cell {
+    .Feedbacklist .Feedbacklist__table__Cell {
       display: table-cell;
-      border-bottom: 1px solid black;
       font-size: 10px;
       padding: 10px;
       text-align: justify;
       word-wrap: break-word;
       min-width: fit-content;
-      max-width: 200px; }
-      .Feedbacklist .Feedbacklist__table .Feedbacklist__Cell__button {
-        padding: 5px; }
+      max-width: 200px;
+      border-bottom: 1px solid black; }
+      .Feedbacklist .Feedbacklist__table__Cell--button {
+        padding: 1px 6px;
+        align-items: flex-start;
+        text-align: center;
+        cursor: default;
+        color: buttontext;
+        background-color: buttonface;
+        box-sizing: border-box;
+        border-width: 2px;
+        border-style: outset;
+        border-color: buttonface;
+        border-image: initial;
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: block;
+        margin: 10px;
+        font: 400 13.3333px Arial;
+        border-bottom: 1px solid black; }
 
 .test {
   width: 100px;

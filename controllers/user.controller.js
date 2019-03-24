@@ -165,14 +165,18 @@ const fillBalance = (req, res) => {
     if (err) {
       res.json({ message: "balance not filled", balance: data.balance });
     } else {
-      data.balance = data.balance + Number(req.body.balance);
-      data.save(errr => {
-        if (errr) {
-          res.json({ message: "balance not filled", balance: data.balance });
-        } else {
-          res.json({ message: "Balance filled", balance: data.balance });
-        }
-      });
+      if (Number(req.body.balance) < 0 || Number(req.body.balance) == 0) {
+        res.json({ message: "Invalid balance number", balance: data.balance });
+      } else {
+        data.balance = data.balance + Number(req.body.balance);
+        data.save(errr => {
+          if (errr) {
+            res.json({ message: "balance not filled", balance: data.balance });
+          } else {
+            res.json({ message: "Balance filled", balance: data.balance });
+          }
+        });
+      }
     }
   });
 };
