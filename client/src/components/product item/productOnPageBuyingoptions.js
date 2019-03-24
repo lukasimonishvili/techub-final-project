@@ -1,10 +1,15 @@
-import React from "react"
+import React from "react";
 import { ProductOnPageDetails } from "./productOnPageDetails";
 import { ProductOnPageAddtocart } from "./productOnPageAddtocart";
 
-export const ProductOnPageBuyingoptions = () => {
-    return <div className="productOnPage_name_buttons fl">
-    <ProductOnPageDetails/>
-    <ProductOnPageAddtocart componentClass="span"/>
+export const ProductOnPageBuyingoptions = props => {
+  return (
+    <div className="productOnPage_name_buttons fl">
+      <ProductOnPageDetails productId={props.productId} />
+      <ProductOnPageAddtocart
+        productId={props.productId}
+        componentClass="span"
+      />
     </div>
-}
+  );
+};

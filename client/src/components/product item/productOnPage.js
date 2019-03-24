@@ -8,6 +8,7 @@ export const ProductOnPage = props => {
         productName={props.productName}
         image={props.image}
         price={props.price}
+        productId={props.productId}
       />
     </div>
   );

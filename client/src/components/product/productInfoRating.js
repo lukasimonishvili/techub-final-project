@@ -5,13 +5,21 @@ import { ProductInfoRatingDislike } from "./productInfoRatingDislike";
 import { ProductInfoRatingDislikeCount } from "./productInfoRatingDislikeCount";
 import { ProductInfoManagequantity } from "./productInfoManagequantity";
 
-export const ProductInfoRating = () => {
+export const ProductInfoRating = props => {
   return (
     <span className="product__info__rating fl">
-      <ProductInfoRatingLike />
-      <ProductInfoRatingLikeCount />
-      <ProductInfoRatingDislike />
-      <ProductInfoRatingDislikeCount />
+      <ProductInfoRatingLike
+        productId={props.productId}
+        likeStater={props.likeStater}
+        disLikeStater={props.disLikeStater}
+      />
+      <ProductInfoRatingLikeCount likes={props.likes} />
+      <ProductInfoRatingDislike
+        likeStater={props.likeStater}
+        productId={props.productId}
+        disLikeStater={props.disLikeStater}
+      />
+      <ProductInfoRatingDislikeCount disLikes={props.disLikes} />
       <ProductInfoManagequantity />
     </span>
   );
