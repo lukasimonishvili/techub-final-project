@@ -33,9 +33,11 @@ export class CartBuyitnow extends React.Component {
               if (
                 amountInp.value[0] === "M" ||
                 amountInp.value === "" ||
-                amountInp.value === "0"
+                amountInp.value === "0" ||
+                Number(amountInp.value) < 0
               ) {
                 allFilled = false;
+                amountInp.value = "";
                 break;
               } else {
                 let obj = {
@@ -58,7 +60,7 @@ export class CartBuyitnow extends React.Component {
               }
             }
             if (!allFilled) {
-              alert("all fields are required");
+              alert("Fill all inputs or Enter valid quantity");
             } else if (priceSumm > res.data.balance) {
               alert("not enought money");
             } else if (amountMessage) {
