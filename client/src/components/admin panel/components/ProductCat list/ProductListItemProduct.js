@@ -1,8 +1,7 @@
 import React from "react";
+import Axios from "axios";
 
 export class ProductListItemProduct extends React.Component {
-  // let item = props.product;
-
   state = {
     item: {
       img: [],
@@ -10,20 +9,20 @@ export class ProductListItemProduct extends React.Component {
       category: "",
       price: "",
       description: "",
-      amount: 0
+      amount: 0,
+      _id: ""
     },
     removeImg: []
   };
 
   componentDidMount() {
-    this.setState({ item: this.props.product }, () => {
-      console.log(this.state.item);
-    });
+    this.setState({ item: this.props.product });
   }
 
   render() {
     return (
       <div className="productlist__edit">
+        <input type="hidden" defaultValue={this.state.item._id} />
         <div className="productlist__edit__images fl fl_jus_bet">
           {this.state.item.img.map(img => {
             let photo = require(`../../../../img/uploads/${img}`);
@@ -86,11 +85,9 @@ export class ProductListItemProduct extends React.Component {
               );
             })}
           </select>
-          <textarea
+          <input
             className="additem__description"
             name="product description"
-            cols="30"
-            rows="3"
             placeholder="product description"
             defaultValue={this.state.item.description}
           />
@@ -114,12 +111,34 @@ export class ProductListItemProduct extends React.Component {
                   .previousSibling.previousSibling;
               let description =
                 e.target.previousSibling.previousSibling.previousSibling;
-              let category = document.getElementById("description");
-              let img = document.getElementById("img");
-              let price = document.getElementById("price");
-              let amount = document.getElementById("amount");
+              let category =
+                e.target.previousSibling.previousSibling.previousSibling
+                  .previousSibling;
+              let img =
+                e.target.previousSibling.previousSibling.previousSibling
+                  .previousSibling.previousSibling.previousSibling;
+              let price = e.target.previousSibling;
+              let amount = e.target.previousSibling.previousSibling;
               let removeList = this.state.removeImg;
-              // console.log(description.value);
+              let fd = new FormData();
+              fd.append("title", title.value);
+              fd.append("description", description.value);
+              fd.append("category", category.value);
+              fd.append("price", price.value);
+              fd.append("amount", amount.value);
+              fd.append("removeList", removeList);
+              for (let i = 0; i < img.files.length; i++) {
+                fd.append("img", img.files[i]);
+              }
+              fd.append("img", img.files);
+              Axios.post(`/editProduct/${this.state.item._id}`, fd, {
+                headers: {
+                  "Content-type": "multipart/form-data"
+                }
+              }).then(res => {
+                alert(res.data.message);
+                this.setState({ item: res.data.data });
+              });
             }}
           >
             Save
