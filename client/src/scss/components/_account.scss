@@ -1,11 +1,12 @@
 .account {
   width: 100%;
   height: calc(100vh - 250px);
-  z-index: 11111111111;
+  z-index: 11111;
+  overflow-y: scroll;
   &__container {
     width: 100%;
     height: 100%;
-    padding: 30px;
+    // padding: 30px;
     &__nav {
       margin: 0 auto;
       width: calc(100% - 300px);
@@ -185,6 +186,7 @@
       }
       &__body {
         width: 100%;
+        height: 360px;
       }
     }
   }
@@ -203,3 +205,17 @@
     }
   }
 }
+// @media (max-height: 770px){
+//   .account {
+//     &__container {
+//       margin-bottom: 20px;
+//       &__nav {
+//         width: 100%;
+//       }
+//       &__body {
+//         width: 100%;
+//         height: 360px;
+//       }
+//     }
+//   }
+// }
