@@ -16,9 +16,9 @@ export const ProductCatCat = props => {
         defaultValue={props.cat}
       />
       <div>
+        <ProductCatActionbuttonToggle />
         <ProductCatActionbuttonEdit />
         <ProductCatActionbuttonDellete />
-        <ProductCatActionbuttonToggle />
       </div>
       <ProductList catList={props.catList} cat={props.cat} />
     </div>

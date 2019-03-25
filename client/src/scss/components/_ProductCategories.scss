@@ -24,7 +24,7 @@
       color: aliceblue;
       border: 1px solid #205e1b;
     }
-    &::placeholder{
+    &::placeholder {
       color: #ffffff;
     }
   }
@@ -57,7 +57,7 @@
     }
 
     &__Link {
-      width: calc(100% - 150px);
+      width: calc(100% - 250px);
       background: transparent;
       padding: 15px 0 15px 10px;
       font-size: 17px;
@@ -66,34 +66,40 @@
       display: block;
       cursor: pointer;
       font: 400 13.3333px Arial;
-      &:active{
+      &:active {
         color: black;
       }
-      &::placeholder{
+      &::placeholder {
         color: #ffffff;
       }
     }
     &__actionbutton {
-      margin-right: 20px;
       padding: 10px;
       color: #fafafa;
       opacity: 0.9;
       cursor: pointer;
       &:first-child {
+        background: #2c522a;
+        border-radius: 3px 0 0 3px;
+      }
+      &:active {
+        background-image: linear-gradient(
+          to right,
+          #2c522a,
+          rgba(255, 255, 255, 0.3)
+        );
+      }
+      &:nth-child(2) {
         background-color: rgb(8, 13, 165);
         margin-right: 0;
-        border-radius: 3px 0 0 3px;
         &:active {
-          background-image: linear-gradient(
-            to right,
-            rgb(8, 13, 165),
-            rgba(255, 255, 255, 0.3)
-          );
+          background: rgba(255, 255, 255, 0.3);
         }
       }
       &:last-child {
         background: rgb(128, 13, 9);
         border-radius: 0 3px 3px 0;
+        margin-right: 20px;
         &:active {
           background-image: linear-gradient(
             to left,
@@ -105,7 +111,7 @@
     }
   }
 }
-.productlist{
+.productlist {
   display: none;
   width: 100%;
   padding: 5px;
@@ -114,28 +120,28 @@
   border-bottom: 2px solid rgb(19, 36, 26);
   &__list {
     width: 100%;
-    &__item{
+    &__item {
       padding: 5px 0 5px 15px;
       color: #ffffff;
       border-bottom: 1px solid #ffffff;
-      &:last-child{
+      &:last-child {
         border: none;
       }
     }
   }
-  &__edit{
+  &__edit {
     display: none;
     flex-direction: column;
     justify-content: space-around;
     margin-top: 5px;
     width: 100%;
-    height: 400px;
+    height: auto;
     border: 1px solid #153d12;
     border-radius: 4px;
-    &__images{
+    &__images {
       width: 100%;
       height: 150px;
-      &--item{
+      &--item {
         width: 20%;
         height: 150px;
         margin: 2px;
@@ -145,10 +151,9 @@
           object-fit: contain;
         }
       }
-      &--opacity{
-        opacity: .3;
+      &--opacity {
+        opacity: 0.3;
       }
     }
   }
 }
-

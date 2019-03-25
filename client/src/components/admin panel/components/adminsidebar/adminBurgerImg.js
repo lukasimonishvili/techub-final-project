@@ -7,7 +7,8 @@ export const AdminBurgerImg = () => {
 
         adminLeftside.classList.toggle("block");
     }}>
-      <img src={gamburga} alt='hamburgermenu' />
+      {/* <img src={gamburga} alt='hamburgermenu' /> */}
+      <img src="https://static.thenounproject.com/png/153-200.png"/>
     </div>
   );
 };

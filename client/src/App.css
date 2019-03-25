@@ -652,7 +652,7 @@ table {
   .chat {
     width: 250px;
     height: 300px;
-    bottom: 30px; }
+    bottom: 50px; }
     .chat__input {
       height: 65px; } }
 
@@ -1273,7 +1273,7 @@ table {
       .contactuser__rightside__list--item {
         padding: 10px;
         margin-bottom: 5px;
-        font-size: 20px;
+        font-size: 15px;
         border: 2px solid #214e47;
         cursor: pointer; }
         .contactuser__rightside__list--item:active {
@@ -1508,7 +1508,7 @@ table {
     .ProductCat__Cat:nth-child(even) {
       background-color: rgba(7, 19, 14, 0.589); }
     .ProductCat__Cat__Link {
-      width: calc(100% - 150px);
+      width: calc(100% - 250px);
       background: transparent;
       padding: 15px 0 15px 10px;
       font-size: 17px;
@@ -1522,20 +1522,24 @@ table {
       .ProductCat__Cat__Link::placeholder {
         color: #ffffff; }
     .ProductCat__Cat__actionbutton {
-      margin-right: 20px;
       padding: 10px;
       color: #fafafa;
       opacity: 0.9;
       cursor: pointer; }
       .ProductCat__Cat__actionbutton:first-child {
-        background-color: #080da5;
-        margin-right: 0;
+        background: #2c522a;
         border-radius: 3px 0 0 3px; }
-        .ProductCat__Cat__actionbutton:first-child:active {
-          background-image: linear-gradient(to right, #080da5, rgba(255, 255, 255, 0.3)); }
+      .ProductCat__Cat__actionbutton:active {
+        background-image: linear-gradient(to right, #2c522a, rgba(255, 255, 255, 0.3)); }
+      .ProductCat__Cat__actionbutton:nth-child(2) {
+        background-color: #080da5;
+        margin-right: 0; }
+        .ProductCat__Cat__actionbutton:nth-child(2):active {
+          background: rgba(255, 255, 255, 0.3); }
       .ProductCat__Cat__actionbutton:last-child {
         background: #800d09;
-        border-radius: 0 3px 3px 0; }
+        border-radius: 0 3px 3px 0;
+        margin-right: 20px; }
         .ProductCat__Cat__actionbutton:last-child:active {
           background-image: linear-gradient(to left, #800d09, rgba(255, 255, 255, 0.3)); }
 
@@ -1560,7 +1564,7 @@ table {
     justify-content: space-around;
     margin-top: 5px;
     width: 100%;
-    height: 400px;
+    height: auto;
     border: 1px solid #153d12;
     border-radius: 4px; }
     .productlist__edit__images {
@@ -1575,14 +1579,11 @@ table {
           height: 150px;
           object-fit: contain; }
       .productlist__edit__images--opacity {
-        opacity: .3; }
+        opacity: 0.3; }
 
 .Feedbacklist {
+  margin-top: 50px;
   box-sizing: border-box; }
-  .Feedbacklist__title {
-    margin: 5px;
-    font-size: 25px;
-    font-weight: bold; }
   .Feedbacklist__table {
     list-style-type: none;
     width: 100%;
@@ -1600,7 +1601,7 @@ table {
       padding: 10px;
       text-align: justify;
       word-wrap: break-word;
-      width: 340PX; }
+      width: 440px; }
     .Feedbacklist__table__Product {
       font-size: 15px;
       padding: 10px;
@@ -1620,7 +1621,7 @@ table {
       padding: 10px;
       text-align: justify;
       word-wrap: break-word;
-      width: 215px;
+      width: 125px;
       cursor: pointer; }
     .Feedbacklist__table__action {
       font-size: 15px;
@@ -1628,26 +1629,24 @@ table {
       text-align: justify;
       word-wrap: break-word;
       width: 80px; }
-      .Feedbacklist__table__action__button {
-        margin: 5px;
-        padding: 1px 6px;
-        align-items: flex-start;
-        text-align: center;
-        cursor: pointer;
-        color: buttontext;
-        background-color: buttonface;
-        box-sizing: border-box;
-        border-width: 2px;
-        border-style: outset;
-        border-color: buttonface;
-        border-image: initial;
-        text-rendering: auto;
-        letter-spacing: normal;
-        word-spacing: normal;
-        text-transform: none;
-        text-indent: 0px;
-        text-shadow: none;
-        display: inline-block; }
+    .Feedbacklist__table__button {
+      margin: 5px;
+      padding: 1px 6px;
+      align-items: flex-start;
+      text-align: center;
+      cursor: pointer;
+      color: buttontext;
+      box-sizing: border-box;
+      border-width: 2px;
+      border-style: outset;
+      border-image: initial;
+      text-rendering: auto;
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-transform: none;
+      text-indent: 0px;
+      text-shadow: none;
+      display: inline-block; }
 
 .block {
   display: block !important; }
