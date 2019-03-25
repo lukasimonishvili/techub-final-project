@@ -20,8 +20,8 @@ export class User extends React.Component {
           <Login path="/login" />
           <Register path="/register" />
           <Product path="product/:productId" />
+        <ProductOnPageContainer path="/" />
         </Router>
-        <ProductOnPageContainer />
         <Footer />
       </>
     );

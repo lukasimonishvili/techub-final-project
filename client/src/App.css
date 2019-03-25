@@ -238,34 +238,39 @@ table {
   padding-top: 50px;
   margin-bottom: 100px; }
   .product__image {
-    width: 500px;
-    height: 500px;
+    display: flex;
+    flex-direction: row-reverse;
     padding: 10px;
     margin: 10px 0 0 10px;
-    background: rgba(214, 214, 215, 0.5);
-    height: calc(100% - 180px);
     margin-right: 40px;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    object-fit: contain; }
     .product__image img {
-      width: 100%;
+      margin: 0 auto;
+      width: 350px;
       padding: 10px;
-      height: auto; }
+      height: 350px;
+      object-fit: contain; }
     .product__image--container {
-      margin-top: 5px;
-      width: 100%;
-      display: flex; }
+      width: 120px;
+      height: 370px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      object-fit: contain; }
     .product__image__wrapper {
-      width: 100px;
-      margin-right: 5px; }
+      width: 100%;
+      margin-right: 0;
+      object-fit: contain; }
       .product__image__wrapper img {
+        width: 100px;
+        height: 100px;
         cursor: pointer;
         border: 1px solid transparent;
-        width: 100%;
         height: auto; }
         .product__image__wrapper img:hover {
           border: 1px solid #000000; }
   .product__info {
-    width: calc(100% - 200px);
     margin: 0 auto;
     margin: 0 20px; }
     .product__info__managequatity {
@@ -353,6 +358,38 @@ table {
 @media (max-width: 900px) {
   .product__column1 {
     flex-direction: column; } }
+
+@media (max-width: 500px) {
+  .product__image {
+    height: 300px; }
+    .product__image img {
+      width: 230px;
+      height: 230px; }
+    .product__image__wrapper {
+      height: 270px; }
+      .product__image__wrapper img {
+        width: 70px;
+        height: 70px; }
+    .product__image--small {
+      padding: 0; }
+  .product__info__addtocart {
+    width: 100px;
+    font-size: 15px; }
+  .product__info__rating {
+    padding: 0; }
+    .product__info__rating--like {
+      width: 50px; }
+      .product__info__rating--like:hover {
+        background: transparent; }
+      .product__info__rating--like:active {
+        background: transparent; }
+    .product__info__rating--dislike {
+      margin-top: -3px;
+      width: 50px; }
+      .product__info__rating--dislike:hover {
+        background: transparent; }
+      .product__info__rating--dislike:active {
+        background: transparent; } }
 
 .login {
   max-width: 600px;
@@ -599,6 +636,12 @@ table {
   .messageIcon {
     width: 70px;
     right: 10px; }
+    .messageIcon__notification {
+      bottom: 135px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      font-size: 10px; }
   .chat {
     width: 250px;
     height: 400px; }
@@ -737,6 +780,13 @@ table {
       cursor: pointer;
       background: rgba(127, 127, 127, 0.4); }
 
+@media (max-width: 500px) {
+  .product__feedback {
+    flex-direction: column;
+    margin: 0; }
+    .product__feedback__input {
+      margin-bottom: 20px; } }
+
 .comment {
   width: 100%;
   padding: 30px;
@@ -744,7 +794,6 @@ table {
   align-items: center; }
   .comment__output {
     margin: 0 auto;
-    width: calc(100% - 80px);
     height: 50px;
     font-size: 15px; }
     .comment__output--edit {
@@ -779,6 +828,19 @@ table {
     .comment__send:hover {
       cursor: pointer;
       background: rgba(127, 127, 127, 0.4); }
+
+@media (max-width: 500px) {
+  .comment {
+    flex-direction: column; }
+    .comment__input {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px; }
+    .comment__output--edit {
+      margin: 0; }
+    .comment__send {
+      margin: 0;
+      margin-top: 15px; } }
 
 .cart {
   width: calc(100% - 400px);
@@ -1170,11 +1232,11 @@ table {
 .account {
   width: 100%;
   height: calc(100vh - 250px);
-  z-index: 11111111111; }
+  z-index: 11111;
+  overflow-y: scroll; }
   .account__container {
     width: 100%;
-    height: 100%;
-    padding: 30px; }
+    height: 100%; }
     .account__container__nav {
       margin: 0 auto;
       width: calc(100% - 300px);
@@ -1316,7 +1378,8 @@ table {
   .account__container__nav {
     width: 100%; }
   .account__container__body {
-    width: 100%; } }
+    width: 100%;
+    height: 360px; } }
 
 @media (max-width: 620px) {
   .account__container {
