@@ -3,9 +3,18 @@ import { ProductCatCat } from "./ProductCatCat";
 import Axios from "axios";
 
 export class ProductCatList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.catStater = this.catStater.bind(this);
+  }
+
   state = {
     categories: []
   };
+
+  catStater(value) {
+    this.setState({ categories: value }, console.log(this.state.categories));
+  }
 
   componentDidMount() {
     Axios.post("/categoryList").then(res => {
@@ -22,6 +31,7 @@ export class ProductCatList extends React.Component {
               key={cat._id}
               catList={this.state.categories}
               cat={cat.title}
+              catStater={this.catStater}
             />
           );
         })}
