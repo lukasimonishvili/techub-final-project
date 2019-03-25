@@ -658,17 +658,33 @@ table {
 
 .admin {
   display: flex; }
+  .admin__sidebar__burger {
+    position: fixed;
+    display: block;
+    right: 30px;
+    top: 30px;
+    z-index: 10000000000; }
+    .admin__sidebar__burger img {
+      width: 50px;
+      height: 50px; }
+    .admin__sidebar__burger:active {
+      border: 1px solid gray; }
   .admin__rightside {
     margin-top: -80px;
     width: calc(100% - 250px);
+    width: 100%;
     height: 100vh;
     background: #f4f4f4;
     overflow-y: scroll; }
   .admin__leftside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
     width: 250px;
     height: 100vh;
-    background: #373d51;
-    margin: -80px 0 0 0; }
+    background: #373d51; }
     .admin__leftside__header {
       background: #0b132b;
       font-size: 25px;
@@ -689,6 +705,37 @@ table {
         background: #1c2541; }
       .admin__leftside__item:visited {
         background: #111727 !important; }
+
+.rotate {
+  display: none;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: -50px; }
+  .rotate__image {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px; }
+  .rotate__text {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    color: #740404; }
+
+@media (max-width: 768px) {
+  .rotate {
+    display: flex; } }
+
+@media (max-height: 450px) {
+  .admin__leftside {
+    width: 150px; }
+    .admin__leftside__header {
+      font-size: 15px; }
+    .admin__leftside__list {
+      padding: 5px; }
+    .admin__leftside__item {
+      font-size: 12px; } }
 
 .additem {
   width: calc(100% - 250px);

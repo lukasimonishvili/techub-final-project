@@ -6,7 +6,7 @@ import { ContactUserMessagesUsername } from "./contactUserMessagesUsername";
 export const ContactUserMessagesBody = props => {
   return (
     <div
-      className="contactuser__leftside__body fl fl_dir_col"
+      className="contactuser__leftside__body"
       id="adminMessage"
     >
       <ContactUserMessagesUsername userName={props.userName} />
