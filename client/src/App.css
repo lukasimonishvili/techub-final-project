@@ -1121,6 +1121,13 @@ table {
     font-size: 14px;
     color: green; }
 
+.category__head {
+  width: 100%;
+  font-size: 20px;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  margin-bottom: 25px; }
+
 @media (max-width: 685px) {
   .productOnPage {
     margin: 0 auto; } }
