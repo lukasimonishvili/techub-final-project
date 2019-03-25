@@ -3,11 +3,13 @@
   &__rightside{
       margin-top: -80px;
       width: calc(100% - 250px);
+      // width: 100%;
       height: 100vh;
         background: #f4f4f4;
         overflow-y: scroll;
   }
   &__leftside {
+    // display: none;
     width: 250px;
     height: 100vh;
     background: #373d51;

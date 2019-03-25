@@ -17,7 +17,22 @@ export class ContactUser extends React.Component {
     userId: ""
   };
 
+  componentDidUpdate(){
+    let x = setTimeout(function() {
+      clearTimeout(x);
+      let body = document.getElementById("adminMessage");
+      body.scrollTo(0, body.offsetHeight * 200);
+      console.log("clicked");
+    }, 500);
+  }
+
   componentDidMount() {
+    let x = setTimeout(function() {
+      clearTimeout(x);
+      let body = document.getElementById("adminMessage");
+      body.scrollTo(0, body.offsetHeight * 200);
+      console.log("clicked");
+    }, 500);
     Axios.post("userList").then(res => {
       this.setState({ users: res.data });
     });
