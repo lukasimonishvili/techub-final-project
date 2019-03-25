@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductOnPage } from "./productOnPage";
 import Axios from "axios";
+import { CategoryHeading } from "./categoryHeading";
 
 export class ProductOnPageContainer extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export class ProductOnPageContainer extends React.Component {
 
   render() {
     return (
-      <div className="productOnPage__container">
+      <div className="productOnPage__container"><CategoryHeading/>
         {this.state.products.map((item, index) => {
           return (
             <ProductOnPage

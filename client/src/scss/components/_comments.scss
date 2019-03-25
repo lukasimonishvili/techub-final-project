@@ -1,14 +1,27 @@
 .comment {
   width: 100%;
-  padding: 30px;
   flex-wrap: wrap;
   align-items: center;
 
   &__output {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
     margin: 0 auto;
-    // width: calc(100% - 80px);
-    height: 50px;
-    font-size: 15px;
+    padding: 30px;
+    &__comment {
+      text-align: left;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: rgb(66, 49, 4);
+      border-bottom: 2px solid black;
+    }
+    &__username {
+      padding: 10px;
+      font-size: 15px;
+      text-align: right;
+      color: black;
+    }
     &--edit {
       margin-left: 30px;
       width: 150px;
@@ -30,12 +43,12 @@
     margin: 30px 0 30px 30px;
     border: 1px solid transparent;
     border-radius: 3px;
-    &:focus{
-        border: 1px solid grey;
-        background: #f2f2f2;
+    &:focus {
+      border: 1px solid grey;
+      background: #f2f2f2;
     }
   }
-  &__send{
+  &__send {
     width: 150px;
     height: 30px;
     padding: 5px;
@@ -47,21 +60,29 @@
       cursor: pointer;
       background: rgba(127, 127, 127, 0.4);
     }
-  
   }
 }
 @media (max-width: 500px) {
-  .comment{
+  .comment {
     flex-direction: column;
-    &__input{
+    &__input {
       width: 100%;
       margin: 0;
       margin-bottom: 20px;
     }
-    &__output--edit{
-margin: 0;
+    &__output {
+      width: 100%;
+      &__comment {
+        font-size: 15px;
+      }
+      &__username {
+        font-size: 10px;
+      }
     }
-    &__send{
+    &__output--edit {
+      margin: 0;
+    }
+    &__send {
       margin: 0;
       margin-top: 15px;
     }

@@ -789,13 +789,25 @@ table {
 
 .comment {
   width: 100%;
-  padding: 30px;
   flex-wrap: wrap;
   align-items: center; }
   .comment__output {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
     margin: 0 auto;
-    height: 50px;
-    font-size: 15px; }
+    padding: 30px; }
+    .comment__output__comment {
+      text-align: left;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #423104;
+      border-bottom: 2px solid black; }
+    .comment__output__username {
+      padding: 10px;
+      font-size: 15px;
+      text-align: right;
+      color: black; }
     .comment__output--edit {
       margin-left: 30px;
       width: 150px;
@@ -836,6 +848,12 @@ table {
       width: 100%;
       margin: 0;
       margin-bottom: 20px; }
+    .comment__output {
+      width: 100%; }
+      .comment__output__comment {
+        font-size: 15px; }
+      .comment__output__username {
+        font-size: 10px; }
     .comment__output--edit {
       margin: 0; }
     .comment__send {
@@ -1121,6 +1139,13 @@ table {
     padding-right: 20px;
     font-size: 14px;
     color: green; }
+
+.category__head {
+  width: 100%;
+  font-size: 20px;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  margin-bottom: 25px; }
 
 @media (max-width: 685px) {
   .productOnPage {
