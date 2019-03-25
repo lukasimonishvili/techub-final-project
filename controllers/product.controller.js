@@ -297,7 +297,7 @@ const editProduct = (req, res) => {
           console.log("bad");
         }
       });
-      res.json(data);
+      res.json({ data, message: "Product saved" });
     }
   });
 };

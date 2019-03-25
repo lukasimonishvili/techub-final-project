@@ -20,16 +20,36 @@ export class ProductListItems extends React.Component {
           <li className="productlist__list__item fl fl_jus_bet">
             <div>{prod.title}</div>
             <div className="btn-container">
-              <button className="ProductCat__Cat__actionbutton">Edit</button>
-              <button className="ProductCat__Cat__actionbutton">Delete</button>
               <button
+                className="ProductCat__Cat__actionbutton"
                 onClick={e => {
                   e.target.parentNode.parentNode.parentNode.childNodes[1].classList.toggle(
                     "block"
                   );
                 }}
               >
-                toggle
+                Edit
+              </button>
+              <button
+                className="ProductCat__Cat__actionbutton"
+                onClick={e => {
+                  let productId =
+                    e.target.parentNode.parentNode.nextSibling.childNodes[0];
+                  let currentProduct = this.state.products;
+                  for (let i = 0; i < currentProduct.length; i++) {
+                    if (productId.value === currentProduct[i]._id) {
+                      currentProduct.splice(i, 1);
+                    }
+                  }
+                  Axios.post("/removeProduct", {
+                    productId: productId.value
+                  }).then(res => {
+                    alert(res.data.message);
+                    this.setState({ products: currentProduct });
+                  });
+                }}
+              >
+                Delete
               </button>
             </div>
           </li>
