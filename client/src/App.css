@@ -85,7 +85,7 @@ table {
     border: 1px solid rgba(0, 0, 0, 0);
     position: relative;
     transition-duration: 0.4s;
-    overflow: hidden;
+    z-index: 1000000;
     border-bottom: 1px solid #4d4848; }
     .header__search:hover {
       border: 1px solid #4d4848;
@@ -1647,6 +1647,31 @@ table {
       text-indent: 0px;
       text-shadow: none;
       display: inline-block; }
+
+.searchdropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 99;
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
+  height: auto;
+  padding: 0 20px 20px 20px;
+  border: 1px solid black;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background: #33333a50; }
+  .searchdropdown__item--name {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    color: #4d4337;
+    font-weight: 400; }
+    .searchdropdown__item--name:hover {
+      background: #29160252;
+      color: #f2f2f2; }
 
 .block {
   display: block !important; }

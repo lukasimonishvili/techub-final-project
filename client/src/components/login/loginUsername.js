@@ -4,7 +4,7 @@ export const LoginUsername = () => {
   return (
     <input
       className="login__username"
-      type="text"
+      type="mail"
       placeholder="E-mail"
       id="eMail"
       defaultValue="misho@misho.com"

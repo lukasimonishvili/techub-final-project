@@ -4,7 +4,7 @@ export const RegisterEmail = () => {
   return (
     <input
       id="eMail"
-      type="text"
+      type="mail"
       placeholder="Email"
       className="register__email"
       onClick={e => {
