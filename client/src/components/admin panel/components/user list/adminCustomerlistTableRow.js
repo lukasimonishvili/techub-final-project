@@ -17,7 +17,7 @@ export class AdminCustomerlistTableRow extends React.Component {
 
   render() {
     return this.state.users.map(user => {
-      if (user.side !== "admin") {
+      if (user._id !== "5c914847298b1b13064c3a4d") {
         return (
           <tr key={user._id} className="customerlist__table__row">
             <AdminCustomerlistTableDataA collumnDataA={user._id} />

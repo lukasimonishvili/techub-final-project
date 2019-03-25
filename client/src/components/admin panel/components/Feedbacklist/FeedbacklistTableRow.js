@@ -12,8 +12,8 @@ export const FeedbacklistTableRow = () => {
         <FeedbacklistCellProduct TdProduct="Archos Platinum 101B"/>
         <FeedbacklistCellAuthor TdAuthor="Jane Doe Paterson"/>
         <FeedbacklistCellId TdId="000002000002000002000002"/>
-        <div class="Feedbacklist__table__action"> 
-                <button type="button" class="Feedbacklist__table__button">Delete</button> 
+        <div className="Feedbacklist__table__action"> 
+                <button type="button" className="Feedbacklist__table__button">Delete</button> 
         </div>
     </li>
   );

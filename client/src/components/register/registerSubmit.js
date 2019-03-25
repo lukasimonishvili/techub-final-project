@@ -19,9 +19,8 @@ export const RegisterSubmit = () => {
           eMail: eMail.value,
           password: password.value,
           repassword: rePassword.value,
-          birthDay: toString(date.value)
+          birthDay: date.value.toString()
         };
-        console.log(sendData);
         Axios.post("/register", sendData).then(res => {
           alert(res.data.message);
           switch (res.data.message) {

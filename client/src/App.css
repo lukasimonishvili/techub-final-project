@@ -1468,7 +1468,6 @@ table {
 
 .productlist {
   display: none;
-  display: flex;
   width: 100%;
   padding: 5px;
   font-size: 14px;
@@ -1484,7 +1483,6 @@ table {
         border: none; }
   .productlist__edit {
     display: none;
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-top: 5px;
@@ -1504,7 +1502,7 @@ table {
           height: 150px;
           object-fit: contain; }
       .productlist__edit__images--opacity {
-        opacity: .5; }
+        opacity: .3; }
 
 .Feedbacklist {
   box-sizing: border-box; }
@@ -1577,6 +1575,9 @@ table {
         text-indent: 0px;
         text-shadow: none;
         display: inline-block; }
+
+.block {
+  display: block !important; }
 
 .test {
   width: 100px;

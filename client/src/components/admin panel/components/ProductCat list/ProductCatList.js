@@ -1,16 +1,31 @@
 import React from "react";
 import { ProductCatCat } from "./ProductCatCat";
-// import { შვილისმუდმივა } from "./საქაღალდე";
+import Axios from "axios";
 
-export const ProductCatList = () => {
-  return (
-    <div className="ProductCat__List" >
-      <ProductCatCat prodCat="Cell Phones..."/>
-      {/* <ProductCatCat prodCat="Tablets..."/> */}
-      {/* <ProductCatCat prodCat="Laptops..."/> */}
-      {/* <ProductCatCat prodCat="Monitors..."/> */}
-      {/* <ProductCatCat prodCat="Accessories..."/> */}
-      {/* <ProductCatCat prodCat="Bags & Cases..."/>  */}
-    </div>
-  );
-};
+export class ProductCatList extends React.Component {
+  state = {
+    categories: []
+  };
+
+  componentDidMount() {
+    Axios.post("/categoryList").then(res => {
+      this.setState({ categories: res.data });
+    });
+  }
+
+  render() {
+    return (
+      <div className="ProductCat__List">
+        {this.state.categories.map(cat => {
+          return (
+            <ProductCatCat
+              key={cat._id}
+              catList={this.state.categories}
+              cat={cat.title}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+}

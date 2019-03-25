@@ -1,10 +1,10 @@
 import React from "react";
 import { ProductListItems } from "./ProductListItems";
 
-export const ProductList = () => {
+export const ProductList = props => {
   return (
     <div className="productlist" id="productListAdmin">
-      <ProductListItems />
+      <ProductListItems catList={props.catList} cat={props.cat} />
     </div>
   );
 };
