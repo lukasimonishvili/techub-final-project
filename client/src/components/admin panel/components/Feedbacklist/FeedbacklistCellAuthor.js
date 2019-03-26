@@ -1,9 +1,5 @@
-import React from "react"
+import React from "react";
 
-export const FeedbacklistCellAuthor = (props) => { 
-    return     (
-    <div className="Feedbacklist__table__Author" >
-       {props.TdAuthor}
-    </div>
-    )
-}
+export const FeedbacklistCellAuthor = props => {
+  return <div className="Feedbacklist__table__Author">{props.TdAuthor}</div>;
+};

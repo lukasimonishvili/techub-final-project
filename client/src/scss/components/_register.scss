@@ -1,75 +1,74 @@
-.register{ 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 30px;
-    height: 200px;
-    &__username{
-        border: 1px solid transparent;
-        font-size: 15px;
-        margin-right: 10px;
-        width: 150px;
-        height: 30px;
-        padding: 5px;
-        transition-duration: 0.4s;
-        &:hover{
-            border: 1px solid grey;
-            border-radius: 2px;
-        }
+.register {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+  height: 200px;
+  &__username {
+    border: 1px solid transparent;
+    font-size: 15px;
+    margin-right: 10px;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    transition-duration: 0.4s;
+    &:hover {
+      border: 1px solid grey;
+      border-radius: 2px;
     }
-    &__email{
-        border: 1px solid transparent;
-        font-size: 15px;
-        margin-right: 10px;
-        width: 150px;
-        height: 30px;
-        padding: 5px;
-        transition-duration: 0.4s;
-        &:hover{
-            border: 1px solid grey;
-            border-radius: 2px;
-        }
+  }
+  &__email {
+    border: 1px solid transparent;
+    font-size: 15px;
+    margin-right: 10px;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    transition-duration: 0.4s;
+    &:hover {
+      border: 1px solid grey;
+      border-radius: 2px;
     }
-    &__password{
-        border: 1px solid transparent;
-        font-size: 15px;
-        margin-right: 10px;
-        width: 150px;
-        height: 30px;
-        padding: 5px;
-        transition-duration: 0.4s;
-        &:hover{
-            border: 1px solid grey;
-            border-radius: 2px;
-        }
+  }
+  &__password {
+    border: 1px solid transparent;
+    font-size: 15px;
+    margin-right: 10px;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    transition-duration: 0.4s;
+    &:hover {
+      border: 1px solid grey;
+      border-radius: 2px;
     }
-    &__birthdate{
-        width: 150px;
-        height: 30px;
-        border: 1px solid transparent;
-        font-size: 15px;
-        margin-right: 10px;
-        width: 150px;
-        height: 30px;
-        padding: 5px;
-        transition-duration: 0.4s;
-        &:hover{
-            border: 1px solid grey;
-            border-radius: 2px;
-        }
+  }
+  &__birthdate {
+    width: 150px;
+    height: 30px;
+    border: 1px solid transparent;
+    font-size: 15px;
+    margin-right: 10px;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    transition-duration: 0.4s;
+    &:hover {
+      border: 1px solid grey;
+      border-radius: 2px;
     }
-    &__submit{
-        width: 150px;
-        height: 30px;
-        padding: 5px;
-        margin-right: 10px;
-        border-radius: 2px;
-        background-color: #707070;
-        color: #f3f3f3;
-        &:hover{
-            background: rgba(127, 127, 127, 0.4);
-            cursor: pointer;
-        }
+  }
+  &__submit {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 2px;
+    background-color: #707070;
+    color: #f3f3f3;
+    &:hover {
+      background: rgba(127, 127, 127, 0.4);
+      cursor: pointer;
     }
+  }
 }
-

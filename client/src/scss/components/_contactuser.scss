@@ -88,9 +88,9 @@
         font-size: 15px;
         border: 2px solid #214e47;
         cursor: pointer;
-        &:active{
+        &:active {
           background: #0b132b;
-          color: #ffffff
+          color: #ffffff;
         }
       }
     }
@@ -121,16 +121,4 @@
       }
     }
   }
-}
-@media (max-widht: 670px) {
-  // .contactuser{
-  //   &__rightside{
-
-  //     &__list{
-  //       &--item{
-  //         font-size: 12px;
-  //       }
-  //     }
-  //   }
-  // }
 }

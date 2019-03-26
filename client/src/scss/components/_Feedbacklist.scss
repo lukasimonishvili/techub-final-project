@@ -1,81 +1,74 @@
 .Feedbacklist {
-    margin-top: 50px;
-    box-sizing: border-box;
+  margin-top: 50px;
+  box-sizing: border-box;
 
-    &__table {
-        list-style-type: none;
-        width: 100%;
-        display: flex;
-        
-        flex-direction: column;
-        &__row {
-            display: flex;
-            flex-direction: row;
-            border-bottom: 1px solid black;
-        }    
-        &__row:first-of-type {
-            background:gray;
-            font-weight: 800;
-        }
-        &__Feedback {
-            font-size: 15px;
-            padding: 10px;
-            text-align: justify;
-            word-wrap: break-word;
-            width: 440px;
-            
-        }
-        &__Product {
-            font-size: 15px;
-            padding: 10px;
-            text-align: justify;
-            word-wrap: break-word;
-            width: 210px;
-            cursor: pointer;
-        }
-        &__Author {
-            font-size: 15px;
-            padding: 10px;
-            text-align: justify;
-            word-wrap: break-word;
-            width: 170px;
-            cursor: pointer;
-        }
-        &__ID {
-            font-size: 15px;
-            padding: 10px;
-            text-align: justify;
-            word-wrap: break-word;
-            width: 125px;
-            cursor: pointer;
-        }
-        &__action {
-            font-size: 15px;
-            padding: 10px;
-            text-align: justify;
-            word-wrap: break-word;
-            width: 80px;}
-            &__button {
-                margin: 5px;
-                padding: 1px 6px;
-                align-items: flex-start;
-                text-align: center;
-                cursor: pointer;
-                color: buttontext;
-                // background-color: buttonface;
-                box-sizing: border-box;
-                border-width: 2px;
-                border-style: outset;
-                // border-color: buttonface;
-                border-image: initial;
-                text-rendering: auto;
-                letter-spacing: normal;
-                word-spacing: normal;
-                text-transform: none;
-                text-indent: 0px;
-                text-shadow: none;
-                display: inline-block;
-            }
-        
+  &__table {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    &__row {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid black;
     }
+    &__row:first-of-type {
+      background: gray;
+      font-weight: 800;
+    }
+    &__Feedback {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 440px;
+    }
+    &__Product {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 210px;
+      cursor: pointer;
+    }
+    &__Author {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 170px;
+      cursor: pointer;
+    }
+    &__ID {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 125px;
+      cursor: pointer;
+    }
+    &__action {
+      font-size: 15px;
+      padding: 10px;
+      text-align: justify;
+      word-wrap: break-word;
+      width: 80px;
+    }
+    &__button {
+      margin: 5px;
+      padding: 5px;
+      cursor: pointer;
+      background: #336633;
+      color: #f2f2f2;
+      border: 1px solid transparent;
+      &:hover {
+        background: #1a331a;
+        border: 1px solid black;
+      }
+      &:active {
+        background: rgb(88, 2, 2);
+      }
+    }
+  }
 }

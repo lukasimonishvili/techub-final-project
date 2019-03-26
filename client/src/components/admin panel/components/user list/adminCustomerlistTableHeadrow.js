@@ -1,5 +1,4 @@
 import React from "react";
-
 import { AdminCustomerlistTableHeader } from "./adminCustomerlistTableHeader";
 
 export const AdminCustomerlistTableHeadrow = () => {

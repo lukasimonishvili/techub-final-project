@@ -5,10 +5,7 @@ import { ContactUserMessagesUsername } from "./contactUserMessagesUsername";
 
 export const ContactUserMessagesBody = props => {
   return (
-    <div
-      className="contactuser__leftside__body"
-      id="adminMessage"
-    >
+    <div className="contactuser__leftside__body" id="adminMessage">
       <ContactUserMessagesUsername userName={props.userName} />
       {props.chat.map((message, index) => {
         if (message.side === "admin") {
@@ -18,9 +15,7 @@ export const ContactUserMessagesBody = props => {
         } else if (message.side === "user") {
           return <ContactUserMessagesBodyUser key={index} txt={message.text} />;
         }
-      }
-      
-      )}
+      })}
     </div>
   );
 };

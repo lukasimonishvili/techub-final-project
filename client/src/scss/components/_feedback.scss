@@ -26,14 +26,13 @@
   }
 }
 @media (max-width: 500px) {
-.product{
-  &__feedback{
-    flex-direction: column;
-    margin: 0;
-    &__input{
-      margin-bottom: 20px;
-
+  .product {
+    &__feedback {
+      flex-direction: column;
+      margin: 0;
+      &__input {
+        margin-bottom: 20px;
+      }
     }
   }
-}
 }

@@ -1,8 +1,11 @@
-import React from "react"
+import React from "react";
 
-export const AdminCustomerlistSearch = () => { 
-    return     (
-    <input className="customerlist__search" type="text" placeholder="Customer Search..">
-    </input>)
-
-}
+export const AdminCustomerlistSearch = () => {
+  return (
+    <input
+      className="customerlist__search"
+      type="text"
+      placeholder="Customer Search.."
+    />
+  );
+};

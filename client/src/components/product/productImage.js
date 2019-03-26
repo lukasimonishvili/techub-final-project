@@ -6,9 +6,7 @@ export const ProductImage = props => {
   return (
     <div className="product__image">
       {props.mainImg.map(photo => {
-        return (
-          <ProductImageImg key={photo} mainImg={photo} />
-        );
+        return <ProductImageImg key={photo} mainImg={photo} />;
       })}
       <ProductImageContainer
         imgStateHander={props.imgStateHander}

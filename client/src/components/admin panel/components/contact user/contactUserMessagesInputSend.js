@@ -26,7 +26,6 @@ export const ContactUserMessagesInputSend = props => {
           body.scrollTo(0, body.offsetHeight * 200);
           console.log("clicked");
         }, 500);
-        
       }}
     >
       Send
