@@ -1660,13 +1660,13 @@ table {
   border-top: none;
   border-radius: 0 0 4px 4px;
   background: #33333a50; }
-  .searchdropdown__item--name {
+  .searchdropdown__item a {
     cursor: pointer;
     font-size: 14px;
     padding: 5px;
     color: #4d4337;
     font-weight: 400; }
-    .searchdropdown__item--name:hover {
+    .searchdropdown__item a:hover {
       background: #29160252;
       color: #f2f2f2; }
 
