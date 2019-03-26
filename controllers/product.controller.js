@@ -288,6 +288,27 @@ const editProduct = (req, res) => {
       for (let i = 0; i < req.files.length; i++) {
         data.img.push(req.files[i].filename);
       }
+      User.find({}, (er, users) => {
+        for (let i = 0; i < users.length; i++) {
+          User.findOne({ _id: users[i]._id }, (e, currentUser) => {
+            for (let k = 0; k < currentUser.cart.length; k++) {
+              if (req.params.productId == currentUser.cart[k]._id) {
+                currentUser.cart.splice(k, 1, data);
+                break;
+              }
+            }
+            currentUser.save(ez => {
+              if (!ez) {
+                console.log(
+                  `${currentUser.name} ${currentUser.lastName}: ${
+                    currentUser._id
+                  } cart updated`
+                );
+              }
+            });
+          });
+        }
+      });
       data.save(err => {
         if (!err) {
           console.log("good");

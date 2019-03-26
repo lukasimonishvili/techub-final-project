@@ -15,11 +15,6 @@ export class ProductListItemProduct extends React.Component {
     removeImg: []
   };
 
-  componentDidMount() {
-    // this.setState({ item: this.props.product });
-    console.log(this.state.category);
-  }
-
   render() {
     return (
       <div className="productlist__edit">
