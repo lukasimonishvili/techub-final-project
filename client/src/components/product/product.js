@@ -45,29 +45,55 @@ export class Product extends React.Component {
     });
   }
   render() {
-    return (
-      <div className="product">
-      <Soldout/>
-        <ProductInfoImageContainer
-          imgStateHander={this.imgStateHander}
-          mainImg={this.state.mainImg}
-          images={this.state.img}
-          price={this.state.product.price}
-          amount={this.state.product.amount}
-          productName={this.state.product.title}
-          description={this.state.product.description}
-          likes={this.state.likes}
-          disLikes={this.state.disLikes}
-          likeStater={this.likeStateHandler}
-          disLikeStater={this.disLikeStateHandler}
-          productId={this.state.product._id}
-        />
-        <Comment productId={this.props.productId} />
-        <Feedback
-          productName={this.state.product.title}
-          productId={this.state.product._id}
-        />
-      </div>
-    );
+    if (Number(this.state.product.amount)) {
+      return (
+        <div className="product">
+          <ProductInfoImageContainer
+            imgStateHander={this.imgStateHander}
+            mainImg={this.state.mainImg}
+            images={this.state.img}
+            price={this.state.product.price}
+            amount={this.state.product.amount}
+            productName={this.state.product.title}
+            description={this.state.product.description}
+            likes={this.state.likes}
+            disLikes={this.state.disLikes}
+            likeStater={this.likeStateHandler}
+            disLikeStater={this.disLikeStateHandler}
+            productId={this.state.product._id}
+          />
+          <Comment productId={this.props.productId} />
+          <Feedback
+            productName={this.state.product.title}
+            productId={this.state.product._id}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className="product">
+          <Soldout />
+          <ProductInfoImageContainer
+            imgStateHander={this.imgStateHander}
+            mainImg={this.state.mainImg}
+            images={this.state.img}
+            price={this.state.product.price}
+            amount={this.state.product.amount}
+            productName={this.state.product.title}
+            description={this.state.product.description}
+            likes={this.state.likes}
+            disLikes={this.state.disLikes}
+            likeStater={this.likeStateHandler}
+            disLikeStater={this.disLikeStateHandler}
+            productId={this.state.product._id}
+          />
+          <Comment productId={this.props.productId} />
+          <Feedback
+            productName={this.state.product.title}
+            productId={this.state.product._id}
+          />
+        </div>
+      );
+    }
   }
 }

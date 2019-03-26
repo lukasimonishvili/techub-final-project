@@ -25,6 +25,7 @@ export class ProductOnPageContainer extends React.Component {
         {this.state.products.map((item, index) => {
           return (
             <ProductOnPage
+              amount={item.amount}
               price={item.price}
               productId={item._id}
               productName={item.title}

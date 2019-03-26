@@ -23,12 +23,16 @@ export class ProductOnPageAddtocart extends React.Component {
         <button
           className="productOnPage_name_buttons-addtocart"
           onClick={() => {
-            Axios.post(`/addToCart`, {
-              userId: this.getCookie("c3a4d"),
-              productId: this.props.productId
-            }).then(res => {
-              alert(res.data.message);
-            });
+            if (Number(this.props.amount)) {
+              Axios.post(`/addToCart`, {
+                userId: this.getCookie("c3a4d"),
+                productId: this.props.productId
+              }).then(res => {
+                alert(res.data.message);
+              });
+            } else {
+              alert("product sold out");
+            }
           }}
         >
           Add to cart
