@@ -9,7 +9,7 @@ export class ProductListItems extends React.Component {
 
   componentDidMount() {
     Axios.get(`/getByCategory/${this.props.cat}`).then(res => {
-      this.setState({ products: res.data });
+      this.setState({ products: res.data.data });
     });
   }
 

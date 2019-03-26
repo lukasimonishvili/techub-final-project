@@ -36,11 +36,15 @@ export const AdditemSend = () => {
             }
           }).then(res => {
             alert(res.data.message);
+            category.value = "";
+            price.value = "";
+            title.value = "";
+            amount.value = "";
+            description.value = "";
           });
         } else {
           alert("all fields are required");
         }
-        let fd = new FormData();
       }}
     >
       Send

@@ -19,14 +19,10 @@ export class SidebarProductlist extends React.Component {
         <li
           className="sidebar__productitem"
           onClick={() => {
-            if (window.location.pathname == "/") {
-              let sidebar = document.getElementById("sidebar");
-              sidebar.style.display = "none";
-              window.scrollTo(0, 0);
-              this.props.catStater("ALL");
-            } else {
-              window.location.replace("/");
-            }
+            let sidebar = document.getElementById("sidebar");
+            sidebar.style.display = "none";
+            window.scrollTo(0, 0);
+            this.props.catStater("ALL");
           }}
         >
           ALL
