@@ -3,8 +3,8 @@ import { SearchDropdownItemname } from "./searchDropdownItemname";
 
 export const SearchDropdownItemlink = () => {
   return (
-    <a className="search__dropdown--itemlink">
+    <span className="searchdropdown__item fl fl_dir_col">
         <SearchDropdownItemname />
-    </a>
+    </span>
   );
 };

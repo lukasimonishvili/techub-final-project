@@ -4,7 +4,7 @@ import axios from "axios";
 export const HeaderSearchInput = () => {
   return (
     <input
-      type="text"
+      type="search"
       className="header__search__input"
       placeholder="Search"
       onKeyUp={e => {

@@ -4,7 +4,7 @@ import { SearchDropdownItemlink } from "./searchDropdownItemlink";
 
 export const SearchDropdownItem = () => {
   return (
-    <div className="search__dropdown--item">
+    <div className="searchdropdown">
       <SearchDropdownItemlink/>
     </div>
   );

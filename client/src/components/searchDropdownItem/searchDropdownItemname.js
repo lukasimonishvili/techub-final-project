@@ -2,8 +2,11 @@ import React from "react";
 
 export const SearchDropdownItemname = () => {
   return (
-    <h3 className="search__dropdown--itemname">
-    productname
-    </h3>
+    <>
+      <span className="searchdropdown__item--name">productname</span>
+      <span className="searchdropdown__item--name">productname</span>
+      <span className="searchdropdown__item--name">productname</span>
+      <span className="searchdropdown__item--name">productname</span>
+    </>
   );
 };
