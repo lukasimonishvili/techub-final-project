@@ -1,5 +1,4 @@
 import React from "react";
-
 import { CartProductitem } from "./cartProductitem";
 
 export class Cart extends React.Component {

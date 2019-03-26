@@ -1,63 +1,60 @@
 .sidebar {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1001;
+  margin-top: -80px;
+  transition: 3s;
+  &__rightside {
     display: none;
-    width: 100%;
+    background-color: #000000;
+    opacity: 0.3;
+    width: calc(100% - 300px);
     height: 100vh;
     position: fixed;
-    z-index: 1001;
-    margin-top: -80px;
-    transition: 3s;
-    &__rightside{
-        display: none;
-        background-color: #000000;
-        opacity: 0.3;
-        width: calc(100% - 300px);
-        height: 100vh;
-        position: fixed;
-        right: 0;
+    right: 0;
+  }
+  &__container {
+    width: 300px;
+    height: 100vh;
+    background-color: #ececea;
+    border-right: 3px solid rgb(81, 81, 83);
+    box-shadow: 0 0 150px black;
+  }
+  &__header {
+    height: 80px;
+    padding: 20px;
+    font-size: 25px;
+    color: rgb(201, 202, 193);
+    background-color: #33333a;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to left, green, rgba(0, 0, 0, 0)) 0 1 100% 0;
+  }
+  &__productitem {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(36, 33, 33);
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+      background-color: #cbd2ae;
     }
-    &__container{
-        width: 300px;
-        height: 100vh;
-        background-color:#ececea;
-        border-right:3px solid rgb(81, 81, 83);
-        box-shadow: 0 0 150px black;
-
+    &:active {
+      background-color: darkslategray;
     }
-    &__header{
-        height: 80px;
-        padding: 20px;
-        font-size: 25px;
-        color: rgb(201, 202, 193);
-        background-color: #33333a;
-        text-align: center;
-        border-width: 3px;
-        border-style: solid;
-        border-image: linear-gradient(
-            to left, green , rgba(0,0,0,0)
-        )0 1 100% 0;
-    }
-    &__productitem{
-        padding: 15px;
-        font-size: 15px;
-        font-weight: 700;
-        color: rgb(36, 33, 33);
-        text-align: center;
-        &:hover{
-            cursor: pointer;
-            background-color: #cbd2ae;
-        }
-        &:active{
-            background-color: darkslategray;
-        }
-    }
+  }
 }
 @media (max-width: 885px) {
-    .sidebar{
-        &__container{
-            width: 200px;
-        }
-        &__rightside{
-            width: calc(100% - 200px);
-        }
+  .sidebar {
+    &__container {
+      width: 200px;
     }
+    &__rightside {
+      width: calc(100% - 200px);
+    }
+  }
 }

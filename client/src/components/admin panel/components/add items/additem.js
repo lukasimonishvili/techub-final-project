@@ -15,8 +15,8 @@ export const Additem = () => {
       <AdditemCategory />
       <AdditemDescription />
       <AdditemQuantity />
-      <AdditemCost/>
-      <AdditemSend/>
+      <AdditemCost />
+      <AdditemSend />
     </div>
   );
 };

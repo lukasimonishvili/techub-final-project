@@ -1,7 +1,6 @@
 import React from "react";
 import { AccountContainerBodyHistoryList } from "./accountContainerBodyHistoryList";
 import { AccountContainerBodyHistoryClear } from "./accountContainerBodyHistoryClear";
-import Axios from "axios";
 
 export class AccountContainerBodyHistory extends React.Component {
   render() {

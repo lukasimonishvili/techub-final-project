@@ -1,30 +1,29 @@
-.searchdropdown{
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    z-index: 99;
-    width: 260px;
-    height: auto;
-    margin: 0 auto;
-    height: auto;
-    padding:0 20px 20px 20px;
-    border:1px solid black;
-    border-top: none;
-    border-radius:0 0 4px 4px;
-    background: #33333a50;
-    &__item{
-
-        &--name{
-            cursor: pointer;
-            font-size: 14px;
-            padding: 5px;
-            color: rgb(77, 67, 55);
-            font-weight: 400;
-            &:hover{
-                background: #29160252;
-                color: #f2f2f2;
-            }
-        }
+.searchdropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 99;
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
+  height: auto;
+  padding: 0 20px 20px 20px;
+  border: 1px solid black;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background: #33333a50;
+  &__item {
+    &--name {
+      cursor: pointer;
+      font-size: 14px;
+      padding: 5px;
+      color: rgb(77, 67, 55);
+      font-weight: 400;
+      &:hover {
+        background: #29160252;
+        color: #f2f2f2;
+      }
     }
+  }
 }

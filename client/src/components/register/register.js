@@ -10,8 +10,8 @@ import { RegisterLastName } from "./registerLastname";
 export const Register = () => {
   return (
     <div className="register login">
-      <RegisterName/>
-      <RegisterLastName/>
+      <RegisterName />
+      <RegisterLastName />
       <RegisterEmail />
       <RegisterPassword />
       <RegisterPasswordRepeat />

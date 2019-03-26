@@ -4,7 +4,7 @@ import { ProductCatAllLink } from "./ProductCatAllLink";
 export const ProductCatAll = () => {
   return (
     <div className="ProductCat__All">
-        <ProductCatAllLink />
+      <ProductCatAllLink />
     </div>
   );
 };

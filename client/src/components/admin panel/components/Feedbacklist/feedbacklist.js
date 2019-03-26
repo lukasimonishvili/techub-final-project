@@ -4,7 +4,7 @@ import { FeedbacklistTable } from "./FeedbacklistTable";
 export const Feedbacklist = () => {
   return (
     <div className="Feedbacklist">
-        <FeedbacklistTable />
+      <FeedbacklistTable />
     </div>
   );
 };

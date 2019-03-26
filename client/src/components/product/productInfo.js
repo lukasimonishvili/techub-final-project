@@ -7,7 +7,10 @@ import { ProductInfoRating } from "./productInfoRating";
 export const ProductInfo = props => {
   return (
     <div className="product__info fl_dir_col">
-      <ProductInfoHeader productId={props.productId} productName={props.productName} />
+      <ProductInfoHeader
+        productId={props.productId}
+        productName={props.productName}
+      />
       <ProductInfoDescription description={props.description} />
       <ProductInfoCostQuantity amount={props.amount} price={props.price} />
       <ProductInfoRating

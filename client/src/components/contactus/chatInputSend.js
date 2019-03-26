@@ -34,9 +34,8 @@ export const ChatInputSend = props => {
           clearTimeout(x);
           let body = document.getElementById("chatBody");
           body.scrollTo(0, body.offsetHeight * 200);
-          console.log('clicked');
+          console.log("clicked");
         }, 500);
-      
       }}
     >
       Send
