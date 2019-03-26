@@ -17,12 +17,14 @@ export class LoggedInUser extends React.Component {
     this.balanceStateHandler = this.balanceStateHandler.bind(this);
     this.historyStateHandler = this.historyStateHandler.bind(this);
     this.userStateHandler = this.userStateHandler.bind(this);
+    this.catStater = this.catStater.bind(this);
   }
 
   state = {
     user: {},
     balance: 0,
-    history: []
+    history: [],
+    cat: "ALL"
   };
 
   balanceStateHandler(value) {
@@ -35,6 +37,10 @@ export class LoggedInUser extends React.Component {
 
   userStateHandler(value) {
     this.setState({ user: value });
+  }
+
+  catStater(value) {
+    this.setState({ cat: value });
   }
 
   getCookie = cname => {
@@ -66,7 +72,7 @@ export class LoggedInUser extends React.Component {
     return (
       <>
         <LoggedInHeader balance={this.state.balance} />
-        <Sidebar />
+        <Sidebar userName={this.state.user.name} />
         <Chat />
         <Router>
           <CartContainer
@@ -83,7 +89,7 @@ export class LoggedInUser extends React.Component {
             user={this.state.user}
           />
           <Product path="product/:productId" />
-          <ProductOnPageContainer path="/" />
+          <ProductOnPageContainer cat={this.state.cat} path="/" />
         </Router>
         <Message />
         <Footer />

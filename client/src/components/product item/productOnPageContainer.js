@@ -12,6 +12,10 @@ export class ProductOnPageContainer extends React.Component {
     products: []
   };
 
+  componentDidUpdate(){
+    Axios.post("")
+  }
+
   componentDidMount() {
     Axios.get("/getAllproduct").then(res => {
       this.setState({ products: res.data });

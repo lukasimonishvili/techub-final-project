@@ -11,7 +11,10 @@ export const HeaderSearchInput = () => {
         if (e.target.value !== "") {
           axios.get(`/search/${e.target.value}`).then(res => {
             if (res.data[0] === "<" || !res.data.length) {
-              alert("No result!");
+              let searchDr = document.getElementById("searchDr");
+              let searchBox = searchDr.childNodes[0];
+              searchBox.innerHTML = "No Result";
+              searchDr.style.display = "block";
             } else {
               let searchDr = document.getElementById("searchDr");
               let searchBox = searchDr.childNodes[0];
@@ -29,9 +32,11 @@ export const HeaderSearchInput = () => {
       onBlur={e => {
         let searchDr = document.getElementById("searchDr");
         let searchBox = searchDr.childNodes[0];
-        searchBox.innerHTML = "";
-        searchDr.style.display = "none";
-        e.target.value = "";
+        if (!e.target.value.length) {
+          searchBox.innerHTML = "";
+          searchDr.style.display = "none";
+          e.target.value = "";
+        }
       }}
     />
   );

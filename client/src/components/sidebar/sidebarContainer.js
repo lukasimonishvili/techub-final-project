@@ -1,10 +1,10 @@
 import React from "react";
 import { SidebarHeader } from "./sidebarHeader";
 import { SidebarProductlist } from "./sidebarProductlist";
-export const SidebarContainer = () => {
+export const SidebarContainer = props => {
   return (
     <div className="sidebar__container">
-      <SidebarHeader />
+      <SidebarHeader userName={props.userName} />
       <SidebarProductlist />
     </div>
   );
