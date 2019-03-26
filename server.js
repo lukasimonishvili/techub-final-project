@@ -8,6 +8,8 @@ const path = require("path");
 const { connect } = require("./connect");
 const {
   addFeedback,
+  removeFeedback,
+  getFeedbacks,
   messageUserToAdmin,
   messageAdminToUser,
   clearUserNotification,
@@ -65,6 +67,8 @@ app.use(helmet());
 app.use(cors());
 
 app.post("/addFeedback", addFeedback);
+app.post("/removeFeedback", removeFeedback);
+app.post("/getFeedbacks", getFeedbacks);
 app.post("/messageUserToAdmin", messageUserToAdmin);
 app.post("/messageAdminToUser", messageAdminToUser);
 app.post("/clearUserNotification", clearUserNotification);

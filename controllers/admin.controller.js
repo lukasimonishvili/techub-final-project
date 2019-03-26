@@ -4,17 +4,40 @@ const { Message } = require("../models/message.modes");
 const { Notification } = require("../models/admin.notification.model");
 
 const addFeedback = (req, res) => {
-  User.findOne({ _id: req.body.userId }, (err, data) => {
-    if (err) {
-      res.json({ message: "Something went wrong" });
+  let newFeedback = {
+    userId: req.body.userId,
+    productId: req.body.userId,
+    body: req.body.body,
+    title: req.body.title
+  };
+  Feedback.create(newFeedback);
+  res.json({ message: "Thank you for your feedback" });
+};
+
+const removeFeedback = (req, res) => {
+  Feedback.find({}, (error, data) => {
+    Feedback.remove({ _id: req.body.id }, err => {
+      if (!err) {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i]._id == req.body.id) {
+            data.splice(i, 1);
+            break;
+          }
+        }
+        res.json({ message: "feedback removed", data });
+      } else {
+        res.json({ message: "Somthing went wrong", data });
+      }
+    });
+  });
+};
+
+const getFeedbacks = (req, res) => {
+  Feedback.find({}, (err, data) => {
+    if (!err) {
+      res.json(data);
     } else {
-      let newFeedback = {
-        userId: req.body.userId,
-        author: `${data.name} ${data.lastName}`,
-        body: req.body.body
-      };
-      Feedback.create(newFeedback);
-      res.json({ message: "Thank you for your feedback" });
+      res.json([]);
     }
   });
 };
@@ -166,6 +189,8 @@ const checkNotificationsForAdmin = (req, res) => {
 
 module.exports = {
   addFeedback,
+  removeFeedback,
+  getFeedbacks,
   messageUserToAdmin,
   messageAdminToUser,
   clearUserNotification,

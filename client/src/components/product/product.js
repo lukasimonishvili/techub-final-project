@@ -63,7 +63,10 @@ export class Product extends React.Component {
           productId={this.state.product._id}
         />
         <Comment productId={this.props.productId} />
-        <Feedback />
+        <Feedback
+          productName={this.state.product.title}
+          productId={this.state.product._id}
+        />
       </div>
     );
   }

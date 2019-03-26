@@ -33,7 +33,7 @@ const addProduct = (req, res) => {
     title: req.body.title,
     img: [],
     description: req.body.description,
-    price: req.body.price + "$",
+    price: req.body.price,
     amount: req.body.amount,
     category: req.body.category,
     likes: [],
