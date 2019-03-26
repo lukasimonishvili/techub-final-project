@@ -153,6 +153,13 @@
     }
   }
 }
+.soldout {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 300px;
+}
+
 @media (max-width: 900px) {
   .product {
     &__column1 {

@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 30px 0;
   box-sizing: border-box;
+  margin-bottom: calc(100vh - 309px);
   &__username {
     border: 1px solid transparent;
     font-size: 15px;

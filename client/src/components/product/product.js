@@ -3,6 +3,7 @@ import { Comment } from "../comment/comment";
 import { Feedback } from "../feedback/feedback";
 import { ProductInfoImageContainer } from "./productInfo&productImageContainer";
 import Axios from "axios";
+import { Soldout } from "./soldout";
 
 export class Product extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ export class Product extends React.Component {
   render() {
     return (
       <div className="product">
+      <Soldout/>
         <ProductInfoImageContainer
           imgStateHander={this.imgStateHander}
           mainImg={this.state.mainImg}
