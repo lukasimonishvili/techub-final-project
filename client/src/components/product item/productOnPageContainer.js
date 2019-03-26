@@ -8,8 +8,16 @@ export class ProductOnPageContainer extends React.Component {
     products: []
   };
 
-  componentDidUpdate(){
-    Axios.post("")
+  componentDidUpdate() {
+    if (this.props.cat === "ALL") {
+      Axios.get("/getAllproduct").then(res => {
+        this.setState({ products: res.data });
+      });
+    } else {
+      Axios.get(`/getByCategory/${this.props.cat}`).then(res => {
+        this.setState({ products: res.data.data });
+      });
+    }
   }
 
   componentDidMount() {
@@ -21,7 +29,7 @@ export class ProductOnPageContainer extends React.Component {
   render() {
     return (
       <div className="productOnPage__container">
-        <CategoryHeading />
+        <CategoryHeading cat={this.props.cat} />
         {this.state.products.map((item, index) => {
           return (
             <ProductOnPage

@@ -10,17 +10,30 @@ import { Footer } from "./components/footer/footer";
 import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
 
 export class User extends React.Component {
+  constructor(props) {
+    super(props);
+    this.catStater = this.catStater.bind(this);
+  }
+
+  state = {
+    cat: "ALL"
+  };
+
+  catStater(value) {
+    this.setState({ cat: value });
+  }
+
   render() {
     return (
       <>
         <Header />
-        <Sidebar />
+        <Sidebar catStater={this.catStater} />
         <Router>
           <CartContainer path="/mycart" />
           <Login path="/login" />
           <Register path="/register" />
           <Product path="product/:productId" />
-          <ProductOnPageContainer path="/" />
+          <ProductOnPageContainer cat={this.state.cat}  path="/" />
         </Router>
         <Footer />
       </>

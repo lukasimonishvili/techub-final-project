@@ -1,14 +1,41 @@
 import React from "react";
-import { SidebarProducItem1 } from "./sidebarProductitem1";
-import { SidebarProducItem2 } from "./sidebarProductItem2";
-import { SidebarProducItem3 } from "./sidebarProductItem3";
+import { SidebarProducItem3 } from "./sidebarProductItem";
+import Axios from "axios";
 
-export const SidebarProductlist = () => {
-  return (
-    <ul className="sidebar__productlist">
-      <SidebarProducItem1 />
-      <SidebarProducItem2 />
-      <SidebarProducItem3 />
-    </ul>
-  );
-};
+export class SidebarProductlist extends React.Component {
+  state = {
+    cats: []
+  };
+
+  componentDidMount() {
+    Axios.post("/categoryList").then(res => {
+      this.setState({ cats: res.data });
+    });
+  }
+
+  render() {
+    return (
+      <ul className="sidebar__productlist">
+        <li
+          className="sidebar__productitem"
+          onClick={() => {
+            let sidebar = document.getElementById("sidebar");
+            sidebar.style.display = "none";
+            this.props.catStater("ALL");
+          }}
+        >
+          ALL
+        </li>
+        {this.state.cats.map(cats => {
+          return (
+            <SidebarProducItem3
+              catStater={this.props.catStater}
+              key={cats._id}
+              cat={cats.title}
+            />
+          );
+        })}
+      </ul>
+    );
+  }
+}

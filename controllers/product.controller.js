@@ -113,9 +113,9 @@ const getAllProductList = (req, res) => {
 const getProductsByCategory = (req, res) => {
   Product.find({ category: req.params.category }, (err, data) => {
     if (err) {
-      res.json({ message: "Something went wrong" });
+      res.json({ message: "Something went wrong", data: [] });
     } else {
-      res.json(data);
+      res.json({ message: "OK", data });
     }
   });
 };

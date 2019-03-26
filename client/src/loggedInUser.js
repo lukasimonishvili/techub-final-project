@@ -72,7 +72,7 @@ export class LoggedInUser extends React.Component {
     return (
       <>
         <LoggedInHeader balance={this.state.balance} />
-        <Sidebar userName={this.state.user.name} />
+        <Sidebar catStater={this.catStater} userName={this.state.user.name} />
         <Chat />
         <Router>
           <CartContainer

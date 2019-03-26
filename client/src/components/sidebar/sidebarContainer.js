@@ -5,7 +5,7 @@ export const SidebarContainer = props => {
   return (
     <div className="sidebar__container">
       <SidebarHeader userName={props.userName} />
-      <SidebarProductlist />
+      <SidebarProductlist catStater={props.catStater} />
     </div>
   );
 };

@@ -73,7 +73,6 @@ export class Chat extends React.Component {
         }
       }
     );
-
     setInterval(() => {
       Axios.post(`/getMessages`, { userId: this.getCookie("c3a4d") }).then(
         res => {
