@@ -1,57 +1,66 @@
 .login {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
   margin: 0 auto;
   padding: 30px 0;
   box-sizing: border-box;
   margin-bottom: calc(100vh - 309px);
   &__username {
-    border: 1px solid transparent;
     font-size: 15px;
-    margin-right: 10px;
-    width: 150px;
-    padding: 5px;
+    font-weight:bold;
+    width: 100%;
+    padding: 15px;
     transition-duration: 0.4s;
+    margin-bottom:10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid grey;
+    background:rgba(0,0,0,0.05);
     &:hover {
       border: 1px solid grey;
       border-radius: 2px;
     }
   }
   &__password {
-    border: 1px solid transparent;
     font-size: 15px;
-    margin-right: 10px;
-    width: 150px;
-    padding: 5px;
+    font-weight:bold;
+    width: 100%;
+    padding: 15px;
     transition-duration: 0.4s;
-
+    margin-bottom:10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid grey;
+    background:rgba(0,0,0,0.05);
     &:hover {
       border: 1px solid grey;
       border-radius: 2px;
     }
   }
   &__signin {
-    padding: 5px;
+    width: 100%;
+    padding: 15px 0px;
     border-radius: 2px;
-    background-color: #707070;
+    background-color: #63b328;
+    font-weight:bold;
+    font-size:15px;
+    margin-bottom:10px;
     color: #f3f3f3;
     &:hover {
-      background: rgba(127, 127, 127, 0.4);
+      background-color: #579c23;
       cursor: pointer;
     }
   }
   &__register {
-    width: 100px;
+    width: 100%;
     text-align: center;
     font-size: 15px;
     line-height: 15px;
-    padding: 5px;
-    border-radius: 2px;
+    padding: 15px 0px;
+    border-radius:2px;
     background-color: #707070;
+    opacity: 0.5;
     color: #f3f3f3;
-    &:hover {
-      background: rgba(127, 127, 127, 0.4);
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 }
 

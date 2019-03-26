@@ -10,14 +10,14 @@
   background-color: rgb(51, 51, 58);
   z-index: 1000;
   padding: 0 20px 0 20px;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  .header__nav{
-    align-items:center;
+  .header__nav {
+    align-items: center;
   }
-  .wrapper{
-    width:100%;
+  .wrapper {
+    width: 100%;
   }
   &__nav {
     height: 100%;
@@ -35,7 +35,7 @@
     width: 180px;
     & img {
       width: 100%;
-      height: auto
+      height: auto;
     }
   }
   &__search {
@@ -85,40 +85,43 @@
     border-radius: 2px;
     font-weight: 500;
     color: #f3f3f3;
-    border: 1px solid transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     background: transparent;
     &:hover {
-      background: linear-gradient(rgb(115, 200, 169), rgb(50, 50, 56));
-      border: 1px solid #33333a;
+      border: 1px solid #fff;
+    }
+    &:active {
+      background:rgba(255,255,255,0.1);
     }
   }
   &__cart {
-    display:block;
-    position:relative;
+    display: block;
+    position: relative;
     width: 50px;
     height: 50px;
-    background:white;
-    display:flex;
+    background: white;
+    border-radius: 6px;
+    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-      &:active:after{
-      top:calc(50% - 50%);
-      left:calc(50% - 50%);
-      width:100%;
-      height:100%;
-      background:#ff8e4370;      
+    &:active:after {
+      top: calc(50% - 50%);
+      left: calc(50% - 50%);
+      width: 100%;
+      height: 100%;
+      background: #ff8e4370;
     }
-    &:after{
+    &:after {
       position: absolute;
-      top:calc(50% - 25%);
-      left:calc(50% - 25%);
-      width:50%;
-      height:50%;
-      background:transparent;
-      content:"";
-      border-radius:100%;
-      transition:0.15s all;
+      top: calc(50% - 25%);
+      left: calc(50% - 25%);
+      width: 50%;
+      height: 50%;
+      background: transparent;
+      content: "";
+      border-radius: 6px;
+      transition: 0.15s all;
     }
   }
   &__cart img {
@@ -143,7 +146,7 @@
   border: 1px solid transparent;
   background: transparent;
   &:hover {
-    background:#444446;
+    background: #444446;
   }
 }
 

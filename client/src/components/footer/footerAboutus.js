@@ -9,8 +9,8 @@ export const FooterAboutus = () => {
       <FooterAboutusHeader />
       <FooterAboutusInfo />
       <FooterAboutusName author="Luka Simonishvili" />
-      <FooterAboutusName author="Zviad Qafianidze" />
       <FooterAboutusName author="Mikheil Mamniashvili" />
+      <FooterAboutusName author="Zviad Qafianidze" />
       <FooterAboutusName author="Ana Bakidze" />
     </div>
   );

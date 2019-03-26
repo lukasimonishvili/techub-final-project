@@ -28,20 +28,22 @@ export class ProductOnPageContainer extends React.Component {
 
   render() {
     return (
-      <div className="productOnPage__container">
+      <div className="productOnPage">
         <CategoryHeading cat={this.props.cat} />
-        {this.state.products.map((item, index) => {
-          return (
-            <ProductOnPage
-              amount={item.amount}
-              price={item.price}
-              productId={item._id}
-              productName={item.title}
-              image={item.img[0]}
-              key={index}
-            />
-          );
-        })}
+        <div className="productOnPage__container">
+          {this.state.products.map((item, index) => {
+            return (
+              <ProductOnPage
+                amount={item.amount}
+                price={item.price}
+                productId={item._id}
+                productName={item.title}
+                image={item.img[0]}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }

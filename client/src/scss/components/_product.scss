@@ -10,6 +10,7 @@
     margin-right: 40px;
     margin-bottom: 50px;
     object-fit: contain;
+    
     & img {
       margin: 0 auto;
       width: 350px;
@@ -150,7 +151,8 @@
   position: absolute;
   left: 0;
   top: 80px;
-  width: 300px;
+  width: 150px;
+  
 }
 
 @media (max-width: 900px) {

@@ -1,10 +1,17 @@
 .productOnPage {
   object-fit: contain;
   position: relative;
+  .category__wrp {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: #dedede;
+    margin-bottom: 25px;
+  }
   &__container {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     min-height: calc(100vh - 250px);
-    padding-top: 30px;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -39,10 +46,10 @@
         margin-top: 5px;
         padding: 5px;
         border: 1px solid transparent;
-        border-radius:3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
         background-color: #eeeef3;
-        width:50%;
-        font-size:20px;
+        width: 50%;
+        font-size: 20px;
         color: rgb(37, 35, 35);
         &:hover {
           background: #dbdbe0;
@@ -59,8 +66,8 @@
         border: 1px solid transparent;
         border-radius: 0 3px 3px 0;
         background-color: #ff6565;
-        width:50%;
-        font-size:20px;
+        width: 50%;
+        font-size: 20px;
         color: #fff;
         &:hover {
           background: #ea5d5d;
@@ -75,16 +82,16 @@
         margin-top: 5px;
         padding: 5px;
         border: 1px solid transparent;
-        border-radius: 3px;
-        background-color: #f3f3f3;
-        color: rgb(37, 35, 35);
-        font-size: 14px;
+        border-radius: 0 3px 3px 0;
+        background-color: #ff6565;
+        width: 50%;
+        font-size: 20px;
+        color: #fff;
         &:hover {
-          border: 1px solid rgb(133, 173, 143);
-          background: #f8f8f8;
+          background: #ea5d5d;
         }
         &:active {
-          background: #727272;
+          background: #f74848;
           color: #f4f4f4;
         }
       }
@@ -103,13 +110,14 @@
   width: 100%;
   font-size: 20px;
   padding: 20px;
-  border-bottom: 2px solid black;
-  margin-bottom: 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .productitem__soldout {
   position: absolute;
-  width: 50%;
+  width: 30%;
 }
 @media (max-width: 685px) {
   .productOnPage {

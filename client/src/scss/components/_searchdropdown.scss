@@ -8,21 +8,28 @@
   height: auto;
   margin: 0 auto;
   height: auto;
-  padding: 0 20px 20px 20px;
-  border: 1px solid black;
   border-top: none;
   border-radius: 0 0 4px 4px;
-  background: #33333a50;
+  background: #444446;
   &__item {
     & a {
       cursor: pointer;
-      font-size: 14px;
+      font-size: 16px;
       padding: 5px;
-      color: rgb(77, 67, 55);
-      font-weight: 400;
+      color: #fff;
+      padding:10px;
+      &:nth-child(2n+2){
+        background:rgba(255,255,255,0.1);
+      }
+      &:last-child{
+        border-bottom: none;
+      }
       &:hover {
-        background: #29160252;
+        background:rgba(255,255,255,0.3);
         color: #f2f2f2;
+      }
+      &:active {
+        background:rgba(0,0,0,0.2);
       }
     }
   }
