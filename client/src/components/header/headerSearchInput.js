@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-export const HeaderSearchInput = () => {
+export const HeaderSearchInput = props => {
   return (
     <input
       type="search"
@@ -12,30 +12,22 @@ export const HeaderSearchInput = () => {
           axios.get(`/search/${e.target.value}`).then(res => {
             if (res.data[0] === "<" || !res.data.length) {
               let searchDr = document.getElementById("searchDr");
-              let searchBox = searchDr.childNodes[0];
-              searchBox.innerHTML = "No Result";
+              props.stater([{ _id: "/", title: "No Result" }]);
               searchDr.style.display = "block";
             } else {
               let searchDr = document.getElementById("searchDr");
-              let searchBox = searchDr.childNodes[0];
-              searchBox.innerHTML = "";
               searchDr.style.display = "block";
-              for (let i = 0; i < res.data.length; i++) {
-                searchBox.innerHTML += `<a class=""searchdropdown__item--name"" href="product/${
-                  res.data[i]._id
-                }">${res.data[i].title}</a>`;
-              }
+              props.stater(res.data);
             }
           });
         }
       }}
       onBlur={e => {
         let searchDr = document.getElementById("searchDr");
-        let searchBox = searchDr.childNodes[0];
         if (!e.target.value.length) {
-          searchBox.innerHTML = "";
           searchDr.style.display = "none";
           e.target.value = "";
+          props.stater([]);
         }
       }}
     />

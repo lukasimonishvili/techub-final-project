@@ -44,6 +44,19 @@ export class Product extends React.Component {
       });
     });
   }
+
+  componentWillReceiveProps(nextProps) {
+    Axios.get(`/getOne/${nextProps.productId}`).then(res => {
+      this.setState({
+        mainImg: [res.data.img[0]],
+        product: res.data,
+        img: res.data.img,
+        likes: res.data.likes.length,
+        disLikes: res.data.disLikes.length
+      });
+    });
+  }
+
   render() {
     if (Number(this.state.product.amount)) {
       return (

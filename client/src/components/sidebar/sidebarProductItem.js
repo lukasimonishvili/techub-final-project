@@ -8,6 +8,7 @@ export const SidebarProducItem3 = props => {
         let sidebar = document.getElementById("sidebar");
         sidebar.style.display = "none";
         props.catStater(props.cat);
+        window.scrollTo(0, 0);
       }}
     >
       {props.cat}

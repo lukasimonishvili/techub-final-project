@@ -8,13 +8,13 @@ export class ProductOnPageContainer extends React.Component {
     products: []
   };
 
-  componentDidUpdate() {
-    if (this.props.cat === "ALL") {
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.cat === "ALL") {
       Axios.get("/getAllproduct").then(res => {
         this.setState({ products: res.data });
       });
     } else {
-      Axios.get(`/getByCategory/${this.props.cat}`).then(res => {
+      Axios.get(`/getByCategory/${nextProps.cat}`).then(res => {
         this.setState({ products: res.data.data });
       });
     }

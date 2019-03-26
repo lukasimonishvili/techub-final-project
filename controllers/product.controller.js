@@ -95,7 +95,6 @@ const removeProduct = (req, res) => {
       });
     }
   });
-  console.log(req.body.productId);
   res.json({ message: "product removed from database" });
 };
 
@@ -104,7 +103,6 @@ const getAllProductList = (req, res) => {
     if (err) {
       res.json({ message: "Something went wrong" });
     } else {
-      console.log(data);
       res.json(data);
     }
   });

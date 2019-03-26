@@ -1,10 +1,16 @@
 import React from "react";
-import { SearchDropdownItemname } from "./searchDropdownItemname";
+import { Link } from "@reach/router";
 
-export const SearchDropdownItemlink = () => {
+export const SearchDropdownItemlink = props => {
   return (
     <span className="searchdropdown__item fl fl_dir_col">
-      <SearchDropdownItemname />
+      {props.srch.map(srch => {
+        return (
+          <Link key={srch._id} to={`/product/${srch._id}`}>
+            {srch.title}
+          </Link>
+        );
+      })}
     </span>
   );
 };
