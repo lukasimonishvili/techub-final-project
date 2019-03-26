@@ -6,6 +6,7 @@ export const FeedbackInput = () => {
       className="product__feedback__input "
       type="text"
       placeholder="Your Feedback"
+      id="feedbackInp"
     />
   );
 };
