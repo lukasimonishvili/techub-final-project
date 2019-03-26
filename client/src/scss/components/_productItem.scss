@@ -29,7 +29,8 @@
     margin: 2px;
     padding: 2px;
     color: darkolivegreen;
-    font-size: 16px;
+    font-size: 20px;
+    text-align: left;
     &_buttons {
       justify-content: space-around;
       &-details {
@@ -38,12 +39,13 @@
         margin-top: 5px;
         padding: 5px;
         border: 1px solid transparent;
-        border-radius: 3px;
-        background-color: #f3f3f3;
+        border-radius:3px 0 0 3px;
+        background-color: #eeeef3;
+        width:50%;
+        font-size:20px;
         color: rgb(37, 35, 35);
         &:hover {
-          border: 1px solid rgb(133, 173, 143);
-          background: #f8f8f8;
+          background: #dbdbe0;
         }
         &:active {
           background: #727272;
@@ -55,15 +57,16 @@
         margin-top: 5px;
         padding: 5px;
         border: 1px solid transparent;
-        border-radius: 3px;
-        background-color: #f3f3f3;
-        color: rgb(37, 35, 35);
+        border-radius: 0 3px 3px 0;
+        background-color: #ff6565;
+        width:50%;
+        font-size:20px;
+        color: #fff;
         &:hover {
-          border: 1px solid rgb(133, 173, 143);
-          background: #f8f8f8;
+          background: #ea5d5d;
         }
         &:active {
-          background: #727272;
+          background: #f74848;
           color: #f4f4f4;
         }
       }
@@ -91,10 +94,8 @@
     display: block;
     width: 100%;
     text-align: right;
-    padding-top: 5px;
-    padding-right: 20px;
-    font-size: 14px;
-    color: green;
+    font-size: 18px;
+    color: black;
   }
 }
 

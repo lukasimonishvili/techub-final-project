@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from '../../img/cart.svg';
 export const HeaderCartImg = () => {
-  return <img src="https://ya-webdesign.com/images/cart-icon-png-8.png" alt="cart" />;
+  return <img src={logo} alt="cart" />;
 };
