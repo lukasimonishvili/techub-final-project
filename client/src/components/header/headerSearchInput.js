@@ -13,11 +13,25 @@ export const HeaderSearchInput = () => {
             if (res.data[0] === "<" || !res.data.length) {
               alert("No result!");
             } else {
-              alert(res.data[0].title);
+              let searchDr = document.getElementById("searchDr");
+              let searchBox = searchDr.childNodes[0];
+              searchBox.innerHTML = "";
+              searchDr.style.display = "block";
+              for (let i = 0; i < res.data.length; i++) {
+                searchBox.innerHTML += `<a class=""searchdropdown__item--name"" href="product/${
+                  res.data[i]._id
+                }">${res.data[i].title}</a>`;
+              }
             }
-            console.log(res);
           });
         }
+      }}
+      onBlur={e => {
+        let searchDr = document.getElementById("searchDr");
+        let searchBox = searchDr.childNodes[0];
+        searchBox.innerHTML = "";
+        searchDr.style.display = "none";
+        e.target.value = "";
       }}
     />
   );
