@@ -30,8 +30,6 @@ export const Message = () => {
         messageIcon.style.display = "none";
         Axios.post("/clearUserNotification", {
           userId: getCookie("c3a4d")
-        }).then(res => {
-          console.log(res.data.data);
         });
       }}
     >

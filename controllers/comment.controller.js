@@ -1,12 +1,15 @@
 const { Comment } = require("../models/comment.model");
 const { User } = require("../models/user.model");
+const mongoose = require("mongoose");
 
 const addComment = (req, res) => {
   User.find({ _id: req.body.userId }, (err, data) => {
     if (err) {
       res.json({ message: "Something went wrong" });
     } else {
+      let commentId = mongoose.Types.ObjectId();
       let newComment = {
+        _id: commentId,
         userId: req.body.userId,
         productId: req.body.productId,
         body: req.body.body,
@@ -14,7 +17,7 @@ const addComment = (req, res) => {
         userId: req.body.userId
       };
       Comment.create(newComment);
-      res.json({ message: "okay", newComment });
+      res.json({ newComment });
     }
   });
 };

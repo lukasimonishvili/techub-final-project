@@ -27,8 +27,6 @@ export const ChatClose = () => {
         messageIcon.style.display = "block";
         Axios.post("/clearUserNotification", {
           userId: getCookie("c3a4d")
-        }).then(res => {
-          console.log(res.data.data);
         });
       }}
     >

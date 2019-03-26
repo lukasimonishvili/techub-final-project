@@ -17,8 +17,15 @@ export const ProductCatCat = props => {
       />
       <div>
         <ProductCatActionbuttonToggle />
-        <ProductCatActionbuttonEdit />
-        <ProductCatActionbuttonDellete />
+        <ProductCatActionbuttonEdit
+          cat={props.cat}
+          catStater={props.catStater}
+        />
+        <ProductCatActionbuttonDellete
+          cat={props.cat}
+          catStater={props.catStater}
+          catList={props.catList}
+        />
       </div>
       <ProductList catList={props.catList} cat={props.cat} />
     </div>

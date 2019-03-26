@@ -60,7 +60,7 @@ export class Product extends React.Component {
           disLikeStater={this.disLikeStateHandler}
           productId={this.state.product._id}
         />
-        <Comment />
+        <Comment productId={this.props.productId} />
         <Feedback />
       </div>
     );

@@ -19,7 +19,7 @@ export const ProductCatNewcatbutton = () => {
             Axios.post("/addCategory", { title: newCategory.value }).then(
               res => {
                 alert(res.data);
-                newCategory.value = "";
+                window.location.replace("/productlist");
               }
             );
           }

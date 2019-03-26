@@ -9,10 +9,9 @@ export const ProductCatActionbuttonEdit = props => {
       onClick={e => {
         let newTitle = e.target.parentNode.previousSibling;
         let oldTitle = props.cat;
-        // console.log(newTitle.value, oldTitle);
         Axios.post("/editCategory", {
           title: oldTitle,
-          newTitle: newTitle.value
+          newTitle: newTitle.value.toUpperCase()
         }).then(res => {
           alert("Category name updated");
           props.catStater(res.data);

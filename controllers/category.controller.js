@@ -1,12 +1,18 @@
 const { Category } = require("../models/category.model");
 const { Product } = require("../models/product.model");
+const { Comment } = require("../models/comment.model");
+const mongoose = require("mongoose");
 const fs = require("fs");
 
 const addCategory = (req, res) => {
   Category.findOne({ title: req.body.title.toUpperCase() }, (err, data) => {
     if (!data) {
-      Category.create({ title: req.body.title.toUpperCase() });
-      res.json("Category created");
+      let newCat = {
+        title: req.body.title.toUpperCase(),
+        _id: mongoose.Types.ObjectId()
+      };
+      Category.create(newCat);
+      res.json({ message: true, data: newCat });
     } else {
       res.json("That category already exists");
     }
@@ -40,8 +46,11 @@ const editCategory = (req, res) => {
   Category.find({}, (err, data) => {
     for (let i = 0; i < data.length; i++) {
       if (data[i].title == req.body.title) {
-        data.splice(i, 1);
-        data.push({ title: req.body.newTitle.toUpperCase(), _id: i });
+        data.splice(i, 1, {
+          title: req.body.newTitle.toUpperCase(),
+          _id: mongoose.Types.ObjectId()
+        });
+        break;
       }
     }
     res.json(data);
@@ -55,6 +64,13 @@ const deleteCategory = (req, res) => {
     } else {
       Product.find({ category: req.body.title }, (error, data) => {
         for (let i = 0; i < data.length; i++) {
+          Comment.remove({ productId: data[i]._id }, err => {
+            if (err) {
+              console.log({ message: "Something went wrong" });
+            } else {
+              console.log({ message: "removed" });
+            }
+          });
           let imgs = data[i].img;
           for (let k = 0; k < imgs.length; k++) {
             try {
@@ -66,6 +82,9 @@ const deleteCategory = (req, res) => {
             }
           }
         }
+      });
+      Product.find({ category: req.body.title }, (errror, data) => {
+        for (let i = 0; i < data.length; i++) {}
       });
       Product.deleteMany({ category: req.body.title }, error => {
         if (!error) {

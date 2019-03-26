@@ -6,7 +6,7 @@ export const ProductCatActionbuttonDellete = props => {
     <button
       type="button"
       className="ProductCat__Cat__actionbutton"
-      onClick={e => {
+      onClick={() => {
         let newCatList = props.catList;
         for (let i = 0; i < newCatList.length; i++) {
           if (newCatList[i].title == props.cat) {
@@ -17,7 +17,7 @@ export const ProductCatActionbuttonDellete = props => {
         Axios.post("/deleteCategory", { title: props.cat }).then(res => {
           alert(res.data.message);
         });
-        console.log(newCatList);
+        props.catStater(newCatList);
       }}
     >
       Delete

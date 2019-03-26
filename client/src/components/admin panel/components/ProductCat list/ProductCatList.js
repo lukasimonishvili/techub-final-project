@@ -13,7 +13,7 @@ export class ProductCatList extends React.Component {
   };
 
   catStater(value) {
-    this.setState({ categories: value }, console.log(this.state.categories));
+    this.setState({ categories: value });
   }
 
   componentDidMount() {

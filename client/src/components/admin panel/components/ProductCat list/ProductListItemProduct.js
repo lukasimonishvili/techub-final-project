@@ -67,7 +67,7 @@ export class ProductListItemProduct extends React.Component {
           />
           <input
             defaultValue={this.state.item.title}
-            className="addthis.state.__name"
+            className="additem__name"
             type="text"
             name="product name"
             placeholder="product name"
