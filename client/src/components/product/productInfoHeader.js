@@ -6,7 +6,10 @@ export const ProductInfoHeader = props => {
     <>
       <h2 className="product__info__header fl fl_jus_bet">
         {props.productName}
-        <ProductInfoAddtocart productId={props.productId} />
+        <ProductInfoAddtocart
+          amount={props.amount}
+          productId={props.productId}
+        />
       </h2>
     </>
   );

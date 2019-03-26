@@ -4,10 +4,6 @@ import Axios from "axios";
 import { CategoryHeading } from "./categoryHeading";
 
 export class ProductOnPageContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     products: []
   };

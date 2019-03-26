@@ -4,19 +4,20 @@ import Axios from "axios";
 export class ProductListItemProduct extends React.Component {
   state = {
     item: {
-      img: [],
-      title: "",
-      category: "",
-      price: "",
-      description: "",
-      amount: 0,
-      _id: ""
+      img: this.props.product.img,
+      title: this.props.product.title,
+      price: this.props.product.price,
+      description: this.props.product.description,
+      amount: this.props.product.amount,
+      _id: this.props.product._id,
+      category: this.props.product.category
     },
     removeImg: []
   };
 
   componentDidMount() {
-    this.setState({ item: this.props.product });
+    // this.setState({ item: this.props.product });
+    console.log(this.state.category);
   }
 
   render() {
@@ -96,6 +97,11 @@ export class ProductListItemProduct extends React.Component {
             type="number"
             placeholder="product quantity"
             defaultValue={this.state.item.amount}
+            onKeyUp={e => {
+              if (Number(e.target.value) < 1) {
+                e.target.value = 1;
+              }
+            }}
           />
           <input
             className="additem__cost"

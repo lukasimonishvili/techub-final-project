@@ -22,12 +22,16 @@ export const ProductInfoAddtocart = props => {
       <button
         className="product__info__addtocart fl"
         onClick={() => {
-          Axios.post(`/addToCart`, {
-            userId: getCookie("c3a4d"),
-            productId: props.productId
-          }).then(res => {
-            alert(res.data.message);
-          });
+          if (Number(props.amount)) {
+            Axios.post(`/addToCart`, {
+              userId: getCookie("c3a4d"),
+              productId: props.productId
+            }).then(res => {
+              alert(res.data.message);
+            });
+          } else {
+            alert("Product Sold out");
+          }
         }}
       >
         add to cart

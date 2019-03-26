@@ -10,6 +10,7 @@ export const ProductInfo = props => {
       <ProductInfoHeader
         productId={props.productId}
         productName={props.productName}
+        amount={props.amount}
       />
       <ProductInfoDescription description={props.description} />
       <ProductInfoCostQuantity amount={props.amount} price={props.price} />

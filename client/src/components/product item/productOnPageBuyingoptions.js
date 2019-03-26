@@ -8,7 +8,7 @@ export const ProductOnPageBuyingoptions = props => {
       <ProductOnPageDetails productId={props.productId} />
       <ProductOnPageAddtocart
         productId={props.productId}
-        props={props.amount}
+        amount={props.amount}
         componentClass="span"
       />
     </div>

@@ -11,6 +11,7 @@ export const ProductOnPage = props => {
           image={props.image}
           price={props.price}
           productId={props.productId}
+          amount={props.amount}
         />
       </div>
     );
