@@ -28,10 +28,10 @@ export class ProductOnPageAddtocart extends React.Component {
                 userId: this.getCookie("c3a4d"),
                 productId: this.props.productId
               }).then(res => {
-                alert(res.data.message);
+                swal(res.data.message, { icon: "success" });
               });
             } else {
-              alert("product sold out");
+              swal("product sold out", { icon: "error" });
             }
           }}
         >

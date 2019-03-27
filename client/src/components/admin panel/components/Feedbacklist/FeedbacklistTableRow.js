@@ -3,6 +3,7 @@ import { FeedbacklistCellFeedback } from "./FeedbacklistCellFeedback";
 import { FeedbacklistCellProduct } from "./FeedbacklistCellProduct";
 import { FeedbacklistCellId } from "./FeedbacklistCellId";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export class FeedbacklistTableRow extends React.Component {
   constructor(props) {
@@ -36,9 +37,21 @@ export class FeedbacklistTableRow extends React.Component {
               type="button"
               className="Feedbacklist__table__button"
               onClick={() => {
-                Axios.post("/removeFeedback", { id: fdbck._id }).then(res => {
-                  alert(res.data.message);
-                  this.setState({ feedbacks: res.data.data });
+                swal({
+                  title: "are you sure?",
+                  text: "Once delete feedback you cant return it",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true
+                }).then(willDelete => {
+                  if (willDelete) {
+                    Axios.post("/removeFeedback", { id: fdbck._id }).then(
+                      res => {
+                        swal(res.data.message ,{icon: "success"});
+                        this.setState({ feedbacks: res.data.data });
+                      }
+                    );
+                  }
                 });
               }}
             >

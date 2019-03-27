@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const AccountContainerBodyDepositMakedeposit = props => {
   let getCookie = cname => {
@@ -26,7 +27,11 @@ export const AccountContainerBodyDepositMakedeposit = props => {
             userId: getCookie("c3a4d"),
             balance: fillBalance.value
           }).then(res => {
-            alert(res.data.message);
+            if (res.data.message == "Balance filled") {
+              swal(res.data.message, { icon: "success" });
+            } else {
+              swal(res.data.message, { icon: "error" });
+            }
             fillBalance.value = "";
             props.baanceStater(res.data.balance);
           });

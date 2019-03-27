@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export class ProductListItemProduct extends React.Component {
   state = {
@@ -132,13 +133,23 @@ export class ProductListItemProduct extends React.Component {
                 fd.append("img", img.files[i]);
               }
               fd.append("img", img.files);
-              Axios.post(`/editProduct/${this.state.item._id}`, fd, {
-                headers: {
-                  "Content-type": "multipart/form-data"
+              swal({
+                title: "Are you sure",
+                text: "to update this changes?",
+                buttons: true
+              }).then(willUpdate => {
+                if (willUpdate) {
+                  Axios.post(`/editProduct/${this.state.item._id}`, fd, {
+                    headers: {
+                      "Content-type": "multipart/form-data"
+                    }
+                  }).then(res => {
+                    swal(res.data.message, {
+                      icon: "success"
+                    });
+                    this.setState({ item: res.data.data });
+                  });
                 }
-              }).then(res => {
-                alert(res.data.message);
-                this.setState({ item: res.data.data });
               });
             }}
           >

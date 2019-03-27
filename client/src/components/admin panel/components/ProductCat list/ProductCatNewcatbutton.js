@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const ProductCatNewcatbutton = () => {
   return (
@@ -18,8 +19,10 @@ export const ProductCatNewcatbutton = () => {
           if (newCategory.value.length) {
             Axios.post("/addCategory", { title: newCategory.value }).then(
               res => {
-                alert(res.data);
-                window.location.replace("/productlist");
+                swal(res.data.message, { icon: "success" });
+                setTimeout(() => {
+                  window.location.replace("/productlist");
+                }, 1000);
               }
             );
           }

@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const AccountContainerBodyPersonalSavechanges = props => {
   let getCookie = cname => {
@@ -27,7 +28,9 @@ export const AccountContainerBodyPersonalSavechanges = props => {
         let rePassword = document.getElementById("rePassord");
         if (newPassword.value !== "") {
           if (newPassword.value !== rePassword.value) {
-            alert("Those passwords didn`t match. Try again");
+            swal("Those passwords didn`t match. Try again", {
+              icon: "success"
+            });
           } else {
             Axios.post(`/editUser/${getCookie("c3a4d")}`, {
               name: name.value,
@@ -41,7 +44,11 @@ export const AccountContainerBodyPersonalSavechanges = props => {
               oldPassword.value = "";
               rePassword.value = "";
               newPassword.value = "";
-              alert(res.data.message);
+              if (res.data.message == "saved") {
+                swal(res.data.message, { icon: "success" });
+              } else {
+                swal(res.data.message, { icon: "error" });
+              }
             });
           }
         } else {
@@ -56,7 +63,11 @@ export const AccountContainerBodyPersonalSavechanges = props => {
             rePassword.value = "";
             newPassword.value = "";
             props.userStater(res.data.data);
-            alert(res.data.message);
+            if (res.data.message == "saved") {
+              swal(res.data.message, { icon: "success" });
+            } else {
+              swal(res.data.message, { icon: "error" });
+            }
           });
         }
       }}

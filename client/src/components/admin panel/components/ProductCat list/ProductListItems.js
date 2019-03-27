@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductListItemProduct } from "./ProductListItemProduct";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export class ProductListItems extends React.Component {
   state = {
@@ -41,11 +42,25 @@ export class ProductListItems extends React.Component {
                       currentProduct.splice(i, 1);
                     }
                   }
-                  Axios.post("/removeProduct", {
-                    productId: productId.value
-                  }).then(res => {
-                    alert(res.data.message);
-                    this.setState({ products: currentProduct });
+                  swal({
+                    title: "Are you sure?",
+                    text: `Removing ${
+                      prod.title
+                    } also removs it from users cart!`,
+                    buttons: true,
+                    dangerMode: true,
+                    icon: "warning"
+                  }).then(willRemove => {
+                    if (willRemove) {
+                      Axios.post("/removeProduct", {
+                        productId: productId.value
+                      }).then(res => {
+                        swal(res.data.message, {
+                          icon: "success"
+                        });
+                        this.setState({ products: currentProduct });
+                      });
+                    }
                   });
                 }}
               >

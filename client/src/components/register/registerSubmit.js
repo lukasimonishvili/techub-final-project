@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const RegisterSubmit = () => {
   return (
@@ -22,7 +23,11 @@ export const RegisterSubmit = () => {
           birthDay: date.value.toString()
         };
         Axios.post("/register", sendData).then(res => {
-          alert(res.data.message);
+          if (res.data.message == "registration successfully") {
+            swal(res.data.message, { icon: "success" });
+          } else {
+            swal(res.data.message, { icon: "error" });
+          }
           switch (res.data.message) {
             case "Email is invalid or already taken":
               eMail.style.borderColor = "red";

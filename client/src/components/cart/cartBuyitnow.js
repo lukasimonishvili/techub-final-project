@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export class CartBuyitnow extends React.Component {
   render() {
@@ -60,22 +61,33 @@ export class CartBuyitnow extends React.Component {
               }
             }
             if (!allFilled) {
-              alert("Fill all inputs or Enter valid quantity");
+              swal("Fill all inputs or Enter valid quantity", {
+                icon: "error"
+              });
             } else if (priceSumm > res.data.balance) {
-              alert("not enought money");
+              swal("not enought money", { icon: "error" });
             } else if (amountMessage) {
-              alert(amountMessage);
+              swal(amountMessage, { icon: "error" });
             } else {
               let buyData = {
                 spendMoney: priceSumm,
                 userId: res.data._id,
                 products: sendData
               };
-              Axios.post("/buyProduct", buyData).then(buy => {
-                alert(buy.data.message);
-                this.props.stater(buy.data.cart);
-                this.props.baanceStater(buy.data.balance);
-                this.props.historyStater(buy.data.history);
+              swal({
+                title: `${res.data.balance}$ - ${buyData.spendMoney}$`,
+                text: `Deposit now: ${Number(res.data.balance) -
+                  Number(buyData.spendMoney)}$`,
+                buttons: ["Cancel", "Buy"]
+              }).then(buyConfirmed => {
+                if (buyConfirmed) {
+                  Axios.post("/buyProduct", buyData).then(buy => {
+                    swal(buy.data.message, { icon: "success" });
+                    this.props.stater(buy.data.cart);
+                    this.props.baanceStater(buy.data.balance);
+                    this.props.historyStater(buy.data.history);
+                  });
+                }
               });
             }
           });

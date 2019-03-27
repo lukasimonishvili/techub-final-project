@@ -13,7 +13,7 @@ const addCategory = (req, res) => {
         _id: mongoose.Types.ObjectId()
       };
       Category.create(newCat);
-      res.json({ message: true, data: newCat });
+      res.json({ message: "Category added to List", data: newCat });
     } else {
       res.json("That category already exists");
     }

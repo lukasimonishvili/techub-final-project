@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const AdditemSend = () => {
   return (
@@ -35,7 +36,7 @@ export const AdditemSend = () => {
               "Content-Type": "multipart/form-data"
             }
           }).then(res => {
-            alert(res.data.message);
+            swal(res.data.message, { icon: "success" });
             category.value = "";
             price.value = "";
             title.value = "";
@@ -43,7 +44,7 @@ export const AdditemSend = () => {
             description.value = "";
           });
         } else {
-          alert("all fields are required");
+          swal("all fields are required");
         }
       }}
     >

@@ -19,7 +19,6 @@ export const ProfilePopupLogout = () => {
         };
         removeCookie("c3a4d");
         setCookie("c3a4d", null, 3650);
-        alert(`aba kargad`);
         window.location.replace("/");
       }}
     >

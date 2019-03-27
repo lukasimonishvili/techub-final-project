@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert"
 
 export const LoginSignin = () => {
   return (
@@ -42,7 +43,7 @@ export const LoginSignin = () => {
                 setCookie("c3a4d", tostring, 3650);
                 window.location.replace("/");
               } else {
-                alert(res.data.message);
+                swal(res.data.message, {icon : "error"});
               }
             }
           });

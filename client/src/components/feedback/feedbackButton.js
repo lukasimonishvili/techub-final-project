@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const FeedbackButton = props => {
   return (
@@ -15,7 +16,7 @@ export const FeedbackButton = props => {
             title: props.productName
           }).then(res => {
             feedbackInp.value = "";
-            alert(res.data.message);
+            swal(res.data.message), { icon: "success" };
           });
         }
       }}

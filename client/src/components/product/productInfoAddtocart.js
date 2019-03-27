@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const ProductInfoAddtocart = props => {
   let getCookie = cname => {
@@ -27,10 +28,10 @@ export const ProductInfoAddtocart = props => {
               userId: getCookie("c3a4d"),
               productId: props.productId
             }).then(res => {
-              alert(res.data.message);
+              swal(res.data.message), { icon: "success" };
             });
           } else {
-            alert("Product Sold out");
+            swal("Product Sold out", { icon: "error" });
           }
         }}
       >

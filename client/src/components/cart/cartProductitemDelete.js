@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export const CartProductitemDelete = props => {
   return (
@@ -24,7 +25,7 @@ export const CartProductitemDelete = props => {
           userId: getCookie("c3a4d"),
           productId: props.productId
         }).then(res => {
-          alert(res.data.message);
+          swal(res.data.message, { icon: "success" });
           props.stater(res.data.data);
         });
       }}
