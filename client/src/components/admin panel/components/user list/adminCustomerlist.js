@@ -28,53 +28,57 @@ export class AdminCustomerlist extends React.Component {
             <span className="customerlist__list__item--text">User ID</span>
           </li>
           {this.state.users.map(user => {
-            return (
-              <div key={user._id}>
-                <li className=" customerlist__list__item">
-                  <span className="customerlist__list__item--user">
-                    {user.name}
-                  </span>
-                  <span className="customerlist__list__item--user">
-                    {user.lastName}
-                  </span>
-                  <span className="customerlist__list__item--user">
-                    {user._id}
-                  </span>
-                  <button
-                    className="customerlist__list__item--user"
-                    onClick={e => {
-                      e.target.parentNode.nextSibling.classList.toggle("block");
-                    }}
-                  >
-                    cart
-                  </button>
-                  <button
-                    className="customerlist__list__item--user"
-                    onClick={() => {
-                      swal({
-                        title: "Are you sure",
-                        text: "to delete this user?",
-                        icon: "warning",
-                        dangerMode: true,
-                        buttons: ["Cancel", "Delete"]
-                      }).then(willDelete => {
-                        if (willDelete) {
-                          Axios.post("/removeUser", { userId: user._id }).then(
-                            res => {
+            if (user._id !== "5c914847298b1b13064c3a4d") {
+              return (
+                <div key={user._id}>
+                  <li className=" customerlist__list__item">
+                    <span className="customerlist__list__item--user">
+                      {user.name}
+                    </span>
+                    <span className="customerlist__list__item--user">
+                      {user.lastName}
+                    </span>
+                    <span className="customerlist__list__item--user">
+                      {user._id}
+                    </span>
+                    <button
+                      className="customerlist__list__item--user"
+                      onClick={e => {
+                        e.target.parentNode.nextSibling.classList.toggle(
+                          "block"
+                        );
+                      }}
+                    >
+                      cart
+                    </button>
+                    <button
+                      className="customerlist__list__item--user"
+                      onClick={() => {
+                        swal({
+                          title: "Are you sure",
+                          text: "to delete this user?",
+                          icon: "warning",
+                          dangerMode: true,
+                          buttons: ["Cancel", "Delete"]
+                        }).then(willDelete => {
+                          if (willDelete) {
+                            Axios.post("/removeUser", {
+                              userId: user._id
+                            }).then(res => {
                               swal(res.data.message, { icon: "success" });
                               this.setState({ users: res.data.data });
-                            }
-                          );
-                        }
-                      });
-                    }}
-                  >
-                    remove user
-                  </button>
-                </li>
-                <AdminCustomerlistCart cart={user.cart} />
-              </div>
-            );
+                            });
+                          }
+                        });
+                      }}
+                    >
+                      remove user
+                    </button>
+                  </li>
+                  <AdminCustomerlistCart cart={user.cart} />
+                </div>
+              );
+            }
           })}
         </ul>
       </div>
