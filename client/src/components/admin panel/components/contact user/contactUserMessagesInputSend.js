@@ -24,7 +24,6 @@ export const ContactUserMessagesInputSend = props => {
           clearTimeout(x);
           let body = document.getElementById("adminMessage");
           body.scrollTo(0, body.offsetHeight * 200);
-          console.log("clicked");
         }, 500);
       }}
     >

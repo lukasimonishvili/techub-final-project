@@ -73,12 +73,21 @@ const logIn = (req, res) => {
 };
 
 const removeUser = (req, res) => {
-  User.remove({ _id: req.body.userId }, err => {
-    if (err) {
-      res.json({ message: "Something went wrong" });
-    } else {
-      res.json({ message: "removed" });
+  User.find({}, (error, users) => {
+    User.remove({ _id: req.body.userId }, err => {
+      if (err) {
+        console.log({ message: "Something went wrong" });
+      } else {
+        console.log({ message: "removed" });
+      }
+    });
+    for (let i = 0; i < users.length; i++) {
+      if (users[i]._id == req.body.userId) {
+        users.splice(i, 1);
+        break;
+      }
     }
+    res.json({ message: "User removed", data: users });
   });
 };
 

@@ -1,9 +1,10 @@
 import React from "react";
-import {Cart} from "../../../cart/cart"
+import { Cart } from "../../../cart/cart";
 
-export const AdminCustomerlistCart = () => {
-  return (<div className="customerlist__cart">
-        {/* <Cart/> */}
-  
-   </div>);
+export const AdminCustomerlistCart = props => {
+  return (
+    <div className="customerlist__cart">
+      <Cart cart={props.cart} />
+    </div>
+  );
 };

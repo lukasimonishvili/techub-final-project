@@ -1072,7 +1072,7 @@ table {
   .customerlist__list {
     width: 100%;
     margin-top: 20px; }
-    .customerlist__list:nth-child(2n+2) {
+    .customerlist__list:nth-child(2n + 2) {
       background: silver; }
     .customerlist__list__item {
       border-bottom: 2px solid black;
@@ -1117,8 +1117,9 @@ table {
         border-left: 1px solid black;
         color: #d6d6d6; }
   .customerlist__cart {
+    display: none;
     width: 100%;
-    height: 200px;
+    height: auto;
     background: #828283;
     border: 2px solid black; }
 
