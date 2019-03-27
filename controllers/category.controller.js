@@ -74,12 +74,14 @@ const deleteCategory = (req, res) => {
           });
           let currentProductId = data[i]._id;
           User.find({}, (e, users) => {
-            console.log(`removing product ${currentProductId} from users cart`);
             for (let k = 0; k < users.length; k++) {
               User.findOne({ _id: users[k]._id }, (errro, user) => {
+                console.log(user.cart);
                 for (let j = 0; j < user.cart.length; j++) {
-                  if (user[k].cart[j]._id == currentProductId) {
-                    user[k].cart.splice(j, 1);
+                  if (
+                    user.cart[j]._id.toString() == currentProductId.toString()
+                  ) {
+                    user.cart.splice(j, 1);
                     break;
                   }
                 }
@@ -93,6 +95,7 @@ const deleteCategory = (req, res) => {
               });
             }
           });
+
           let imgs = data[i].img;
           for (let k = 0; k < imgs.length; k++) {
             try {

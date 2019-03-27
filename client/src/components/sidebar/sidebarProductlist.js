@@ -1,5 +1,6 @@
 import React from "react";
 import { SidebarProducItem3 } from "./sidebarProductItem";
+import { Link } from "@reach/router";
 import Axios from "axios";
 
 export class SidebarProductlist extends React.Component {
@@ -16,7 +17,8 @@ export class SidebarProductlist extends React.Component {
   render() {
     return (
       <ul className="sidebar__productlist">
-        <li
+        <Link
+        to="/"
           className="sidebar__productitem"
           onClick={() => {
             let sidebar = document.getElementById("sidebar");
@@ -26,7 +28,7 @@ export class SidebarProductlist extends React.Component {
           }}
         >
           ALL
-        </li>
+        </Link>
         {this.state.cats.map(cats => {
           return (
             <SidebarProducItem3
