@@ -198,6 +198,8 @@ table {
     .header__search {
       width: 100px;
       height: 50px; }
+      .header__search__input {
+        width: 80px; }
     .header__sidebar img {
       width: 30px;
       height: 30px; } }
@@ -688,27 +690,27 @@ table {
 
 @media (max-width: 885px) {
   .messageIcon {
-    width: 70px;
+    width: 45px;
     right: 10px; }
     .messageIcon__notification {
-      bottom: 135px;
-      right: 15px;
+      bottom: 35px;
+      right: 5px;
       width: 20px;
       height: 20px;
       font-size: 10px; }
   .chat {
+    bottom: 50px;
     width: 250px;
     height: 400px; }
-    .chat__input__text {
-      margin-right: 10px; } }
+    .chat__input input {
+      padding: 5px 0; } }
 
 @media (max-height: 475px) {
   .chat {
-    width: 250px;
-    height: 300px;
-    bottom: 100px; }
-    .chat__input {
-      height: 65px; } }
+    bottom: -135px; }
+    .chat__body {
+      width: 250px;
+      height: 200px; } }
 
 .admin {
   display: flex; }
@@ -1051,15 +1053,22 @@ table {
   height: 100vh;
   overflow-y: auto; }
   .customerlist__search {
+    margin-top: 20px;
+    margin-left: 20px;
     width: 250px;
     height: 50px; }
     .customerlist__search--input {
       padding: 5px;
       margin: 10px;
       width: 150px; }
+      .customerlist__search--input:active {
+        border: 2px solid grey; }
     .customerlist__search--button {
+      cursor: pointer;
       margin: 10px;
       padding: 5px; }
+      .customerlist__search--button:active {
+        background: darkgray; }
   .customerlist__list {
     width: 100%;
     margin-top: 20px; }

@@ -91,7 +91,7 @@
       border: 1px solid #fff;
     }
     &:active {
-      background:rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
     }
   }
   &__cart {
@@ -173,6 +173,9 @@
     &__search {
       width: 100px;
       height: 50px;
+      &__input {
+        width: 80px;
+      }
     }
     &__sidebar img {
       width: 30px;

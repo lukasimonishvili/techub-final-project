@@ -51,7 +51,7 @@
         word-wrap: break-word;
         word-break: break-all;
         font-size: 14px;
-        font-weight:bold;
+        font-weight: bold;
       }
       &--admin {
         width: 100%;
@@ -64,7 +64,7 @@
         word-wrap: break-word;
         word-break: break-all;
         font-size: 14px;
-        font-weight:bold;
+        font-weight: bold;
       }
     }
   }
@@ -75,7 +75,7 @@
     border-radius: 0 0 6px 6px;
     height: 50px;
     background-color: #d6d6d6;
-    border-top:1px solid #c1c7d4;
+    border-top: 1px solid #c1c7d4;
     &__text {
       border-radius: 0 0 0 5px;
       border-right: 0;
@@ -102,17 +102,17 @@
   }
   &__close {
     position: absolute;
-    width:30px;
-    height:30px;
-    padding:5px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
     right: 0px;
     top: -34px;
-    background:#e24e4e;
-    border-radius:4px;
+    background: #e24e4e;
+    border-radius: 4px;
     cursor: pointer;
     & img {
-      width:100%;
-      height:auto;
+      width: 100%;
+      height: auto;
     }
   }
 }
@@ -143,22 +143,23 @@
 
 @media (max-width: 885px) {
   .messageIcon {
-    width: 70px;
+    width: 45px;
     right: 10px;
     &__notification {
-      bottom: 135px;
-      right: 15px;
+      bottom: 35px;
+      right: 5px;
       width: 20px;
       height: 20px;
       font-size: 10px;
     }
   }
   .chat {
+    bottom: 50px;
     width: 250px;
     height: 400px;
     &__input {
-      &__text {
-        margin-right: 10px;
+      & input {
+        padding: 5px 0;
       }
     }
   }
@@ -166,11 +167,10 @@
 
 @media (max-height: 475px) {
   .chat {
-    width: 250px;
-    height: 300px;
-    bottom: 100px;
-    &__input {
-      height: 65px;
+    bottom: -135px;
+    &__body {
+      width: 250px;
+      height: 200px;
     }
   }
 }
