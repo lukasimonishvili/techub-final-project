@@ -22,7 +22,7 @@ export class AdminCustomerlist extends React.Component {
           <button className="customerlist__search--button">Search</button>
         </div>
         <ul className="customerlist__list">
-          <li className=" customerlist__list__item">
+          <li className="customerlist__list__item customerlist__list__item--heading">
             <span className="customerlist__list__item--text">Name</span>
             <span className="customerlist__list__item--text">Lastname</span>
             <span className="customerlist__list__item--text">User ID</span>

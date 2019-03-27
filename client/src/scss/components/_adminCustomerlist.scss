@@ -38,7 +38,7 @@
       background: #999999;
       justify-content: space-between;
       align-content: flex-start;
-      &:first-of-type {
+      &--heading {
         padding-right: calc(100% - 600px);
       }
       & button {
@@ -85,8 +85,9 @@
   &__cart {
     display: none;
     width: 100%;
-    height: auto;
+    height: 200px;
     background: rgb(130, 130, 131);
     border: 2px solid black;
+    overflow-y: scroll;
   }
 }

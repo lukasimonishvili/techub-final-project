@@ -1082,7 +1082,7 @@ table {
       background: #999999;
       justify-content: space-between;
       align-content: flex-start; }
-      .customerlist__list__item:first-of-type {
+      .customerlist__list__item--heading {
         padding-right: calc(100% - 600px); }
       .customerlist__list__item button {
         cursor: pointer;
@@ -1119,9 +1119,10 @@ table {
   .customerlist__cart {
     display: none;
     width: 100%;
-    height: auto;
+    height: 200px;
     background: #828283;
-    border: 2px solid black; }
+    border: 2px solid black;
+    overflow-y: scroll; }
 
 .footer {
   width: 100%;
