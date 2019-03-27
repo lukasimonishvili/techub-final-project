@@ -34,6 +34,7 @@
     border-image: linear-gradient(to left, green, rgba(0, 0, 0, 0)) 0 1 100% 0;
   }
   &__productitem {
+    display: block;
     padding: 15px;
     font-size: 15px;
     font-weight: 700;

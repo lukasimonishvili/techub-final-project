@@ -41,22 +41,6 @@ export class Chat extends React.Component {
     this.setState({ notification: value });
   }
 
-  intervalHandler(value) {
-    let interval = setInterval(() => {
-      Axios.post(`/getMessages`, { userId: this.getCookie("c3a4d") }).then(
-        res => {
-          if (res.data.notification) {
-            console.log(res.data.notification);
-          }
-        }
-      );
-    }, 5 * 1000);
-    if (!value) {
-      clearInterval(interval);
-    } else {
-    }
-  }
-
   componentDidMount() {
     Axios.post(`/getMessages`, { userId: this.getCookie("c3a4d") }).then(
       res => {

@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "@reach/router";
 
 export const SidebarProducItem3 = props => {
   return (
-    <li
+    <Link
+      to="/"
       className="sidebar__productitem"
       onClick={() => {
         let sidebar = document.getElementById("sidebar");
@@ -12,6 +14,6 @@ export const SidebarProducItem3 = props => {
       }}
     >
       {props.cat}
-    </li>
+    </Link>
   );
 };

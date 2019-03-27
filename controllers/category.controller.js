@@ -1,6 +1,7 @@
 const { Category } = require("../models/category.model");
 const { Product } = require("../models/product.model");
 const { Comment } = require("../models/comment.model");
+const { User } = require("../models/user.model");
 const mongoose = require("mongoose");
 const fs = require("fs");
 
@@ -64,13 +65,37 @@ const deleteCategory = (req, res) => {
     } else {
       Product.find({ category: req.body.title }, (error, data) => {
         for (let i = 0; i < data.length; i++) {
-          Comment.remove({ productId: data[i]._id }, err => {
-            if (err) {
+          Comment.deleteMany({ productId: data[i]._id }, erro => {
+            if (erro) {
               console.log({ message: "Something went wrong" });
             } else {
               console.log({ message: "removed" });
             }
           });
+          let currentProductId = data[i]._id;
+          User.find({}, (e, users) => {
+            for (let k = 0; k < users.length; k++) {
+              User.findOne({ _id: users[k]._id }, (errro, user) => {
+                console.log(user.cart);
+                for (let j = 0; j < user.cart.length; j++) {
+                  if (
+                    user.cart[j]._id.toString() == currentProductId.toString()
+                  ) {
+                    user.cart.splice(j, 1);
+                    break;
+                  }
+                }
+                user.save(unsv => {
+                  if (!unsv) {
+                    console.log(
+                      `${currentProductId} removed from ${user._id}'s cart`
+                    );
+                  }
+                });
+              });
+            }
+          });
+
           let imgs = data[i].img;
           for (let k = 0; k < imgs.length; k++) {
             try {
@@ -82,9 +107,6 @@ const deleteCategory = (req, res) => {
             }
           }
         }
-      });
-      Product.find({ category: req.body.title }, (errror, data) => {
-        for (let i = 0; i < data.length; i++) {}
       });
       Product.deleteMany({ category: req.body.title }, error => {
         if (!error) {
