@@ -16,7 +16,7 @@ export const FeedbackButton = props => {
             title: props.productName
           }).then(res => {
             feedbackInp.value = "";
-            swal(res.data.message), { icon: "success" };
+            swal(res.data.message, { icon: "success" });
           });
         }
       }}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import Axios from "axios";
+import swal from "sweetalert";
 
 export class ProductOnPageAddtocart extends React.Component {
   getCookie = cname => {

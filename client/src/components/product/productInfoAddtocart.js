@@ -28,7 +28,7 @@ export const ProductInfoAddtocart = props => {
               userId: getCookie("c3a4d"),
               productId: props.productId
             }).then(res => {
-              swal(res.data.message), { icon: "success" };
+              swal(res.data.message, { icon: "success" });
             });
           } else {
             swal("Product Sold out", { icon: "error" });
