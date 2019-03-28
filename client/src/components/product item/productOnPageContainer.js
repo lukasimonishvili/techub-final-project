@@ -22,7 +22,7 @@ export class ProductOnPageContainer extends React.Component {
 
   componentDidMount() {
     if (this.props.cat) {
-      if (this.props.cat == "ALL") {
+      if (this.props.cat === "ALL") {
         Axios.get("/getAllproduct").then(res => {
           this.setState({ products: res.data });
         });
