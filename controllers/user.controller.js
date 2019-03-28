@@ -8,9 +8,9 @@ const saltRound = 10;
 
 const userRegister = (req, res) => {
   User.find({ eMail: req.body.eMail }, async (err, data) => {
-    let reggex = new RegExp("e");
+    let reggex = new RegExp("@");
     let mailCheck = reggex.test(req.body.eMail);
-    if (data.length > 0 || mailCheck) {
+    if (data.length > 0 || !mailCheck) {
       res.json({ message: "Email is invalid or already taken" });
     } else {
       if (req.body.password.length < 6) {

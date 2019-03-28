@@ -7,6 +7,10 @@ export const LoginUsername = () => {
       type="mail"
       placeholder="E-mail"
       id="eMail"
+      onFocus={e => {
+        e.target.style.border = "1px solid transparent";
+        e.target.style.borderBottom = "1px solid gray";
+      }}
     />
   );
 };

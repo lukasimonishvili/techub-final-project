@@ -7,8 +7,9 @@ export const RegisterEmail = () => {
       type="mail"
       placeholder="Email"
       className="register__email"
-      onClick={e => {
-        e.target.style.borderColor = "transparent";
+      onFocus={e => {
+        e.target.style.border = "1px solid transparent";
+        e.target.style.borderBottom = "1px solid gray";
       }}
     />
   );

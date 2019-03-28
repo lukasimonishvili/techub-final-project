@@ -7,8 +7,9 @@ export const RegisterLastName = () => {
       id="lastName"
       placeholder="Last name"
       className="register__username"
-      onClick={e => {
-        e.target.style.borderColor = "transparent";
+      onFocus={e => {
+        e.target.style.border = "1px solid transparent";
+        e.target.style.borderBottom = "1px solid gray";
       }}
     />
   );
