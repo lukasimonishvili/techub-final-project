@@ -48,7 +48,7 @@ make sure your terminal is in our projects "client" folder.
 type in terminal
 
 ```bash
-nmp run dev
+npm run dev
 ```
 
 this command starts our application
