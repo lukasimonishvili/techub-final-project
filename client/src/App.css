@@ -1879,20 +1879,20 @@ table {
   .searchdropdown__item {
     max-height: 300px;
     overflow-y: auto; }
-    .searchdropdown__item a {
+    .searchdropdown__item a, .searchdropdown__item p {
       cursor: pointer;
       font-size: 16px;
       padding: 5px;
       color: #fff;
       padding: 10px; }
-      .searchdropdown__item a:nth-child(2n+2) {
+      .searchdropdown__item a:nth-child(2n+2), .searchdropdown__item p:nth-child(2n+2) {
         background: rgba(255, 255, 255, 0.1); }
-      .searchdropdown__item a:last-child {
+      .searchdropdown__item a:last-child, .searchdropdown__item p:last-child {
         border-bottom: none; }
-      .searchdropdown__item a:hover {
+      .searchdropdown__item a:hover, .searchdropdown__item p:hover {
         background: rgba(255, 255, 255, 0.3);
         color: #f2f2f2; }
-      .searchdropdown__item a:active {
+      .searchdropdown__item a:active, .searchdropdown__item p:active {
         background: rgba(0, 0, 0, 0.2); }
 
 .slider__block {
