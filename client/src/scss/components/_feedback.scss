@@ -1,9 +1,8 @@
 .product {
   &__feedback {
-    padding: 30px;
+    padding:100px 20px 0px 20px;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 35px;
     &__input {
       width: 300px;
       height: 40px;
@@ -16,8 +15,9 @@
       padding: 5px;
       margin-left: 1px;
       border-radius: 2px;
-      background-color: #707070;
-      color: #f3f3f3;
+      background-color: #fbfa3b;
+      color: #949329;
+      font-weight: bold;
       &:hover {
         cursor: pointer;
         background: rgba(127, 127, 127, 0.4);

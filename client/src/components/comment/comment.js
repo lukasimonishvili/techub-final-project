@@ -57,14 +57,16 @@ export class Comment extends React.Component {
     return (
       <div className="comment fl">
         <CommentOutput btnStater={this.btnStater} com={this.state.comments} />
-        <CommentInput btn={this.state.btn} btnStater={this.btnStater} />
-        <CommentInputButtons
-          com={this.state.comments}
-          btn={this.state.btn}
-          btnStater={this.btnStater}
-          stater={this.stater}
-          productId={this.props.productId}
-        />
+        <div className="comment__wrp">
+          <CommentInput btn={this.state.btn} btnStater={this.btnStater} />
+          <CommentInputButtons
+            com={this.state.comments}
+            btn={this.state.btn}
+            btnStater={this.btnStater}
+            stater={this.stater}
+            productId={this.props.productId}
+          />
+        </div>
       </div>
     );
   }

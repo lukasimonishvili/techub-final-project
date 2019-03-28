@@ -12,6 +12,7 @@ export const ProductInfo = props => {
         productName={props.productName}
         amount={props.amount}
       />
+      <div className="product__description-item">
       <ProductInfoDescription description={props.description} />
       <ProductInfoCostQuantity amount={props.amount} price={props.price} />
       <ProductInfoRating
@@ -20,7 +21,7 @@ export const ProductInfo = props => {
         disLikes={props.disLikes}
         likeStater={props.likeStater}
         disLikeStater={props.disLikeStater}
-      />
+      /></div>
     </div>
   );
 };

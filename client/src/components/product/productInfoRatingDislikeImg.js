@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios";
-
+import img from "../../img/thumb-down.svg";
 export const ProductInfoRatingDilikeImg = props => {
   let getCookie = cname => {
     var name = cname + "=";
@@ -18,7 +18,7 @@ export const ProductInfoRatingDilikeImg = props => {
   };
   return (
     <img
-      src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Close_Icon_Dark-512.png"
+      src={img}
       alt=""
       onClick={() => {
         if (getCookie("c3a4d").length === 24) {

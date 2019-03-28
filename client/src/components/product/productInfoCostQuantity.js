@@ -4,7 +4,7 @@ import { ProductInfoAvailable } from "./productInfoAvailable";
 
 export const ProductInfoCostQuantity = props => {
   return (
-    <div className="fl">
+    <div className="gm-price fl">
       <ProductInfoCost price={props.price} />
       <ProductInfoAvailable amount={props.amount} />
     </div>

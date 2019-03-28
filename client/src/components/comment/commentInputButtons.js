@@ -3,7 +3,7 @@ import { CommentOutputEdit } from "./commentOutputEdit";
 
 export const CommentInputButtons = props => {
   return (
-    <div className="fl fl_dir_col">
+    <div className="fl fl_dir_col comment__btn">
       <CommentOutputEdit
         btn={props.btn}
         stater={props.stater}

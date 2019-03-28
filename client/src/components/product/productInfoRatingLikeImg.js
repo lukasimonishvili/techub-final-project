@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios";
-
+import img from "../../img/thumb-up.svg";
 export const ProductInfoRatingLikeImg = props => {
   let getCookie = cname => {
     var name = cname + "=";
@@ -19,7 +19,7 @@ export const ProductInfoRatingLikeImg = props => {
   return (
     <img
       alt=""
-      src="https://cms2cms.com/wp-content/uploads/2019/02/Green-Tick-PNG-Pic.png"
+      src={img}
       onClick={() => {
         if (getCookie("c3a4d").length === 24) {
           Axios.post("/likeProducts", {

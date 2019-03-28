@@ -8,18 +8,22 @@ import { ProductInfoManagequantity } from "./productInfoManagequantity";
 export const ProductInfoRating = props => {
   return (
     <span className="product__info__rating fl">
-      <ProductInfoRatingLike
-        productId={props.productId}
-        likeStater={props.likeStater}
-        disLikeStater={props.disLikeStater}
-      />
+      <div className="like">
+        <ProductInfoRatingLike
+          productId={props.productId}
+          likeStater={props.likeStater}
+          disLikeStater={props.disLikeStater}
+        />
       <ProductInfoRatingLikeCount likes={props.likes} />
-      <ProductInfoRatingDislike
-        likeStater={props.likeStater}
-        productId={props.productId}
-        disLikeStater={props.disLikeStater}
-      />
-      <ProductInfoRatingDislikeCount disLikes={props.disLikes} />
+      </div>
+      <div className="dislike">
+        <ProductInfoRatingDislike
+          likeStater={props.likeStater}
+          productId={props.productId}
+          disLikeStater={props.disLikeStater}
+        />
+        <ProductInfoRatingDislikeCount disLikes={props.disLikes} />
+      </div>
       <ProductInfoManagequantity />
     </span>
   );
