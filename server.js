@@ -15,7 +15,8 @@ const {
   clearUserNotification,
   clearAdminNotification,
   getMessages,
-  checkNotificationsForAdmin
+  checkNotificationsForAdmin,
+  userSearch
 } = require("./controllers/admin.controller");
 const {
   userRegister,
@@ -75,6 +76,7 @@ app.post("/clearUserNotification", clearUserNotification);
 app.post("/clearAdminNotification", clearAdminNotification);
 app.post("/getMessages", getMessages);
 app.post("/checkNotificationsForAdmin", checkNotificationsForAdmin);
+app.post("/userSearch", userSearch);
 
 app.post("/register", userRegister);
 app.post("/login", logIn);

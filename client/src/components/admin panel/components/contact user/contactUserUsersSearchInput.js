@@ -4,6 +4,7 @@ export const ContactUserUsersSearchInput = () => {
     <input
       className="contactuser__rightside__search--input"
       placeholder="Search User"
+      id="searchUser"
     />
   );
 };

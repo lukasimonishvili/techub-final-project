@@ -18,10 +18,66 @@ export class AdminCustomerlist extends React.Component {
     return (
       <div className="customerlist fl fl_dir_col">
         <div className="customerlist__search fl fl_jus_bet">
-          <input className="customerlist__search--input" placeholder="Search" />
-          <button className="customerlist__search--button">Search</button>
+          <input
+            id="searchInp"
+            className="customerlist__search--input"
+            placeholder="Search"
+          />
+          <button
+            className="customerlist__search--button"
+            onClick={e => {
+              let searchInp = document.getElementById("searchInp");
+              let userDomList = document.getElementById("userList");
+              if (searchInp.value.length) {
+                Axios.post("/userSearch", { search: searchInp.value }).then(
+                  res => {
+                    if (res.data.message === "User not found") {
+                      swal(res.data.message, { icon: "error" });
+                    } else if (res.data.message === "id") {
+                      for (let i = 1; i < userDomList.childNodes.length; i++) {
+                        let userId =
+                          userDomList.childNodes[i].childNodes[0].childNodes[2]
+                            .innerHTML;
+                        console.log(userId);
+                        if (userId == res.data.data._id) {
+                          userDomList.insertBefore(
+                            userDomList.childNodes[i],
+                            userDomList.childNodes[1]
+                          );
+                          break;
+                        }
+                      }
+                    } else if (res.data.message == "name") {
+                      for (let i = 1; i < userDomList.childNodes.length; i++) {
+                        let userName = `${
+                          userDomList.childNodes[i].childNodes[0].childNodes[0]
+                            .innerHTML
+                        } ${
+                          userDomList.childNodes[i].childNodes[0].childNodes[1]
+                            .innerHTML
+                        }`;
+                        if (
+                          userName ==
+                          res.data.data.name + " " + res.data.data.lastName
+                        ) {
+                          userDomList.childNodes[i].style.color = "green";
+                          userDomList.insertBefore(
+                            userDomList.childNodes[i],
+                            userDomList.childNodes[1]
+                          );
+                          break;
+                        }
+                      }
+                    }
+                  }
+                );
+              }
+            }}
+          >
+            Search
+          </button>
         </div>
-        <ul className="customerlist__list">
+        <ul id="userList" className="customerlist__list">
           <li className="customerlist__list__item customerlist__list__item--heading">
             <span className="customerlist__list__item--text">Name</span>
             <span className="customerlist__list__item--text">Lastname</span>
