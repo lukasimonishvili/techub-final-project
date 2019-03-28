@@ -187,6 +187,26 @@ const checkNotificationsForAdmin = (req, res) => {
   });
 };
 
+const userSearch = (req, res) => {
+  User.findOne({ _id: req.body.search }, (err, data) => {
+    if (data) {
+      res.json({ message: "id", data });
+    } else {
+      let splitedWord = req.body.search.split(" ");
+      let userName = splitedWord[0];
+      let lastName = splitedWord[1];
+      console.log(userName, lastName);
+      User.findOne({ name: userName, lastName: lastName }, (error, user) => {
+        if (user) {
+          res.json({ message: "name", data: user });
+        } else {
+          res.json({ message: "User not found" });
+        }
+      });
+    }
+  });
+};
+
 module.exports = {
   addFeedback,
   removeFeedback,
@@ -196,5 +216,6 @@ module.exports = {
   clearUserNotification,
   clearAdminNotification,
   getMessages,
-  checkNotificationsForAdmin
+  checkNotificationsForAdmin,
+  userSearch
 };

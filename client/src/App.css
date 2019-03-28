@@ -1411,7 +1411,8 @@ table {
     .contactuser__rightside__search {
       width: 100%;
       padding: 30px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-top: 50px; }
       .contactuser__rightside__search--input {
         width: 100%;
         padding: 10px;
