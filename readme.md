@@ -5,7 +5,7 @@ Welcome to Israel TechHub final project!
 ## How to open
 
 you can donwload our project from this page by clicking "Clone or download" button
-or visit our project [web page.](www.techubproject.tk)
+or visit our project [web page.](http://www.techubproject.tk/)
 
 ## Download
 
