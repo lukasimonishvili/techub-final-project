@@ -12,7 +12,7 @@ export const HeaderSearchInput = props => {
           axios.get(`/search/${e.target.value}`).then(res => {
             if (res.data[0] === "<" || !res.data.length) {
               let searchDr = document.getElementById("searchDr");
-              props.stater([{ _id: "/", title: "No Result" }]);
+              props.stater([]);
               searchDr.style.display = "block";
             } else {
               let searchDr = document.getElementById("searchDr");
