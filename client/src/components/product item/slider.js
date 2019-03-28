@@ -1,4 +1,10 @@
 import React from "react";
+import slider1 from "../../img/slider1.png";
+import slider2 from "../../img/slider2.jpg";
+import slider3 from "../../img/slider3.png";
+import slider4 from "../../img/slider4.jpg";
+import slider5 from "../../img/slider5.jpg";
+import slider6 from "../../img/slider6.jpg";
 
 export class Slider extends React.Component {
   componentDidMount() {
@@ -39,22 +45,22 @@ export class Slider extends React.Component {
     return (
       <div className="slider">
         <div className="slider__block ">
-          <img src="https://cdn.techjuice.pk/wp-content/uploads/2019/02/2019-02-21.png" />
+          <img src={slider1} />
         </div>
         <div className="slider__block ">
-          <img src="https://assets2.razerzone.com/images/rzr-ph/rzph-og-image-1200x630.jpg" />
+          <img src={slider2} />
         </div>
         <div className="slider__block ">
-          <img src="https://cdn.wccftech.com/wp-content/uploads/2017/06/Intel-Core-X-Series-Skylake-X-and-Kaby-Lake-X-CPU-Family.png" />
+          <img src={slider3} />
         </div>
         <div className="slider__block ">
-          <img src="https://cdn.mos.cms.futurecdn.net/SY82Ar3e4Wcnnc3SoPnsYS.jpg" />
+          <img src={slider4} />
         </div>
         <div className="slider__block ">
-          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/M/Q0/MQ052/MQ052?wid=4000&hei=1800&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1495129815011" />
+          <img src={slider5} />
         </div>
         <div className="slider__block ">
-          <img src="https://www.reviewgeek.com/p/uploads/2018/01/x7dcedf8d.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.hNos-NXDT-.jpg" />
+          <img src={slider6} />
         </div>
       </div>
     );
