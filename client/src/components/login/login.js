@@ -35,7 +35,7 @@ export class Login extends React.Component {
         if (res.data.data.status) {
           removeCookie("c914847298b1b13064c3a4d");
           setCookie("c914847298b1b13064c3a4d", "c914847298b1b13064c3a4d", 3650);
-          window.location.replace("/");
+          window.location.replace("/additem");
         } else {
           console.log(res.data.data._id);
           console.log(String(res.data.data._id));
