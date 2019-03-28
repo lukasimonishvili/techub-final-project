@@ -21,9 +21,15 @@ export class ProductOnPageContainer extends React.Component {
   }
 
   componentDidMount() {
-    Axios.get("/getAllproduct").then(res => {
-      this.setState({ products: res.data });
-    });
+    if (this.props.cat) {
+      Axios.get(`/getByCategory/${this.props.cat}`).then(res => {
+        this.setState({ products: res.data.data });
+      });
+    } else {
+      Axios.get("/getAllproduct").then(res => {
+        this.setState({ products: res.data });
+      });
+    }
   }
 
   render() {
