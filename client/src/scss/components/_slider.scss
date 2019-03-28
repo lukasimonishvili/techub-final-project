@@ -1,0 +1,14 @@
+.slider {
+  &__block {
+    margin-top: -25px;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    & img {
+      width: 100%;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+  }
+}
