@@ -2,6 +2,7 @@ import React from "react";
 import { ProductOnPage } from "./productOnPage";
 import Axios from "axios";
 import { CategoryHeading } from "./categoryHeading";
+import { Slider } from "./slider";
 
 export class ProductOnPageContainer extends React.Component {
   state = {
@@ -42,9 +43,11 @@ export class ProductOnPageContainer extends React.Component {
     return (
       <div className="productOnPage">
         <CategoryHeading cat={this.props.cat} />
+        <Slider/>
         <div className="productOnPage__container">
           {this.state.products.map((item, index) => {
             return (
+             
               <ProductOnPage
                 amount={item.amount}
                 price={item.price}
