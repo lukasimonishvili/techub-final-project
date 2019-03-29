@@ -33,8 +33,7 @@ export class User extends React.Component {
           <Login path="/login" />
           <Register path="/register" />
           <Product path="product/:productId" />
-          <ProductOnPageContainer cat={this.state.cat}  path="/" />
-        
+          <ProductOnPageContainer cat={this.state.cat} path="/" />
         </Router>
         <Footer />
       </>

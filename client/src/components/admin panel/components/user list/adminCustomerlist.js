@@ -38,7 +38,6 @@ export class AdminCustomerlist extends React.Component {
                         let userId =
                           userDomList.childNodes[i].childNodes[0].childNodes[2]
                             .innerHTML;
-                        console.log(userId);
                         if (userId == res.data.data._id) {
                           userDomList.insertBefore(
                             userDomList.childNodes[i],

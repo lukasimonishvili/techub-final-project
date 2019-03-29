@@ -2,8 +2,6 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const path = require("path");
-const fs = require("fs");
-const https = require("https");
 
 const { connect } = require("./connect");
 const {
