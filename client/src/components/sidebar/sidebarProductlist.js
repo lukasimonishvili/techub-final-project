@@ -18,7 +18,7 @@ export class SidebarProductlist extends React.Component {
     return (
       <ul className="sidebar__productlist">
         <Link
-        to="/"
+          to="/"
           className="sidebar__productitem"
           onClick={() => {
             let sidebar = document.getElementById("sidebar");

@@ -51,8 +51,14 @@
 }
 @media (max-width: 885px) {
   .sidebar {
+   
+    &__header{
+      height: 60px;
+      font-size: 20px;
+    }
     &__container {
       width: 200px;
+      overflow-y: scroll;
     }
     &__rightside {
       width: calc(100% - 200px);

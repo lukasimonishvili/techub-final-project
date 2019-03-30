@@ -7,7 +7,6 @@ export const SidebarRightside = () => {
       id="sidebarRightside"
       onClick={() => {
         const sidebar = document.getElementById("sidebar");
-
         sidebar.style.display = "none";
       }}
     />

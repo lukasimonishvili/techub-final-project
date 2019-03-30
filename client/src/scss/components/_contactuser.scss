@@ -31,16 +31,17 @@
       }
       &--username {
         position: absolute;
-        background: #ffffff;
+        background: #ffffff49;
         top: 10px;
         left: 50%;
         transform: translateX(-50%);
         margin: 0 auto;
-        color: rgb(44, 42, 42);
+        color: rgb(0, 122, 20);
         border: 1px solid black;
-        padding: 30px;
-        font-size: 20px;
+        padding: 20px;
+        font-size: 15px;
         border-radius: 3px;
+        font-weight: 500;
       }
     }
     &__input {

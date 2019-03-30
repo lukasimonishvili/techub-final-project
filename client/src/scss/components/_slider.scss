@@ -12,3 +12,32 @@
     }
   }
 }
+
+@media (max-width: 1024px){
+  .slider {
+    &__block{
+height: 400px;
+    }
+  }
+}
+@media (max-width: 768px){
+  .slider {
+    &__block{
+height: 350px;
+    }
+  }
+}
+@media (max-width: 425px){
+  .slider {
+    &__block{
+height: 200px;
+    }
+  }
+}
+@media (max-width: 320px){
+  .slider {
+    &__block{
+height: 150px;
+    }
+  }
+}
