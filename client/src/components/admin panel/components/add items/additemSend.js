@@ -13,6 +13,7 @@ export const AdditemSend = () => {
         let title = document.getElementById("title");
         let amount = document.getElementById("amount");
         let description = document.getElementById("description");
+
         if (
           category.value.length &&
           img.files.length &&
@@ -27,10 +28,12 @@ export const AdditemSend = () => {
           fd.append("amount", amount.value);
           fd.append("description", description.value);
           fd.append("category", category.value);
+
           for (let i = 0; i < img.files.length; i++) {
             fd.append("img", img.files[i]);
           }
           fd.append("img", img.files);
+
           Axios.post("/addProduct", fd, {
             headers: {
               "Content-Type": "multipart/form-data"

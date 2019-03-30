@@ -48,7 +48,6 @@ export const CommentOutputEdit = props => {
                     props.stater(newComments);
                   }
                 }
-                console.log(res.data.newComment);
               });
               break;
           }

@@ -1,12 +1,12 @@
 import React from "react";
+
 export const AdminBurgerImg = () => {
   return (
     <div
       className="admin__sidebar__burger"
       id="adminBurger"
-      onClick={e => {
+      onClick={() => {
         let adminLeftside = document.getElementById("adminLeftside");
-
         adminLeftside.classList.toggle("block");
       }}
     >

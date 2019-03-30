@@ -1,8 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
-const morgan = require("morgan");
 const helmet = require("helmet");
-const cors = require("cors");
 const path = require("path");
 
 const { connect } = require("./connect");
@@ -63,9 +61,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(morgan("dev"));
 app.use(helmet());
-app.use(cors());
 
 app.post("/addFeedback", addFeedback);
 app.post("/removeFeedback", removeFeedback);

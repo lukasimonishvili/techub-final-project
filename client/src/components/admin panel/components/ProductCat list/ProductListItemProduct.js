@@ -46,7 +46,6 @@ export class ProductListItemProduct extends React.Component {
                       let newList = this.state.removeImg;
                       newList.push(img);
                     }
-                    console.log(this.state.removeImg);
                   }}
                 />
               </div>
