@@ -321,6 +321,18 @@ const editProduct = (req, res) => {
   });
 };
 
+const soldoutProducts = (req, res) => {
+  Product.find({}, (err, data) => {
+    let soldOuts = [];
+    for (let i = 0; i < data.length; i++) {
+      if (!data[i].amount) {
+        soldOuts.push(data[i]);
+      }
+    }
+    res.json(soldOuts);
+  });
+};
+
 module.exports = {
   uploadProductImg,
   addProduct,
@@ -331,5 +343,6 @@ module.exports = {
   getOneProduct,
   likeProduct,
   disLikeProduct,
-  editProduct
+  editProduct,
+  soldoutProducts
 };
