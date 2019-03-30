@@ -10,6 +10,7 @@ export const ContactUserMessagesInputSend = props => {
         if (
           message.value.length &&
           props.userName.length &&
+          message.value.replace(/\s/g, "").length &&
           props.userId.length === 24
         ) {
           Axios.post("/messageAdminToUser", {

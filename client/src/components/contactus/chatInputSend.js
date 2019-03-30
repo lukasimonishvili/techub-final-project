@@ -21,7 +21,10 @@ export const ChatInputSend = props => {
       className="chat__input__send"
       onClick={() => {
         let messageInp = document.getElementById("messageInp");
-        if (messageInp.value.length > 0) {
+        if (
+          messageInp.value.length > 0 &&
+          messageInp.value.replace(/\s/g, "").length
+        ) {
           Axios.post(`/messageUserToAdmin`, {
             userId: getCookie("c3a4d"),
             body: messageInp.value
