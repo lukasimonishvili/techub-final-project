@@ -6,6 +6,7 @@ import { ContactUser } from "../contact user/contactUser";
 import { ProductCat } from "../ProductCat list/ProductCat";
 import { Feedbacklist } from "../Feedbacklist/feedbacklist";
 import { AdminBurgerImg } from "./adminBurgerImg";
+import { Soldout } from "../sold out/soldout";
 
 export const AdminRightside = () => {
   return (
@@ -17,6 +18,7 @@ export const AdminRightside = () => {
         <ContactUser path="/contactuser" />
         <ProductCat path="/productlist" />
         <Feedbacklist path="/feedback" />
+        <Soldout path="/soldout"/>
       </Router>
     </>
   );

@@ -9,6 +9,7 @@ export const AdminLeftsideList = () => {
       <AdminLeftsideItem listItem="Product List" link="/productlist" />
       <AdminLeftsideItem listItem="Feedback" link="/feedback" />
       <AdminLeftsideItem listItem="Contact User" link="/contactuser" />
+      <AdminLeftsideItem listItem="Sold Out" link="/soldout"/>
       <AdminLeftsideItem listItem="Log Out" link="/" />
     </ul>
   );
