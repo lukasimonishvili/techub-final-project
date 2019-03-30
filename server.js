@@ -45,7 +45,8 @@ const {
   getOneProduct,
   likeProduct,
   disLikeProduct,
-  editProduct
+  editProduct,
+  soldoutProducts
 } = require("./controllers/product.controller");
 
 const {
@@ -99,6 +100,7 @@ app.get("/getAllproduct", getAllProductList);
 app.get("/getByCategory/:category", getProductsByCategory);
 app.get("/search/:search", searchProduct);
 app.get("/getOne/:productId", getOneProduct);
+app.post("/soldoutProducts", soldoutProducts);
 
 app.get("/comment/:productId", getCommentsByProductId);
 app.post("/addComment", addComment);

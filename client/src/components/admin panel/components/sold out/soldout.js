@@ -1,4 +1,6 @@
 import React from "react";
+import Axios from "axios";
+import swal from "sweetalert";
 
 export const Soldout = () => {
   return (
@@ -135,6 +137,6 @@ export const Soldout = () => {
           <button className="soldout__delete">Delete</button>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}

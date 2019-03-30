@@ -47,7 +47,7 @@ export class ProductListItems extends React.Component {
                     text: `Removing ${
                       prod.title
                     } also removs it from users cart!`,
-                    buttons: true,
+                    buttons: ["Cancel", "Delete"],
                     dangerMode: true,
                     icon: "warning"
                   }).then(willRemove => {
