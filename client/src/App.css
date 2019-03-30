@@ -1934,20 +1934,47 @@ table {
 .soldout {
   width: 100%;
   height: 100vh;
-  overflow-y: auto;
   position: relative; }
   .soldout__container {
     width: 100%;
     height: 150px;
-    background: #8f8b8b;
-    align-items: center; }
+    background: #c2bfbf;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #494848; }
+    .soldout__container:nth-child(2n + 2) {
+      background-color: #919191; }
+    .soldout__container:last-child {
+      border-bottom: none; }
   .soldout__image {
     object-fit: contain;
     width: 150px;
-    height: 150px; }
+    height: 150px;
+    padding: 10px; }
   .soldout__name {
     font-size: 15px;
-    font-weight: 600; }
+    font-weight: 600;
+    padding: 10px;
+    color: #434363;
+    border-bottom: 1px solid black; }
+  .soldout__number {
+    padding: 10px;
+    width: 70px;
+    border-radius: 3px; }
+  .soldout button {
+    padding: 15px;
+    cursor: pointer;
+    color: #fdfdfd; }
+  .soldout__save {
+    background-color: #007a00;
+    border-radius: 3px 0 0 3px; }
+    .soldout__save:active {
+      background-color: #013b01; }
+  .soldout__delete {
+    border-radius: 0 3px 3px 0;
+    background-color: #8f0000; }
+    .soldout__delete:active {
+      background-color: #5f0000; }
 
 .block {
   display: block !important; }
