@@ -25,23 +25,23 @@ export class Soldout extends React.Component {
 
   render() {
     return (
-      <div className="soldout">
+      <div className="soldOut">
         {this.state.products.map(prod => {
           return (
-            <div key={prod._id} className="soldout__container fl fl_jus_bet">
+            <div key={prod._id} className="soldOut__container fl fl_jus_bet">
               <img
-                className="soldout__image"
+                className="soldOut__image"
                 src={require(`../../../../img/uploads/${prod.img[0]}`)}
               />
-              <span className="soldout__name">{prod.title}</span>
+              <span className="soldOut__name">{prod.title}</span>
               <input
-                className="soldout__number"
+                className="soldOut__number"
                 defaultValue={prod.amount}
                 type="number"
               />
-              <div className="soldout__buttons">
+              <div className="soldOut__buttons">
                 <button
-                  className="soldout__save"
+                  className="soldOut__save"
                   onClick={e => {
                     let newAmount = e.target.parentNode.previousSibling.value;
                     if (
@@ -75,7 +75,7 @@ export class Soldout extends React.Component {
                   Save
                 </button>
                 <button
-                  className="soldout__delete"
+                  className="soldOut__delete"
                   onClick={() => {
                     swal({
                       title: "Are you sure?",

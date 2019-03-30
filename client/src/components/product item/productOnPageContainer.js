@@ -43,11 +43,10 @@ export class ProductOnPageContainer extends React.Component {
     return (
       <div className="productOnPage">
         <CategoryHeading cat={this.props.cat} />
-        <Slider/>
+        <Slider />
         <div className="productOnPage__container">
           {this.state.products.map((item, index) => {
             return (
-             
               <ProductOnPage
                 amount={item.amount}
                 price={item.price}
