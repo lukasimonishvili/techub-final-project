@@ -8,6 +8,7 @@ import { Register } from "./components/register/register";
 import { Product } from "./components/product/product";
 import { Footer } from "./components/footer/footer";
 import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
+import { ERROR404 } from "./components/404/404";
 
 export class User extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ export class User extends React.Component {
         <Header />
         <Sidebar catStater={this.catStater} />
         <Router>
+          <ERROR404 default/>
           <CartContainer path="/mycart" />
           <Login path="/login" />
           <Register path="/register" />

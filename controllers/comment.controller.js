@@ -53,9 +53,13 @@ const deleteComment = (req, res) => {
 const getCommentsByProductId = (req, res) => {
   Comment.find({ productId: req.params.productId }, (err, data) => {
     if (err) {
-      res.json({ message: "Something went wrong" });
+      res.json(null);
     } else {
-      res.json(data);
+      if (data) {
+        res.json(data);
+      } else {
+        res.json(null);
+      }
     }
   });
 };

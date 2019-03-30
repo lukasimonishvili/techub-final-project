@@ -6,11 +6,15 @@
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
+  background: grey;
+  padding: 30px;
   &__upload[type="file"] {
     cursor: pointer;
     width: 180px;
     height: 34px;
     overflow: hidden;
+    margin-right: 30px;
+    margin-bottom: 23px;
     &:before {
       width: 158px;
       height: 32px;

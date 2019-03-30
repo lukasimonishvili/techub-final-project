@@ -15,6 +15,7 @@
     color: #f3f3f3;
     font-weight: 500;
     cursor: pointer;
+
     &:hover {
       background: #205e1b;
       border: 1px solid #26991e;
@@ -155,4 +156,8 @@
       }
     }
   }
+}
+#newCategory {
+  background: rgb(108, 110, 108);
+  color: #e2e2e2;
 }

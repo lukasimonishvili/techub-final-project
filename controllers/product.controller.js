@@ -136,7 +136,7 @@ const searchProduct = (req, res) => {
 const getOneProduct = (req, res) => {
   Product.findOne({ _id: req.params.productId }, (err, data) => {
     if (err) {
-      res.json({ message: "Something went wrong" });
+      res.json(null);
     } else {
       res.json(data);
     }

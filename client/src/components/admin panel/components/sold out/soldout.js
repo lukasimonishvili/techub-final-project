@@ -2,8 +2,8 @@ import React from "react";
 
 export const Soldout = () => {
   return (
-    <div className="soldout">
-  <div className="soldout__container fl fl_jus_bet">
+    <div className="soldOut">
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -26,7 +26,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -37,7 +38,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -48,7 +50,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -59,7 +62,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -70,7 +74,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -81,7 +86,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -92,7 +98,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -103,7 +110,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"
@@ -114,7 +122,8 @@ export const Soldout = () => {
           <button className="soldout__save">Save</button>
           <button className="soldout__delete">Delete</button>
         </div>
-      </div><div className="soldout__container fl fl_jus_bet">
+      </div>
+      <div className="soldout__container fl fl_jus_bet">
         <img
           className="soldout__image"
           src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone8/gold/iphone8-gold-select-2018?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1550795416637"

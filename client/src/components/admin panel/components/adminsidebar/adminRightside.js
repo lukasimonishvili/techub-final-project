@@ -7,18 +7,20 @@ import { ProductCat } from "../ProductCat list/ProductCat";
 import { Feedbacklist } from "../Feedbacklist/feedbacklist";
 import { AdminBurgerImg } from "./adminBurgerImg";
 import { Soldout } from "../sold out/soldout";
+import { ERROR404 } from "../../../404/404";
 
 export const AdminRightside = () => {
   return (
     <>
       <AdminBurgerImg />
       <Router className="admin__rightside">
+        <ERROR404 default />
         <Additem path="/additem" />
         <AdminCustomerlist path="/userlist" />
         <ContactUser path="/contactuser" />
         <ProductCat path="/productlist" />
         <Feedbacklist path="/feedback" />
-        <Soldout path="/soldout"/>
+        <Soldout path="/soldout" />
       </Router>
     </>
   );

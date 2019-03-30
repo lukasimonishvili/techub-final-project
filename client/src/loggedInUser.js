@@ -10,6 +10,7 @@ import Axios from "axios";
 import { ProductOnPageContainer } from "./components/product item/productOnPageContainer";
 import { Product } from "./components/product/product";
 import { Account } from "./components/user account/account";
+import { ERROR404 } from "./components/404/404";
 
 export class LoggedInUser extends React.Component {
   constructor(props) {
@@ -75,6 +76,7 @@ export class LoggedInUser extends React.Component {
         <Sidebar catStater={this.catStater} userName={this.state.user.name} />
         <Chat />
         <Router>
+          <ERROR404 default/>
           <CartContainer
             baanceStater={this.balanceStateHandler}
             historyStater={this.historyStateHandler}

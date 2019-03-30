@@ -33,16 +33,18 @@ export class Comment extends React.Component {
 
   componentDidMount() {
     Axios.get(`/comment/${this.props.productId}`).then(res => {
-      this.setState({ comments: res.data });
-    });
-    setTimeout(() => {
-      if (this.getCookie("c3a4d").length !== 24) {
-        let comment = document.getElementById("comment");
-        let publish = document.getElementById("publish");
-        comment.style.display = "none";
-        publish.style.display = "none";
+      if (res.data && res.data.length) {
+        this.setState({ comments: res.data });
+        setTimeout(() => {
+          if (this.getCookie("c3a4d").length !== 24) {
+            let comment = document.getElementById("comment");
+            let publish = document.getElementById("publish");
+            comment.style.display = "none";
+            publish.style.display = "none";
+          }
+        }, 1500);
       }
-    }, 1500);
+    });
   }
 
   stater(value) {
