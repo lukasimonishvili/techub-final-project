@@ -8,7 +8,10 @@ export const FeedbackButton = props => {
       className="product__feedback__button"
       onClick={() => {
         let feedbackInp = document.getElementById("feedbackInp");
-        if (feedbackInp.value.length) {
+        if (
+          feedbackInp.value.length &&
+          feedbackInp.value.replace(/\s/g, "").length
+        ) {
           Axios.post("/addFeedback", {
             userId: props.userId,
             productId: props.productId,
