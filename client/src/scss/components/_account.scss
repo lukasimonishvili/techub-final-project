@@ -5,7 +5,7 @@
   overflow-y: scroll;
   &__container {
     width: 100%;
-    height: 100%;
+    height: 110%;
     &__nav {
       margin: 0 auto;
       width: calc(100% - 300px);
@@ -145,6 +145,7 @@
         justify-content: space-between;
         width: 100%;
         height: 100%;
+        overflow-y: auto;
         & input {
           margin: 0 auto;
           background: transparent;
@@ -156,10 +157,11 @@
         }
         & button {
           margin: 0 auto;
+          margin-top: 10px;
           cursor: pointer;
           width: 200px;
           height: 30px;
-          padding: 4px;
+          padding: 18px;
           background: #26991e;
           border-radius: 3px;
           line-height: 0;
