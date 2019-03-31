@@ -18,9 +18,13 @@ export const AdditemSend = () => {
           category.value.length &&
           img.files.length &&
           price.value.length &&
+          price.value.replace(/\s/g, "").length &&
           title.value.length &&
+          title.value.replace(/\s/g, "").length &&
           amount.value.length &&
-          description.value.length
+          amount.value.replace(/\s/g, "").length &&
+          description.value.length &&
+          description.value.replace(/\s/g, "").length
         ) {
           let fd = new FormData();
           fd.append("title", title.value);

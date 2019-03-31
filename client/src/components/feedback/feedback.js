@@ -1,7 +1,6 @@
 import React from "react";
 import { FeedbackInput } from "./feedbackInput";
 import { FeedbackButton } from "./feedbackButton";
-import Axios from "axios";
 
 export class Feedback extends React.Component {
   getCookie = cname => {
@@ -19,29 +18,20 @@ export class Feedback extends React.Component {
     return "";
   };
 
-  componentDidMount() {
-    Axios.get(`/getOne/${this.props.productId}`).then(res => {
-      if (res.data) {
-        setTimeout(() => {
-          if (this.getCookie("c3a4d").length !== 24) {
-            let element = document.getElementById("feedback");
-            element.style.display = "none";
-          }
-        }, 1500);
-      }
-    });
-  }
-
   render() {
-    return (
-      <div className="product__feedback fl" id="feedback">
-        <FeedbackInput />
-        <FeedbackButton
-          productName={this.props.productName}
-          userId={this.getCookie("c3a4d")}
-          productId={this.props.productId}
-        />
-      </div>
-    );
+    if (this.getCookie("c3a4d").length == 24) {
+      return (
+        <div className="product__feedback fl" id="feedback">
+          <FeedbackInput />
+          <FeedbackButton
+            productName={this.props.productName}
+            userId={this.getCookie("c3a4d")}
+            productId={this.props.productId}
+          />
+        </div>
+      );
+    } else {
+      return <></>;
+    }
   }
 }
