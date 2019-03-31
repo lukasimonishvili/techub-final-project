@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 export const SidebarHeader = props => {
   return (
     <Link to="/">
-      <h3 className="sidebar__header">hello {props.userName || "Guest"}</h3>;
+      <h3 className="sidebar__header">HELLO {props.userName || "Guest"}</h3>;
     </Link>
   );
 };
