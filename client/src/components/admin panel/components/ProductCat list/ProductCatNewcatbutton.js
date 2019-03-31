@@ -16,7 +16,10 @@ export const ProductCatNewcatbutton = () => {
         type="button"
         onClick={() => {
           let newCategory = document.getElementById("newCategory");
-          if (newCategory.value.length) {
+          if (
+            newCategory.value.length &&
+            newCategory.value.replace(/\s/g, "").length
+          ) {
             Axios.post("/addCategory", { title: newCategory.value }).then(
               res => {
                 swal(res.data.message, { icon: "success" });
