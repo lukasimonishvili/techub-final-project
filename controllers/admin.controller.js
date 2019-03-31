@@ -179,7 +179,7 @@ const getMessages = (req, res) => {
 
 const checkNotificationsForAdmin = (req, res) => {
   Notification.find({}, (err, data) => {
-    if (data.length) {
+    if (data && data.length) {
       res.json(data);
     } else {
       res.json([]);
