@@ -1,5 +1,4 @@
 import React from "react";
-
 export const CommentOutput = props => {
   let getCookie = cname => {
     var name = cname + "=";
@@ -23,12 +22,12 @@ export const CommentOutput = props => {
             key={index}
             className="comment__output__comment fl fl_dir_col"
             onClick={e => {
-              let commetn = document.getElementById("comment");
+              let comment = document.getElementById("comment");
               let commentId = document.getElementById("commentId");
               if (com.userId === getCookie("c3a4d")) {
-                commetn.value = e.target.childNodes[0].nodeValue;
+                comment.value = e.target.childNodes[0].nodeValue;
                 commentId.value = com._id;
-                props.btnStater("Edit your commetn");
+                props.btnStater("Edit your comment");
               }
             }}
           >

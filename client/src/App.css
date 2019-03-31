@@ -391,7 +391,8 @@ input[type=number]::-webkit-outer-spin-button {
       bottom: 0;
       left: 0;
       justify-items: flex-end; }
-      .product__info__rating .like, .product__info__rating .dislike {
+      .product__info__rating .like,
+      .product__info__rating .dislike {
         position: relative; }
       .product__info__rating .like .product__info__rating--count {
         background: #4f9445;
@@ -405,7 +406,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 40px;
         display: flex;
         justify-content: center;
-        aling-center: center;
+        alingn-center: center;
         border-radius: 4px 0 0 0;
         cursor: pointer; }
         .product__info__rating--like img {
@@ -421,7 +422,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 40px;
         display: flex;
         justify-content: center;
-        aling-center: center;
+        alingn-center: center;
         border-radius: 0 0 0 0;
         background: #f74545;
         cursor: pointer; }

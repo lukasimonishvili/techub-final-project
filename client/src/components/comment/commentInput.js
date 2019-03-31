@@ -13,7 +13,7 @@ export class CommentInput extends React.Component {
           onKeyUp={e => {
             if (
               !e.target.value.length &&
-              this.props.btn === "Edit your commetn"
+              this.props.btn === "Edit your comment"
             ) {
               this.props.btnStater("Publish");
             }

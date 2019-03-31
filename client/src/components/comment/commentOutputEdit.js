@@ -37,7 +37,7 @@ export const CommentOutputEdit = props => {
                 props.stater(newComments);
               });
               break;
-            case "Edit your commetn":
+            case "Edit your comment":
               Axios.post("/editComment", {
                 commentId: commentId.value,
                 body: comment.value
