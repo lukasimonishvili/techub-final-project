@@ -11,7 +11,7 @@
       padding: 5px;
       margin: 10px;
       width: 150px;
-      &:active{
+      &:active {
         border: 2px solid grey;
       }
     }
@@ -19,9 +19,9 @@
       cursor: pointer;
       margin: 10px;
       padding: 5px;
-    &:active{
-      background: darkgray;
-    }
+      &:active {
+        background: darkgray;
+      }
     }
   }
   &__list {
@@ -89,5 +89,34 @@
     background: rgb(130, 130, 131);
     border: 2px solid black;
     overflow-y: scroll;
+  }
+}
+@media (max-width: 750px) {
+  .customerlist {
+    &__list {
+      &__item {
+        & button {
+          padding: 0;
+          font-size: 12px;
+          width: 45px;
+        }
+        &--user {
+          font-size: 12px;
+          height: auto;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .customerlist {
+    &__list {
+      &__item {
+        &--user {
+          width: 90px;
+        }
+      }
+    }
   }
 }

@@ -89,6 +89,7 @@
         font-size: 15px;
         border: 2px solid #214e47;
         cursor: pointer;
+        word-break: break-all;
         &:active {
           background: #0b132b;
           color: #ffffff;
@@ -120,6 +121,29 @@
           border: 1px solid black;
           border-left: none;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 485px) {
+  .contactuser {
+  flex-direction: column-reverse;
+    &__rightside {
+      background: #31455883;
+      &__search {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 40px;
+        &--input{
+          background: transparent;
+          color: #ffffff;
+        }
+      }
+      &__list {
+        padding: 0;
+        margin-top: 20px;
       }
     }
   }

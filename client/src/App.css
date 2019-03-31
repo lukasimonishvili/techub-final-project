@@ -55,6 +55,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 .fl {
   display: flex;
   display: -webkit-box;
@@ -812,8 +817,8 @@ table {
   .admin__sidebar__burger {
     position: fixed;
     display: block;
-    right: 30px;
-    top: 30px;
+    right: 10px;
+    top: 0;
     z-index: 10000000000; }
     .admin__sidebar__burger img {
       width: 50px;
@@ -962,6 +967,10 @@ table {
     .additem__send:hover {
       background: rgba(127, 127, 127, 0.4);
       cursor: pointer; }
+
+@media (max-width: 600px) {
+  .additem {
+    width: 100%; } }
 
 .product__feedback {
   padding: 100px 20px 0px 20px;
@@ -1238,6 +1247,20 @@ table {
     background: #828283;
     border: 2px solid black;
     overflow-y: scroll; }
+
+@media (max-width: 750px) {
+  .customerlist__list__item button {
+    padding: 0;
+    font-size: 12px;
+    width: 45px; }
+  .customerlist__list__item--user {
+    font-size: 12px;
+    height: auto;
+    word-break: break-all; } }
+
+@media (max-width: 600px) {
+  .customerlist__list__item--user {
+    width: 90px; } }
 
 .footer {
   width: 100%;
@@ -1521,7 +1544,8 @@ table {
         margin-bottom: 5px;
         font-size: 15px;
         border: 2px solid #214e47;
-        cursor: pointer; }
+        cursor: pointer;
+        word-break: break-all; }
         .contactuser__rightside__list--item:active {
           background: #0b132b;
           color: #ffffff; }
@@ -1547,6 +1571,23 @@ table {
           background-color: grey;
           border: 1px solid black;
           border-left: none; }
+
+@media (max-width: 485px) {
+  .contactuser {
+    flex-direction: column-reverse; }
+    .contactuser__rightside {
+      background: #31455883; }
+      .contactuser__rightside__search {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 40px; }
+        .contactuser__rightside__search--input {
+          background: transparent;
+          color: #ffffff; }
+      .contactuser__rightside__list {
+        padding: 0;
+        margin-top: 20px; } }
 
 .account {
   width: 100%;
@@ -2003,6 +2044,25 @@ table {
     background-color: #8f0000; }
     .soldOut__delete:active {
       background-color: #5f0000; }
+
+@media (max-width: 620px) {
+  .soldOut__container {
+    height: 100px;
+    padding: 0; }
+    .soldOut__container:first-child {
+      margin-top: 50px; }
+  .soldOut__image {
+    width: 75px;
+    height: 75px;
+    padding: 0; }
+  .soldOut button {
+    padding: 5px; }
+  .soldOut__number {
+    padding: 5px; } }
+
+@media (max-width: 425px) {
+  .soldOut__image {
+    display: none; } }
 
 .body {
   height: calc(100vh - 227px);
