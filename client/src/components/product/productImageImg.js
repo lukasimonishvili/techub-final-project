@@ -14,6 +14,8 @@ export const ProductImageImg = props => {
         width: 800,
         height: 800,
       },
-      enlargedImagePosition: "over" 
+      enlargedImagePosition: "over",
+      isActivatedOnTouch: true,
+      pressDuration: 500
 }} />
 };
