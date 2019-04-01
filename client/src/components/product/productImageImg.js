@@ -15,7 +15,8 @@ export const ProductImageImg = props => {
         height: 800,
       },
       enlargedImagePosition: "over",
-      isActivatedOnTouch: true,
-      pressDuration: 500
+      // touch screen zoom
+      // isActivatedOnTouch: true,
+      // pressDuration: 500
 }} />
 };
