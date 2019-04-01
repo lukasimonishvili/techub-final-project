@@ -25,36 +25,38 @@ const editCategory = (req, res) => {
     if (err) {
       res.json({ message: "Something went wrong" });
     } else {
-      data.title = req.body.newTitle.toUpperCase();
-      data.save(err => {
-        if (!err) {
-          console.log("good");
-        } else {
-          console.log("bad");
+      if (data) {
+        data.title = req.body.newTitle.toUpperCase();
+        data.save(err => {
+          if (!err) {
+            console.log("good");
+          } else {
+            console.log("bad");
+          }
+        });
+        Product.updateMany(
+          { category: req.body.title },
+          { category: req.body.newTitle.toUpperCase() },
+          er => {
+            if (!er) {
+              console.log("ok");
+            }
+          }
+        );
+      }
+      Category.find({}, (err, data) => {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].title == req.body.title) {
+            data.splice(i, 1, {
+              title: req.body.newTitle.toUpperCase(),
+              _id: mongoose.Types.ObjectId()
+            });
+            break;
+          }
         }
+        res.json(data);
       });
     }
-  });
-  Product.updateMany(
-    { category: req.body.title },
-    { category: req.body.newTitle.toUpperCase() },
-    er => {
-      if (!er) {
-        console.log("ok");
-      }
-    }
-  );
-  Category.find({}, (err, data) => {
-    for (let i = 0; i < data.length; i++) {
-      if (data[i].title == req.body.title) {
-        data.splice(i, 1, {
-          title: req.body.newTitle.toUpperCase(),
-          _id: mongoose.Types.ObjectId()
-        });
-        break;
-      }
-    }
-    res.json(data);
   });
 };
 
