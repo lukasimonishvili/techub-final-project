@@ -26,11 +26,11 @@
     margin-bottom: 50px;
     object-fit: contain;
 
-    & img {
+    &__zoom {
       margin: 0 auto;
-      width: 350px;
-      padding: 10px;
-      height: 350px;
+      width: 350px !important;
+      // padding: 10px;
+      height: 350px !important;
       object-fit: contain;
     }
     &--container {
@@ -145,7 +145,7 @@
         height: 40px;
         display: flex;
         justify-content: center;
-        alingn-center: center;
+        align-center: center;
         border-radius: 4px 0 0 0;
         cursor: pointer;
 
@@ -166,7 +166,7 @@
         height: 40px;
         display: flex;
         justify-content: center;
-        alingn-center: center;
+        align-center: center;
         border-radius: 0 0 0 0;
         background: #f74545;
         cursor: pointer;
