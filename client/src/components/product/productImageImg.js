@@ -5,9 +5,11 @@ export const ProductImageImg = props => {
   let photo = require(`../../img/uploads/${props.mainImg}`);
   return <ReactImageMagnify className="product__image__zoom" {...{
     smallImage: {
-        alt: 'Wristwatch by Ted Baker London',
-        isFluidWidth: true,
-        src: photo
+        alt: '',
+        isFluidWidth: false,
+        src: photo,
+        width: 350,
+        height: 350
     },
     largeImage: {
         src: photo,
