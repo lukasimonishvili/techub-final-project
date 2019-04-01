@@ -34,29 +34,29 @@ const editCategory = (req, res) => {
             console.log("bad");
           }
         });
+        Product.updateMany(
+          { category: req.body.title },
+          { category: req.body.newTitle.toUpperCase() },
+          er => {
+            if (!er) {
+              console.log("ok");
+            }
+          }
+        );
       }
+      Category.find({}, (err, data) => {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].title == req.body.title) {
+            data.splice(i, 1, {
+              title: req.body.newTitle.toUpperCase(),
+              _id: mongoose.Types.ObjectId()
+            });
+            break;
+          }
+        }
+        res.json(data);
+      });
     }
-  });
-  Product.updateMany(
-    { category: req.body.title },
-    { category: req.body.newTitle.toUpperCase() },
-    er => {
-      if (!er) {
-        console.log("ok");
-      }
-    }
-  );
-  Category.find({}, (err, data) => {
-    for (let i = 0; i < data.length; i++) {
-      if (data[i].title == req.body.title) {
-        data.splice(i, 1, {
-          title: req.body.newTitle.toUpperCase(),
-          _id: mongoose.Types.ObjectId()
-        });
-        break;
-      }
-    }
-    res.json(data);
   });
 };
 
