@@ -314,10 +314,7 @@ input[type=number]::-webkit-outer-spin-button {
       width: 350px !important;
       height: 350px !important;
       object-fit: contain;
-      cursor: zoom-in !important;
-      border: 1px solid transparent; }
-      .product__image__zoom:hover {
-        border: 1px solid black; }
+      cursor: zoom-in !important; }
     .product__image--container {
       width: 120px;
       height: 370px;
