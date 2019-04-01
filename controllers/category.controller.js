@@ -25,14 +25,16 @@ const editCategory = (req, res) => {
     if (err) {
       res.json({ message: "Something went wrong" });
     } else {
-      data.title = req.body.newTitle.toUpperCase();
-      data.save(err => {
-        if (!err) {
-          console.log("good");
-        } else {
-          console.log("bad");
-        }
-      });
+      if (data) {
+        data.title = req.body.newTitle.toUpperCase();
+        data.save(err => {
+          if (!err) {
+            console.log("good");
+          } else {
+            console.log("bad");
+          }
+        });
+      }
     }
   });
   Product.updateMany(
