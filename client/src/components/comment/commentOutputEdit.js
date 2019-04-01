@@ -27,28 +27,38 @@ export const CommentOutputEdit = props => {
         if (comment.value.length) {
           switch (props.btn) {
             case "Publish":
-              Axios.post("/addComment", {
-                userId: getCookie("c3a4d"),
-                productId: props.productId,
-                body: comment.value
-              }).then(res => {
-                newComments.push(res.data.newComment);
-                comment.value = "";
-                props.stater(newComments);
-              });
+              if (
+                comment.value.replace(/\s/g, "").length &&
+                comment.value.length
+              ) {
+                Axios.post("/addComment", {
+                  userId: getCookie("c3a4d"),
+                  productId: props.productId,
+                  body: comment.value
+                }).then(res => {
+                  newComments.push(res.data.newComment);
+                  comment.value = "";
+                  props.stater(newComments);
+                });
+              }
               break;
             case "Edit your comment":
-              Axios.post("/editComment", {
-                commentId: commentId.value,
-                body: comment.value
-              }).then(res => {
-                for (let i = 0; i < newComments.length; i++) {
-                  if (newComments[i]._id === commentId.value) {
-                    newComments.splice(i, 1, res.data.newComment);
-                    props.stater(newComments);
+              if (
+                comment.value.replace(/\s/g, "").length &&
+                comment.value.length
+              ) {
+                Axios.post("/editComment", {
+                  commentId: commentId.value,
+                  body: comment.value
+                }).then(res => {
+                  for (let i = 0; i < newComments.length; i++) {
+                    if (newComments[i]._id === commentId.value) {
+                      newComments.splice(i, 1, res.data.newComment);
+                      props.stater(newComments);
+                    }
                   }
-                }
-              });
+                });
+              }
               break;
           }
         }

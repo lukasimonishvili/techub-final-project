@@ -29,7 +29,7 @@ export const AccountContainerBodyPersonalSavechanges = props => {
         if (newPassword.value !== "") {
           if (newPassword.value !== rePassword.value) {
             swal("Those passwords didn`t match. Try again", {
-              icon: "success"
+              icon: "error"
             });
           } else {
             Axios.post(`/editUser/${getCookie("c3a4d")}`, {
