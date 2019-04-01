@@ -7,10 +7,14 @@ import { HeaderSignin } from "./headerSignin";
 export const HeaderNav = () => {
   return (
     <ul className="header__nav fl fl_jus_bet">
-      <HeaderSidebar />
-      <HeaderLogo />
-      <HeaderSearch />
-      <HeaderSignin />
+      <div className="header__flex">
+        <HeaderSidebar />
+        <HeaderLogo />
+      </div>
+      <div className="header__flex">
+        <HeaderSearch />
+        <HeaderSignin />
+      </div>
     </ul>
   );
 };
