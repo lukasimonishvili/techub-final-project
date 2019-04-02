@@ -4,7 +4,7 @@ import { ProductInfo } from "./productInfo";
 
 export const ProductInfoImageContainer = props => {
   return (
-    <div className="product__column1 fl">
+    <div className="product__column1 fl fl_jus_bet">
       <ProductImage
         imgStateHander={props.imgStateHander}
         mainImg={props.mainImg}
