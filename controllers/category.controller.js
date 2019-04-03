@@ -102,7 +102,7 @@ const deleteCategory = (req, res) => {
           for (let k = 0; k < imgs.length; k++) {
             try {
               fs.unlinkSync(
-                `${__dirname}/static/media//${imgs[k]}`
+                `${__dirname}/static/media/${imgs[k]}`
               );
             } catch (erro) {
               console.error(erro);
