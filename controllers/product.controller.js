@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname + "/static/media/"));
   },
   filename: function(req, file, cb) {
-    cb(null, new Date().toISOString().replace(/:/g, "-") + file.originalname);
+    cb(null, file.originalname);
   }
 });
 const uploadProductImg = multer({
