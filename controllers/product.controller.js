@@ -14,7 +14,7 @@ const fileFilter = (req, file, cb) => {
 };
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, path.join(__dirname + "/../../static/media"));
+    cb(null, path.join(__dirname + "/../client/static/media"));
   },
   filename: function(req, file, cb) {
     cb(null, new Date().toISOString().replace(/:/g, "_") + file.originalname);
@@ -55,7 +55,7 @@ const removeProduct = (req, res) => {
       for (let i = 0; i < data.img.length; i++) {
         try {
           fs.unlinkSync(
-            `${__dirname}/../../static/media/${data.img[i]}`
+            `${__dirname}/../client/static/media/${data.img[i]}`
           );
         } catch (erro) {
           console.error(erro);
@@ -277,7 +277,7 @@ const editProduct = (req, res) => {
             data.img.splice(i, 1);
             try {
               fs.unlinkSync(
-                `${__dirname}/../../static/media/${removeList[k]}`
+                `${__dirname}/../client/static/media/${removeList[k]}`
               );
             } catch (erro) {
               console.error(erro);
