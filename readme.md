@@ -66,27 +66,24 @@ first start may take few minutes
 
 ```JSON
 "clientSide": {
-   "@reach/router": "^1.2.1",
+    "@reach/router": "^1.2.1",
     "axios": "^0.18.0",
     "concurrently": "^4.1.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-draggable": "^3.2.1",
+    "react-image-magnify": "^2.7.4",
     "react-scripts": "2.1.8",
     "sweetalert": "^2.1.2"
 },
 "backend": {
     "bcrypt": "^3.0.4",
     "cookie-parser": "^1.4.4",
-    "cors": "^2.8.5",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
     "mongoose": "^5.4.19",
-    "morgan": "^1.9.1",
     "multer": "^1.4.1",
-    "nodemon": "^1.18.10",
-    "react-draggable": "^3.2.1"
+    "nodemon": "^1.18.10"
 }
 ```
