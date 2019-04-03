@@ -330,10 +330,14 @@ input[type=number]::-webkit-outer-spin-button {
     margin-right: 40px;
     margin-bottom: 50px;
     object-fit: contain; }
+    .product__image--small {
+      object-fit: contain; }
     .product__image__zoom {
       margin: 0 auto;
       object-fit: contain;
       cursor: zoom-in !important; }
+      .product__image__zoom img {
+        object-fit: contain; }
     .product__image--container {
       width: 120px;
       height: 370px;
@@ -425,7 +429,6 @@ input[type=number]::-webkit-outer-spin-button {
         height: 40px;
         display: flex;
         justify-content: center;
-        align-center: center;
         border-radius: 4px 0 0 0;
         cursor: pointer; }
         .product__info__rating--like img {
@@ -441,7 +444,6 @@ input[type=number]::-webkit-outer-spin-button {
         height: 40px;
         display: flex;
         justify-content: center;
-        align-center: center;
         border-radius: 0 0 0 0;
         background: #f74545;
         cursor: pointer; }

@@ -25,13 +25,16 @@
     margin-right: 40px;
     margin-bottom: 50px;
     object-fit: contain;
-
+    &--small {
+      object-fit: contain;
+    }
     &__zoom {
       margin: 0 auto;
-      // width: 350px !important;
-      // height: 350px !important;
       object-fit: contain;
       cursor: zoom-in !important;
+      & img {
+        object-fit: contain;
+      }
     }
     &--container {
       width: 120px;
@@ -62,9 +65,7 @@
     padding: 10px;
     background: #9ea0a031;
     border-radius: 4px;
-    // -webkit-box-shadow: -20px 20px 13px 2px #777;
-    // -moz-box-shadow: -20px 20px 13px 2px #777;
-    // box-shadow: -20px 20px 13px 2px #777;
+
     &__managequatity {
       flex-direction: row-reverse;
       width: 100%;
@@ -145,7 +146,6 @@
         height: 40px;
         display: flex;
         justify-content: center;
-        align-center: center;
         border-radius: 4px 0 0 0;
         cursor: pointer;
 
@@ -166,7 +166,6 @@
         height: 40px;
         display: flex;
         justify-content: center;
-        align-center: center;
         border-radius: 0 0 0 0;
         background: #f74545;
         cursor: pointer;
