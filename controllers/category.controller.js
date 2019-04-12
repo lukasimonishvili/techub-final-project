@@ -101,9 +101,7 @@ const deleteCategory = (req, res) => {
           let imgs = data[i].img;
           for (let k = 0; k < imgs.length; k++) {
             try {
-              fs.unlinkSync(
-                `${__dirname}/../client/src/img/uploads/${imgs[k]}`
-              );
+              fs.unlinkSync(`${__dirname}/../client/build/static/media/${imgs[k]}`);
             } catch (erro) {
               console.error(erro);
             }
