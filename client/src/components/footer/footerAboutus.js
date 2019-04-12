@@ -11,7 +11,6 @@ export const FooterAboutus = () => {
       <FooterAboutusName author="Luka Simonishvili" />
       <FooterAboutusName author="Mikheil Mamniashvili" />
       <FooterAboutusName author="Zviad Qafianidze" />
-      <FooterAboutusName author="Ana Bakidze" />
     </div>
   );
 };
